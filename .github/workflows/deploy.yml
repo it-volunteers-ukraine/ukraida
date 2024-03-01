@@ -23,9 +23,11 @@ jobs:
         username: ${{ secrets.FTP_USER }}
         password: ${{ secrets.FTP_PASSWORD }}
         server-dir: ${{ secrets.FTP_PATH }}
-
         exclude: |
           **/.git*
           **/.git*/**
           **/node_modules/**
           fileToExclude.txt
+        dangerous-clean-slate: true
+        
+        
