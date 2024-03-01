@@ -1,0 +1,31 @@
+name: Build and deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v4.1.1
+
+      - name: Install and Build 🔧
+        run: |
+          npm ci
+          gulp build
+
+      # - name: Deploy 🚀
+      #  uses: JamesIves/github-pages-deploy-action@4.1.0
+      #  with:
+      #    branch: gh-pages
+      #    folder: build
+
+      - run: set -eu
+      - run: mkdir "$HOME/.ssh"
+      - run: echo "${{ secrets.ukraida }}" > "$HOME/.ssh/key"
+      - run: chmod 600 "$HOME/.ssh/key"
+      #Deploy
+      - run: rsync -e "ssh -p 65002 -i $HOME/.ssh/key -o StrictHostKeyChecking=no"  --archive --compress --exclude '.github' --exclude '.git' --exclude '.gitignore' --exclude 'node_modules' --delete . u298000242@45.84.206.132:/home/u298000242/domains/ukraida.ddns.net.ua/public_html/wp-content/themes/ukraida
+      #- run: ll

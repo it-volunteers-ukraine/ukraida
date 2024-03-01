@@ -1,0 +1,1 @@
+console.log('script part/posts-instagram')

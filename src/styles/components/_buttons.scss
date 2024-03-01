@@ -1,0 +1,208 @@
+/* 
+You can use this class for button
+ btn-ymain           - main button
+ btn-advanced        - advanced button
+ btn-advanced-big    - advanced big button
+ btn-icon             - button for icons
+ btn-icon-black       - button for black icons
+ btn-socseti-yellow   - button yellow for socseti
+ btn-socseti-white    - button white for socseti
+ btn-clear - utils, delete all styles from button
+ */
+
+@import "../variables.scss";
+
+/* reset style */
+#btn-reset {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  padding: 0;
+
+  &:hover,
+  &:focus {
+    outline: none;
+    border: none;
+  }
+}
+
+#svg-animation {
+  transition: all $animations;
+
+  & .icon {
+    transition: all $animations;
+  }
+}
+
+#btn-svg {
+  @extend #btn-reset;
+  @extend #svg-animation;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  & .icon {
+    fill: inherit;
+  }
+}
+
+#svg-yellow {
+  fill: $yellow;
+
+  & .icon {
+    fill: inherit;
+    stroke: white;
+  }
+
+  &:hover,
+  &:focus {
+    fill: red;
+  }
+
+  &:active {
+    fill: orange;
+  }
+}
+
+#svg-black {
+  fill: $black;
+  stroke: $black;
+
+  & .icon {
+    fill: inherit;
+    stroke: $black;
+  }
+}
+
+#btn-main {
+  background-color: $btn-main;
+
+  &:hover,
+  &:focus {
+    background-color: $btn-hover;
+  }
+
+  &:active {
+    background-color: $btn-pressed;
+  }
+
+}
+
+#btn-white {
+  background-color: white;
+
+  &:hover,
+  &:focus {
+    background-color: $btn-inv-hover;
+  }
+
+  &:active {
+    background-color: $btn-inv-pressed;
+  }
+}
+
+#btn-socseti {
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+}
+
+.btn-main {
+  font-family: inter, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 80px;
+  height: 61px;
+  padding: 16px;
+  border-radius: 15px;
+  color: $white;
+  font-size: 24px;
+  font-weight: 500;
+  background-color: $btn-main;
+  border: none;
+  cursor: pointer;
+  transition: all $animations;
+
+  & img {
+    margin-left: 8px;
+  }
+
+  &:hover,
+  &:focus {
+    box-shadow: $btn-hover-shadow;
+  }
+  &:active {
+    background-color: $btn-pressed;
+  }
+  &:disabled {
+    background-color: $btn-disabled;
+    cursor: initial;
+  }
+  
+}
+
+
+.btn-advanced {
+  @extend .btn-main;
+  color: $black;
+  background: $gradient;
+
+  &:hover,
+  &:focus {
+    box-shadow: $btn-hover-shadow;
+  }
+  &:active {
+    box-shadow: $btn-hover-shadow;
+  }
+  &:disabled {
+    background-color: $btn-inv-disabled;
+    cursor: initial;
+  }
+}
+
+.btn-advanced-big{
+  @extend .btn-advanced;
+  padding: 24px 20px;
+  height: 77px;
+
+}
+
+
+.btn-clear {
+  @extend #btn-reset;
+}
+
+.btn-icon {
+  @extend #svg-yellow;
+  @extend #svg-animation;
+}
+
+.btn-icon-black {
+  @extend #svg-black;
+}
+
+.btn-socseti-yellow {
+  @extend #btn-svg;
+  @extend #btn-socseti;
+  @extend #btn-main;
+  fill: white;
+}
+
+.btn-socseti-white {
+  @extend #btn-svg;
+  @extend #btn-socseti;
+  @extend #btn-white;
+  fill: $yellow;
+
+  &:active,
+  &:hover,
+  &:focus {
+    fill: white;
+  }
+}
+
+.btn-disabled-yellow{
+  background-color: red;
+  cursor: initial;
+}

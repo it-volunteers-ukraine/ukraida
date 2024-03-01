@@ -1,0 +1,28 @@
+@import "../components.scss" ;
+
+.button-example{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.button-main{   
+    /* background-color: red; */
+    @extend .btn-main; 
+
+}
+
+.button-advanced{   
+    /* background-color: red; */
+    @extend .btn-advanced; 
+    
+}
+
+
+
+.button-advanced-big{   
+    /* background-color: red; */
+    @extend .btn-advanced-big;
+
+
+}
