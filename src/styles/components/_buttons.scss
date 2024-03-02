@@ -149,6 +149,18 @@ You can use this class for button
    
  }
  
+ .btn-main-small{
+  @extend .btn-main;
+  padding: 14px 12px;
+  height: 45px;
+ }
+
+ .btn-main-medium{
+  @extend .btn-main;
+  padding: 16px 12px;
+  height: 61px;
+ }
+
  
  .btn-advanced {
    @extend .btn-main;
@@ -168,6 +180,13 @@ You can use this class for button
    }
  }
  
+ .btn-advanced-small{
+  @extend .btn-advanced;
+  padding: 14px 8px;
+  height: 45px;
+
+}
+
  .btn-advanced-big{
    @extend .btn-advanced;
    padding: 24px 20px;
