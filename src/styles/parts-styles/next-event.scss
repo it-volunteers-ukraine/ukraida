@@ -8,13 +8,13 @@
 
 .button-main{   
     /* background-color: red; */
-    @extend .btn-main; 
+    @extend .btn-main-l; 
 
 }
 
 .button-advanced{   
     /* background-color: red; */
-    @extend .btn-advanced; 
+    @extend .btn-advanced-l; 
     
 }
 
@@ -22,7 +22,7 @@
 
 .button-advanced-big{   
     /* background-color: red; */
-    @extend .btn-advanced-big;
+    @extend .btn-advanced-l;
 
 
 }
