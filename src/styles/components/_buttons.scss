@@ -114,7 +114,7 @@ You can use this class for button
    @extend .btn-main;
  {
  */ 
- .btn-main {
+ #btn-main {
    font-family: inter, sans-serif;
    display: flex;
    justify-content: center;
@@ -148,51 +148,63 @@ You can use this class for button
    }
    
  }
+
  
- .btn-main-small{
-  @extend .btn-main;
-  padding: 14px 12px;
+ #btn-advanced {
+  @extend #btn-main;
+  color: $black;
+  background: $gradient;
+
+  &:hover,
+  &:focus {
+    box-shadow: $btn-hover-shadow;
+  }
+  &:active {
+    box-shadow: $btn-hover-shadow;
+  }
+  &:disabled {
+    background-color: $btn-inv-disabled;
+    cursor: initial;
+  }
+}
+ 
+ .btn-main-s{
+  @extend #btn-main;
   height: 45px;
+  padding: 14px 12px;
  }
 
- .btn-main-medium{
-  @extend .btn-main;
-  padding: 16px 12px;
-  height: 61px;
- }
+ .btn-main-m{
+   @extend #btn-main;
+   height: 56px;
+   padding: 16px;
+  }
+  
+  .btn-main-l{
+   @extend #btn-main;
+   height: 77px;
+   padding: 24px 20px;
+  }
+  
 
  
- .btn-advanced {
-   @extend .btn-main;
-   color: $black;
-   background: $gradient;
- 
-   &:hover,
-   &:focus {
-     box-shadow: $btn-hover-shadow;
-   }
-   &:active {
-     box-shadow: $btn-hover-shadow;
-   }
-   &:disabled {
-     background-color: $btn-inv-disabled;
-     cursor: initial;
-   }
- }
- 
- .btn-advanced-small{
-  @extend .btn-advanced;
+ .btn-advanced-s{
+  @extend #btn-advanced;
   padding: 14px 8px;
   height: 45px;
-
 }
 
- .btn-advanced-big{
-   @extend .btn-advanced;
-   padding: 24px 20px;
-   height: 77px;
- 
- }
+.btn-advanced-m{
+  @extend #btn-advanced;
+  padding: 14px 8px;
+  height: 45px;
+}
+
+.btn-advanced-s{
+  @extend #btn-advanced;
+  padding: 14px 8px;
+  height: 45px;
+}
  
  
  .btn-clear {
