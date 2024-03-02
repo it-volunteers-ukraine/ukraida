@@ -53,24 +53,26 @@ body {
   margin-right: auto;
   padding-left: 16px;
   padding-right: 16px;
+  min-width: 320px;
 
-  /* @media screen and (max-width: 359.98px) {
+  @media screen and (max-width: 359.98px) {
     width: 300px;
   }
 
+  
   @media screen and (min-width: 576px) {
     width: 576px;
   }
 
   @media screen and (min-width: 768px) {
     width: 768px;
-    padding-left: 32px;
-    padding-right: 32px;
+    /*padding-left: 32px;
+    padding-right: 32px; */
   }
   
   @media screen and (min-width: 992px) {
     width: 752px;
-  } */ 
+  } 
   
   @media screen and (min-width: 1200px) {
     width: 1200px;
