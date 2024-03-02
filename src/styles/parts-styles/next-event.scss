@@ -1,32 +1,5 @@
 @import "../components.scss" ;
 
-.button-example{
-    display: flex;
-    gap: 20px;
-    align-items: center;
-}
-
-.button-main{   
-    /* background-color: red; */
-    @extend .btn-main-l; 
-
-}
-
-.button-advanced{   
-    /* background-color: red; */
-    @extend .btn-advanced-l; 
-    
-}
-
-
-
-.button-advanced-big{   
-    /* background-color: red; */
-    @extend .btn-advanced-l;
-
-
-}
-
 
 .event{
     max-width: 1080px;
@@ -46,7 +19,7 @@
 }
 
 .event-btn{
-    @extend .btn-advanced-big;
+    @extend .btn-advanced-l;
     margin-top: 36px;
     margin-left: auto;
     margin-right: auto;
