@@ -190,20 +190,20 @@ You can use this class for button
  
  .btn-advanced-s{
   @extend #btn-advanced;
-  padding: 14px 8px;
   height: 45px;
+  padding: 14px 12px;
 }
 
 .btn-advanced-m{
   @extend #btn-advanced;
-  padding: 14px 8px;
-  height: 45px;
+  height: 61px;
+  padding: 16px;
 }
 
 .btn-advanced-s{
   @extend #btn-advanced;
-  padding: 14px 8px;
-  height: 45px;
+  height: 77px;
+  padding: 24px 20px;
 }
  
  
