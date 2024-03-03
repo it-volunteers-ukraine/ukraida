@@ -2,7 +2,6 @@
 
 svg {
     fill: $black;
-    stroke: $black;
 }
 
 .footer {
@@ -49,7 +48,6 @@ svg {
 }
 
 .social-media__link {
-    padding: 13px 0;
     display: flex;
     align-items: center;
     gap: 8px;
@@ -114,10 +112,6 @@ svg {
         row-gap: 12px;
     }
 
-    .social-media__link {
-        padding: 16px 0;
-    }
-
     // Copyright__desc
     .copyright__desc {
         font-size: 14px;
@@ -142,6 +136,11 @@ svg {
     // Social-media
     .social-media__list {
        gap: 16px;
+    }
+
+    .social__icon {
+        width: 32px;
+        height: 32px;
     }
 
     // Copyright__desc
