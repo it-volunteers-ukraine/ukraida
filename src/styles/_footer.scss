@@ -2,7 +2,6 @@
 
 svg {
     fill: $black;
-    stroke: $black;
 }
 
 .footer {
@@ -137,6 +136,11 @@ svg {
     // Social-media
     .social-media__list {
        gap: 16px;
+    }
+
+    .social__icon {
+        width: 32px;
+        height: 32px;
     }
 
     // Copyright__desc
