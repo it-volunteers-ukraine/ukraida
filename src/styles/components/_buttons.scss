@@ -116,7 +116,7 @@ You can use this class for button
  */
 @mixin btn-main {
   font-family: inter, sans-serif;
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
   min-width: 80px;

@@ -20,10 +20,10 @@
 }
 
 .event-btn{
+    @include btn-advanced-s;
     margin-top: 36px;
     margin-left: auto;
     margin-right: auto;
-    @include btn-advanced-s;
     
     @media screen and (min-width: 768px ){
         @include btn-advanced-m;
