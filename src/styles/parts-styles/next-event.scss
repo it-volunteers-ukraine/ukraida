@@ -1,6 +1,7 @@
 @import "../components.scss" ;
 
 
+
 .event{
     max-width: 1080px;
     text-align: center;
@@ -19,9 +20,25 @@
 }
 
 .event-btn{
-    @extend .btn-advanced-l;
     margin-top: 36px;
     margin-left: auto;
     margin-right: auto;
-
+    @include btn-advanced-s;
+    
+    @media screen and (min-width: 768px ){
+        @include btn-advanced-m;
+    }
+    @media screen and (min-width: 992px ){
+        @include btn-advanced-l;
+    }
 }
+/*
+@media screen and (min-width: 768px){
+    .event-btn{
+        @extend .btn-advanced-l;
+        margin-top: 32px;
+    }
+        
+}
+*/
+
