@@ -10,148 +10,146 @@ You can use this class for button
  btn-clear - utils, delete all styles from button
  */
 
- @import "../variables.scss";
+@import "../variables.scss";
 
- /* reset style */
- #btn-reset {
-   border: none;
-   background-color: transparent;
-   cursor: pointer;
-   padding: 0;
- 
-   &:hover,
-   &:focus {
-     outline: none;
-     border: none;
-   }
- }
- 
- #svg-animation {
-   transition: all $animations;
- 
-   & .icon {
-     transition: all $animations;
-   }
- }
- 
- #btn-svg {
-   @extend #btn-reset;
-   @extend #svg-animation;
-   display: flex;
-   justify-content: center;
-   align-items: center;
- 
-   & .icon {
-     fill: inherit;
-   }
- }
- 
- #svg-yellow {
-   fill: $yellow;
- 
-   & .icon {
-     fill: inherit;
-     stroke: white;
-   }
- 
-   &:hover,
-   &:focus {
-     fill: red;
-   }
- 
-   &:active {
-     fill: orange;
-   }
- }
- 
- #svg-black {
-   fill: $black;
-   stroke: $black;
- 
-   & .icon {
-     fill: inherit;
-     stroke: $black;
-   }
- }
- 
- #btn-main {
-   background-color: $btn-main;
- 
-   &:hover,
-   &:focus {
-     background-color: $btn-hover;
-   }
- 
-   &:active {
-     background-color: $btn-pressed;
-   }
- 
- }
- 
- #btn-white {
-   background-color: white;
- 
-   &:hover,
-   &:focus {
-     background-color: $btn-inv-hover;
-   }
- 
-   &:active {
-     background-color: $btn-inv-pressed;
-   }
- }
- 
- #btn-socseti {
-   border-radius: 50%;
-   width: 35px;
-   height: 35px;
- }
- 
- /*  Это стили для кнопок 
+/* reset style */
+@mixin btn-reset {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  padding: 0;
+
+  &:hover,
+  &:focus {
+    outline: none;
+    border: none;
+  }
+}
+
+#svg-animation {
+  transition: all $animations;
+
+  & .icon {
+    transition: all $animations;
+  }
+}
+
+#btn-svg {
+  @include btn-reset;
+  @extend #svg-animation;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  & .icon {
+    fill: inherit;
+  }
+}
+
+#svg-yellow {
+  fill: $yellow;
+
+  & .icon {
+    fill: inherit;
+    stroke: white;
+  }
+
+  &:hover,
+  &:focus {
+    fill: red;
+  }
+
+  &:active {
+    fill: orange;
+  }
+}
+
+#svg-black {
+  fill: $black;
+  stroke: $black;
+
+  & .icon {
+    fill: inherit;
+    stroke: $black;
+  }
+}
+/*
+#btn-main {
+  background-color: $btn-main;
+
+  &:hover,
+  &:focus {
+    background-color: $btn-hover;
+  }
+
+  &:active {
+    background-color: $btn-pressed;
+  }
+}
+*/
+
+#btn-white {
+  background-color: white;
+
+  &:hover,
+  &:focus {
+    background-color: $btn-inv-hover;
+  }
+
+  &:active {
+    background-color: $btn-inv-pressed;
+  }
+}
+
+#btn-socseti {
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+}
+
+/*  Это стили для кнопок 
  # Чтобы их подключить нужно импортировать у себя в файле стилей @import "../components.scss";
  # и в классе для кнопки загруить нужную кнопку например, у нас есть кнопка с класом sort-button
  .sort-button{
    @extend .btn-main;
  {
- */ 
- #btn-main {
-   font-family: inter, sans-serif;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   min-width: 80px;
-   height: 61px;
-   padding: 16px;
-   border-radius: 15px;
-   color: $white;
-   font-size: 24px;
-   font-weight: 500;
-   background-color: $btn-main;
-   border: none;
-   cursor: pointer;
-   transition: all $animations;
- 
-   & img {
-     margin-left: 8px;
-   }
- 
-   &:hover,
-   &:focus {
-     box-shadow: $btn-hover-shadow;
-   }
-   &:active {
-     background-color: $btn-pressed;
-   }
-   &:disabled {
-     background-color: $btn-disabled;
-     cursor: initial;
-   }
-   
- }
+ */
+@mixin btn-main {
+  font-family: inter, sans-serif;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 80px;
+  height: 61px;
+  padding: 16px;
+  border-radius: 15px;
+  color: $white;
+  font-size: 24px;
+  font-weight: 500;
+  background-color: $btn-main;
+  border: none;
+  cursor: pointer;
+  transition: all $animations;
 
- 
- #btn-advanced {
-  @extend #btn-main;
+  & img {
+    margin-left: 8px;
+  }
+
+  &:hover,
+  &:focus {
+    box-shadow: $btn-hover-shadow;
+  }
+  &:active {
+    background-color: $btn-pressed;
+  }
+  &:disabled {
+    background-color: $btn-disabled;
+    cursor: initial;
+  }
+}
+
+@mixin btn-advanced {
+  @include btn-main;
   color: $black;
   background: $gradient;
 
@@ -167,81 +165,77 @@ You can use this class for button
     cursor: initial;
   }
 }
- 
- .btn-main-s{
-  @extend #btn-main;
-  height: 45px;
-  padding: 14px 12px;
- }
 
- .btn-main-m{
-   @extend #btn-main;
-   height: 56px;
-   padding: 16px;
-  }
-  
-  .btn-main-l{
-   @extend #btn-main;
-   height: 77px;
-   padding: 24px 20px;
-  }
-  
-
- 
- .btn-advanced-s{
-  @extend #btn-advanced;
+@mixin btn-main-s {
+  @include btn-main;
   height: 45px;
   padding: 14px 12px;
 }
 
-.btn-advanced-m{
-  @extend #btn-advanced;
+@mixin btn-main-m {
+  @include btn-main;
+  height: 56px;
+  padding: 16px;
+}
+
+@mixin btn-main-l {
+  @include btn-main;
+  height: 77px;
+  padding: 24px 20px;
+}
+
+@mixin btn-advanced-s {
+  @include btn-advanced;
+  height: 45px;
+  padding: 14px 12px;
+}
+
+@mixin btn-advanced-m {
+  @include btn-advanced;
   height: 61px;
   padding: 16px;
 }
 
-.btn-advanced-s{
-  @extend #btn-advanced;
+@mixin btn-advanced-l {
+  @include btn-advanced;
   height: 77px;
   padding: 24px 20px;
 }
- 
- 
- .btn-clear {
-   @extend #btn-reset;
- }
- 
- .btn-icon {
-   @extend #svg-yellow;
-   @extend #svg-animation;
- }
- 
- .btn-icon-black {
-   @extend #svg-black;
- }
- 
- .btn-socseti-yellow {
-   @extend #btn-svg;
-   @extend #btn-socseti;
-   @extend #btn-main;
-   fill: white;
- }
- 
- .btn-socseti-white {
-   @extend #btn-svg;
-   @extend #btn-socseti;
-   @extend #btn-white;
-   fill: $yellow;
- 
-   &:active,
-   &:hover,
-   &:focus {
-     fill: white;
-   }
- }
- 
- .btn-disabled-yellow{
-   background-color: red;
-   cursor: initial;
- }
- 
+
+.btn-clear {
+  @include btn-reset;
+}
+
+.btn-icon {
+  @extend #svg-yellow;
+  @extend #svg-animation;
+}
+
+.btn-icon-black {
+  @extend #svg-black;
+}
+
+.btn-socseti-yellow {
+  @extend #btn-svg;
+  @extend #btn-socseti;
+  @include btn-main;
+  fill: white;
+}
+
+.btn-socseti-white {
+  @extend #btn-svg;
+  @extend #btn-socseti;
+  @extend #btn-white;
+  fill: $yellow;
+
+  &:active,
+  &:hover,
+  &:focus {
+    fill: white;
+  }
+}
+
+.btn-disabled-yellow {
+  background-color: red;
+  cursor: initial;
+}

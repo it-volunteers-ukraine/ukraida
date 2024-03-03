@@ -1,28 +1,44 @@
 @import "../components.scss" ;
 
-.button-example{
-    display: flex;
-    gap: 20px;
-    align-items: center;
+
+
+.event{
+    max-width: 1080px;
+    text-align: center;
 }
 
-.button-main{   
-    /* background-color: red; */
-    @extend .btn-main-l; 
-
+.event-title{
+    font-family: lato;
+    font-size: 32px;
+    font-weight: 900;
 }
 
-.button-advanced{   
-    /* background-color: red; */
-    @extend .btn-advanced-l; 
+.event-title-inter{
+    font-family: inter;
+    font-size: 32px;
+    font-weight: 900;
+}
+
+.event-btn{
+    @include btn-advanced-s;
+    margin-top: 36px;
+    margin-left: auto;
+    margin-right: auto;
     
+    @media screen and (min-width: 768px ){
+        @include btn-advanced-m;
+    }
+    @media screen and (min-width: 992px ){
+        @include btn-advanced-l;
+    }
 }
-
-
-
-.button-advanced-big{   
-    /* background-color: red; */
-    @extend .btn-advanced-l;
-
-
+/*
+@media screen and (min-width: 768px){
+    .event-btn{
+        @extend .btn-advanced-l;
+        margin-top: 32px;
+    }
+        
 }
+*/
+
