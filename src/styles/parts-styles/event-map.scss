@@ -1,3 +1,13 @@
 .event-map{
     color: red;
+    height: 432px;
+
+
+}
+
+
+@media screen and (min-width: 768px) {
+    .event-map{
+        height: 493px;
+    }
 }

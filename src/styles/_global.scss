@@ -19,11 +19,10 @@ body {
   /* padding-top: 64px;  */
   padding-bottom: 64px;
 
-  /* @media screen and (min-width: 768px) {
-    padding-top: 64px;
-    padding-bottom: 64px;
+  @media screen and (min-width: 768px) {
+    padding-bottom: 112px;
   } 
-  */
+  
 
   @media screen and (min-width: 1200px) {
     /* padding-top: 144px; */
@@ -66,8 +65,8 @@ body {
 
   @media screen and (min-width: 768px) {
     width: 768px;
-    /*padding-left: 32px;
-    padding-right: 32px; */
+    padding-left: 32px;
+    padding-right: 32px; 
   }
   
   @media screen and (min-width: 992px) {
@@ -80,7 +79,8 @@ body {
     padding-right: 12px; */
   }
   @media screen and (min-width: 1440px) {
-    max-width: 1632px;
+    max-width: 1696px;
+    width: auto;
     /* padding-left: 144px;
     padding-right: 144px; */
   }

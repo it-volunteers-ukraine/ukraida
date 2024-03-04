@@ -5,6 +5,8 @@
 .event{
     max-width: 1080px;
     text-align: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .event-title{
@@ -14,7 +16,7 @@
 }
 
 .event-title-inter{
-    font-family: inter;
+    font-family: 'Inter';
     font-size: 32px;
     font-weight: 900;
 }
