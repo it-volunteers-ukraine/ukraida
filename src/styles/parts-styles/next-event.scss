@@ -11,15 +11,16 @@
 
 .event-title{
     font-family: lato;
-    font-size: 32px;
+    font-size: 18px;
     font-weight: 900;
 }
 
+/*
 .event-title-inter{
     font-family: 'Inter';
-    font-size: 32px;
+    font-size: 18px;
     font-weight: 900;
-}
+}*/
 
 .event-btn{
     @include btn-advanced-s;
@@ -33,6 +34,19 @@
     @media screen and (min-width: 992px ){
         @include btn-advanced-l;
     }
+}
+
+@media screen and (min-width: 768px ){
+    event-title{
+        font-size: 24px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    event-title{
+        font-size: 32px;
+    }
+
 }
 /*
 @media screen and (min-width: 768px){
