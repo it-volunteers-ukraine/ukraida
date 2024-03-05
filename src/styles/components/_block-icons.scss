@@ -68,6 +68,13 @@
         @media (min-width:1200px) {
             margin-bottom: 54px;
         }
+        &>svg{
+            width: 85px;
+            @media (min-width:1200px) {
+                width: 123px;
+            }
+        }   
+    
     }
 
     &__num {
