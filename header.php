@@ -11,12 +11,12 @@
 
 <body>
     <header class="header">
-        <container class="wrap">
+        <div class="wrap container">
             <button class="modal js-open-menu">
                 <img src="wp-content/themes/ukraida/src/images/header/menu.svg" alt="menu" />
             </button>
+            <a href="#" class="logo">UKRAIDA<img class="nav__img" src="wp-content/themes/ukraida/src/images/header/logo.svg" alt="Logo" /></a>
             <nav class="nav">
-                <a href="#" class="logo">UKRAIDA<img class="nav__img" src="wp-content/themes/ukraida/src/images/header/logo.svg" alt="Logo" /></a>
                 <ul class="nav__site">
                     <li class="nav__item"><a class="link" href="#">Головна</a></li>
                     <li class="nav__item"><a class="link" href="#">Про нас</a></li>
@@ -38,7 +38,7 @@
 
             <!-- mobile menu -->
         </container>
-        <div class="menu__overlay">
+        <div class="menu__overlay container">
             <div class="js-menu-container">
                 <ul class="menu__modal">
                     <li>
