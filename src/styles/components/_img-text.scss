@@ -1,0 +1,104 @@
+@import './buttons';
+
+.img-text {
+    &__title {
+        text-align: center;
+
+        &--desc {
+            display: none;
+
+            @media (min-width:1200px) {
+                display: block;
+                margin-bottom: 64px;
+            }
+        }
+
+        &--mob {
+            display: block;
+            margin-bottom: 33px;
+
+            @media (min-width:1200px) {
+                display: none;
+            }
+        }
+    }
+
+    &__wrap {
+        display: flex;
+        flex-direction: column;
+
+        .img-text--reverse & {
+            flex-direction: column-reverse
+        }
+
+        @media (min-width:1200px) {
+
+            .img-text--reverse &,
+            & {
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                gap: 30px;
+            }
+
+
+        }
+    }
+
+    &__img {
+        width: 100%;
+        align-self: center;
+        margin-bottom: 16px;
+
+        & img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+
+        }
+
+        @media (min-width:768px) {
+            width: 70%;
+        }
+
+        @media (min-width:1200px) {
+            margin-bottom: 0;
+            width: 50%;
+        }
+    }
+
+    &__content {
+        flex-basis: 50%;
+        flex-grow: 1;
+        font-size: 14px;
+        line-height: 121%;
+
+        @media (min-width:1200px) {
+            font-size: 24px;
+        }
+        &>p{
+            margin-bottom: 15px
+        }
+
+    }
+
+    &__btn {
+       
+        @include btn-main ;
+
+        width: fit-content;
+        padding: 14px 8px;
+        height: auto;
+        min-height: unset;
+        display: flex;
+        margin: 24px auto 0;
+        border-radius: 0px;
+        font-size: 14px;
+        @media (min-width:1200px) {
+            margin: 72px auto 0;
+            padding: 16px;
+            font-size: 24px;
+        }
+    }
+
+}
