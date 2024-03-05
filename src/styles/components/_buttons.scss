@@ -124,7 +124,7 @@ You can use this class for button
   padding: 16px;
   border-radius: 15px;
   color: $white;
-  font-size: 24px;
+  font-size: 14px;
   font-weight: 500;
   background-color: $btn-main;
   border: none;
@@ -192,12 +192,14 @@ You can use this class for button
 
 @mixin btn-advanced-m {
   @include btn-advanced;
+  font-size: 20px;
   height: 61px;
   padding: 16px;
 }
 
 @mixin btn-advanced-l {
   @include btn-advanced;
+  font-size: 24px;
   height: 77px;
   padding: 24px 20px;
 }
