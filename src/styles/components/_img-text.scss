@@ -85,12 +85,19 @@
     &__btn {
        
         @include btn-main ;
+
         width: fit-content;
+        padding: 14px 8px;
+        height: auto;
+        min-height: unset;
         display: flex;
         margin: 24px auto 0;
         border-radius: 0px;
+        font-size: 14px;
         @media (min-width:1200px) {
             margin: 72px auto 0;
+            padding: 16px;
+            font-size: 24px;
         }
     }
 
