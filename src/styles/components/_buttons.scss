@@ -139,12 +139,11 @@ You can use this class for button
   }
 
   &:hover,
-  &:focus {
+  &:focus-visible,
+  &:active {
     box-shadow: $btn-hover-shadow;
   }
-  &:active {
-    background-color: $btn-pressed;
-  }
+
   &:disabled {
     background-color: $btn-disabled;
     cursor: initial;
@@ -156,13 +155,10 @@ You can use this class for button
   color: $black;
   background: $gradient;
 
-  &:hover,
-  &:focus {
+  &:hover, &:focus-visible, &:active {
     box-shadow: $btn-hover-shadow;
   }
-  &:active {
-    box-shadow: $btn-hover-shadow;
-  }
+
   &:disabled {
     background-color: $btn-inv-disabled;
     cursor: initial;
