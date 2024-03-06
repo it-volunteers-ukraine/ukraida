@@ -51,6 +51,9 @@ function wp_it_volunteers_scripts() {
 
   wp_enqueue_style( 'event-map-style', get_template_directory_uri() . '/assets/styles/parts-styles/event-map.css', array() );
   wp_enqueue_script( 'event-map-scripts', get_template_directory_uri() . '/assets/scripts/parts-scripts/event-map.js', array(), false, true );
+
+  wp_enqueue_style( 'modal-donate', get_template_directory_uri() . '/assets/styles/parts-styles/modal-donate.css', array() );
+  wp_enqueue_script( 'modal-donate-scripts', get_template_directory_uri() . '/assets/scripts/parts-scripts/modal-donate.js', array(), false, true );
   
 // posts-instagram
 

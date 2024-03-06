@@ -1,0 +1,21 @@
+@import "../variables";
+
+.modal {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: $black;
+    opacity: 0.65;
+}
+
+.inner__wrap {
+    background-color: $background;
+    width: 100%;
+    border-radius: 15px;
+    border: 2px solid $green;
+    padding-top: 64px;
+    padding-bottom: 27px;
+}
