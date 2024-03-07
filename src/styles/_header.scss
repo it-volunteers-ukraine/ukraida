@@ -1,28 +1,22 @@
 @import "../styles/global";
-
-.header {
-  padding-top: 16px;
-  padding-bottom: 16px;
-}
-
-:root {
-  --yellow: #fdef26;
-  --dark-blue: #1c59a6;
-  --black: #221f25;
-  --background: #fefefe;
-  --white: #fff;
-  --gray: #d9d9d9;
-  --blue: #85bbe4;
-  --green: #64c642;
-  --light-blue: #f0f4f7;
-
-  --font-family: "Inter", sans-serif;
-  --second-family: "Lato", sans-serif;
-  --third-family: "PT Sans", sans-serif;
-}
+@import "./components";
+@import "./variables";
 
 body {
   font-family: "Inter", sans-serif;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+
+  position: fixed;
+  width: 100%;
+  height: 85px;
+  z-index: 100;
+  background: $white;
+
+  background: $white;
 }
 
 .nav__site,
@@ -33,25 +27,36 @@ body {
 
 .wrap {
   display: flex;
-  justify-content: space-between;
-  /* align-items: center; */
-  gap: 18px;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  padding-top: 16px;
+  background: $white;
+}
+
+.btn__img {
+  margin-right: 81px;
 }
 
 .modal {
   display: block;
-  background: var(--white);
+  background: $white;
   border: 0;
   cursor: pointer;
   padding: 0;
 }
 
+.modal img {
+  width: 24px;
+}
+
 .modal.js-open-menu {
-  margin-right: 64px;
+  margin-right: auto;
 }
 
 .logo {
   font-size: 8px;
+  letter-spacing: 0.15em;
   text-transform: uppercase;
   display: flex;
   flex-direction: column;
@@ -61,7 +66,7 @@ body {
   height: 56px;
   width: 56px;
   padding-top: 10px;
-  color: var(--black);
+  color: $black;
 }
 
 .logo::before {
@@ -98,34 +103,23 @@ body {
 }
 
 .nav__img {
+  position: relative;
   width: 46px;
 }
 
 .menu {
-  gap: 0;
+  margin-left: auto;
 }
 
 .menu__btn {
-  font-weight: 500;
-  font-size: 14px;
-  padding: 14px 8px;
-  border-radius: 15px;
-  border: 0;
-  background: linear-gradient(
-    180deg,
-    rgba(28, 89, 166, 0.5) -9.375%,
-    rgba(253, 239, 38, 0.5) 110.938%
-  );
-  transition: 0.3s;
+  @include btn-advanced-s;
+
+  @media screen and (min-width: 768px) {
+    @include btn-advanced-m;
+  }
 }
 
-.menu__btn:hover,
-.menu__btn:focus {
-  box-shadow: 4px 4px 4px 0 rgba(0, 0, 0, 0.25);
-}
-
-
-.menu__overlay.backdrop{
+.menu__overlay.backdrop {
   height: 100%;
   z-index: 1;
   position: absolute;
@@ -166,47 +160,106 @@ body {
 }
 
 .link-modal {
-  color: var(--black);
+  color: $black;
 }
 
 .menu__item-modal {
   margin-top: 36px;
 }
 
+/* modal */
+.js-menu-container {
+  position: absolute;
+  border: 2px solid var(--green);
+  border-radius: 15px;
+  padding: 24px 16px;
+  width: 100%;
+  height: 499px;
+  top: 24px;
 
+  background: $white;
+  transform: translateY(-200%);
+  transition-duration: 0.4s;
+}
 
+.is__open {
+  transform: translateY(0);
+}
+
+.backdrop {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(46, 47, 66, 0.4);
+
+  opacity: 1;
+  transition-property: opacity;
+  transition-duration: 0.1s;
+}
+
+.nav__modal {
+  margin-top: 38px;
+  display: flex;
+  flex-direction: column;
+  gap: 38px;
+}
+
+@media screen and (min-width: 768px) {
+  .header {
+    height: 130px;
+  }
+
+  .modal img {
+    width: 34px;
+  }
+
+  .logo {
+    font-size: 12px;
+    padding-top: 14px;
+    letter-spacing: 0.2em;
+    height: 100px;
+    width: 100px;
+  }
+
+  .nav__img {
+    top: -4px;
+    width: 83px;
+  }
+
+  .btn__img {
+    margin-right: 114px;
+  }
+}
 
 @media screen and (min-width: 992px) {
+  .header {
+    height: 190px;
+  }
+
+  .wrap {
+    flex-wrap: wrap;
+  }
+
   .menu__overlay {
     display: none;
   }
 
-  /*
-  .wrap {
-    gap: 118px;
+  .logo {
+    margin-right: auto;
   }
-*/
 
   .modal {
     display: none;
   }
 
-  .logo {
-    font-size: 14px;
-    padding-top: 20px;
-    height: 114px;
-    width: 114px;
-  }
-
   .nav {
     align-items: center;
     display: flex;
-    /*
-    gap: 118px;*/
   }
 
   .nav__img {
-    position: relative;
     top: -4px;
     width: 94px;
   }
@@ -215,18 +268,17 @@ body {
     display: flex;
     justify-content: space-between;
     gap: 16px;
-    /* gap: 48px; */
     font-size: 24px;
     font-weight: 500;
   }
 
   .link {
     text-decoration: none;
-    color: var(--black);
+    color: $black;
   }
 
   .link:hover {
-    border-bottom: 2px solid var(--black);
+    border-bottom: 2px solid $black;
   }
 
   .menu {
@@ -235,9 +287,17 @@ body {
     gap: 32px;
   }
 
+  .menu__item-inst {
+    display: block;
+  }
+
+  .menu__item-inst {
+    width: 32px;
+  }
+
   .menu__item {
-    font-size: 24px;
-    color: var(--black);
+    font-size: 18px;
+    color: $black;
     font-weight: 500;
     text-transform: uppercase;
 
@@ -250,7 +310,7 @@ body {
   }
 
   .menu__itm-lang {
-    color: var(--gray);
+    color: $grey;
   }
 
   .menu__btn {
@@ -258,60 +318,46 @@ body {
     padding: 24px 20px;
     border-radius: 15px;
   }
-
-  /* modal */
-  .js-menu-container {
-    position: absolute;
-    border: 2px solid var(--green);
-    border-radius: 15px;
-    padding: 24px 16px;
-    width: 100%;
-    height: 499px;
-    top: 24px;
-
-    background: var(--white);
-    transform: translateY(-200%);
-    transition-duration: 0.4s;
-  }
-
-  .is__open {
-    transform: translateY(0);
-  }
-
-  .backdrop {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background: rgba(46, 47, 66, 0.4);
-
-    opacity: 1;
-    transition-property: opacity;
-    transition-duration: 0.1s;
-  }
-
-
-
-  /*
-  .nav__modal {
-    margin-top: 38px;
-    display: flex;
-    flex-direction: column;
-    gap: 38px;
-  }
-*/
-
 }
 
 @media screen and (min-width: 1200px) {
+  .header {
+    height: 205px;
+  }
+
   .nav__site {
     gap: 24px;
   }
+
+  .menu__item {
+    font-size: 24px;
+  }
+
+  .logo {
+    font-size: 14px;
+    letter-spacing: 0.32em;
+    padding-top: 20px;
+    height: 114px;
+    width: 114px;
+  }
 }
 
+@media screen and (min-width: 1440px) {
+  .header {
+    height: 140px;
+  }
+
+  .wrap {
+    gap: 36px;
+  }
+}
 
 @media screen and (min-width: 1600px) {
+  .wrap {
+    flex-wrap: nowrap;
+    gap: 118px;
+  }
+
   .nav__site {
     gap: 48px;
   }

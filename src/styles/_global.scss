@@ -1,6 +1,5 @@
 * {
   box-sizing: border-box;
-
 }
 
 body {
@@ -22,8 +21,7 @@ body {
 
   @media screen and (min-width: 768px) {
     padding-bottom: 112px;
-  } 
-  
+  }
 
   @media screen and (min-width: 1200px) {
     /* padding-top: 144px; */
@@ -36,17 +34,27 @@ body {
   } */
 }
 
-.section__next-event{
-  padding-top: 24px;
+.section__next-event {
+  padding-top: 110px;
   padding-bottom: 24px;
 
-  @media screen and (min-width: 1200px){
-    padding-top: 28px;
+  @media screen and (min-width: 768px) {
+    padding-top: 158px;
+  }
+
+  @media screen and (min-width: 992px) {
+    padding-top: 215px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 230px;
     padding-bottom: 64px;
   }
 
+  @media screen and (min-width: 1440px) {
+    padding-top: 165px;
+  }
 }
-
 
 .container {
   margin-left: auto;
@@ -59,7 +67,6 @@ body {
     width: 300px;
   }
 
-  
   @media screen and (min-width: 576px) {
     width: 576px;
   }
@@ -67,13 +74,13 @@ body {
   @media screen and (min-width: 768px) {
     width: 768px;
     padding-left: 32px;
-    padding-right: 32px; 
+    padding-right: 32px;
   }
-  
+
   @media screen and (min-width: 992px) {
     width: 992px;
-  } 
-  
+  }
+
   @media screen and (min-width: 1200px) {
     width: 1200px;
     /* padding-left: 12px;
@@ -86,7 +93,6 @@ body {
     padding-right: 144px; */
   }
 }
-
 
 .error-404-container {
   padding-top: 50px;
