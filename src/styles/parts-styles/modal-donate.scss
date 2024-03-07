@@ -1,4 +1,5 @@
 @import "../variables";
+@import '../components/buttons';
 
 .modal {
     width: 100%;
@@ -11,11 +12,94 @@
     opacity: 0.65;
 }
 
+// Inner__wrap
 .inner__wrap {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     background-color: $background;
     width: 100%;
     border-radius: 15px;
     border: 2px solid $green;
-    padding-top: 64px;
-    padding-bottom: 27px;
+    padding: 64px 17px 27px;
+}
+
+// Modal__btn-close & icon
+.modal__btn-close {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 6px;
+}
+
+.modal__icon-btn {
+    width: 32px;
+    height: 32px;
+}
+
+// Modal__text-wrap
+.modal__text-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: $black;
+    padding: 5px 0;
+    margin-bottom: 24px;
+}
+
+.modal__title {
+    margin-bottom: 12px;
+    font-size: 16px;
+    font-weight: 900;
+    line-height: normal;
+}
+
+.payment-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 4px;
+    margin-bottom: 12px;
+}
+
+.payment-text {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.payment-text--size {
+    font-size: 13px;
+}
+
+// Modal__subtitle
+.modal__subtitle {
+    font-size: 14px;
+    font-weight: 900;
+    line-height: 200%;
+    margin-bottom: 4px;
+}
+
+.modal__subtitle-text {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: normal;
+}
+
+// Btn-copy
+.modal__btn-copy {
+
+    @include btn-advanced-s
+}
+.modal__btn-copy--span {
+    text-transform: uppercase;
 }
