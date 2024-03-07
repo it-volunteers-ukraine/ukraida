@@ -176,7 +176,13 @@ $blur-block-length: 300px;
 
 
 /* ########  test v3 ################*/ 
-.card2{
+.card-example{
+
+  display: flex;
+  gap: 30px;
+  margin-top: 200px;
+}
+.card-d{
   font-size: 32px;
   position: relative;
   width: 528px;
@@ -187,6 +193,48 @@ $blur-block-length: 300px;
   align-items: center;
 
 }
+
+.card-p{
+  @extend .card-d;
+  width: 349px;
+  height: 337px;
+  font-size: 21px;
+}
+
+.card-m{
+  @extend .card-d;
+  width: 231px;
+  height: 210px;
+  font-size: 14px;
+}
+
+.card-p .card-text{
+  width: 252px;
+  margin-right: 20px;
+
+}
+
+.card-m .card-text{
+  width: 164px;
+  margin-right: 15px;
+
+}
+
+.card-p .card-number{
+  font-size: 48px;
+}
+.card-p .card-content{
+  font-size: 24px;
+}
+
+.card-m .card-number{
+  font-size: 32px;
+}
+.card-m .card-content{
+  font-size: 18px;
+}
+
+
 .blur-wrap2 {
   position: absolute;
   padding-left: 3.5em;
@@ -218,11 +266,4 @@ $blur2: 0px 0px 6em 2.5em;
 .blur-el-y2 {
   box-shadow: $blur2 #fff03c;
   z-index: -10;
-}
-
-.card3{
-  @extend .card2;
-  width: 349px;
-  height: 337px;
-  font-size: 21px;
 }

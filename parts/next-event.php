@@ -27,25 +27,38 @@
             <p class="card-content">Успішно проведених проєктів</P>
         </div>
     </div>
-    <div class='card2'>
-        <div class='blur-wrap2'>
-            <div class='blur-el-b2'></div>
-            <div class='blur-el-y2'></div>
+    <div class="card-example">
+        <div class='card-d'>
+            <div class='blur-wrap2'>
+                <div class='blur-el-b2'></div>
+                <div class='blur-el-y2'></div>
+            </div>
+            <div class="card-text">
+                <p class="card-number">+8</P>
+                <p class="card-content">Успішно проведених проєктів</P>
+            </div>
         </div>
-        <div class="card-text">
-            <p class="card-number">+8</P>
-            <p class="card-content">Успішно проведених проєктів</P>
+        <div class='card-p'>
+            <div class='blur-wrap2'>
+                <div class='blur-el-b2'></div>
+                <div class='blur-el-y2'></div>
+            </div>
+            <div class="card-text">
+                <p class="card-number">+8</P>
+                <p class="card-content">Успішно проведених проєктів</P>
+            </div>
         </div>
-    </div>
-    <div class='card3'>
-        <div class='blur-wrap2'>
-            <div class='blur-el-b2'></div>
-            <div class='blur-el-y2'></div>
+        <div class='card-m'>
+            <div class='blur-wrap2'>
+                <div class='blur-el-b2'></div>
+                <div class='blur-el-y2'></div>
+            </div>
+            <div class="card-text">
+                <p class="card-number">+8</P>
+                <p class="card-content">Успішно проведених проєктів</P>
+            </div>
         </div>
-        <div class="card-text">
-            <p class="card-number">+8</P>
-            <p class="card-content">Успішно проведених проєктів</P>
-        </div>
+
     </div>
     <!-- <div class='card'>
         <div class='blur-block'>
