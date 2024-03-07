@@ -1,18 +1,16 @@
-@import "../components.scss" ;
+@import "../components.scss";
 
-
-
-.event{
-    max-width: 1080px;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
+.event {
+  max-width: 1080px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.event-title{
-    font-family: $font-main;
-    font-size: 18px;
-    font-weight: 900;
+.event-title {
+  font-family: $font-main;
+  font-size: 18px;
+  font-weight: 900;
 }
 
 /*
@@ -22,31 +20,30 @@
     font-weight: 900;
 }*/
 
-.event-btn{
-    @include btn-advanced-s;
-    margin-top: 36px;
-    margin-left: auto;
-    margin-right: auto;
-    
-    @media screen and (min-width: 768px ){
-        @include btn-advanced-m;
-    }
-    @media screen and (min-width: 992px ){
-        @include btn-advanced-l;
-    }
+.event-btn {
+  @include btn-advanced-s;
+  margin-top: 36px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media screen and (min-width: 768px) {
+    @include btn-advanced-m;
+  }
+  @media screen and (min-width: 992px) {
+    @include btn-advanced-l;
+  }
 }
 
-@media screen and (min-width: 768px ){
-    .event-title{
-        font-size: 24px;
-    }
+@media screen and (min-width: 768px) {
+  .event-title {
+    font-size: 24px;
+  }
 }
 
 @media screen and (min-width: 992px) {
-    .event-title{
-        font-size: 32px;
-    }
-
+  .event-title {
+    font-size: 32px;
+  }
 }
 /*
 @media screen and (min-width: 768px){
@@ -58,3 +55,174 @@
 }
 */
 
+.card {
+  position: relative;
+  width: 528px;
+  height: 479px;
+  font-family: $font-advanced;
+  text-align: left;
+  display: flex;
+  align-items: center;
+}
+
+.card-text {
+  width: 312px;
+  z-index: 0;
+  margin-right: 34px;
+  margin-left: auto;
+}
+
+.card-number {
+  font-size: 64px;
+  font-weight: 900;
+  margin-bottom: 24px;
+}
+.card-content {
+  font-size: 32px;
+  font-style: italic;
+}
+
+.blur-wrap {
+  position: absolute;
+  /*padding-left: 35%;
+  padding-right: 35%;
+*/
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  outline: 1px solid red;
+}
+
+$blur: 0px 0px 200px 80px;
+$blur-length: 300px;
+
+.blur-el-b,
+.blur-el-y {
+  width: 100%;
+  width: $blur-length;
+
+  height: 0px;
+  rotate: -27deg;
+}
+
+.blur-el-b {
+  box-shadow: $blur #1c59a6;
+  margin-bottom: 160px;
+  z-index: -9;
+  transform: translateX(-30px);
+}
+.blur-el-y {
+  box-shadow: $blur #fff03c;
+  z-index: -10;
+}
+
+/*   #############   blur block ###############*/
+$blur-block: 0px 0px 200px 80px;
+$blur-block-length: 300px;
+
+.blur-block {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  outline: 1px solid red;
+}
+
+.blur-block-el {
+  &::before,
+  &::after {
+    content: "";
+    display: block;
+    width: $blur-block-length;
+    rotate: -27deg;
+    outline: 1px solid green;
+  }
+  &::before {
+    box-shadow: $blur-block #1c59a6;
+    margin-bottom: 160px;
+    z-index: -1;
+    transform: translateX(-30px);
+  }
+  &::after {
+    box-shadow: $blur-block #fff03c;
+    z-index: -1000;
+  }
+}
+
+.blur-block-el-b {
+  box-shadow: $blur-block #1c59a6;
+  margin-bottom: 160px;
+  z-index: -9;
+  transform: translateX(-30px);
+}
+.blur-block-el-y {
+  box-shadow: $blur-block #fff03c;
+  z-index: -10;
+}
+
+
+/* ########  test v3 ################*/ 
+.card2{
+  font-size: 32px;
+  position: relative;
+  width: 528px;
+  height: 479px;
+  font-family: $font-advanced;
+  text-align: left;
+  display: flex;
+  align-items: center;
+
+}
+.blur-wrap2 {
+  position: absolute;
+  padding-left: 3.5em;
+  padding-right: 3.5em;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  outline: 1px solid red;
+}
+
+$blur2: 0px 0px 6em 2.5em;
+
+.blur-el-b2,
+.blur-el-y2 {
+  width: 100%;
+  height: 0px;
+  rotate: -27deg;
+}
+
+.blur-el-b2 {
+  box-shadow: $blur2 #1c59a6;
+  margin-bottom: 5em;
+  z-index: -9;
+  transform: translateX(-30px);
+}
+.blur-el-y2 {
+  box-shadow: $blur2 #fff03c;
+  z-index: -10;
+}
+
+.card3{
+  @extend .card;
+  width: 349px;
+  height: 337px;
+  font-size: 24px;
+}
