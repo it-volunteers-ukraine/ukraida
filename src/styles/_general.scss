@@ -1,8 +1,18 @@
+* {
+  box-sizing: border-box;
+
+}
+
 
 body {
   margin: 0;
   font-style: normal;
+  font-family: $font-main;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 1.2;
 }
+
 
 img {
   display: block;
