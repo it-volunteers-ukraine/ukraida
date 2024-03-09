@@ -33,7 +33,7 @@
                 <li>
                     <a href="#" class="menu__item"><img class="menu__img" src="wp-content/themes/ukraida/src/images/header/language.svg" alt="language" /><span class="menu__itm-lang">DE</span>/UA</a>
                 </li>
-                <li><button class="menu__btn">Задонатити</button></li>
+                <li><button type="button" id="js-btn-donate" class="menu__btn">Задонатити</button></li>
             </ul>
 
             <!-- mobile menu -->
