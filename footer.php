@@ -2,7 +2,7 @@
             <div class="container">
                <div class="footer-main__wrap">
                     <div class="footer__inner-wrap">
-                        <a href="" class="logo__link">THIS NEED TO ADD LOGO</a>
+                        <a href="" class="logo__link"><svg class="footer__logo"><use xlink:href="wp-content/themes/ukraida/src/images/footer/sprites.svg#logo"></use></svg></a>
 
                     <ul class="privacy__list">
                         <li class="privacy__item">
