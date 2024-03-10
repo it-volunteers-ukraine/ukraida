@@ -31,18 +31,18 @@
                     <a href="#" class="menu__item-inst"><img src="<?php bloginfo('template_url'); ?>/assets/images/header/instagram.svg" alt="instagram" width="32" /></a>
                 </li>
                 <li>
-                    <a href="#" class="menu__item"><img class="menu__img" src="<?php bloginfo('template_url'); ?>/assets/images/header/language.svg" alt="language" /><span class="menu__itm-lang">DE</span>/UA</a>
+                    <a href="#" class="menu__item"><img class="menu__img" src="<?php bloginfo('template_url'); ?>/assets/images/header/language.svg" alt="language" />DE&nbsp;/&nbsp;<span class="menu__itm-lang">UA</span></a>
                 </li>
                 <li><button class="menu__btn">Задонатити</button></li>
             </ul>
 
             <!-- mobile menu -->
             </container>
-            <div class="menu__overlay container">
+            <div class="menu__overlay">
                 <div class="js-menu-container">
                     <ul class="menu__modal">
                         <li>
-                            <a href="#" class="menu__modal-item"><img class="menu__modalimg" src="<?php bloginfo('template_url'); ?>/assets/images/header/language.svg" alt="language" /><span class="menu__itm-lang">DE&nbsp;</span>/&nbsp;UA</a>
+                            <a href="#" class="menu__modal-item"><img class="menu__modal-img" src="<?php bloginfo('template_url'); ?>/assets/images/header/language.svg" alt="language" />DE&nbsp;/&nbsp;<span class="menu__itm-lang">UA</span></a>
                         </li>
                         <li>
                             <button class="modal js-close-menu">
@@ -50,26 +50,30 @@
                             </button>
                         </li>
                     </ul>
-                    <ul class="nav__modal">
-                        <li class="nav__item-modal">
-                            <a class="link-modal" href="#">Головна</a>
-                        </li>
-                        <li class="nav__item-modal">
-                            <a class="link-modal" href="#">Про нас</a>
-                        </li>
-                        <li class="nav__item-modal">
-                            <a class="link-modal" href="#">Новини</a>
-                        </li>
-                        <li class="nav__item-modal">
-                            <a class="link-modal" href="#">Пожертви</a>
-                        </li>
-                        <li class="nav__item-modal">
-                            <a class="link-modal" href="#">Долучитися</a>
-                        </li>
-                        <li class="nav__item-modal">
-                            <a class="link-modal" href="#">Проєкти</a>
-                        </li>
-                    </ul>
+                    <div class="nav__modal-wrap">
+                        <ul class="nav__modal">
+                            <li class="nav__item-modal">
+                                <a class="link-modal" href="#">Головна</a>
+                            </li>
+                            <li class="nav__item-modal">
+                                <a class="link-modal" href="#">Про нас</a>
+                            </li>
+                            <li class="nav__item-modal">
+                                <a class="link-modal" href="#">Новини</a>
+                            </li>
+                        </ul>
+                        <ul class="nav__modal">
+                            <li class="nav__item-modal">
+                                <a class="link-modal" href="#">Пожертви</a>
+                            </li>
+                            <li class="nav__item-modal">
+                                <a class="link-modal" href="#">Долучитися</a>
+                            </li>
+                            <li class="nav__item-modal">
+                                <a class="link-modal" href="#">Проєкти</a>
+                            </li>
+                        </ul>
+                    </div>
                     <div class="menu__item-modal">
                         <a href="#"><img class="nav__img-inst" src="<?php bloginfo('template_url'); ?>/assets/images/header/instagram.svg" alt="instagram" width="36" /></a>
                     </div>
