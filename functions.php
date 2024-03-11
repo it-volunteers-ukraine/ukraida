@@ -29,6 +29,7 @@ add_action('wp_enqueue_scripts', 'add_google_fonts');
 /**
  * Enqueue scripts and styles.
  */
+
 add_action('wp_enqueue_scripts', 'wp_it_volunteers_scripts');
 
 function wp_it_volunteers_scripts()
@@ -70,6 +71,7 @@ function wp_it_volunteers_scripts()
 
     // wp_enqueue_style( 'posts-instagram-style', get_template_directory_uri() . '/assets/styles/vendors/swiper.css', array('main') );
     // wp_enqueue_script( 'posts-instagram-scripts', get_template_directory_uri() . '/assets/scripts/vendors/swiper-bundle.js', array(), false, true );
+
 
 
   }

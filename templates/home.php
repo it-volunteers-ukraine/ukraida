@@ -35,6 +35,11 @@ get_header();
         </div>
     </section>
 
+
+    <div id="modal-donate" >
+        <?php get_template_part('parts/modal-donate', null, []); ?>
+    </div>
+
 </main>
 
 <?php get_footer(); ?>
