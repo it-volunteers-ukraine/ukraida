@@ -60,6 +60,7 @@
 
         @media (min-width:768px) {
             width: 70%;
+            margin-bottom: 24px;
         }
 
         @media (min-width:1200px) {
@@ -86,7 +87,7 @@
 
     &__btn {
        
-        @include btn-main ;
+        @include btn-advanced-m;
 
         width: fit-content;
         padding: 14px 8px;
@@ -94,7 +95,10 @@
         min-height: unset;
         display: flex;
         margin: 24px auto 0;
-        font-size: 14px;
+        @media (min-width:768px) {
+            padding: 16px;
+            font-size: 20px;
+        }
         @media (min-width:1200px) {
             margin: 72px auto 0;
             padding: 24px 20px;
