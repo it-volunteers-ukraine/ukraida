@@ -1,8 +1,11 @@
 /* 
 You can use this class for button
- btn-ymain           - main button
- btn-advanced        - advanced button
- btn-advanced-big    - advanced big button
+ btn-main-s           - main button
+ btn-main-m           - main button
+ btn-main-l           - main button
+ btn-advanced-s       - advanced button
+ btn-advanced-m       - advanced button
+ btn-advanced-l       - advanced button
  btn-icon             - button for icons
  btn-icon-black       - button for black icons
  btn-socseti-yellow   - button yellow for socseti
@@ -115,7 +118,7 @@ You can use this class for button
  {
  */
 @mixin btn-main {
-  font-family: inter, sans-serif;
+  font-family: $font-advanced;
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -136,12 +139,11 @@ You can use this class for button
   }
 
   &:hover,
-  &:focus {
+  &:focus-visible,
+  &:active {
     box-shadow: $btn-hover-shadow;
   }
-  &:active {
-    background-color: $btn-pressed;
-  }
+
   &:disabled {
     background-color: $btn-disabled;
     cursor: initial;
@@ -153,13 +155,10 @@ You can use this class for button
   color: $black;
   background: $gradient;
 
-  &:hover,
-  &:focus {
+  &:hover, &:focus-visible, &:active {
     box-shadow: $btn-hover-shadow;
   }
-  &:active {
-    box-shadow: $btn-hover-shadow;
-  }
+
   &:disabled {
     background-color: $btn-inv-disabled;
     cursor: initial;

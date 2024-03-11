@@ -14,12 +14,16 @@ svg {
 }
 
 .logo__link {
-    outline: 1px solid blue;
     width: 106px;
     height: 106px;
     margin: 0 auto;
     display: block;
     margin-bottom: 32px;
+}
+
+.footer__logo {
+    width: 100%;
+    height: 100%;
 }
 
 // Privacy__list
@@ -118,7 +122,44 @@ svg {
     }
 }
 
+@media screen and (min-width: 768px) {
+    .footer {
+        padding: 24px 0;
+    }
+
+    .footer__inner-wrap {
+        margin-bottom: 47px;
+    }
+
+    // Privacy__list
+    .privacy__list {
+        align-items: start;
+        row-gap: 36px;
+    }
+
+    .privacy__item-order {
+        order: -1;
+    }
+
+    .privacy__link {
+        font-size: 20px;
+    }
+
+    // Social-media
+    .social-media__list {
+        row-gap: 36px;
+    }
+
+    .social-media__link {
+        font-size: 20px;
+    }
+}
+
 @media screen and (min-width: 990px) {
+    .footer {
+        padding: 32px 0;
+    }
+
     .footer__inner-wrap {
         margin-bottom: 44px;
     }

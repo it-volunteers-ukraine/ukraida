@@ -15,6 +15,14 @@ if ( ! function_exists('wp_it_volunteers_setup')) {
 }
 
 
+/** add fonts */
+function add_google_fonts() {
+  // wp_enqueue_style( 'google_web_fonts-inter', 'https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap' , false);
+  // wp_enqueue_style( 'google_web_fonts-open-sans', 'https://fonts.googleapis.com/css2?family=Open+Sans:ital,wdth,wght@0,75..100,300..800;1,75..100,300..800&display=swap' , false);
+  wp_enqueue_style( 'google_web_fonts', 'https://fonts.googleapis.com/css2?family=Inter:slnt,wght@-10..0,100..900&family=Open+Sans:ital,wdth,wght@0,75..100,300..800;1,75..100,300..800&display=swap' , false);
+}
+add_action( 'wp_enqueue_scripts', 'add_google_fonts' );
+
 /**
  * Enqueue scripts and styles.
  */
@@ -51,6 +59,9 @@ function wp_it_volunteers_scripts() {
 
   wp_enqueue_style( 'event-map-style', get_template_directory_uri() . '/assets/styles/parts-styles/event-map.css', array() );
   wp_enqueue_script( 'event-map-scripts', get_template_directory_uri() . '/assets/scripts/parts-scripts/event-map.js', array(), false, true );
+
+  wp_enqueue_style( 'modal-donate', get_template_directory_uri() . '/assets/styles/parts-styles/modal-donate.css', array() );
+  wp_enqueue_script( 'modal-donate-scripts', get_template_directory_uri() . '/assets/scripts/parts-scripts/modal-donate.js', array(), false, true );
   
 // posts-instagram
 
@@ -74,12 +85,7 @@ function wp_it_volunteers_scripts() {
   }
 
 
-/** add fonts */
-function add_google_fonts() {
-  wp_enqueue_style( 'google_web_fonts_lato', 'https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400&display=swap' );
-  wp_enqueue_style( 'google_web_fonts_inter', 'https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap' );
-}
-add_action( 'wp_enqueue_scripts', 'add_google_fonts' );
+
 
 /** add swiper */
 // function add_swiper() {
