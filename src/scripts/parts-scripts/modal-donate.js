@@ -7,7 +7,9 @@ function openModal() {
     modalContainerRef.classList.add('is-open');
     modalContainerRef.addEventListener('click', closeModal); 
     document.addEventListener('keydown', closeModal);
-
+    document.body.classList.add('modal-open');
+    window.scroll(0, 0);
+    
     btnDonateCopyRef.addEventListener('click', copyIban);
 }
 
@@ -19,6 +21,7 @@ function closeModal(evt) {
 
         btnDonateCopyRef.removeEventListener('click', copyIban);
     }
+    document.body.classList.remove('modal-open');
 }
 
 function copyIban() {
