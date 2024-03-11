@@ -1,6 +1,11 @@
 @import "../variables";
 @import '../components/buttons';
 
+// block scroll
+.modal-open {
+    overflow: hidden;
+}
+
 .modal {
     position: absolute;
     top: 0;
@@ -18,9 +23,9 @@
 }
 
 .modal.is-open {
-    z-index: 9999;
+    z-index: 999;
     transform: translateX(0%);
-    opacity: 0.95;
+    opacity: 1;
 }
 // Inner__wrap
 .inner__wrap {
