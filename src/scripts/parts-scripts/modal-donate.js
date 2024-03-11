@@ -35,6 +35,26 @@ function copyIban() {
     el.select();
     document.execCommand('copy');
     document.body.removeChild(el);
+
+    // Notification
+    btnDonateCopyRef.style.position = 'relative';
+
+    const notify = document.createElement('div');
+    // notify.style.backgroundColor = 'green';
+    notify.style.backgroundImage = 'url(wp-content/themes/ukraida/src/images/icons/success.svg)';
+    notify.style.width = '24px';
+    notify.style.height = '24px';
+    notify.style.borderRadius = '50%';
+    notify.style.position = 'absolute';
+    notify.style.top = '-50%';
+    notify.style.right = '-15%';
+
+    btnDonateCopyRef.appendChild(notify);
+    
+    setTimeout(() => {
+        btnDonateCopyRef.removeChild(notify);
+        btnDonateCopyRef.style.position = 'static';
+     }, 2000);
 }
 
 btnDonateRef.addEventListener('click', openModal);
