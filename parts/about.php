@@ -84,12 +84,16 @@
             </div>
         </section>
 
-        <section class="block-icons section">
+        <section class="block-icons section block-icons--num">
     
-                <h2 class="title__content block-icons__title ">Наші досягнення</h2>
+                <h2 class="title__content block-icons__title block-icons__title--num ">Наші досягнення</h2>
                 <div class="block-icons__wrap">
                     <div class="block-icons__item">
-                        <img class="block-icons__item-fon" src="./source/src/images/home/block-icon-fon.png" alt="">
+
+                        <div class="block-icons__item-fon">
+                            <div class="block-icons__item-fon-bl"></div>
+                            <div class="block-icons__item-fon-ye"></div>
+                        </div>
                         <div class="block-icons__num">
                             + 8
 
@@ -100,7 +104,10 @@
                         </div>
                     </div>
                     <div class="block-icons__item">
-                        <img class="block-icons__item-fon" src="./source/src/images/home/block-icon-fon.png" alt="">
+                    <div class="block-icons__item-fon">
+                            <div class="block-icons__item-fon-bl"></div>
+                            <div class="block-icons__item-fon-ye"></div>
+                        </div>
                         <div class="block-icons__num">
                    
                             + 10
@@ -112,7 +119,10 @@
                         </div>
                     </div>
                     <div class="block-icons__item">
-                        <img class="block-icons__item-fon" src="./source/src/images/home/block-icon-fon.png" alt="">
+                    <div class="block-icons__item-fon">
+                            <div class="block-icons__item-fon-bl"></div>
+                            <div class="block-icons__item-fon-ye"></div>
+                        </div>
                         <div class="block-icons__num">
                             + 25 000$
 
