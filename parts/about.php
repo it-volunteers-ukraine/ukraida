@@ -2,7 +2,7 @@
 
 
         <section class="img-text section">
-            <div class="container">
+     
                 <h2 class="title__content img-text__title img-text__title--mob">Про нас</h2>
                 <div class="img-text__wrap">
                     <div class="img-text__img">
@@ -26,10 +26,10 @@
 
                     </div>
                 </div>
-            </div>
+ 
         </section>
         <section class="block-icons section">
-            <div class="container block-icons__container">
+            <div class="block-icons__container">
                 <h2 class="title__content block-icons__title ">Наші цілі і Бачення</h2>
                 <div class="block-icons__wrap">
                     <div class="block-icons__item">
@@ -85,7 +85,7 @@
         </section>
 
         <section class="block-icons section">
-            <div class="container">
+    
                 <h2 class="title__content block-icons__title ">Наші досягнення</h2>
                 <div class="block-icons__wrap">
                     <div class="block-icons__item">
@@ -124,11 +124,11 @@
                     </div>
 
                 </div>
-            </div>
+       
         </section>
 
         <section class="img-text img-text--reverse section">
-            <div class="container">
+        
                 <h2 class="title__content img-text__title img-text__title--mob">Чому ми ?</h2>
                 <div class="img-text__wrap">
 
@@ -164,5 +164,5 @@
 
                     </div>
                 </div>
-            </div>
+   
         </section>
