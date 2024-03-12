@@ -80,10 +80,6 @@ function wp_it_volunteers_scripts()
   }
 
 
-  if ( is_page_template('templates/dev_page.php') ){
-    wp_enqueue_style('dev_page-style', get_template_directory_uri() . '/assets/styles/template-styles/dev_page.css', array());
-  }
-
 
   // if (is_singular() && is_page_template('parts/gallery.php')) {
   //   wp_enqueue_style( 'gallery-parts-style', get_template_directory_uri() . '/assets/styles/parts-styles/gallery.css', array() );
