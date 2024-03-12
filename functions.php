@@ -75,7 +75,7 @@ function wp_it_volunteers_scripts()
 
   }
 
-  if ( is_page_template('templates/home.php') ){
+  if ( is_page_template('404.php') ){
     wp_enqueue_style( 'error-style', get_stylesheet_directory_uri() . '/assets/styles/template-styles/404.css' , array('main'));
   }
 

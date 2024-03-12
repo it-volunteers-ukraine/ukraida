@@ -1,4 +1,7 @@
-/* @import "../global";
+@import "../components.scss" ;
+
+/* 
+@import "../global";
 @import "../variables"; 
 
 
@@ -34,7 +37,7 @@
     
     }
     & .button-secondary{
-        @include btn-main;
+        @include btn-main-l;
         margin-top: 56px;
     }
 
