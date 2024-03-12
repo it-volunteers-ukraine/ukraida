@@ -22,7 +22,7 @@
                             mattis.
                             Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
                         </p>
-                        <a href="#" class="button-secondary img-text__btn">Детальна інформація</a>
+                        <a href="/devpage" class="button-secondary img-text__btn">Детальна інформація</a>
 
                     </div>
                 </div>
@@ -162,7 +162,7 @@
                             ac aliquet odio mattis.
                             Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
                         </p>
-                        <a href="#" class="button-secondary img-text__btn">Детальна інформація</a>
+                        <a href="/devpage" class="button-secondary img-text__btn">Детальна інформація</a>
 
                     </div>
                     <div class="img-text__img">

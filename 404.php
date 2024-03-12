@@ -9,7 +9,7 @@ get_header();
         <div class="container">
         <h1 class="error__title">404</h1>
         <p>Cторінка видалина або не активна</p>
-        <a href="#" class="button-secondary">Повернутись на головну</a>
+        <a href="/" class="button-secondary">Повернутись на головну</a>
         </div>
         
         

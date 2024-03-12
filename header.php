@@ -15,15 +15,15 @@
             <button class="modal js-open-menu">
                 <img class="btn__img" src="<?php bloginfo('template_url'); ?>/assets/images/header/menu.svg" alt="menu" />
             </button>
-            <a href="#" class="logo">UKRAIDA<img class="nav__img" src="<?php bloginfo('template_url'); ?>/assets/images/header/logo.svg" alt="Logo" /></a>
+            <a href="/" class="logo">UKRAIDA<img class="nav__img" src="<?php bloginfo('template_url'); ?>/assets/images/header/logo.svg" alt="Logo" /></a>
             <nav class="nav">
                 <ul class="nav__site">
-                    <li class="nav__item"><a class="link" href="#">Головна</a></li>
-                    <li class="nav__item"><a class="link" href="#">Про нас</a></li>
-                    <li class="nav__item"><a class="link" href="#">Новини</a></li>
-                    <li class="nav__item"><a class="link" href="#">Пожертви</a></li>
-                    <li class="nav__item"><a class="link" href="#">Долучитися</a></li>
-                    <li class="nav__item"><a class="link" href="#">Проєкти</a></li>
+                    <li class="nav__item"><a class="link" href="/">Головна</a></li>
+                    <li class="nav__item"><a class="link" href="/devpage">Про нас</a></li>
+                    <li class="nav__item"><a class="link" href="/devpage">Новини</a></li>
+                    <li class="nav__item"><a class="link" href="/devpage">Пожертви</a></li>
+                    <li class="nav__item"><a class="link" href="/devpage">Долучитися</a></li>
+                    <li class="nav__item"><a class="link" href="/devpage">Проєкти</a></li>
                 </ul>
             </nav>
             <ul class="menu">
@@ -42,7 +42,7 @@
                 <div class="js-menu-container">
                     <ul class="menu__modal">
                         <li>
-                            <a href="#" class="menu__modal-item"><img class="menu__modal-img" src="<?php bloginfo('template_url'); ?>/assets/images/header/language.svg" alt="language" />DE&nbsp;/&nbsp;<span class="menu__itm-lang">UA</span></a>
+                            <a href="/" class="menu__modal-item"><img class="menu__modal-img" src="<?php bloginfo('template_url'); ?>/assets/images/header/language.svg" alt="language" />DE&nbsp;/&nbsp;<span class="menu__itm-lang">UA</span></a>
                         </li>
                         <li>
                             <button class="modal js-close-menu">
@@ -53,24 +53,24 @@
                     <div class="nav__modal-wrap">
                         <ul class="nav__modal">
                             <li class="nav__item-modal">
-                                <a class="link-modal" href="#">Головна</a>
+                                <a class="link-modal" href="/">Головна</a>
                             </li>
                             <li class="nav__item-modal">
-                                <a class="link-modal" href="#">Про нас</a>
+                                <a class="link-modal" href="/devpage">Про нас</a>
                             </li>
                             <li class="nav__item-modal">
-                                <a class="link-modal" href="#">Новини</a>
+                                <a class="link-modal" href="/devpage">Новини</a>
                             </li>
                         </ul>
                         <ul class="nav__modal">
                             <li class="nav__item-modal">
-                                <a class="link-modal" href="#">Пожертви</a>
+                                <a class="link-modal" href="/devpage">Пожертви</a>
                             </li>
                             <li class="nav__item-modal">
-                                <a class="link-modal" href="#">Долучитися</a>
+                                <a class="link-modal" href="/devpage">Долучитися</a>
                             </li>
                             <li class="nav__item-modal">
-                                <a class="link-modal" href="#">Проєкти</a>
+                                <a class="link-modal" href="/devpage">Проєкти</a>
                             </li>
                         </ul>
                     </div>
