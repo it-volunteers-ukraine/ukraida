@@ -79,7 +79,7 @@ function wp_it_volunteers_scripts()
     wp_enqueue_style( 'error-style', get_stylesheet_directory_uri() . '/assets/styles/template-styles/404.css' , array('main'));
   }
 
-  
+
 
   // if (is_singular() && is_page_template('parts/gallery.php')) {
   //   wp_enqueue_style( 'gallery-parts-style', get_template_directory_uri() . '/assets/styles/parts-styles/gallery.css', array() );
