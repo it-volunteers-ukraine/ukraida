@@ -2,7 +2,7 @@
 
 
         <section class="img-text section">
-            <div class="container">
+     
                 <h2 class="title__content img-text__title img-text__title--mob">Про нас</h2>
                 <div class="img-text__wrap">
                     <div class="img-text__img">
@@ -26,10 +26,10 @@
 
                     </div>
                 </div>
-            </div>
+ 
         </section>
         <section class="block-icons section">
-            <div class="container block-icons__container">
+            <div class="block-icons__container">
                 <h2 class="title__content block-icons__title ">Наші цілі і Бачення</h2>
                 <div class="block-icons__wrap">
                     <div class="block-icons__item">
@@ -84,12 +84,16 @@
             </div>
         </section>
 
-        <section class="block-icons section">
-            <div class="container">
-                <h2 class="title__content block-icons__title ">Наші досягнення</h2>
+        <section class="block-icons section block-icons--num">
+    
+                <h2 class="title__content block-icons__title block-icons__title--num ">Наші досягнення</h2>
                 <div class="block-icons__wrap">
                     <div class="block-icons__item">
-                        <img class="block-icons__item-fon" src="./source/src/images/home/block-icon-fon.png" alt="">
+
+                        <div class="block-icons__item-fon">
+                            <div class="block-icons__item-fon-bl"></div>
+                            <div class="block-icons__item-fon-ye"></div>
+                        </div>
                         <div class="block-icons__num">
                             + 8
 
@@ -100,7 +104,10 @@
                         </div>
                     </div>
                     <div class="block-icons__item">
-                        <img class="block-icons__item-fon" src="./source/src/images/home/block-icon-fon.png" alt="">
+                    <div class="block-icons__item-fon">
+                            <div class="block-icons__item-fon-bl"></div>
+                            <div class="block-icons__item-fon-ye"></div>
+                        </div>
                         <div class="block-icons__num">
                    
                             + 10
@@ -112,7 +119,10 @@
                         </div>
                     </div>
                     <div class="block-icons__item">
-                        <img class="block-icons__item-fon" src="./source/src/images/home/block-icon-fon.png" alt="">
+                    <div class="block-icons__item-fon">
+                            <div class="block-icons__item-fon-bl"></div>
+                            <div class="block-icons__item-fon-ye"></div>
+                        </div>
                         <div class="block-icons__num">
                             + 25 000$
 
@@ -124,11 +134,11 @@
                     </div>
 
                 </div>
-            </div>
+       
         </section>
 
         <section class="img-text img-text--reverse section">
-            <div class="container">
+        
                 <h2 class="title__content img-text__title img-text__title--mob">Чому ми ?</h2>
                 <div class="img-text__wrap">
 
@@ -164,5 +174,5 @@
 
                     </div>
                 </div>
-            </div>
+   
         </section>
