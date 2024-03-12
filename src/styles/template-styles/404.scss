@@ -1,0 +1,44 @@
+@import "../components.scss" ;
+
+/* 
+@import "../global";
+@import "../variables"; 
+
+
+
+*/
+.error{
+
+    padding-top: 309px;
+    text-align: center;
+    color:#85BBE4;
+   
+
+    &__title{
+        margin-bottom: 10px;
+        font-size: 80px;
+        font-weight: 700;
+        line-height: 120%;
+        @media (min-width:767px) {
+            font-size: 98px;
+        }
+
+        @media (min-width:1200px) {
+            font-size: 150px;
+        }
+
+    }
+    &__title+p{
+        font-size: 18px;
+        font-weight: 400;
+        @media (min-width:767px) {
+            font-size: 32px;
+        }
+    
+    }
+    & .button-secondary{
+        @include btn-main-l;
+        margin-top: 56px;
+    }
+
+}
