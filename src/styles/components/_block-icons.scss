@@ -3,21 +3,31 @@
 .block-icons {
     &__container {
         max-width: 1428px;
+        margin: 0 auto;
     }
+
+
 
     &__title {
         text-align: center;
         margin-bottom: 32px;
 
+        @media (min-width:768px) {
+            margin-bottom: 56px;
+        }
+
         @media (min-width:1200px) {
             margin-bottom: 64px;
         }
+
+  
     }
 
     &__wrap {
         display: flex;
-        flex-direction: column;
+        flex-wrap: wrap;
         align-items: center;
+        justify-content: space-around;
         gap: 24px;
 
         @media (min-width:1200px) {
@@ -30,22 +40,45 @@
     &__item {
         position: relative;
         width: 100%;
+        max-width: 231px;
         flex-grow: 1;
         font-size: 14px;
 
         &:has(.block-icons__num) {
-            width: 80%;
+            display: flex;
+            flex-direction: column;
+            justify-content:center;
+            min-height: 210px;
             font-size: 18px;
 
             .blocl-icons__text {
                 width: auto;
                 margin: 0;
             }
-            @media (min-width:1200px) {
-                font-size: 32px;
-                max-width: 352px;
-    
+
+            @media (min-width:768px) {
+                min-height: 337px;
+                max-width:231px;
+                font-size: 24px;
+
             }
+
+            @media (min-width:1200px) {
+              
+                min-height: 449px;
+                max-width: 352px;
+                font-size: 32px;
+
+            }
+
+
+        }
+
+        @media (min-width:768px) {
+            font-size: 20px;
+    
+            max-width: 320px;
+
         }
 
         @media (min-width:1200px) {
@@ -58,8 +91,50 @@
 
     &__item-fon {
         position: absolute;
-        top: 50%;
-        left: 50%;
+        padding: 2em 2em 2em 0;
+        width: 80%;
+        height: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        @media (min-width:768px) {
+            width: 90%;
+            height: 90%;
+
+        }
+
+
+
+        &-bl,
+        &-ye {
+            width: 100%;
+            height: 0px;
+
+        }
+
+        &-bl {
+
+            box-shadow: 0px 0px 4.5em 1.6em #1c59a6;
+            transform: rotate(-30deg) translateX(-3px) translateY(-44px);
+            z-index: -9;
+            @media (min-width:768px) {
+                transform: rotate(-30deg) translateX(-30px) translateY(-44px);
+    
+            }
+
+        }
+
+        &-ye {
+            box-shadow: 0px 0px 4.5em 1.6em #fff03c;
+            z-index: -10;
+            transform: rotate(-30deg) translateX(-3px) translateY(40px);
+            @media (min-width:768px) {
+                transform: rotate(-30deg) translateX(-30px) translateY(40px);
+    
+            }
+        }
+
     }
 
     &__icon {
@@ -68,17 +143,20 @@
         @media (min-width:1200px) {
             margin-bottom: 54px;
         }
-        &>svg{
+
+        &>svg {
             width: 85px;
+
             @media (min-width:1200px) {
                 width: 123px;
             }
-        }   
-    
+        }
+
     }
 
     &__num {
         margin-bottom: 16px;
+        padding-left: 0.5rem;
         color: $black;
         text-transform: uppercase;
         font-weight: 900;
@@ -91,10 +169,10 @@
     }
 
     &__text {
-
-        margin: 0 auto;
+        padding-left: 1rem;
         line-height: 120%;
         font-style: italic;
+
 
     }
 
