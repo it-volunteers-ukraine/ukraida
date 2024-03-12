@@ -1,0 +1,139 @@
+@import "../variables";
+
+.dev__page {
+  background: url("../../images/dev_page/bg_dev_page.svg");
+  background-repeat: no-repeat;
+  max-width: 100%;
+  height: 394px;
+  position: relative;
+}
+
+.dev__page-img1 {
+  position: absolute;
+  z-index: -1;
+  top: 5%;
+  left: 160px;
+  width: 73px;
+}
+
+.dev__page-img2 {
+  position: absolute;
+  z-index: -1;
+  top: 25%;
+  left: 205px;
+  width: 75px;
+}
+
+.dev__page-img3 {
+  position: absolute;
+  z-index: -1;
+  top: 56%;
+  left: 210px;
+  width: 78px;
+}
+
+.text__wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  text-align: center;
+  width: 190px;
+  height: 394px;
+  color: $yellow;
+}
+
+.title__text {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.text__item {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+}
+
+@media screen and (min-width: 768px) {
+  .dev__page {
+    background: url("../../images/dev_page/bg_dev_page2.svg");
+    background-repeat: no-repeat;
+    height: 619px;
+  }
+
+  .dev__page-img1 {
+    position: absolute;
+    z-index: -1;
+    top: 5%;
+    left: 360px;
+    width: 105px;
+  }
+
+  .dev__page-img2 {
+    top: 25%;
+    left: 505px;
+    width: 141px;
+  }
+
+  .dev__page-img3 {
+    top: 56%;
+    left: 550px;
+    width: 127px;
+  }
+
+  .text__wrap {
+    padding-left: 22px;
+    width: 388px;
+    height: 619px;
+  }
+
+  .title__text {
+    font-size: 32px;
+  }
+
+  .text__item {
+    font-size: 20px;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .dev__page {
+    background: url("../../images/dev_page/bg_dev_page3.svg");
+    background-repeat: no-repeat;
+    height: 531px;
+  }
+
+  .dev__page-img1 {
+    position: absolute;
+    z-index: -1;
+    top: 4%;
+    left: 783px;
+    width: 156px;
+  }
+
+  .dev__page-img2 {
+    top: 25%;
+    left: 993px;
+    width: 250px;
+  }
+
+  .dev__page-img3 {
+    top: 56%;
+    left: 1450px;
+    width: 180px;
+  }
+
+  .text__wrap {
+    padding-left: 64px;
+    width: 475px;
+    height: 531px;
+  }
+
+  .title__text {
+    font-size: 36px;
+  }
+
+  .text__item {
+    font-size: 24px;
+  }
+}
