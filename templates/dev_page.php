@@ -1,9 +1,9 @@
-<?php get_header(); 
+<?php get_header();
 /*
 Template Name: devpage
 */
 ?>
-<section class="">
+<section class="section__next-event container">
     <div class="dev__page">
         <img class="dev__page-img1" src="<?php bloginfo('template_url'); ?>/assets/images/dev_page/dev_page-img1.png" alt="pigeon" />
         <img class="dev__page-img2" src="<?php bloginfo('template_url'); ?>/assets/images/dev_page/dev_page-img2.png" alt="pigeon" />
