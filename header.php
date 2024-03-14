@@ -12,7 +12,7 @@
 <body>
     <header class="header">
         <div class="wrap container">
-            <button class="modal js-open-menu">
+            <button class="modal__btn js-open-menu">
                 <img class="btn__img" src="<?php bloginfo('template_url'); ?>/assets/images/header/menu.svg" alt="menu" />
             </button>
             <a href="/" class="logo">UKRAIDA<img class="nav__img" src="<?php bloginfo('template_url'); ?>/assets/images/header/logo.svg" alt="Logo" /></a>
@@ -45,7 +45,7 @@
                             <a href="/" class="menu__modal-item"><img class="menu__modal-img" src="<?php bloginfo('template_url'); ?>/assets/images/header/language.svg" alt="language" />DE&nbsp;/&nbsp;<span class="menu__itm-lang">UA</span></a>
                         </li>
                         <li>
-                            <button class="modal js-close-menu">
+                            <button class="modal__btn js-close-menu">
                                 <img src="<?php bloginfo('template_url'); ?>/assets/images/header/close.svg" alt="close" width="17" />
                             </button>
                         </li>

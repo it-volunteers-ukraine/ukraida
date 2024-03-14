@@ -30,13 +30,14 @@ body {
   position: fixed;
   padding-top: 16px;
   background: $white;
+  width: 100%;
 }
 
 .btn__img {
   margin-right: 81px;
 }
 
-.modal {
+.modal__btn {
   display: block;
   background: $white;
   border: 0;
@@ -44,11 +45,11 @@ body {
   padding: 0;
 }
 
-.modal.js-open-menu {
+.modal__btn.js-open-menu {
   margin-right: auto;
 }
 
-.logo {
+/* .logo {
   font-size: 8px;
   letter-spacing: 0.15em;
   text-transform: uppercase;
@@ -94,12 +95,16 @@ body {
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
+} */
+
+.logo {
+  @include logo;
 }
 
-.nav__img {
+/*.nav__img {
   position: relative;
   width: 46px;
-}
+}*/
 
 .menu {
   margin-left: auto;
@@ -112,19 +117,6 @@ body {
     @include btn-advanced-m;
   }
 }
-
-/* .menu__overlay.backdrop {
-  height: 100%;
-  z-index: 1;
-  position: absolute;
-  height: 500px;
-  width: 100%;
-  background-color: $background;
-} */
-
-/* .menu__overlay:not(.backdrop) {
-  display: none;
-} */
 
 .menu__itm-lang {
   color: $dark-blue;
@@ -154,7 +146,7 @@ body {
   height: 100%;
   top: 0;
   left: 0;
-  background: rgba(46, 47, 66, 0.4);
+  background: rgba(20, 20, 20, 0.9);
 
   opacity: 1;
   transition-property: opacity;
@@ -211,18 +203,18 @@ body {
     height: 130px;
   }
 
-  .logo {
+  /*.logo {
     font-size: 12px;
     padding-top: 14px;
     letter-spacing: 0.2em;
     height: 100px;
     width: 100px;
-  }
+  }*/
 
-  .nav__img {
+  /*.nav__img {
     top: -4px;
     width: 83px;
-  }
+  }*/
 
   .btn__img {
     width: 34px;
@@ -257,11 +249,11 @@ body {
     display: none;
   }
 
-  .logo {
+  /*.logo {
     margin-right: auto;
-  }
+  }*/
 
-  .modal {
+  .modal__btn {
     display: none;
   }
 
@@ -270,10 +262,10 @@ body {
     display: flex;
   }
 
-  .nav__img {
+  /*.nav__img {
     top: -4px;
     width: 94px;
-  }
+  }*/
 
   .nav__site {
     display: flex;
@@ -342,13 +334,13 @@ body {
     font-size: 24px;
   }
 
-  .logo {
+  /*.logo {
     font-size: 14px;
     letter-spacing: 0.32em;
     padding-top: 20px;
     height: 114px;
     width: 114px;
-  }
+  }*/
 }
 
 @media screen and (min-width: 1440px) {
