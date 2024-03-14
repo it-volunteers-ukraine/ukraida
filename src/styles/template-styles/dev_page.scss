@@ -1,8 +1,8 @@
 @import "../variables";
 
 .dev__page {
-  background: url("<?php bloginfo('template_url'); ?>/assets/images/dev_page/bg_dev_page.svg");
-  /* background: url("../../images/dev_page/bg_dev_page.svg");*/
+  /* background: url("<?php bloginfo('template_url'); ?>/assets/images/dev_page/bg_dev_page.svg"); */
+  background: url("../../images/dev_page/bg_dev_page.svg");
   background-repeat: no-repeat;
   max-width: 100%;
   height: 394px;
