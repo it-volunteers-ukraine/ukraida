@@ -138,13 +138,17 @@ You can use this class for button
     margin-left: 8px;
   }
 
-  &:hover,
-  &:focus-visible,
-  &:active {
+  &:hover:not(:disabled),
+  &:focus-visible:not(:disabled) {
     box-shadow: $btn-hover-shadow;
   }
 
+  &:active:not(:disabled) {
+    background: $btn-main-active-background;
+  }
+
   &:disabled {
+    background: none;
     background-color: $btn-disabled;
     cursor: initial;
   }
@@ -155,14 +159,16 @@ You can use this class for button
   color: $black;
   background: $gradient;
 
-  &:hover, &:focus-visible, &:active {
+  &:hover:not(:disabled),
+  &:focus-visible:not(:disabled) {
     box-shadow: $btn-hover-shadow;
   }
 
-  &:disabled {
-    background-color: $btn-inv-disabled;
-    cursor: initial;
+  &:active:not(:disabled) {
+    background: $btn-advanced-active-background;
+    box-shadow: $btn-hover-shadow;
   }
+
 }
 
 @mixin btn-main-s {
