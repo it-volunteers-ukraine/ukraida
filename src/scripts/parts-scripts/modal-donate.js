@@ -17,8 +17,8 @@ function openModal() {
 
 function closeModal(evt) {
     if (evt.code === 'Escape' || evt.currentTarget === evt.target || evt.currentTarget.id === 'js-btn-close') {
-        modalContainerRef.classList.remove('is-open');
         modalInnerRef.classList.remove('is-open');
+        modalContainerRef.classList.remove('is-open');
         document.removeEventListener('keydown', closeModal);
         modalContainerRef.removeEventListener('click', closeModal); 
 
