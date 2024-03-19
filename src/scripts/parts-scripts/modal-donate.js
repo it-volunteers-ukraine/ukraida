@@ -20,8 +20,8 @@ function closeModal(evt) {
         modalContainerRef.removeEventListener('click', closeModal); 
 
         btnDonateCopyRef.removeEventListener('click', copyIban);
+        document.body.classList.remove('modal-open');
     }
-    document.body.classList.remove('modal-open');
 }
 
 function copyIban() {
@@ -40,7 +40,6 @@ function copyIban() {
     btnDonateCopyRef.style.position = 'relative';
 
     const notify = document.createElement('div');
-    // notify.style.backgroundColor = 'green';
     notify.style.backgroundImage = 'url(wp-content/themes/ukraida/src/images/icons/success.svg)';
     notify.style.width = '24px';
     notify.style.height = '24px';
