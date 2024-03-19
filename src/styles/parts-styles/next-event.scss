@@ -11,16 +11,10 @@
 
 .event-title{
     font-family: $font-main;
-    font-size: 18px;
-    font-weight: 900;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.36;
 }
-
-/*
-.event-title-inter{
-    font-family: 'Inter';
-    font-size: 18px;
-    font-weight: 900;
-}*/
 
 .event-btn{
     @include btn-advanced-s;
@@ -48,6 +42,14 @@
     }
 
 }
+
+@media screen and (min-width: 1200px) {
+    .event-title{
+        font-size: 32px;
+        font-weight: 600;
+    }
+}
+
 /*
 @media screen and (min-width: 768px){
     .event-btn{
