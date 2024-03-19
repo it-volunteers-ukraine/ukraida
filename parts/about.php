@@ -94,6 +94,7 @@
                             <div class="block-icons__item-fon-bl"></div>
                             <div class="block-icons__item-fon-ye"></div>
                         </div>
+                        <div class="block-icons__num-inner">
                         <div class="block-icons__num">
                             + 8
 
@@ -102,27 +103,33 @@
                             Успішно проведених <br>
                             проєктів
                         </div>
+                        </div>
+                      
                     </div>
                     <div class="block-icons__item">
                     <div class="block-icons__item-fon">
                             <div class="block-icons__item-fon-bl"></div>
                             <div class="block-icons__item-fon-ye"></div>
                         </div>
+                        <div class="block-icons__num-inner">
                         <div class="block-icons__num">
                    
-                            + 10
+                   + 10
 
+               </div>
+               <div class="block-icons__text">
+                   Організованих <br>
+                   мітенгів
+               </div>
                         </div>
-                        <div class="block-icons__text">
-                            Організованих <br>
-                            мітенгів
-                        </div>
+                     
                     </div>
                     <div class="block-icons__item">
                     <div class="block-icons__item-fon">
                             <div class="block-icons__item-fon-bl"></div>
                             <div class="block-icons__item-fon-ye"></div>
                         </div>
+                        <div class="block-icons__num-inner">
                         <div class="block-icons__num">
                             + 25 000$
 
@@ -131,6 +138,8 @@
                             Зібраних <br>
                              коштів
                         </div>
+                        </div>
+                      
                     </div>
 
                 </div>
