@@ -19,12 +19,13 @@
     justify-content: center;
     background-color: rgba(20,20,20, .7);
     opacity: 0;
+    z-index: 9999;
+    pointer-events: none;
 }
 
 .modal.is-open {
-    z-index: 9999;
-    pointer-events: all;
     opacity: 1;
+    pointer-events: all;
 }
 // Inner__wrap
 .inner__wrap {
