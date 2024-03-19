@@ -1,10 +1,12 @@
 const btnDonateRef = document.getElementById('js-btn-donate');
 const btnCloseModalRef = document.getElementById('js-btn-close');
 const modalContainerRef = document.getElementById('js-modal');
+const modalInnerRef = document.getElementById('js-inner__wrap');
 const btnDonateCopyRef = document.getElementById('js-btn-donate-copy');
 
 function openModal() {
     modalContainerRef.classList.add('is-open');
+    modalInnerRef.classList.add('is-open');
     modalContainerRef.addEventListener('click', closeModal); 
     document.addEventListener('keydown', closeModal);
     document.body.classList.add('modal-open');
@@ -16,6 +18,7 @@ function openModal() {
 function closeModal(evt) {
     if (evt.code === 'Escape' || evt.currentTarget === evt.target || evt.currentTarget.id === 'js-btn-close') {
         modalContainerRef.classList.remove('is-open');
+        modalInnerRef.classList.remove('is-open');
         document.removeEventListener('keydown', closeModal);
         modalContainerRef.removeEventListener('click', closeModal); 
 
