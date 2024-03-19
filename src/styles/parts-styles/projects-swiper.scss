@@ -19,7 +19,7 @@
     }
 
     &-dot {
-      display: block;
+      display: none;
       width: 8px;
       height: 8px;
       flex-shrink: 0;
@@ -205,7 +205,7 @@
 
     @media (min-width:1200px) {
 
-      display: block;
+      display: none;
       position: absolute;
       top: 50%;
       background: transparent;
