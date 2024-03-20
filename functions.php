@@ -18,17 +18,18 @@ if (!function_exists('wp_it_volunteers_setup')) {
 
 
 /** add fonts */
+add_action('wp_enqueue_scripts', 'add_google_fonts');
 function add_google_fonts()
 {
   // wp_enqueue_style( 'google_web_fonts-inter', 'https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap' , false);
   // wp_enqueue_style( 'google_web_fonts-open-sans', 'https://fonts.googleapis.com/css2?family=Open+Sans:ital,wdth,wght@0,75..100,300..800;1,75..100,300..800&display=swap' , false);
   wp_enqueue_style('google_web_fonts', 'https://fonts.googleapis.com/css2?family=Inter:slnt,wght@-10..0,100..900&family=Open+Sans:ital,wdth,wght@0,75..100,300..800;1,75..100,300..800&display=swap', false);
 }
-add_action('wp_enqueue_scripts', 'add_google_fonts');
 
 /**
  * Enqueue scripts and styles.
  */
+add_action('wp_enqueue_scripts', 'wp_it_volunteers_scripts');
 
 function wp_it_volunteers_scripts()
 {
@@ -93,7 +94,6 @@ function wp_it_volunteers_scripts()
   // }
 }
 
-add_action('wp_enqueue_scripts', 'wp_it_volunteers_scripts');
 
 
 
@@ -113,7 +113,7 @@ function wp_it_volunteers_menus()
     'header' => __('Header Menu', 'wp-it-volunteers'),
     'footer' => __('Footer Menu', 'wp-it-volunteers'),
   );
-
+  
   register_nav_menus($locations);
 }
 
