@@ -29,7 +29,6 @@ add_action('wp_enqueue_scripts', 'add_google_fonts');
 /**
  * Enqueue scripts and styles.
  */
-add_action('wp_enqueue_scripts', 'wp_it_volunteers_scripts');
 
 function wp_it_volunteers_scripts()
 {
@@ -94,6 +93,7 @@ function wp_it_volunteers_scripts()
   // }
 }
 
+add_action('wp_enqueue_scripts', 'wp_it_volunteers_scripts');
 
 
 
