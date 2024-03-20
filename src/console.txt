@@ -1,0 +1,5 @@
+Файл для консоля функций
+
+<h1><?php
+    echo (get_template_directory_uri())
+?></h1>
