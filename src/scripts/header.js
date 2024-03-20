@@ -1,7 +1,10 @@
+console.log('!!!start header.js');
 const mobileMenu = document.querySelector(".js-menu-container");
 const openMenuBtn = document.querySelector(".js-open-menu");
 const overlayMenu = document.querySelector(".menu__overlay");
 const closeMenuBtn = document.querySelector(".js-close-menu");
+
+console.log(openMenuBtn)
 
 const toggleMenu = () => {
   mobileMenu.classList.toggle("is__open");
