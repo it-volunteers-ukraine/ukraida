@@ -3,7 +3,7 @@
             <div class="footer-main__wrap">
                 <div class="footer__inner-wrap">
                     <a href="/" class="logo__link">
-                        <img class="footer__logo" src="<?php bloginfo('template_url'); ?>/assets/images/footer/logo_footer.svg" alt="logo">
+                        <img class="footer__logo" src="<?php bloginfo('template_url'); ?>/assets/images/footer/Logo_Ukraida.svg" alt="logo">
                     </a>
                     <ul class="privacy__list">
                         <li class="privacy__item">
