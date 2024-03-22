@@ -71,16 +71,16 @@ body {
 
 /* modal */
 .js-menu-container {
-  position: absolute;
+  position: fixed;
   border: 2px solid $green;
   border-radius: 15px;
   padding: 24px 16px;
   width: 100%;
   top: 24px;
-
+  left: 0;
   background: $white;
   transform: translateY(-200%);
-  transition-duration: 0.4s;
+  transition-duration: 1s;
 }
 
 .is__open {
@@ -93,11 +93,10 @@ body {
   height: 100%;
   top: 0;
   left: 0;
-  background: rgba(20, 20, 20, 0.9);
+  background-color: rgba(20, 20, 20, 0.7);
 
-  opacity: 1;
-  transition-property: opacity;
-  transition-duration: 0.1s;
+  transition-property: background-color;
+  transition-duration: 0.5s;
 }
 
 .nav__modal-wrap {
