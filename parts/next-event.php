@@ -2,7 +2,7 @@
 <div class="event next-event__event">
     <!-- <br>font Lato: <br> -->
     <p class="event-title">
-    Наступна Демонстрація за мир в Україні відбудеться 03.02.2024 р. за адресою Friedensplatz (Darmstadt) о 10:30 год.
+    Die nächste Demonstration für Frieden in der Ukraine findet am XX.XX.XXXX auf dem Friedensplatz (Darmstadt) um 10:30 Uhr statt.
     </p>
     <!-- <p class="event-title">
         Die nächste Demonstration für den Frieden in der Ukraine findet am 3. Februar 2024 um 10:30 Uhr auf dem Friedensplatz (Darmstadt) statt.
@@ -15,5 +15,5 @@
         Die nächste Demonstration für den Frieden in der Ukraine findet am 3. Februar 2024 um 10:30 Uhr auf dem Friedensplatz (Darmstadt) statt.
     </p>
      <button class="event-btn"> Показати на карті</button> -->
-    <a href="#event-map" class="event-btn">Показати на карті</a>
+    <a href="#event-map" class="event-btn">Auf der Karte anzeigen</a>
 </div>
