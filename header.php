@@ -18,12 +18,12 @@
             <a href="/" class="logo">UKRAIDA<img class="nav__img" src="<?php bloginfo('template_url'); ?>/assets/images/header/logo.svg" alt="Logo" /></a>
             <nav class="nav">
                 <ul class="nav__site">
-                    <li class="nav__item"><a class="link" href="/">Головна</a></li>
-                    <li class="nav__item"><a class="link" href="/devpage">Про нас</a></li>
-                    <li class="nav__item"><a class="link" href="/devpage">Новини</a></li>
-                    <li class="nav__item"><a class="link" href="/devpage">Пожертви</a></li>
-                    <li class="nav__item"><a class="link" href="/devpage">Долучитися</a></li>
-                    <li class="nav__item"><a class="link" href="/devpage">Проєкти</a></li>
+                    <li class="nav__item"><a class="link" href="/">Startseite</a></li>
+                    <li class="nav__item"><a class="link" href="/devpage">Über uns</a></li>
+                    <li class="nav__item"><a class="link" href="/devpage">Aktuelles</a></li>
+                    <li class="nav__item"><a class="link" href="/devpage">Spenden</a></li>
+                    <li class="nav__item"><a class="link" href="/devpage">Mitmachen</a></li>
+                    <li class="nav__item"><a class="link" href="/devpage">Projekte</a></li>
                 </ul>
             </nav>
             <ul class="menu">
@@ -33,7 +33,7 @@
                 <li>
                     <a href="#" class="menu__item"><img class="menu__img" src="<?php bloginfo('template_url'); ?>/assets/images/header/language.svg" alt="language" />DE&nbsp;/&nbsp;<span class="menu__itm-lang">UA</span></a>
                 </li>
-                <li><button type="button" id="js-btn-donate" class="menu__btn">Задонатити</button></li>
+                <li><button type="button" id="js-btn-donate" class="menu__btn">Spenden</button></li>
             </ul>
 
             <!-- mobile menu -->
@@ -53,24 +53,24 @@
                     <div class="nav__modal-wrap">
                         <ul class="nav__modal">
                             <li class="nav__item-modal">
-                                <a class="link-modal" href="/">Головна</a>
+                                <a class="link-modal" href="/">Startseite</a>
                             </li>
                             <li class="nav__item-modal">
-                                <a class="link-modal" href="/devpage">Про нас</a>
+                                <a class="link-modal" href="/devpage">Über uns</a>
                             </li>
                             <li class="nav__item-modal">
-                                <a class="link-modal" href="/devpage">Новини</a>
+                                <a class="link-modal" href="/devpage">Aktuelles</a>
                             </li>
                         </ul>
                         <ul class="nav__modal">
                             <li class="nav__item-modal">
-                                <a class="link-modal" href="/devpage">Пожертви</a>
+                                <a class="link-modal" href="/devpage">Spenden</a>
                             </li>
                             <li class="nav__item-modal">
-                                <a class="link-modal" href="/devpage">Долучитися</a>
+                                <a class="link-modal" href="/devpage">Mitmachen</a>
                             </li>
                             <li class="nav__item-modal">
-                                <a class="link-modal" href="/devpage">Проєкти</a>
+                                <a class="link-modal" href="/devpage">Projekte</a>
                             </li>
                         </ul>
                     </div>
