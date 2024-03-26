@@ -1,1 +1,3 @@
-console.log('script part/next-event')
+console.log("script part/next-event");
+
+
