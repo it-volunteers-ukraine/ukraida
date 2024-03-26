@@ -23,11 +23,11 @@ get_header();
         </div>
     </section>
 
-    <section id="posts-instagramm" class="section section__instagram" >
+    <!-- <section id="posts-instagramm" class="section section__instagram" >
         <div class="container container__instagram">
             <?php get_template_part('parts/posts-instagram', null, []); ?>
         </div>
-    </section>
+    </section> -->
 
     <section id="event-map" class="section container__map">
         <div class="container container-map">
