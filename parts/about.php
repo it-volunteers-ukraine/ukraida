@@ -13,16 +13,23 @@
                      
                     </div>
                     <div class="img-text__content">
-                        <h2 class="title__content img-text__title img-text__title--desc">Про нас</h2>
+                        <h2 class="title__content img-text__title img-text__title--desc">Über uns.</h2>
                         <p>
-                            Vorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate
-                            libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad
-                            litora torquent per conubia nostra, per inceptos himenaeos.Vorem ipsum dolor sit amet,
-                            consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio
-                            mattis.
-                            Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+                        Der Ukrainische Verein Darmstadt (UKRAIDA) e.V. ist ein 
+                        gemeinnütziger Verein, der offiziell im Jahr 2023 von einem Team 
+                        von Freiwilligen in Darmstadt gegründet wurde. 
+Wir haben uns aus persönlichen Gründen für die ehrenamtliche Arbeit entschieden - 
+wir wollten uns selbst helfen. Durch die Freiwilligenarbeit haben wir inneren Frieden und 
+Stolz gewonnen, einen Beitrag zur freien Zukunft einer unabhängigen Ukraine zu leisten. Wir tragen 
+zur Entwicklung der demokratischen Werte und zur Verteidigung der europäischen Zukunft bei.
+Unsere ganze Kraft, unsere Kompetenzen und unsere Emotionen fließen in die 
+Freiwilligenarbeit und die kontinuierliche praktische Unterstützung der Ukrainer:
+innen ein. Seit über 2 Jahren sammeln wir humanitäre Hilfe und organisieren Wohltätigkeitsprojekte. 
+Anderen zu helfen heißt, sich selbst zu helfen, denn wir alle träumen von einem glücklichen und sicheren 
+Leben in einem friedlichen Europa.
+
                         </p>
-                        <a href="/devpage" class="button-secondary img-text__btn">Детальна інформація</a>
+                        <a href="/devpage" class="button-secondary img-text__btn">Mehr Informationen</a>
 
                     </div>
                 </div>
@@ -30,7 +37,7 @@
         </section>
         <section class="block-icons section">
             <div class="block-icons__container">
-                <h2 class="title__content block-icons__title ">Наші цілі і Бачення</h2>
+                <h2 class="title__content block-icons__title ">Unsere Ziele und Visionen sind</h2>
                 <div class="block-icons__wrap">
                     <div class="block-icons__item">
                         <div class="block-icons__icon">
@@ -43,9 +50,7 @@
 
                         </div>
                         <div class="block-icons__text">
-                            Vorem ipsum dolor sit amet, consectetur
-                            adipiscing elit. Nunc vulputate libero et velit interdum,
-                            ac aliquet odio mattis.
+                        	UKRAIDA ist Einheit. UKRAine + In + DArmstadt: wir kommen zusammen, um uns gegenseitig zu unterstützen.
                         </div>
                     </div>
                     <div class="block-icons__item">
@@ -57,9 +62,7 @@
 
                         </div>
                         <div class="block-icons__text">
-                            Vorem ipsum dolor sit amet, consectetur 
-                            adipiscing elit. Nunc vulputate libero et 
-                            velit interdum, ac aliquet odio mattis. 
+                        UKRAIDA ist Hilfe. UKRaine + AId + DArmstadt: Wir helfen der Ukraine in Darmstadt. 
                         </div>
                     </div>
                     <div class="block-icons__item">
@@ -73,10 +76,7 @@
 
                         </div>
                         <div class="block-icons__text">
-                            Vorem ipsum dolor sit amet, 
-                            consectetur adipiscing elit. Nunc
-                             vulputate libero et velit interdum, 
-                             ac aliquet odio mattis. 
+                        UKRAIDA ist Dankbarkeit. UKRAIne + DAnkt: Wir danken jedem, der uns hilft und unterstützt. 
                         </div>
                     </div>
 
@@ -86,7 +86,7 @@
 
         <section class="block-icons section block-icons--num">
     
-                <h2 class="title__content block-icons__title block-icons__title--num ">Наші досягнення</h2>
+                <h2 class="title__content block-icons__title block-icons__title--num ">Unsere Errungenschaften:</h2>
                 <div class="block-icons__wrap">
                     <div class="block-icons__item">
 
@@ -96,12 +96,11 @@
                         </div>
                         <div class="block-icons__num-inner">
                         <div class="block-icons__num">
-                            + 8
+                            30 +
 
                         </div>
                         <div class="block-icons__text">
-                            Успішно проведених <br>
-                            проєктів
+                        Evakuierungsfahrzeuge <br>und Krankenwagen
                         </div>
                         </div>
                       
@@ -114,12 +113,11 @@
                         <div class="block-icons__num-inner">
                         <div class="block-icons__num">
                    
-                   + 10
+                        Mehr als 100 
 
                </div>
                <div class="block-icons__text">
-                   Організованих <br>
-                   мітенгів
+               Demonstrationen zur <br> Unterstützung der Ukraine
                </div>
                         </div>
                      
@@ -131,12 +129,11 @@
                         </div>
                         <div class="block-icons__num-inner">
                         <div class="block-icons__num">
-                            + 25 000$
+                        5+
 
                         </div>
                         <div class="block-icons__text">
-                            Зібраних <br>
-                             коштів
+                        	 Wohltätigkeitsprojekte
                         </div>
                         </div>
                       
@@ -148,30 +145,22 @@
 
         <section class="img-text img-text--reverse section">
         
-                <h2 class="title__content img-text__title img-text__title--mob">Чому ми ?</h2>
+                <h2 class="title__content img-text__title img-text__title--mob">Warum wir? </h2>
                 <div class="img-text__wrap">
 
                     <div class="img-text__content">
-                        <h2 class="title__content img-text__title img-text__title--desc">Чому ми ?</h2>
+                        <h2 class="title__content img-text__title img-text__title--desc">Warum wir? </h2>
                         <p>
-                            Vorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            Nunc vulputate libero et velit interdum, ac aliquet odio mattis.
-                            Class aptent taciti sociosqu ad litora torquent per conubia nostra,
-                            per inceptos himenaeos.Vorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            Nunc vulputate libero et velit interdum, ac aliquet odio mattis.
-                            Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+                        Demonstrationen, um die Öffentlichkeit über die Ereignisse in der Ukraine zu informieren und Spenden zu sammeln. Wir erreichen unsere gemeinnützigen Ziele, weil wir vereint, zielgerichtet und äußerst dankbar füreinander und für alle, die uns unterstützen, sind. 
+Ein wichtiger Teil unserer Arbeit ist die Bereitstellung von Evakuierungs- und Krankentransporten für ukrainische Ärzte. Allein im Jahr 2023 haben wir 22 Fahrzeuge angeschafft.  Man vertraut uns, weil wir zu 100 % transparent arbeiten. Sie können jedes gekaufte Fahrzeug bei unseren Samstagsdemonstrationen sehen. 
+
                         </p>
                         <p>
-                            Vorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit
-                            interdum,
-                            ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra,
-                            per inceptos
-                            himenaeos.Vorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et
-                            velit interdum,
-                            ac aliquet odio mattis.
-                            Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+                        Für uns ist es wichtig, die Grundlage für eine glückliche, gebildete und gesunde Generation von Ukrainer:innen zu schaffen. Deshalb liegt uns das Wohl der Kinder am Herzen. Unser Team hat sich an der Erstellung des Buches "Ein Jahr Solidarität mit der Ukraine in Darmstadt" beteiligt, das mit Unterstützung der Stadt Darmstadt veröffentlicht wurde. Der Erlös aus dem Buchverkauf wurde in ein Rehabilitationsprojekt für ukrainische 
+                        Teenager investiert. Wir haben noch viele weitere interessante Projekte.
                         </p>
-                        <a href="/devpage" class="button-secondary img-text__btn">Детальна інформація</a>
+                        <p>Wir machen weiter. Sind Sie dabei? </p>
+                        <a href="/devpage" class="button-secondary img-text__btn">Mehr Informationen</a>
 
                     </div>
                     <div class="img-text__img">
