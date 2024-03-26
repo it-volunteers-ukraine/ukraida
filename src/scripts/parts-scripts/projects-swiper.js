@@ -16,6 +16,7 @@ const swiperThumbs = new Swiper(".swiper-thumbs", {
   loop: true,
   slidesPerView: 2 + isDesktop,
   spaceBetween: 24,
+  speed: 500,
 });
 
 const swiperMain = new Swiper(".swiper-main", {
@@ -24,6 +25,7 @@ const swiperMain = new Swiper(".swiper-main", {
   loop: true,
   slidesPerView: 1,
   spaceBetween: 24,
+  speed: 500,
   // If we need pagination
   // pagination: {
   //   el: '.swiper-pagination',

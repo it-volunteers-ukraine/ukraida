@@ -29,7 +29,7 @@
         <div class="slider__wrap slider-main swiper-main swiper">
             <div class="slider__track-big swiper-wrapper">
                 <div class="slider__item swiper-slide slider__item--big">
-                    <img class="slider__item-fon" src="<?php echo  get_template_directory_uri() . '/src/images/home/slider/2.png'; ?>" alt="">
+                    <img class="slider__item-fon" src="<?php echo  get_template_directory_uri() . '/assets/images/projects/f-01.jpg'; ?>" alt="">
                     <!-- <div class="slider__item-text">
                         <div class="slider__item-text-inner">
                             <h4 class="slider__item-title">
@@ -44,7 +44,7 @@
                     </div> -->
                 </div>
                 <div class="slider__item swiper-slide slider__item--big">
-                    <img class="slider__item-fon" src="<?php echo  get_template_directory_uri() . '/src/images/home/slider/1.png'; ?>" alt="">
+                    <img class="slider__item-fon" src="<?php echo  get_template_directory_uri() . '/assets/images/projects/f-02.jpg'; ?>" alt="">
                     <!-- <div class="slider__item-text">
                         <div class="slider__item-text-inner">
                             <h4 class="slider__item-title">
@@ -59,7 +59,7 @@
                     </div> -->
                 </div>
                 <div class="slider__item swiper-slide slider__item--big">
-                    <img class="slider__item-fon" src="<?php echo  get_template_directory_uri() . '/src/images/home/slider/3.png'; ?>" alt="">
+                    <img class="slider__item-fon" src="<?php echo  get_template_directory_uri() . '/assets/images/projects/f-03.jpg'; ?>" alt="">
                     <!-- <div class="slider__item-text">
                         <div class="slider__item-text-inner">
                             <h4 class="slider__item-title">
@@ -74,7 +74,82 @@
                     </div> -->
                 </div>
                 <div class="slider__item swiper-slide slider__item--big">
-                    <img class="slider__item-fon" src="<?php echo  get_template_directory_uri() . '/src/images/home/slider/b1.png'; ?>" alt="">
+                    <img class="slider__item-fon" src="<?php echo  get_template_directory_uri() . '/assets/images/projects/f-04.jpg'; ?>" alt="">
+                    <!-- <div class="slider__item-text">
+                        <div class="slider__item-text-inner">
+                            <h4 class="slider__item-title">
+                                Наш новий проєкт під назвою “Український літературний простір у Дармштадті”
+                            </h4>
+                            <p>
+                                Дуже хочеться, аби наш новий дім, місто Дармштадт, став для нас ще затишнішим. Ми впевнені,
+                                що цього можна досягти завдяки читанню книг українською мовою і теплим бесідам про них.
+                            </p>
+                            <a href="#" class="button-secondary slider__item-btn">Детальна інформація</a>
+                        </div>
+                    </div> -->
+                </div>
+                <div class="slider__item swiper-slide slider__item--big">
+                    <img class="slider__item-fon" src="<?php echo  get_template_directory_uri() . '/assets/images/projects/f-05.jpg'; ?>" alt="">
+                    <!-- <div class="slider__item-text">
+                        <div class="slider__item-text-inner">
+                            <h4 class="slider__item-title">
+                                Наш новий проєкт під назвою “Український літературний простір у Дармштадті”
+                            </h4>
+                            <p>
+                                Дуже хочеться, аби наш новий дім, місто Дармштадт, став для нас ще затишнішим. Ми впевнені,
+                                що цього можна досягти завдяки читанню книг українською мовою і теплим бесідам про них.
+                            </p>
+                            <a href="#" class="button-secondary slider__item-btn">Детальна інформація</a>
+                        </div>
+                    </div> -->
+                </div>
+                <div class="slider__item swiper-slide slider__item--big">
+                    <img class="slider__item-fon" src="<?php echo  get_template_directory_uri() . '/assets/images/projects/f-06.jpg'; ?>" alt="">
+                    <!-- <div class="slider__item-text">
+                        <div class="slider__item-text-inner">
+                            <h4 class="slider__item-title">
+                                Наш новий проєкт під назвою “Український літературний простір у Дармштадті”
+                            </h4>
+                            <p>
+                                Дуже хочеться, аби наш новий дім, місто Дармштадт, став для нас ще затишнішим. Ми впевнені,
+                                що цього можна досягти завдяки читанню книг українською мовою і теплим бесідам про них.
+                            </p>
+                            <a href="#" class="button-secondary slider__item-btn">Детальна інформація</a>
+                        </div>
+                    </div> -->
+                </div>
+                <div class="slider__item swiper-slide slider__item--big">
+                    <img class="slider__item-fon" src="<?php echo  get_template_directory_uri() . '/assets/images/projects/f-07.jpg'; ?>" alt="">
+                    <!-- <div class="slider__item-text">
+                        <div class="slider__item-text-inner">
+                            <h4 class="slider__item-title">
+                                Наш новий проєкт під назвою “Український літературний простір у Дармштадті”
+                            </h4>
+                            <p>
+                                Дуже хочеться, аби наш новий дім, місто Дармштадт, став для нас ще затишнішим. Ми впевнені,
+                                що цього можна досягти завдяки читанню книг українською мовою і теплим бесідам про них.
+                            </p>
+                            <a href="#" class="button-secondary slider__item-btn">Детальна інформація</a>
+                        </div>
+                    </div> -->
+                </div>
+                <div class="slider__item swiper-slide slider__item--big">
+                    <img class="slider__item-fon" src="<?php echo  get_template_directory_uri() . '/assets/images/projects/f-08.jpg'; ?>" alt="">
+                    <!-- <div class="slider__item-text">
+                        <div class="slider__item-text-inner">
+                            <h4 class="slider__item-title">
+                                Наш новий проєкт під назвою “Український літературний простір у Дармштадті”
+                            </h4>
+                            <p>
+                                Дуже хочеться, аби наш новий дім, місто Дармштадт, став для нас ще затишнішим. Ми впевнені,
+                                що цього можна досягти завдяки читанню книг українською мовою і теплим бесідам про них.
+                            </p>
+                            <a href="#" class="button-secondary slider__item-btn">Детальна інформація</a>
+                        </div>
+                    </div> -->
+                </div>
+                <div class="slider__item swiper-slide slider__item--big">
+                    <img class="slider__item-fon" src="<?php echo  get_template_directory_uri() . '/assets/images/projects/f-09.jpg'; ?>" alt="">
                     <!-- <div class="slider__item-text">
                         <div class="slider__item-text-inner">
                             <h4 class="slider__item-title">
@@ -97,21 +172,33 @@
             <div class="slider__wrap slider-thumbs swiper-thumbs swiper">
                 <div class="slider__track swiper-wrapper">
                     <div class="slider__item swiper-slide">
-                        <img class="slider__item-fon" src="<?php echo  get_template_directory_uri() . '/src/images/home/slider/2.png'; ?>" alt="">
+                        <img class="slider__item-fon" src="<?php echo  get_template_directory_uri() . '/assets/images/projects/f-01.jpg'; ?>" alt="">
                         
                     </div>
                     <div class="slider__item swiper-slide active">
-                        <img class="slider__item-fon" src="<?php echo  get_template_directory_uri() . '/src/images/home/slider/1.png'; ?>" alt="">
-                   
+                        <img class="slider__item-fon" src="<?php echo  get_template_directory_uri() . '/assets/images/projects/f-02.jpg'; ?>" alt="">
                     </div>
     
                     <div class="slider__item swiper-slide">
-                        <img class="slider__item-fon" src="<?php echo  get_template_directory_uri() . '/src/images/home/slider/3.png'; ?>" alt="">
-                   
+                        <img class="slider__item-fon" src="<?php echo  get_template_directory_uri() . '/assets/images/projects/f-03.jpg'; ?>" alt="">
                     </div>
                     <div class="slider__item swiper-slide">
-                        <img class="slider__item-fon" src="<?php echo  get_template_directory_uri() . '/src/images/home/slider/b1.png'; ?>" alt="">
-           
+                        <img class="slider__item-fon" src="<?php echo  get_template_directory_uri() . '/assets/images/projects/f-04.jpg'; ?>" alt="">
+                    </div>
+                    <div class="slider__item swiper-slide">
+                        <img class="slider__item-fon" src="<?php echo  get_template_directory_uri() . '/assets/images/projects/f-05.jpg'; ?>" alt="">
+                    </div>
+                    <div class="slider__item swiper-slide">
+                        <img class="slider__item-fon" src="<?php echo  get_template_directory_uri() . '/assets/images/projects/f-06.jpg'; ?>" alt="">
+                    </div>
+                    <div class="slider__item swiper-slide">
+                        <img class="slider__item-fon" src="<?php echo  get_template_directory_uri() . '/assets/images/projects/f-07.jpg'; ?>" alt="">
+                    </div>
+                    <div class="slider__item swiper-slide">
+                        <img class="slider__item-fon" src="<?php echo  get_template_directory_uri() . '/assets/images/projects/f-08.jpg'; ?>" alt="">
+                    </div>
+                    <div class="slider__item swiper-slide">
+                        <img class="slider__item-fon" src="<?php echo  get_template_directory_uri() . '/assets/images/projects/f-09.jpg'; ?>" alt="">
                     </div>
                 </div>
                 
