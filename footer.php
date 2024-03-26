@@ -7,10 +7,10 @@
                     </a>
                     <ul class="privacy__list">
                         <li class="privacy__item">
-                            <a href="#" target="_blank" rel="noopener noreferrer" class="privacy__link">Захист даних</a>
+                            <a href="#" target="_blank" rel="noopener noreferrer" class="privacy__link">Impressum</a>
                         </li>
                         <li class="privacy__item privacy__item-order">
-                            <a href="#" target="_blank" rel="noopener noreferrer" class="privacy__link">Політика конфіденційності</a>
+                            <a href="#" target="_blank" rel="noopener noreferrer" class="privacy__link">Datenschutz</a>
                         </li>
                     </ul>
                     <ul class="social-media__list">
