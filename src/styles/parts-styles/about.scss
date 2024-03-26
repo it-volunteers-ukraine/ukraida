@@ -1,5 +1,9 @@
 .about{
     color: yellow;
 }
+
+.container__about section:last-child{
+    padding-bottom: 0;
+}
 @import '../components/block-icons';
 @import '../components/img-text';
