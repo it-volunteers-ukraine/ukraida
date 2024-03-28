@@ -1,5 +1,4 @@
 @import "../styles/global";
-@import "./components";
 @import "./variables";
 
 body {
@@ -50,7 +49,7 @@ body {
 }
 
 .logo {
-  @include logo;
+  width: 56px;
 }
 
 .menu {
@@ -149,6 +148,10 @@ body {
     height: 130px;
   }
 
+  .logo {
+    width: 100px;
+  }
+
   .btn__img {
     width: 34px;
     margin-right: 114px;
@@ -172,6 +175,10 @@ body {
 @media screen and (min-width: 992px) {
   .header {
     height: 190px;
+  }
+
+  .logo {
+    width: 100px;
   }
 
   .wrap {
