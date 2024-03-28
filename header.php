@@ -15,7 +15,7 @@
             <button class="modal__btn js-open-menu">
                 <img class="btn__img" src="<?php bloginfo('template_url'); ?>/assets/images/header/menu.svg" alt="menu" />
             </button>
-            <a href="/" class="logo">UKRAIDA<img class="nav__img" src="<?php bloginfo('template_url'); ?>/assets/images/header/logo.svg" alt="Logo" /></a>
+            <a href="/" class="logo">UKRAIDA<img class="nav__img" src="<?php bloginfo('template_url'); ?>/assets/images/logo.svg" alt="Logo" /></a>
             <nav class="nav">
                 <ul class="nav__site">
                     <li class="nav__item"><a class="link" href="/">Startseite</a></li>
