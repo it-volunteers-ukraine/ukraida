@@ -13,6 +13,10 @@ svg {
     margin-bottom: 64px;
 }
 
+.logo1{
+
+}
+/*
 .logo__link {
     width: 106px;
     height: 106px;
@@ -27,7 +31,7 @@ svg {
     border-radius: 50%;
     background-color: $white;
 }
-
+*/
 // Privacy__list
 .privacy__list {
     display: flex;
@@ -99,10 +103,11 @@ svg {
         margin-bottom: 52px;
     }
 
+    /*
     .logo__link {
         margin: 0;
     }
-
+    */
     // Privacy__list
     .privacy__list {
         row-gap: 16px;
@@ -194,9 +199,13 @@ svg {
 
 @media screen and (min-width: 1200px) {
     .footer__inner-wrap {
+        height: 153px;
         margin-bottom: 40px;
     }
 
+    .logo_img{
+        width: 153px;
+    }
     // Privacy__list
     .privacy__list {
         gap: 88px;
