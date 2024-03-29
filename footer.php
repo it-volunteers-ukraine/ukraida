@@ -13,14 +13,14 @@
                     </ul>
                     <ul class="social-media__list">
                         <li class="social-media__item">
-                            <a class="social-media__link" href="#" target="_blank" rel="noopener noreferrer">
+                            <a class="social-media__link" href="https://www.instagram.com/ukraida_darmstadt/" target="_blank" rel="noopener noreferrer">
                                 <svg class="social__icon">
                                     <use xlink:href="<?php bloginfo('template_url'); ?>/assets/images/footer/sprites.svg#instagram"></use>
                                 </svg>@ukraida_darmstadt
                             </a>
                         </li>
                         <li class="social-media__item">
-                            <a class="social-media__link" href="mailto:" target="_blank" rel="noopener noreferrer">
+                            <a class="social-media__link" href="mailto:email@gmail.com" target="_blank" rel="noopener noreferrer">
                                 <svg class="social__icon">
                                     <use xlink:href="<?php bloginfo('template_url'); ?>/assets/images/footer/sprites.svg#email"></use>
                                 </svg>email@gmail.com

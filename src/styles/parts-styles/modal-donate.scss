@@ -3,14 +3,16 @@
 
 // block scroll
 .modal-open {
-    overflow: hidden;
+    /* overflow: hidden; */
+    position:fixed;
+    overflow-y: scroll;
+    width: 100%;
 }
 
 .modal {
     position: absolute;
     top: 0;
     left: 0;
-    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
     width: 100%;
     height: 100vh;
     display: flex;
@@ -21,6 +23,8 @@
     opacity: 0;
     z-index: 9999;
     pointer-events: none;
+    font-family: $font-main;
+    transition: all $animations-long;
 }
 
 .modal.is-open {
@@ -32,7 +36,6 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -41,11 +44,10 @@
     border-radius: 15px;
     border: 2px solid $green;
     padding: 64px 14.5px 20px;
-    transform: translate(-50%, -50%) scale(0);
-    transition: 0.5s all;
+    transform: translate(-50%, -50%) scale(0.3);
+    transition:  all $animations-long;
 }
 .inner__wrap.is-open {
-    position: relative;
     transform: translate(-50%, -50%) scale(1);
 }
 
@@ -125,9 +127,6 @@
     @include btn-advanced-s;
     font-weight: 500;
 }
-.modal__btn-copy--span {
-    text-transform: uppercase;
-}
 
 // MEDIA 
 @media screen and (min-width: 595px) {
@@ -175,10 +174,8 @@
     }
 
     .modal__btn-copy {
-        width: 188px;
-        height: 56px;
-        padding: 16px;
-        font-size: 20px;
+        @include btn-advanced-m;
+
     }
 }
 
@@ -208,9 +205,6 @@
     }
 
     .modal__btn-copy {
-        width: 227px;
-        height: 77px;
-        padding: 24px 20px;
-        font-size: 24px;
+        @include btn-advanced-m;
     }
 }
