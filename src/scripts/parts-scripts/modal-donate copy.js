@@ -10,7 +10,7 @@ function openModal() {
     modalContainerRef.addEventListener('click', closeModal); 
     document.addEventListener('keydown', closeModal);
     document.body.classList.add('modal-open');
-    // window.scroll(0, 0);
+    window.scroll(0, 0);
     
     btnDonateCopyRef.addEventListener('click', copyIban);
 }

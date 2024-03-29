@@ -10,24 +10,23 @@
 
             <!-- text -->
             <div class="modal__text-wrap">
-                <h2 class="modal__title">Міжнародний благодійний фонд <br/> "UKRAIDA"</h2>
+                <h2 class="modal__title">Міжнародний благодійний фонд "UKRAIDA"</h2>
                 <ul class="payment-list">
                     <li class="payment-item">
-                        <p class="payment-text">ЄДРПОУ: <span>00000000</span></p>
+                        <p class="payment-text">ЄДРПОУ: 00000000</p>
                     </li>
                     <li class="payment-item">
-                        <p class="payment-text payment-text--size">IBAN:  <span id="js-iban">   UA000000000000000000000000</span></p>
+                        <p class="payment-text payment-text--size">IBAN: <span id="js-iban">UA000000000000000000000000</span></p>
                     </li>
                     <li class="payment-item">
-                        <p class="payment-text">АТ КБ <span>“Приват Банк”</span></p>
+                        <p class="payment-text">АТ КБ “Приват Банк”</p>
                     </li>
                 </ul>
                 <h3 class="modal__subtitle">Призначення платежу:</h3>
-                <p class="modal__subtitle-text">“Безповоротна фінансова допомога від <span>ПІБ</span>”</p>
+                <p class="modal__subtitle-text">“Безповоротна фінансова допомога від ПІБ”</p>
             </div>
-
             <!-- button-copy -->
-            <button id="js-btn-donate-copy" type="button" class="modal__btn-copy btn-clear">Копіювати<span class="modal__btn-copy--span"> IBAN</span></button>
+            <button id="js-btn-donate-copy" type="button" class="modal__btn-copy btn-clear">Копіювати IBAN</button>
         </div>
     </div>
 </div>
