@@ -10,12 +10,18 @@ svg {
 }
 
 .footer__inner-wrap {
-    margin-bottom: 64px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap:24px;
+
+    margin-bottom: 56px;
 }
 
-.logo1{
-
+.logo_img{
+    width: 106px;
 }
+
 /*
 .logo__link {
     width: 106px;
@@ -37,12 +43,18 @@ svg {
     display: flex;
     flex-direction: column;
     row-gap: 8px;
-    margin-bottom: 30px;
+    font-size: 14px;
+    font-weight: 500;
+    align-items: center;
+}
+
+.privacy__item{
+    padding-top: 14px;
+    padding-bottom: 14px;
 }
 
 .privacy__link {
-    font-size: 14px;
-    font-weight: 500;
+
     color: $black;
 }
 .privacy__link:hover,
@@ -78,36 +90,28 @@ svg {
 .copyright__desc {
     text-align: center;
     font-size: 12px;
+    line-height: 1.38;
     font-weight: 500;
     color: $black;
 }
 
-// MEDIA 
-@media screen and (min-width: 476px) {
-    .footer__inner-wrap {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
 
-    // Privacy__list
-    .privacy__list {
-        align-items: center;
-    }
-}
 
 @media screen and (min-width: 576px) {
+    /*
     .footer__inner-wrap {
         flex-direction: row;
         justify-content: space-between;
         margin-bottom: 52px;
     }
-
+    */
     /*
     .logo__link {
         margin: 0;
     }
     */
+    
+    /*
     // Privacy__list
     .privacy__list {
         row-gap: 16px;
@@ -117,16 +121,20 @@ svg {
     .privacy__link {
         font-size: 16px;
     }
+    */
 
+    /*
     // Social-media
     .social-media__list {
         row-gap: 12px;
     }
-
+    */
+    /*
     // Copyright__desc
     .copyright__desc {
         font-size: 14px;
     }
+    */
 }
 
 @media screen and (min-width: 768px) {
@@ -135,15 +143,26 @@ svg {
     }
 
     .footer__inner-wrap {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
         margin-bottom: 47px;
+    }
+
+    .logo_img{
+        width: 121px;
     }
 
     // Privacy__list
     .privacy__list {
         align-items: start;
-        row-gap: 36px;
+        gap: 16px;
     }
 
+    .privacy__item{
+        padding: 10px 0;
+    }
+    
     .privacy__item-order {
         order: -1;
     }
