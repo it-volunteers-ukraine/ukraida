@@ -28,7 +28,7 @@
             </nav>
             <ul class="menu">
                 <li>
-                    <a href="#" class="menu__item-inst"><img src="<?php bloginfo('template_url'); ?>/assets/images/header/instagram.svg" alt="instagram" width="32" /></a>
+                    <a href="https://www.instagram.com/ukraida_darmstadt/" target="_blank" class="menu__item-inst"><img src="<?php bloginfo('template_url'); ?>/assets/images/header/instagram.svg" alt="instagram" width="32" /></a>
                 </li>
                 <li>
                     <a href="#" class="menu__item"><img class="menu__img" src="<?php bloginfo('template_url'); ?>/assets/images/header/language.svg" alt="language" />DE&nbsp;/&nbsp;<span class="menu__itm-lang">UA</span></a>
@@ -75,7 +75,7 @@
                         </ul>
                     </div>
                     <div class="menu__item-modal">
-                        <a href="#"><img class="nav__img-inst" src="<?php bloginfo('template_url'); ?>/assets/images/header/instagram.svg" alt="instagram" width="36" /></a>
+                        <a href="https://www.instagram.com/ukraida_darmstadt/" target="_blank"><img class="nav__img-inst modalƒ" src="<?php bloginfo('template_url'); ?>/assets/images/header/instagram.svg" alt="instagram" width="36" /></a>
                     </div>
                 </div>
             </div>
