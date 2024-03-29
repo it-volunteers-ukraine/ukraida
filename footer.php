@@ -2,9 +2,7 @@
         <div class="container">
             <div class="footer-main__wrap">
                 <div class="footer__inner-wrap">
-                    <a href="/" class="logo__link">
-                        <img class="footer__logo" src="<?php bloginfo('template_url'); ?>/assets/images/footer/Logo_Ukraida.svg" alt="logo">
-                    </a>
+                    <a href="/" class="logo1"><img class="logo_img" src="<?php bloginfo('template_url'); ?>/assets/images/header/logo.svg" alt="Logo" /></a>
                     <ul class="privacy__list">
                         <li class="privacy__item">
                             <a href="#" target="_blank" rel="noopener noreferrer" class="privacy__link">Impressum</a>
