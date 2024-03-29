@@ -37,6 +37,8 @@ function wp_it_volunteers_scripts()
   wp_enqueue_style('wp-style', get_template_directory_uri() . '/assets/styles/main.css', array('main'));
   wp_enqueue_style('normalize', 'https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css');
   wp_enqueue_script('wp-scripts', get_template_directory_uri() . '/assets/scripts/main.js', array(), false, true);
+  wp_enqueue_style('modal-donate', get_template_directory_uri() . '/assets/styles/parts-styles/modal-donate.css', array());
+  wp_enqueue_script('modal-donate-scripts', get_template_directory_uri() . '/assets/scripts/parts-scripts/modal-donate.js', array(), false, true);
 
   if (is_page_template('templates/home.php')) {
     //   $front_scripts_args = [
@@ -67,13 +69,7 @@ function wp_it_volunteers_scripts()
     wp_enqueue_style('event-map-style', get_template_directory_uri() . '/assets/styles/parts-styles/event-map.css', array());
     wp_enqueue_script('event-map-scripts', get_template_directory_uri() . '/assets/scripts/parts-scripts/event-map.js', array(), false, true);
 
-    wp_enqueue_style('modal-donate', get_template_directory_uri() . '/assets/styles/parts-styles/modal-donate.css', array());
-    wp_enqueue_script('modal-donate-scripts', get_template_directory_uri() . '/assets/scripts/parts-scripts/modal-donate.js', array(), false, true);
-
     // posts-instagram
-
-
-
 
   }
 
