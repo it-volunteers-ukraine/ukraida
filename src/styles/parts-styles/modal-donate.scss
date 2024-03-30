@@ -36,6 +36,7 @@
     position: absolute;
     top: 50%;
     left: 50%;
+    width: 288px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -43,7 +44,7 @@
     background-color: $background;
     border-radius: 15px;
     border: 2px solid $green;
-    padding: 64px 14.5px 20px;
+    padding: 64px 13px 20px;
     transform: translate(-50%, -50%) scale(0.3);
     transition:  all $animations-long;
 }
@@ -75,8 +76,17 @@
     justify-content: center;
     text-align: center;
     color: $black;
-    padding: 5px 0;
+    font-size: 12px;
     margin-bottom: 24px;
+    line-height: 1.36;
+    & h3{
+        font-size: 12px;
+    }
+}
+.modal__text-wrap{
+    & h2, & h3, & p, & .payment-text{
+        line-height: inherit;
+    }
 }
 
 .modal__title {
@@ -95,29 +105,27 @@
     justify-content: center;
     text-align: center;
     gap: 4px;
-    margin-bottom: 12px;
+    margin-bottom: 16px;
 }
 
 .payment-text {
-    font-size: 12px;
     font-weight: 400;
     line-height: normal;
 }
 
+/*
 .payment-text--size {
     font-size: 13px;
-}
+}*/
 
 // Modal__subtitle
 .modal__subtitle {
-    font-size: 14px;
-    font-weight: 900;
+    font-weight: 700;
     line-height: 200%;
     margin-bottom: 4px;
 }
 
 .modal__subtitle-text {
-    font-size: 12px;
     font-weight: 400;
     line-height: normal;
 }
@@ -125,7 +133,6 @@
 // Btn-copy
 .modal__btn-copy {
     @include btn-advanced-s;
-    font-weight: 500;
 }
 
 // MEDIA 
@@ -138,7 +145,7 @@
 @media screen and (min-width: 768px) {
     .inner__wrap {
         width: 505px;
-        padding: 87px 38px 32px;
+        padding: 87px 49px 32px;
     }
 
     .modal__icon-btn {
@@ -148,6 +155,10 @@
 
     .modal__text-wrap {
         margin-bottom: 40px;
+        font-size: 20px;
+        & h3{
+            font-size: 20px;
+        }
     }
 
     .modal__title {
@@ -158,7 +169,13 @@
     .payment-list {
         margin-bottom: 16px;
     }
-
+    .modal__subtitle{
+        font-weight: 700;
+    }
+    .modal__btn-copy {
+        @include btn-advanced-m;
+    }   
+    /*
     .payment-text {
         font-size: 20px;
     }
@@ -172,11 +189,8 @@
     .modal__subtitle-text {
         font-size: 20px;
     }
+    */
 
-    .modal__btn-copy {
-        @include btn-advanced-m;
-
-    }
 }
 
 @media screen and (min-width: 1200px) {
@@ -185,13 +199,20 @@
         padding: 96px 56px 48px;
     }
 
+    .modal__text-wrap, .modal__text-wrap h3 {
+        font-size: 24px;
+    }
+
     .modal__title {
         width: 567px;
-        font-weight: 700;
+        font-weight: 600;
         font-size: 32px;
         margin-bottom: 32px;
     }
-
+    .modal__subtitle{
+        font-weight: 700;
+    }
+    /*
     .payment-text {
         font-size: 24px;
     }
@@ -203,8 +224,8 @@
     .modal__subtitle-text {
         font-size: 24px;
     }
-
+*/
     .modal__btn-copy {
-        @include btn-advanced-m;
+        @include btn-advanced-l;
     }
 }
