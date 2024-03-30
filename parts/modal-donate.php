@@ -26,7 +26,7 @@
                 <p class="modal__subtitle-text">“Безповоротна фінансова допомога від ПІБ”</p>
             </div>
             <!-- button-copy -->
-            <button id="js-btn-donate-copy" type="button" class="modal__btn-copy btn-clear">Копіювати IBAN</button>
+            <button id="js-btn-donate-copy" type="button" class="modal__btn-copy">Копіювати IBAN</button>
         </div>
     </div>
 </div>
