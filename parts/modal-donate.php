@@ -5,7 +5,9 @@
         <div id="js-inner__wrap" class="inner__wrap">
             <!-- button-close -->
             <button id="js-btn-close" type="button" class="btn-clear btn-icon modal__btn-close">
-                <svg class="modal__icon-btn"><use href="<?php bloginfo('template_url'); ?>/assets/images/footer/sprites.svg#close"></use></svg>
+                <svg class="modal__icon-btn">
+                    <use href="<?php bloginfo('template_url'); ?>/assets/images/footer/sprites.svg#close"></use>
+                </svg>
             </button>
 
             <!-- text -->
