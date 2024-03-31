@@ -27,9 +27,9 @@ const swiperMain = new Swiper(".swiper-main", {
   spaceBetween: 24,
   speed: 500,
   // If we need pagination
-  // pagination: {
-  //   el: '.swiper-pagination',
-  // },
+  pagination: {
+   el: '.slider__nav',
+   },
 
   // Navigation arrows
   navigation: {

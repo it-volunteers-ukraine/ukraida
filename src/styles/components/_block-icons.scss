@@ -1,6 +1,7 @@
 @import '../variables';
 
 .block-icons {
+    font-family: $font-main;
     &__container {
         max-width: 1428px;
         margin: 0 auto;

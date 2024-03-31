@@ -1,1 +1,1 @@
-console.log('home srcipt src/template-script/home.js')
+console.log('home srcipt src/template-script/home.js');
