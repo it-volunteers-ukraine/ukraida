@@ -3,7 +3,7 @@
 
 <section class="img-text section">
 
-    <h2 class="title__content img-text__title img-text__title--mob">Про нас</h2>
+    <h2 class="title__content img-text__title img-text__title--mob">Über uns</h2>
     <div class="img-text__wrap">
         <div class="img-text__img">
             <picture>
