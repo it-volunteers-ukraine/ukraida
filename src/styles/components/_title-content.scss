@@ -1,13 +1,13 @@
 .title__content {
     color: rgb(0, 0, 0);
-    font-family: Lato;
-    font-size: 18px;
+    font-family: $font-main;
+    font-size: 20px;
     font-weight: 900;
     line-height:122%;
     text-align: left;
     text-transform: uppercase;
 
-    @media (min-width:1200px){
+    @media (min-width:768px){
         color: rgb(0, 0, 0);
         font-size: 32px;
         font-weight: 900;
