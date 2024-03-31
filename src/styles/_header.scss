@@ -1,5 +1,6 @@
 @import "../styles/global";
 @import "./variables";
+@import "./components";
 
 body {
   font-family: "Inter", sans-serif;
@@ -29,7 +30,7 @@ body {
   position: fixed;
   padding-top: 16px;
   background: $white;
-  width: 100%;
+  /* width: 100%; */
 }
 
 .btn__img {
@@ -70,6 +71,10 @@ body {
 
   @media screen and (min-width: 768px) {
     @include btn-advanced-m;
+  }
+
+  @media screen and (min-width: 992px) {
+    @include btn-advanced-l;
   }
 }
 
@@ -281,12 +286,6 @@ body {
   .menu__img {
     margin-right: 8px;
   }
-
-  .menu__btn {
-    font-size: 24px;
-    padding: 24px 20px;
-    border-radius: 15px;
-  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -305,7 +304,7 @@ body {
   }
 
   .wrap {
-    gap: 36px;
+    gap: 90px;
   }
 
   .wrap :nth-child(3) {
@@ -327,7 +326,7 @@ body {
 @media screen and (min-width: 1600px) {
   .wrap {
     flex-wrap: nowrap;
-    gap: 88px;
+    gap: 140px;
   }
 
   .nav__site {
@@ -336,7 +335,7 @@ body {
 
   @media screen and (min-width: 1920px) {
     .wrap {
-      gap: 118px;
+      gap: 161px;
     }
 
     .nav__site {
