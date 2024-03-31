@@ -219,9 +219,9 @@
             </button>
         </div>
         <ul class="slider__nav">
-            <li class="slider__nav-dot"></li>
+            <!-- <li class="slider__nav-dot"></li>
             <li class="slider__nav-dot active"></li>
-            <li class="slider__nav-dot"></li>
+            <li class="slider__nav-dot"></li> -->
         </ul>
     </div>
 </section>
