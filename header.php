@@ -13,7 +13,10 @@
     <header class="header">
         <div class="wrap container">
             <button class="modal__btn js-open-menu">
-                <img class="btn__img" src="<?php bloginfo('template_url'); ?>/assets/images/header/menu.svg" alt="menu" />
+                <svg class="btn__img">
+                    <use xlink:href="<?php bloginfo('template_url'); ?>/assets/images/header/sprite.svg#menu"></use>
+                </svg>
+                <!-- <img class="btn__img" src="<?php bloginfo('template_url'); ?>/assets/images/header/menu.svg" alt="menu" /> -->
             </button>
             <a href="/" class="logo"><img class="nav__img" src="<?php bloginfo('template_url'); ?>/assets/images/logo.svg" alt="Logo" /></a>
             <nav class="nav">
@@ -28,10 +31,18 @@
             </nav>
             <ul class="menu">
                 <li>
-                    <a href="https://www.instagram.com/ukraida_darmstadt/" target="_blank" class="menu__item-inst"><img src="<?php bloginfo('template_url'); ?>/assets/images/header/instagram.svg" alt="instagram" width="32" /></a>
+                    <a href="https://www.instagram.com/ukraida_darmstadt/" target="_blank" class="menu__item-inst">
+                        <svg>
+                            <use xlink:href="<?php bloginfo('template_url'); ?>/assets/images/header/sprite.svg#instagram"></use>
+                        </svg>
+                    </a>
                 </li>
                 <li>
-                    <a href="#" class="menu__item"><img class="menu__img" src="<?php bloginfo('template_url'); ?>/assets/images/header/language.svg" alt="language" />DE&nbsp;/&nbsp;<span class="menu__itm-lang">UA</span></a>
+                    <a href="#" class="menu__item">
+                        <svg class="menu__img">
+                            <use xlink:href="<?php bloginfo('template_url'); ?>/assets/images/header/sprite.svg#language"></use>
+                        </svg>
+                        DE&nbsp;/&nbsp;<span class="menu__itm-lang">UA</span></a>
                 </li>
                 <li><button type="button" id="js-btn-donate" class="menu__btn">Spenden</button></li>
             </ul>
@@ -42,11 +53,17 @@
                 <div class="js-menu-container">
                     <ul class="menu__modal">
                         <li>
-                            <a href="/" class="menu__modal-item"><img class="menu__modal-img" src="<?php bloginfo('template_url'); ?>/assets/images/header/language.svg" alt="language" />DE&nbsp;/&nbsp;<span class="menu__itm-lang">UA</span></a>
+                            <a href="/" class="menu__modal-item">
+                                <svg class="menu__modal-img">
+                                    <use xlink:href="<?php bloginfo('template_url'); ?>/assets/images/header/sprite.svg#language"></use>
+                                </svg>
+                                DE&nbsp;/&nbsp;<span class="menu__itm-lang">UA</span></a>
                         </li>
                         <li>
                             <button class="modal__btn js-close-menu">
-                                <img src="<?php bloginfo('template_url'); ?>/assets/images/header/close.svg" alt="close" width="17" />
+                                <svg>
+                                    <use xlink:href="<?php bloginfo('template_url'); ?>/assets/images/header/sprite.svg#close"></use>
+                                </svg>
                             </button>
                         </li>
                     </ul>
@@ -75,7 +92,11 @@
                         </ul>
                     </div>
                     <div class="menu__item-modal">
-                        <a href="https://www.instagram.com/ukraida_darmstadt/" target="_blank"><img class="nav__img-inst modalƒ" src="<?php bloginfo('template_url'); ?>/assets/images/header/instagram.svg" alt="instagram" width="36" /></a>
+                        <a href="https://www.instagram.com/ukraida_darmstadt/" target="_blank">
+                            <svg class="nav__img-inst">
+                                <use xlink:href="<?php bloginfo('template_url'); ?>/assets/images/header/sprite.svg#instagram"></use>
+                            </svg>
+                        </a>
                     </div>
                 </div>
             </div>
