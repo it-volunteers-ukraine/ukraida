@@ -42,7 +42,7 @@
                         <svg class="menu__img">
                             <use xlink:href="<?php bloginfo('template_url'); ?>/assets/images/header/sprite.svg#language"></use>
                         </svg>
-                        DE&nbsp;/&nbsp;<span class="menu__itm-lang">UA</span></a>
+                        <span class="menu__itm-lang active">DE</span>&nbsp;/&nbsp;<span class="menu__itm-lang">UA</span></a>
                 </li>
                 <li><button type="button" id="js-btn-donate" class="menu__btn">Spenden</button></li>
             </ul>
@@ -57,7 +57,7 @@
                                 <svg class="menu__modal-img">
                                     <use xlink:href="<?php bloginfo('template_url'); ?>/assets/images/header/sprite.svg#language"></use>
                                 </svg>
-                                DE&nbsp;/&nbsp;<span class="menu__itm-lang">UA</span></a>
+                                <span class="menu__itm-lang active">DE</span>&nbsp;/&nbsp;<span class="menu__itm-lang">UA</span></a>
                         </li>
                         <li>
                             <button class="modal__btn js-close-menu">
