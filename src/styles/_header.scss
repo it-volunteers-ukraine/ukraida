@@ -79,7 +79,7 @@
   }
 }
 
-.menu__itm-lang {
+.menu__itm-lang.active{
   color: $dark-blue;
 }
 
@@ -227,6 +227,7 @@
 
   .wrap {
     flex-wrap: wrap;
+    margin-top: 0;
   }
 
   .wrap :nth-child(3) {
