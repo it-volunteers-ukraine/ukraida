@@ -321,4 +321,11 @@
   transform: translateX(0);
   margin-left: auto;
   margin-right: auto;
+
+}
+
+
+.swiper-slide-thumb-active .slider__item-fon{
+  border: 3px solid $green;
+
 }
