@@ -9,9 +9,20 @@ const debounce = (callback, time) => {
   window.clearTimeout(debounceTimer);
   debounceTimer = window.setTimeout(callback, time);
 };
+// var swiper = new Swiper(".mySwiper", {
+//   pagination: {
+//     el: ".swiper-pagination2",
+//     dynamicBullets: true,
+//   },
+// });
+
 
 const swiperThumbs = new Swiper(".swiper-thumbs", {
   // Optional parameters
+  pagination: {
+    el: ".swiper-pagination",
+    dynamicBullets: true,
+  },
   direction: "horizontal",
   loop: true,
   slidesPerView: 2 + isDesktop,
@@ -27,9 +38,10 @@ const swiperMain = new Swiper(".swiper-main", {
   spaceBetween: 24,
   speed: 500,
   // If we need pagination
-  pagination: {
-   el: '.slider__nav',
-   },
+  // pagination: {
+  //   el: ".swiper-pagination",
+  //   dynamicBullets: true,
+  // },
 
   // Navigation arrows
   navigation: {
@@ -50,17 +62,20 @@ const adaptiveSlider = (e) => {
   const widtWin = window.innerWidth;
   if (widtWin < 767) {
     swiperThumbs.params.slidesPerView = 2.2;
-    spaceBetween = 6;
+    swiperThumbs.params.spaceBetween = 6;
     swiperThumbs.update();
   } else if (widtWin < 1199) {
     swiperThumbs.params.slidesPerView = 2.6;
-    spaceBetween = 20;
+    swiperThumbs.params.spaceBetween = 20;
     swiperThumbs.update();
-//   } else if (widtWin < 1439) {
-    //   swiperThumbs.update();
-    } else {
+  // } else if (widtWin < 1439) {
+  //   console.log('<1439 widthWin: ' + widtWin)
+  //   swiperThumbs.params.spaceBetween = 20;
+  //   swiperThumbs.update();
+  } else {
+    console.log('else widthWin: ' + widtWin)
     swiperThumbs.params.slidesPerView = 3;
-    spaceBetween = 24;
+    swiperThumbs.params.spaceBetween = 24;
     swiperThumbs.update();
   }
 };
