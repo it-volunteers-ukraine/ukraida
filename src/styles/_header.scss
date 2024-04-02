@@ -2,11 +2,8 @@
 @import "./variables";
 @import "./components";
 
-body {
-  font-family: "Inter", sans-serif;
-}
-
 .header {
+  font-family: "Inter", sans-serif;
   display: flex;
   justify-content: center;
 
@@ -30,12 +27,14 @@ body {
   position: fixed;
   padding-top: 16px;
   background: $white;
-  /* width: 100%; */
+  width: 100%;
 }
 
 .btn__img {
   width: 32px;
+  height: 32px;
   margin-right: 81px;
+  fill: $dark-blue;
 }
 
 .modal__btn {
@@ -50,8 +49,10 @@ body {
   margin-right: auto;
 }
 
-.modal__btn img {
+.modal__btn svg {
   width: 32px;
+  height: 32px;
+  fill: $dark-blue;
 }
 
 .logo {
@@ -136,6 +137,13 @@ body {
   align-items: center;
 }
 
+.menu__modal-item svg {
+  width: 32px;
+  height: 32px;
+
+  stroke: $black;
+}
+
 .menu__modal-img {
   margin-right: 12px;
 }
@@ -150,6 +158,8 @@ body {
 
 .nav__img-inst {
   width: 44px;
+  height: 44px;
+  fill: $black;
 }
 
 .link-modal {
@@ -176,6 +186,7 @@ body {
 
   .btn__img {
     width: 44px;
+    height: 44px;
     margin-right: 114px;
   }
 
@@ -183,8 +194,9 @@ body {
     padding: 32px 40px;
   }
 
-  .modal__btn img {
+  .modal__btn svg {
     width: 44px;
+    height: 44px;
   }
 
   .menu__modal-item {
@@ -265,12 +277,31 @@ body {
   }
 
   .menu__item-inst {
-    fill: $black;
-    display: block;
+    display: flex;
   }
 
-  .menu__item-inst {
+  .menu__item-inst svg {
     width: 32px;
+    height: 32px;
+
+    fill: $black;
+    transition: fill 0.3s;
+  }
+
+  .menu__item-inst:hover svg {
+    fill: $dark-blue;
+  }
+
+  .menu__item svg {
+    width: 32px;
+    height: 32px;
+
+    stroke: $black;
+    transition: stroke 0.3s;
+  }
+
+  .menu__item:hover svg {
+    stroke: $dark-blue;
   }
 
   .menu__item {
