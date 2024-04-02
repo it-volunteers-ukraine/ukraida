@@ -55,7 +55,8 @@
 
                 </div>
                 <div class="block-icons__text">
-                    UKRAIDA ist Einheit. UKRAine + In + DArmstadt: wir kommen zusammen, um uns gegenseitig zu unterstützen
+                    UKRAIDA ist Einheit. UKRAine + In + DArmstadt: wir
+                     kommen zusammen, um uns gegenseitig zu unterstützen.
                 </div>
             </div>
             <div class="block-icons__item">
@@ -65,7 +66,7 @@
                     </svg>
                 </div>
                 <div class="block-icons__text">
-                    UKRAIDA ist Hilfe. UKRaine + AId + DArmstadt: Wir helfen der Ukraine in Darmstadt.
+                    UKRAIDA ist Hilfe. UKRaine + AId + DArmstadt: Wir helfen der Ukraine in Darmstadt. <br>&nbsp;
                 </div>
             </div>
             <div class="block-icons__item">
@@ -125,7 +126,7 @@
                     + 5
                 </div>
                 <div class="block-icons__text">
-                    Wohltätigkeitsprojekte
+                    Wohltätigkeitsprojekte <br>&nbsp;
                 </div>
             </div>
         </div>
