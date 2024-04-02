@@ -20,15 +20,15 @@
                             </a>
                         </li>
                         <li class="social-media__item">
-                            <a class="social-media__link" href="mailto:email@gmail.com" target="_blank" rel="noopener noreferrer">
+                            <a class="social-media__link" href="mailto:ukraidadarmstadt@gmail.com" target="_blank" rel="noopener noreferrer">
                                 <svg class="social__icon">
                                     <use xlink:href="<?php bloginfo('template_url'); ?>/assets/images/footer/sprites.svg#email"></use>
-                                </svg>email@gmail.com
+                                </svg>ukraidadarmstadt@gmail.com
                             </a>
                         </li>
                     </ul>
                 </div>
-                <p class="copyright__desc">&#169; 2024  БО «Ukraida». Всі права захищені.</p>
+                <p class="copyright__desc">&#169; 2024 Ukrainischer Verein Darmstadt (UKRAIDA)</p>
             </div>
         </div>
     </footer>
