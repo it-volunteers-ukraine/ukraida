@@ -36,8 +36,9 @@
 
               </p>
               
-           
-            <a href="/devpage" class="button-secondary img-text__btn">Mehr Informationen</a>
+              <div class="img-text__button">
+                <a href="/devpage" class="img-text__btn">Mehr Informationen</a>
+            </div>
 
         </div>
     </div>
@@ -164,7 +165,9 @@
                 ukrainische Teenager investiert. Wir haben noch viele weitere interessante
                 Projekte.
             </p>
-            <a href="/devpage" class="button-secondary img-text__btn">Wir machen weiter. Sind Sie dabei?</a>
+            <div class="img-text__button">
+                <a href="/devpage" class="img-text__btn-advanced">Wir machen weiter. Sind Sie dabei?</a>
+            </div>
 
         </div>
         <div class="img-text__img">
