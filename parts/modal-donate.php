@@ -32,3 +32,6 @@
         </div>
     </div>
 </div>
+<Script>
+  const backgroundImageUrl = "<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/icons/success.svg";
+</Script>

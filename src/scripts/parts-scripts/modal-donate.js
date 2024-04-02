@@ -49,10 +49,10 @@ function copyIban() {
   btnDonateCopyRef.style.position = "relative";
 
   const notify = document.createElement("div");
-  
+  // const backgroundImageUrl = "<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/icons/success.svg";
+  const svgUrl = "url(" + backgroundImageUrl + ")";
   if (btnDonateCopyRef.children.length == 0) {
-    notify.style.backgroundImage =
-      "url(wp-content/themes/ukraida/src/images/icons/success.svg)";
+    notify.style.backgroundImage = svgUrl;
     notify.style.width = "24px";
     notify.style.height = "24px";
     notify.style.borderRadius = "50%";
