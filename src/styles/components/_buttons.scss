@@ -144,7 +144,7 @@ You can use this class for button
   }
 
   &:active:not(:disabled) {
-    background: $btn-main-active-background;
+    background-color: $blue;
   }
 
   &:disabled {
@@ -178,12 +178,14 @@ You can use this class for button
 
 @mixin btn-main-m {
   @include btn-main;
+  font-size: 20px;
   height: 56px;
   padding: 16px;
 }
 
 @mixin btn-main-l {
   @include btn-main;
+  font-size: 24px;
   height: 77px;
   padding: 24px 20px;
 }

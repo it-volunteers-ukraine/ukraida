@@ -1,113 +1,124 @@
-@import './buttons';
+@import "./buttons";
 
 .img-text {
-    &__title {
-        text-align: center;
+  &__title {
+    text-align: center;
 
-        &--desc {
-            display: none;
+    &--desc {
+      display: none;
 
-            @media (min-width:1200px) {
-                display: block;
-                margin-bottom: 64px;
-            }
-        }
-
-        &--mob {
-            display: block;
-            margin-bottom: 33px;
-
-            @media (min-width:1200px) {
-                display: none;
-            }
-        }
+      @media (min-width: 1200px) {
+        display: block;
+        margin-bottom: 64px;
+      }
     }
 
-    &__wrap {
-        display: flex;
-        flex-direction: column;
+    &--mob {
+      display: block;
+      margin-bottom: 33px;
 
-        .img-text--reverse & {
-            flex-direction: column-reverse
-        }
+      @media (min-width: 1200px) {
+        display: none;
+      }
+    }
+  }
 
-        @media (min-width:1200px) {
+  &__wrap {
+    display: flex;
+    flex-direction: column;
 
-            .img-text--reverse &,
-            & {
-                flex-direction: row;
-                align-items: center;
-                justify-content: space-between;
-                gap: 30px;
-            }
-
-
-        }
+    .img-text--reverse & {
+      flex-direction: column-reverse;
     }
 
-    &__img {
-        width: 100%;
-        align-self: center;
-        margin-bottom: 16px;
+    @media (min-width: 1200px) {
+      .img-text--reverse &,
+      & {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 30px;
+      }
+    }
+  }
 
-        & img {
-            width: 100%;
-            height: auto;
-            object-fit: cover;
-            border-radius:15px;
+  &__img {
+    width: 100%;
+    align-self: center;
+    margin-bottom: 16px;
 
-        }
-
-        @media (min-width:768px) {
-            width: 74%;
-            margin-bottom: 24px;
-        }
-
-        @media (min-width:1200px) {
-            margin-bottom: 0;
-            width: 50%;
-        }
+    & img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      border-radius: 15px;
     }
 
-    &__content {
-        flex-basis: 50%;
-        flex-grow: 1;
-        font-size: 14px;
-        line-height: 121%;
-        font-family: $font-main;
-        text-align: justify;
-
-        @media (min-width:767px) {
-            font-size: 20px;
-        }
-        @media (min-width:1600px) {
-            font-size: 24px;
-        }
-        &>p{
-            margin-bottom: 15px
-        }
-
+    @media (min-width: 768px) {
+      width: 74%;
+      margin-bottom: 24px;
     }
 
-    &__btn {
-       
-        @include btn-advanced-m;
+    @media (min-width: 1200px) {
+      margin-bottom: 0;
+      width: 50%;
+    }
+  }
 
-        width: fit-content;
-        padding: 14px 8px;
-        height: auto;
-        min-height: unset;
-        display: flex;
-        margin: 24px auto 0;
-        @media (min-width:768px) {
-            padding: 16px;
-            font-size: 20px;
-        }
-        @media (min-width:1200px) {
-            margin: 72px auto 0;
-            padding: 24px 20px;
-            font-size: 24px;
-        }
+  &__content {
+    flex-basis: 50%;
+    flex-grow: 1;
+    font-size: 14px;
+    line-height: 121%;
+    font-family: $font-main;
+    text-align: justify;
+
+    @media (min-width: 767px) {
+      font-size: 20px;
+    }
+    @media (min-width: 1600px) {
+      font-size: 24px;
+    }
+    & > p {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__button {
+      margin-top: 24px;
+      text-align: center;
+    @media (min-width: 768px) {
+      margin-top: 40px;
+    }
+    @media (min-width: 1200px) {
+        /*margin-top: 40px;*/
+      }
+  }
+
+  &__btn {
+    @include btn-main-s;
+
+    @media (min-width: 768px) {
+      @include btn-main-m;
+
+    }
+    @media (min-width: 1200px) {
+      @include btn-main-l;
+    }
+    @media (min-width: 1440px) {
+      /*margin-top: 72px; */
+    }
+  }
+
+  &__btn-advanced {
+    @include btn-advanced-s;
+
+    @media (min-width: 768px) {
+      @include btn-advanced-m;
     }
 
+    @media (min-width: 1200px) {
+      @include btn-advanced-l;
+    }
+  }
 }
