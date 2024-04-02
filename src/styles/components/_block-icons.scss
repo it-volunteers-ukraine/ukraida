@@ -44,6 +44,12 @@
         max-width: 231px;
         flex-grow: 1;
         font-size: 14px;
+        &:has(.block-icons__icon){
+            display: flex;
+            flex-direction: column;
+            align-items:center;
+            justify-content: flex-start;
+        }
 
         &:has(.block-icons__num) {
             display: flex;
@@ -96,6 +102,7 @@
             font-size: 24px;
 
         }
+     
     }
    &__num-inner{
     position: relative;
@@ -153,6 +160,7 @@
     }
 
     &__icon {
+      
         margin-bottom: 24px;
 
         @media (min-width:1200px) {
@@ -163,9 +171,10 @@
             width: 85px;
 
             @media (min-width:1200px) {
-                width: 123px;
+               width : 123px;
             }
         }
+     
 
     }
 
@@ -176,6 +185,8 @@
         text-transform: uppercase;
         font-weight: 900;
         font-size: 32px;
+        text-align: center;
+        padding-inline-end: 20px;
         @media (min-width:767px) {
             margin-bottom: 24px;
             font-size: 48px;
@@ -191,6 +202,7 @@
         padding-left: 1rem;
         line-height: 120%;
         font-style: italic;
+        text-align: center;
 
 
     }
