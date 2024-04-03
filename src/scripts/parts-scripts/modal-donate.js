@@ -7,11 +7,16 @@ const btnDonateCopyRef = document.getElementById("js-btn-donate-copy");
 console.log("modal script");
 
 function openModal() {
+  bodyScrollTop = window.scrollY || document.documentElement.scrollTop;
+    // Запрещаем прокрутку страницы
+  document.body.style.overflow = 'hidden';
+  document.body.style.paddingRight = getScrollbarWidth() + 'px';
+
   modalContainerRef.classList.add("is-open");
   modalInnerRef.classList.add("is-open");
   modalContainerRef.addEventListener("click", closeModal);
   document.addEventListener("keydown", closeModal);
-  document.body.classList.add("modal-open");
+  // document.body.classList.add("modal-open");
   // window.scroll(0, 0);
 
   btnDonateCopyRef.addEventListener("click", copyIban);
@@ -23,14 +28,32 @@ function closeModal(evt) {
     evt.currentTarget === evt.target ||
     evt.currentTarget.id === "js-btn-close"
   ) {
+    document.body.style.overflow = '';
+    // Удаляем отступ справа
+    document.body.style.paddingRight = '';
+    // Возвращаем скролл на прежнюю позицию
+    window.scrollTo(0, bodyScrollTop);
+
     modalInnerRef.classList.remove("is-open");
     modalContainerRef.classList.remove("is-open");
     document.removeEventListener("keydown", closeModal);
     modalContainerRef.removeEventListener("click", closeModal);
 
     btnDonateCopyRef.removeEventListener("click", copyIban);
-    document.body.classList.remove("modal-open");
+    // document.body.classList.remove("modal-open");
   }
+}
+
+function getScrollbarWidth() {
+  // Создаем элемент-индикатор прокрутки
+  var scrollDiv = document.createElement('div');
+  scrollDiv.style.cssText = 'width: 99px; height: 99px; overflow: scroll; position: absolute; top: -9999px;';
+  document.body.appendChild(scrollDiv);
+  // Вычисляем ширину скроллбара
+  var scrollbarWidth = scrollDiv.offsetWidth - scrollDiv.clientWidth;
+  // Удаляем элемент-индикатор прокрутки
+  document.body.removeChild(scrollDiv);
+  return scrollbarWidth;
 }
 
 function copyIban() {

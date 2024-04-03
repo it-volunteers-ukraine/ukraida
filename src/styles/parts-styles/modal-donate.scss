@@ -3,9 +3,11 @@
 
 // block scroll
 .modal-open {
-  /* overflow: hidden; */
+  /* overflow: hidden;
+  padding-right: 17px;
+   */
+  overflow-y: hidden;
   position: fixed;
-  overflow-y: scroll;
   width: 100%;
 }
 

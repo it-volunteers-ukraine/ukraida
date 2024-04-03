@@ -28,7 +28,7 @@
                         </li>
                     </ul>
                 </div>
-                <p class="copyright__desc">&#169; 2024 Ukrainischer Verein Darmstadt (UKRAIDA)</p>
+                <p class="copyright__desc">&#169; 2024 Ukrainischer Verein Darmstadt (UKRAIDA) e.V.</p>
             </div>
         </div>
     </footer>
