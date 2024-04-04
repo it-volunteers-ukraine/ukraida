@@ -1,7 +1,7 @@
 @import "../variables";
 
 .dev__page {
-  /* background: url("<?php bloginfo('template_url'); ?>/assets/images/dev_page/bg_dev_page.svg"); */
+  font-family: "Inter", sans-serif;
   background: url("../../images/dev_page/bg_dev_page.svg");
   background-repeat: no-repeat;
   max-width: 100%;
@@ -47,12 +47,30 @@
 .title__text {
   font-size: 20px;
   font-weight: 700;
+  width: 150px;
 }
 
 .text__item {
   font-weight: 400;
   font-size: 14px;
   line-height: 150%;
+}
+
+.dev__btn {
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500px;
+  padding: 14px 12px;
+  border-radius: 15px;
+  border: 0;
+  background: $dark-blue;
+  color: $white;
+
+  transition: 0.3s background;
+}
+
+.dev__btn:hover {
+  background: $blue;
 }
 
 @media screen and (min-width: 768px) {
@@ -90,10 +108,16 @@
 
   .title__text {
     font-size: 32px;
+    width: auto;
   }
 
   .text__item {
     font-size: 20px;
+  }
+
+  .dev__btn {
+    font-size: 20px;
+    padding: 16px;
   }
 }
 
@@ -103,7 +127,7 @@
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1280px) {
   .dev__page {
     background: url("../../images/dev_page/bg_dev_page4.svg");
     background-repeat: no-repeat;
@@ -136,12 +160,21 @@
     height: 480px;
   }
 
+  .title__text {
+    font-size: 36px;
+  }
+
   .text__item {
     font-size: 24px;
   }
+
+  .dev__btn {
+    font-size: 24px;
+    padding: 24px 20px;
+  }
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1920px) {
   .dev__page {
     background: url("../../images/dev_page/bg_dev_page3.svg");
     background-repeat: no-repeat;
@@ -150,7 +183,6 @@
 
   .dev__page-img1 {
     top: 4%;
-    /*left: 783px;*/
     left: unset;
     right: 700px;
     width: 156px;
@@ -158,7 +190,6 @@
 
   .dev__page-img2 {
     top: 25%;
-    /*left: 993px;*/
     left: unset;
     right: 300px;
 
@@ -177,13 +208,5 @@
     padding-left: 64px;
     width: 475px;
     height: 531px;
-  }
-
-  .title__text {
-    font-size: 36px;
-  }
-
-  .text__item {
-    font-size: 24px;
   }
 }

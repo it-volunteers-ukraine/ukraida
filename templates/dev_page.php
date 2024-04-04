@@ -9,11 +9,16 @@ Template Name: devpage
         <img class="dev__page-img2" src="<?php bloginfo('template_url'); ?>/assets/images/dev_page/dev_page-img2.png" alt="pigeon" />
         <img class="dev__page-img3" src="<?php bloginfo('template_url'); ?>/assets/images/dev_page/dev_page-img3.png" alt="pigeon" />
         <div class="text__wrap">
-            <h2 class="title__text">Сторінка знаходиться в розробці</h2>
+            <h2 class="title__text">Diese Seite wird gerade entwickelt.</h2>
             <p class="text__item">
-                Вибачте за тимчасові незручності! Ми працюємо над створенням
-                чогось особливого. Дякуємо за терпіння!
+                Vielen Dank, dass Sie dabei sind. Diese Seite
+                wird in absehbarer Zeit verfügbar sein. Bitte
+                schauen Sie später wieder vorbei.
+                Danke für Ihr Verständnis.
             </p>
+            <div>
+                <button class="dev__btn">Zur Startseite</button>
+            </div>
         </div>
     </div>
 </section>
