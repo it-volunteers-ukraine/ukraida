@@ -30,20 +30,37 @@
         </div>
     </div>
 </div> -->
-<div id="donat-modal" class="modal">
-    <div class="modal-wrap">
-        <h2 class="donat-title"></h2>
-        <div class="item donat-item">
-            <p class="item-title">Name des Empfängers:</p>
-            <p class="item-text">Ukrainischer Verein Darmstadt (UKRAIDA) e.V.</p>
+<div id="donate-modal" class="modal ">
+    <div id="modal-wrap" class="modal-wrap">
+        <button id="js-btn-close" type="button" class="btn-clear btn-icon modal__btn-close">
+            <svg class="modal__icon-btn">
+                <use href="<?php bloginfo('template_url'); ?>/assets/images/footer/sprites.svg#close"></use>
+            </svg>
+        </button>
+        <h2 class="donate-title">Spendendetails</h2>
+        <div class="donate_item">
+            <p class="donate_item-title">Name des Empfängers:</p>
+            <div class="donate_block-text">
+                <p class="donate_item-text">Ukrainischer Verein Darmstadt (UKRAIDA) e.V.</p>
+                <svg class="donate_icon-copy donate_icon is-hidden">
+                    <use href="<?php bloginfo('template_url'); ?>/assets/images/sprites.svg#icon-copy"></use>
+                </svg>
+                <svg class="donate_icon-copy donate_icon">
+                    <use href="<?php bloginfo('template_url'); ?>/assets/images/sprites.svg#icon-copy-success"></use>
+                </svg>
+                <!-- <div class="donate_text-icon">
+                </div> -->
+            </div>
         </div>
-        <div class="item donat-item">
-            <p class="item-title">IBAN:</p>
-            <p class="item-text">DE25 5085 0150 0080 0148 99</p>
+        <div class="donate_item">
+            <p class="donate_item-title">IBAN:</p>
+            <div class="donate_block-text">
+                <p class="donate_item-text">DE25 5085 0150 0080 0148 99</p>
+            </div>
         </div>
-        <div class="item donat-item">
-            <p class="item-title">Verwendungszweck:</p>
-            <p class="item-text">Spende</p>
+        <div class="donate_item">
+            <p class="donate_item-title">Verwendungszweck:</p>
+            <p class="donate_item-text">Spende</p>
         </div>
     </div>
 </div>

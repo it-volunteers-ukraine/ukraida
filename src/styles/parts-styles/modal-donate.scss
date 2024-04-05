@@ -27,6 +27,7 @@
   pointer-events: none;
   font-family: $font-main;
   transition: all $animations-long;
+  color: $black;
 }
 
 .modal.is-open {
@@ -34,23 +35,26 @@
   pointer-events: all;
 }
 // Inner__wrap
-.inner__wrap {
+.modal-wrap {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 288px;
+  width: 284px;
   display: flex;
   flex-direction: column;
+  gap: 24px;
+  /*display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: center; */
   background-color: $background;
   border-radius: 15px;
   border: 2px solid $green;
-  padding: 64px 13px 20px;
+  padding: 60px 24px 43px;
   transform: translate(-50%, -50%) scale(0.3);
   transition: all $animations-long;
 }
-.inner__wrap.is-open {
+.modal-wrap.is-open {
   transform: translate(-50%, -50%) scale(1);
 }
 
@@ -69,6 +73,66 @@
 
 .modal__icon-btn {
   height: 100%;
+}
+
+.donate-title {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.362;
+  margin-bottom: 32px;
+}
+
+.donate_item {
+  padding-bottom: 24px;  
+  border-bottom: 1px solid $green;
+}
+
+.donate_item-title {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.362;
+  margin-bottom: 8px;
+}
+
+.donate_block-text{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 44px;
+  height: 44px;
+}
+
+.donate_item-text {
+  font-size: 14px;
+  line-height: 1.362;
+}
+
+.donate_text-icon{
+  position: relative;
+  width: 44px;
+  height: 44px;
+  /*
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+   */
+  padding: 10px;
+}
+
+.donate_icon {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.donate_icon-copy{
+  fill: $black;
 }
 
 // Modal__text-wrap

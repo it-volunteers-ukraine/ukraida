@@ -1,7 +1,7 @@
 const btnDonateRef = document.getElementById("js-btn-donate");
 const btnCloseModalRef = document.getElementById("js-btn-close");
-const modalContainerRef = document.getElementById("js-modal");
-const modalInnerRef = document.getElementById("js-inner__wrap");
+const modalDonateRef = document.getElementById("donate-modal");
+const modalWrapRef = document.getElementById("modal-wrap");
 const btnDonateCopyRef = document.getElementById("js-btn-donate-copy");
 
 console.log("modal script");
@@ -12,9 +12,9 @@ function openModal() {
   document.body.style.overflow = 'hidden';
   document.body.style.paddingRight = getScrollbarWidth() + 'px';
 
-  modalContainerRef.classList.add("is-open");
-  modalInnerRef.classList.add("is-open");
-  modalContainerRef.addEventListener("click", closeModal);
+  modalDonateRef.classList.add("is-open");  //background
+  modalWrapRef.classList.add("is-open");   
+  modalDonateRef.addEventListener("click", closeModal); 
   document.addEventListener("keydown", closeModal);
   // document.body.classList.add("modal-open");
   // window.scroll(0, 0);
@@ -34,10 +34,10 @@ function closeModal(evt) {
     // Возвращаем скролл на прежнюю позицию
     window.scrollTo(0, bodyScrollTop);
 
-    modalInnerRef.classList.remove("is-open");
-    modalContainerRef.classList.remove("is-open");
+    modalWrapRef.classList.remove("is-open");
+    modalDonateRef.classList.remove("is-open");
     document.removeEventListener("keydown", closeModal);
-    modalContainerRef.removeEventListener("click", closeModal);
+    modalDonateRef.removeEventListener("click", closeModal);
 
     btnDonateCopyRef.removeEventListener("click", copyIban);
     // document.body.classList.remove("modal-open");
