@@ -16,17 +16,18 @@ const debounce = (callback, time) => {
 //   },
 // });
 
-function calulatethumbs(){
+function calulatethumbs() {
   const widtWin = window.innerWidth;
-  countThumbs = 3
+  countThumbs = 0;
   if (widtWin < 767) {
     countThumbs = 2.2;
   } else if (widtWin < 1199) {
     countThumbs = 2.72;
-  } 
+  } else {
+    countThumbs = 3;
+  }
   return countThumbs;
 }
-
 
 const swiperThumbs = new Swiper(".swiper-thumbs", {
   // Optional parameters
@@ -36,7 +37,7 @@ const swiperThumbs = new Swiper(".swiper-thumbs", {
   },
   direction: "horizontal",
   loop: true,
-  slidesPerView: calulatethumbs(),
+  slidesPerView: 4,
   spaceBetween: 24,
   speed: 500,
 });
@@ -71,16 +72,17 @@ const swiperMain = new Swiper(".swiper-main", {
 
 const adaptiveSlider = (e) => {
   const widtWin = window.innerWidth;
-  swiperThumbs.params.slidesPerView = calulatethumbs();
-  
+  // swiperThumbs.params.slidesPerView = calulatethumbs();
+
   if (widtWin < 767) {
     swiperThumbs.params.spaceBetween = 6;
   } else if (widtWin < 1199) {
     swiperThumbs.params.spaceBetween = 20;
   } else {
-    console.log('else widthWin: ' + widtWin)
+    console.log("else widthWin: " + widtWin);
     swiperThumbs.params.spaceBetween = 24;
   }
+
   swiperThumbs.update();
 };
 
