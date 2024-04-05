@@ -1,25 +1,25 @@
 @import "../styles/global";
 
 svg {
-    fill: $black;
+  fill: $black;
 }
 
 .footer {
-    padding: 32px 0;
-    background: $gradient;
+  padding: 32px 0;
+  background: $gradient;
 }
 
 .footer__inner-wrap {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap:24px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
 
-    margin-bottom: 56px;
+  margin-bottom: 56px;
 }
 
-.logo_img{
-    width: 106px;
+.logo_img {
+  width: 106px;
 }
 
 /*
@@ -40,79 +40,78 @@ svg {
 */
 // Privacy__list
 .privacy__list {
-    display: flex;
-    flex-direction: column;
-    row-gap: 8px;
-    font-size: 14px;
-    font-weight: 500;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+  font-size: 14px;
+  font-weight: 500;
 }
 
-.privacy__item{
-    padding-top: 14px;
-    padding-bottom: 14px;
+.privacy__item {
+  padding-top: 14px;
+  padding-bottom: 14px;
 }
 
 .privacy__link {
-
-    color: $black;
+  color: $black;
 }
 .privacy__link:hover,
 .privacy__link:focus {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 // Social-media
 .social-media__list {
-    display: flex;
-    flex-direction: column;
-    row-gap: 8px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
 }
 
 .social-media__link {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    color: $black;
-    transition: fill $animations;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: $black;
+  transition: fill $animations, color $animations;
 }
-.social-media__link:hover svg,
-.social-media__link:focus svg {
-   fill: $dark-blue;
+.social-media__link:hover,
+.social-media__link:focus {
+  & .social__icon {
+    fill: $dark-blue;
+  }
+  color: $dark-blue;
 }
 
 .social__icon {
-    width: 24px;
-    height: 24px;
+  width: 24px;
+  height: 24px;
 }
 
 // Copyright__desc
 .copyright__desc {
-    font-family: $font-main;
-    text-align: center;
-    font-size: 12px;
-    line-height: 1.38;
-    font-weight: 500;
-    color: $black;
+  font-family: $font-main;
+  text-align: center;
+  font-size: 12px;
+  line-height: 1.38;
+  font-weight: 500;
+  color: $black;
 }
 
-
-
 @media screen and (min-width: 576px) {
-    /*
+  /*
     .footer__inner-wrap {
         flex-direction: row;
         justify-content: space-between;
         margin-bottom: 52px;
     }
     */
-    /*
+  /*
     .logo__link {
         margin: 0;
     }
     */
-    
-    /*
+
+  /*
     // Privacy__list
     .privacy__list {
         row-gap: 16px;
@@ -124,13 +123,13 @@ svg {
     }
     */
 
-    /*
+  /*
     // Social-media
     .social-media__list {
         row-gap: 12px;
     }
     */
-    /*
+  /*
     // Copyright__desc
     .copyright__desc {
         font-size: 14px;
@@ -139,114 +138,116 @@ svg {
 }
 
 @media screen and (min-width: 768px) {
-    .footer {
-        padding: 24px 0;
-    }
+  .footer {
+    padding: 24px 0;
+  }
 
-    .footer__inner-wrap {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 47px;
-    }
+  .footer__inner-wrap {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 47px;
+  }
 
-    .logo_img{
-        width: 121px;
-    }
+  .logo_img {
+    width: 121px;
+  }
 
-    // Privacy__list
-    .privacy__list {
-        align-items: start;
-        gap: 16px;
-    }
+  // Privacy__list
+  .privacy__list {
+    align-items: start;
+    gap: 16px;
+  }
 
-    .privacy__item{
-        padding: 10px 0;
-    }
-    
-    .privacy__item-order {
-        order: -1;
-    }
+  .privacy__item {
+    padding: 10px 0;
+  }
 
-    .privacy__link {
-        font-size: 20px;
-    }
+  .privacy__item-order {
+    order: -1;
+  }
 
-    // Social-media
-    .social-media__list {
-        row-gap: 36px;
-    }
+  .privacy__link {
+    font-size: 20px;
+  }
 
-    .social-media__link {
-        font-size: 20px;
-    }
+  // Social-media
+  .social-media__list {
+    row-gap: 36px;
+  }
+
+  .social-media__link {
+    font-size: 20px;
+  }
+  .copyright__desc {
+    font-size: 14px;
+  }
 }
 
 @media screen and (min-width: 990px) {
-    .footer {
-        padding: 32px 0;
-    }
+  .footer {
+    padding: 32px 0;
+  }
 
-    .footer__inner-wrap {
-        margin-bottom: 44px;
-    }
+  .footer__inner-wrap {
+    margin-bottom: 44px;
+  }
 
-    // Privacy__list
-    .privacy__list {
-        flex-direction: row;
-        gap: 44px;
-    }
+  // Privacy__list
+  .privacy__list {
+    flex-direction: row;
+    gap: 44px;
+  }
 
-    .privacy__link {
-        font-size: 16px;
-    }
+  .privacy__link {
+    font-size: 16px;
+  }
 
-    // Social-media
-    .social-media__list {
-       gap: 16px;
-    }
+  // Social-media
+  .social-media__list {
+    gap: 16px;
+  }
 
-    .social__icon {
-        width: 32px;
-        height: 32px;
-    }
+  .social__icon {
+    width: 32px;
+    height: 32px;
+  }
 
-    // Copyright__desc
-    .copyright__desc {
-        font-size: 16px;
-    }
+  // Copyright__desc
+  .copyright__desc {
+    font-size: 16px;
+  }
 }
 
 @media screen and (min-width: 1200px) {
-    .footer__inner-wrap {
-        height: 153px;
-        margin-bottom: 40px;
-    }
+  .footer__inner-wrap {
+    height: 153px;
+    margin-bottom: 40px;
+  }
 
-    .logo_img{
-        width: 153px;
-    }
-    // Privacy__list
-    .privacy__list {
-        gap: 88px;
-    }
+  .logo_img {
+    width: 153px;
+  }
+  // Privacy__list
+  .privacy__list {
+    gap: 88px;
+  }
 
-    .privacy__link {
-        font-size: 24px;
-    }
+  .privacy__link {
+    font-size: 24px;
+  }
 
-    // Social-media
-    .social-media__list {
-       gap: 32px;
-    }
+  // Social-media
+  .social-media__list {
+    gap: 32px;
+  }
 
-    .social-media__link {
-        font-size: 24px;
-    }
+  .social-media__link {
+    font-size: 24px;
+  }
 
-    // Copyright__desc
-    .copyright__desc {
-        font-size: 18px;
-        font-weight: 400;
-    }
+  // Copyright__desc
+  .copyright__desc {
+    font-size: 18px;
+  }
 }
