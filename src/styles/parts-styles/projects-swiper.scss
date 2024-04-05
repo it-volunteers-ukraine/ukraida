@@ -111,7 +111,7 @@
     display: flex;
     justify-content: flex-start;
     align-items: stretch;
-    gap: 8px;
+     gap: 8px;
 
     @media (min-width:768px) {
       gap: 24px;
@@ -139,7 +139,6 @@
       height: 257px;
       
       @media (min-width:768px) {
-        max-height: unset;
         height: 330px;
       }
       @media (min-width:1200px) {
@@ -159,7 +158,7 @@
         height: 176px;
       }
       @media (min-width:1200px) {
-       max-width: 293px;
+       width: 293px;
         height: 211px;
       }
       @media (min-width:1440px) {

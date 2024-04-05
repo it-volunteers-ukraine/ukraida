@@ -16,7 +16,7 @@ const debounce = (callback, time) => {
 //   },
 // });
 
-function calulatethumbs() {
+function calulateThumbs() {
   const widtWin = window.innerWidth;
   countThumbs = 0;
   if (widtWin < 767) {
@@ -29,6 +29,19 @@ function calulatethumbs() {
   return countThumbs;
 }
 
+function calculateSpaceBetween() {
+  const widtWin = window.innerWidth;
+  countSpaceBetween = 0;
+  if (widtWin < 767) {
+    countSpaceBetween = 6;
+  } else if (widtWin < 1199) {
+    countSpaceBetween = 20;
+  } else {
+    countSpaceBetween = 24;
+  }
+  return countSpaceBetween;
+}
+
 const swiperThumbs = new Swiper(".swiper-thumbs", {
   // Optional parameters
   pagination: {
@@ -37,8 +50,8 @@ const swiperThumbs = new Swiper(".swiper-thumbs", {
   },
   direction: "horizontal",
   loop: true,
-  slidesPerView: 4,
-  spaceBetween: 24,
+  slidesPerView: calulateThumbs(),
+  spaceBetween: calculateSpaceBetween(),
   speed: 500,
 });
 
@@ -72,17 +85,8 @@ const swiperMain = new Swiper(".swiper-main", {
 
 const adaptiveSlider = (e) => {
   const widtWin = window.innerWidth;
-  // swiperThumbs.params.slidesPerView = calulatethumbs();
-
-  if (widtWin < 767) {
-    swiperThumbs.params.spaceBetween = 6;
-  } else if (widtWin < 1199) {
-    swiperThumbs.params.spaceBetween = 20;
-  } else {
-    console.log("else widthWin: " + widtWin);
-    swiperThumbs.params.spaceBetween = 24;
-  }
-
+  swiperThumbs.params.slidesPerView = calulateThumbs();
+  swiperThumbs.params.spaceBetween = calculateSpaceBetween();
   swiperThumbs.update();
 };
 
