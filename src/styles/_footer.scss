@@ -45,7 +45,6 @@ svg {
   row-gap: 8px;
   font-size: 14px;
   font-weight: 500;
-  align-items: center;
 }
 
 .privacy__item {
@@ -180,6 +179,9 @@ svg {
   .social-media__link {
     font-size: 20px;
   }
+  .copyright__desc {
+    font-size: 14px;
+  }
 }
 
 @media screen and (min-width: 990px) {
@@ -247,6 +249,5 @@ svg {
   // Copyright__desc
   .copyright__desc {
     font-size: 18px;
-    font-weight: 400;
   }
 }
