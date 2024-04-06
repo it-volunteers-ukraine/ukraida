@@ -42,10 +42,10 @@
             <p class="donate_item-title">Name des Empfängers:</p>
             <div class="donate_block-text">
                 <p class="donate_item-text">Ukrainischer Verein Darmstadt (UKRAIDA) e.V.</p>
-                <svg class="donate_icon-copy donate_icon is-hidden">
+                <svg class="donate_icon-copy donate_icon ">
                     <use href="<?php bloginfo('template_url'); ?>/assets/images/sprites.svg#icon-copy"></use>
                 </svg>
-                <svg class="donate_icon-copy donate_icon">
+                <svg class="donate_icon-success donate_icon is-hidden">
                     <use href="<?php bloginfo('template_url'); ?>/assets/images/sprites.svg#icon-copy-success"></use>
                 </svg>
                 <!-- <div class="donate_text-icon">
@@ -55,12 +55,26 @@
         <div class="donate_item">
             <p class="donate_item-title">IBAN:</p>
             <div class="donate_block-text">
-                <p class="donate_item-text">DE25 5085 0150 0080 0148 99</p>
+                <p class="donate_item-text">DE25508501500080014899</p>
+                <svg class="donate_icon-copy donate_icon ">
+                    <use href="<?php bloginfo('template_url'); ?>/assets/images/sprites.svg#icon-copy"></use>
+                </svg>
+                <svg class="donate_icon-success donate_icon is-hidden">
+                    <use href="<?php bloginfo('template_url'); ?>/assets/images/sprites.svg#icon-copy-success"></use>
+                </svg>
             </div>
         </div>
         <div class="donate_item">
             <p class="donate_item-title">Verwendungszweck:</p>
-            <p class="donate_item-text">Spende</p>
+            <div class="donate_block-text">
+                <p class="donate_item-text">Spende</p>
+                <svg class="donate_icon-copy donate_icon ">
+                    <use href="<?php bloginfo('template_url'); ?>/assets/images/sprites.svg#icon-copy"></use>
+                </svg>
+                <svg class="donate_icon-success donate_icon is-hidden">
+                    <use href="<?php bloginfo('template_url'); ?>/assets/images/sprites.svg#icon-copy-success"></use>
+                </svg>
+            </div>
         </div>
     </div>
 </div>

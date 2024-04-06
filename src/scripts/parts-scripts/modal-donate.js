@@ -4,17 +4,30 @@ const modalDonateRef = document.getElementById("donate-modal");
 const modalWrapRef = document.getElementById("modal-wrap");
 const btnDonateCopyRef = document.getElementById("js-btn-donate-copy");
 
+// console.log("!!!!")
+const allDonateBlock = document.querySelectorAll(".donate_block-text");
+console.log("all donate block: ", allDonateBlock);
+
+// const donateItemRef = document.querySelector('.donate_item');
+const donateItemRef = document.querySelector(".modal-wrap");
+console.log(donateItemRef);
+
 console.log("modal script");
+
+const copyText = (e) => {
+  console.log(e.target);
+  console.log(e.currentTarget);
+};
 
 function openModal() {
   bodyScrollTop = window.scrollY || document.documentElement.scrollTop;
-    // Запрещаем прокрутку страницы
-  document.body.style.overflow = 'hidden';
-  document.body.style.paddingRight = getScrollbarWidth() + 'px';
+  // Запрещаем прокрутку страницы
+  document.body.style.overflow = "hidden";
+  document.body.style.paddingRight = getScrollbarWidth() + "px";
 
-  modalDonateRef.classList.add("is-open");  //background
-  modalWrapRef.classList.add("is-open");   
-  modalDonateRef.addEventListener("click", closeModal); 
+  modalDonateRef.classList.add("is-open"); //background
+  modalWrapRef.classList.add("is-open");
+  modalDonateRef.addEventListener("click", closeModal);
   document.addEventListener("keydown", closeModal);
   // document.body.classList.add("modal-open");
   // window.scroll(0, 0);
@@ -28,9 +41,9 @@ function closeModal(evt) {
     evt.currentTarget === evt.target ||
     evt.currentTarget.id === "js-btn-close"
   ) {
-    document.body.style.overflow = '';
+    document.body.style.overflow = "";
     // Удаляем отступ справа
-    document.body.style.paddingRight = '';
+    document.body.style.paddingRight = "";
     // Возвращаем скролл на прежнюю позицию
     window.scrollTo(0, bodyScrollTop);
 
@@ -46,8 +59,9 @@ function closeModal(evt) {
 
 function getScrollbarWidth() {
   // Создаем элемент-индикатор прокрутки
-  var scrollDiv = document.createElement('div');
-  scrollDiv.style.cssText = 'width: 99px; height: 99px; overflow: scroll; position: absolute; top: -9999px;';
+  var scrollDiv = document.createElement("div");
+  scrollDiv.style.cssText =
+    "width: 99px; height: 99px; overflow: scroll; position: absolute; top: -9999px;";
   document.body.appendChild(scrollDiv);
   // Вычисляем ширину скроллбара
   var scrollbarWidth = scrollDiv.offsetWidth - scrollDiv.clientWidth;
@@ -91,5 +105,47 @@ function copyIban() {
   }
 }
 
+const setNewAttributeSuccess = (event) => {
+  // console.log('@@@ start setNewAttributeSuccess')
+  for(let i = 0; i < allDonateBlock.length; i++){
+    if (allDonateBlock[i].hasAttribute('success')){
+      // console.log(`Remove Attributefor_ ${allDonateBlock[i]}`)
+      allDonateBlock[i].removeAttribute('success');
+    }
+  }
+  event.currentTarget.setAttribute('success', '');
+}
+
+
+const copyToBuffer = (event) =>{
+  // console.dir(e);
+  // console.dir(e.currentTarget);
+  console.log(`attribute success: ${event.currentTarget.hasAttribute('success')}`);
+  // console.dir(e.currentTarget);
+  // console.dir(`!!e.target: ${e}`);
+  data = event.currentTarget.firstElementChild.innerText
+  // console.log(`data: ${data}`)
+  try {
+    navigator.clipboard.writeText(data);
+  } catch (error) {
+    if (!window.isSecureContext) {
+      console.log("Cant copy non securyti https");
+    } else {
+      console.log("Error", error);
+    }
+  }
+  // #clear success
+  if (!event.currentTarget.hasAttribute('success')){
+    setNewAttributeSuccess(event);
+  }
+}
+
+for (let i = 0; i < allDonateBlock.length; i++){
+  console.log("add for: ", allDonateBlock[i])
+  allDonateBlock[i].addEventListener("click", (e) => copyToBuffer(e));
+}
+
+
 btnDonateRef.addEventListener("click", openModal);
 btnCloseModalRef.addEventListener("click", closeModal);
+// donateItemRef.addEventListener("click", copyText);

@@ -83,7 +83,7 @@
 }
 
 .donate_item {
-  padding-bottom: 24px;  
+  padding-bottom: 24px;
   border-bottom: 1px solid $green;
 }
 
@@ -94,20 +94,45 @@
   margin-bottom: 8px;
 }
 
-.donate_block-text{
+.donate_block-text {
+  position: relative;
+  cursor: pointer;
   display: flex;
-  justify-content: center;
   align-items: center;
   padding-right: 44px;
   height: 44px;
+
+  &:hover {
+    color: $dark-blue;
+    & svg {
+      fill: $dark-blue;
+    }
+  }
 }
 
+.donate_block-text svg {
+  transition: all $animations;
+}
+
+.donate_block-text[success] svg.donate_icon-copy {
+  opacity: 0;
+}
+.donate_block-text[success] svg.donate_icon-success {
+  opacity: 1;
+}
+
+.donate_block-text:not([success]) svg.donate_icon-copy {
+  opacity: 1;
+}
+.donate_block-text:not([success]) svg.donate_icon-success {
+  opacity: 0;
+}
 .donate_item-text {
   font-size: 14px;
   line-height: 1.362;
 }
 
-.donate_text-icon{
+.donate_text-icon {
   position: relative;
   width: 44px;
   height: 44px;
@@ -127,12 +152,10 @@
   height: 24px;
   position: absolute;
   top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.donate_icon-copy{
-  fill: $black;
+  right: 10px;
+  cursor: pointer;
+  transform: translateY(-50%);
+  transition: all $animations;
 }
 
 // Modal__text-wrap
