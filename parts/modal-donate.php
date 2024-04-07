@@ -32,9 +32,10 @@
 </div> -->
 <div id="donate-modal" class="modal ">
     <div id="modal-wrap" class="modal-wrap">
-        <button id="js-btn-close" type="button" class="btn-clear btn-icon modal__btn-close">
-            <svg class="modal__icon-btn">
-                <use href="<?php bloginfo('template_url'); ?>/assets/images/footer/sprites.svg#close"></use>
+        <button id="js-btn-close" type="button" class="modal_btn-close">
+            <!-- <svg class="modal__icon-btn icon"> -->
+            <svg class="icon">
+                <use href="<?php bloginfo('template_url'); ?>/assets/images/sprites.svg#icon-close"></use>
             </svg>
         </button>
         <h2 class="donate-title">Spendendetails</h2>
@@ -42,7 +43,7 @@
             <p class="donate_item-title">Name des Empfängers:</p>
             <div class="donate_block-text">
                 <p class="donate_item-text">Ukrainischer Verein Darmstadt (UKRAIDA) e.V.</p>
-                <svg class="donate_icon-copy donate_icon ">
+                <svg class="donate_icon-copy donate_icon">
                     <use href="<?php bloginfo('template_url'); ?>/assets/images/sprites.svg#icon-copy"></use>
                 </svg>
                 <svg class="donate_icon-success donate_icon is-hidden">

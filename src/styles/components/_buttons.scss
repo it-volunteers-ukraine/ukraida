@@ -6,8 +6,8 @@ You can use this class for button
  btn-advanced-s       - advanced button
  btn-advanced-m       - advanced button
  btn-advanced-l       - advanced button
- btn-icon             - button for icons
- btn-icon-black       - button for black icons
+ btn-icon-main        - button for icons
+ btn-icon-advanced    - button for black icons
  btn-socseti-yellow   - button yellow for socseti
  btn-socseti-white    - button white for socseti
  btn-clear - utils, delete all styles from button
@@ -17,6 +17,19 @@ You can use this class for button
 
 /* reset style */
 @mixin btn-reset {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  padding: 0;
+
+  &:hover,
+  &:focus {
+    outline: none;
+    border: none;
+  }
+}
+
+#btn-reset1 {
   border: none;
   background-color: transparent;
   cursor: pointer;
@@ -49,7 +62,26 @@ You can use this class for button
   }
 }
 
-#svg-yellow {
+#svg-main {
+  fill: $dark-blue;
+
+  & .icon {
+    fill: inherit;
+    height: 100%;
+  }
+
+  &:hover,
+  &:focus {
+    fill: $blue;
+  }
+  /*
+  &:active {
+    fill: orange;
+  }
+  */
+}
+
+#svg-advanced {
   fill: $yellow;
 
   & .icon {
@@ -67,29 +99,7 @@ You can use this class for button
   }
 }
 
-#svg-black {
-  fill: $black;
-  stroke: $black;
 
-  & .icon {
-    fill: inherit;
-    stroke: $black;
-  }
-}
-/*
-#btn-main {
-  background-color: $btn-main;
-
-  &:hover,
-  &:focus {
-    background-color: $btn-hover;
-  }
-
-  &:active {
-    background-color: $btn-pressed;
-  }
-}
-*/
 
 #btn-white {
   background-color: white;
@@ -110,13 +120,7 @@ You can use this class for button
   height: 35px;
 }
 
-/*  Это стили для кнопок 
- # Чтобы их подключить нужно импортировать у себя в файле стилей @import "../components.scss";
- # и в классе для кнопки загруить нужную кнопку например, у нас есть кнопка с класом sort-button
- .sort-button{
-   @extend .btn-main;
- {
- */
+
 @mixin btn-main {
   font-family: $font-advanced;
   display: inline-flex;
@@ -214,16 +218,20 @@ You can use this class for button
   @include btn-reset;
 }
 
-.btn-icon {
-  @extend #svg-yellow;
+.btn-icon-main {
+  /*@include btn-reset;*/
+  @extend #btn-reset1;
+  @extend #svg-main;
   @extend #svg-animation;
 }
 
-.btn-icon-black {
-  @extend #svg-black;
+.btn-icon-advanced {
+  @extend #svg-advanced;
+  @extend #svg-animation;
+
 }
 
-.btn-socseti-yellow {
+.btn-socseti {
   @extend #btn-svg;
   @extend #btn-socseti;
   @include btn-main;

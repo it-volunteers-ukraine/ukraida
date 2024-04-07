@@ -10,14 +10,14 @@ console.log("all donate block: ", allDonateBlock);
 
 // const donateItemRef = document.querySelector('.donate_item');
 const donateItemRef = document.querySelector(".modal-wrap");
-console.log(donateItemRef);
+// console.log(donateItemRef);
 
 console.log("modal script");
 
-const copyText = (e) => {
-  console.log(e.target);
-  console.log(e.currentTarget);
-};
+// const copyText = (e) => {
+//   console.log(e.target);
+//   console.log(e.currentTarget);
+// };
 
 function openModal() {
   bodyScrollTop = window.scrollY || document.documentElement.scrollTop;
@@ -106,10 +106,8 @@ function copyIban() {
 }
 
 const setNewAttributeSuccess = (event) => {
-  // console.log('@@@ start setNewAttributeSuccess')
   for(let i = 0; i < allDonateBlock.length; i++){
     if (allDonateBlock[i].hasAttribute('success')){
-      // console.log(`Remove Attributefor_ ${allDonateBlock[i]}`)
       allDonateBlock[i].removeAttribute('success');
     }
   }
@@ -118,13 +116,8 @@ const setNewAttributeSuccess = (event) => {
 
 
 const copyToBuffer = (event) =>{
-  // console.dir(e);
-  // console.dir(e.currentTarget);
-  console.log(`attribute success: ${event.currentTarget.hasAttribute('success')}`);
-  // console.dir(e.currentTarget);
-  // console.dir(`!!e.target: ${e}`);
+  // console.log(`attribute success: ${event.currentTarget.hasAttribute('success')}`);
   data = event.currentTarget.firstElementChild.innerText
-  // console.log(`data: ${data}`)
   try {
     navigator.clipboard.writeText(data);
   } catch (error) {
