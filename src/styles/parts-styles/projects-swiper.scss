@@ -256,7 +256,10 @@
 
   &__btn-left,
   &__btn-right {
-    display: none;    
+    display: none;
+    cursor: pointer;
+    padding: 0;
+    line-height: 0;
 
     @media (min-width:1200px) {
       display: block;
@@ -267,6 +270,10 @@
       transform: translate(-50%, 0);
     }
 
+    & svg path{
+      transition: all $animations;    
+    }
+
     &:hover {
       & svg path {
         fill: #CCCCCC;
@@ -275,11 +282,11 @@
   }
 
   &__btn-left {
-    left: -34px;
+    left: -40px;
   }
 
   &__btn-right {
-    right: -64px;
+    right: -72px;
 
   }
 
