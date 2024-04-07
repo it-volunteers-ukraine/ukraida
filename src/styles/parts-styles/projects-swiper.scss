@@ -258,6 +258,8 @@
   &__btn-right {
     display: none;
     cursor: pointer;
+    padding: 0;
+    line-height: 0;
 
     @media (min-width:1200px) {
       display: block;
@@ -280,11 +282,11 @@
   }
 
   &__btn-left {
-    left: -34px;
+    left: -40px;
   }
 
   &__btn-right {
-    right: -64px;
+    right: -62px;
 
   }
 
