@@ -27,6 +27,7 @@
   pointer-events: none;
   font-family: $font-main;
   transition: all $animations-long;
+  color: $black;
 }
 
 .modal.is-open {
@@ -34,28 +35,28 @@
   pointer-events: all;
 }
 // Inner__wrap
-.inner__wrap {
+.modal-wrap {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 288px;
+  width: 284px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   background-color: $background;
   border-radius: 15px;
   border: 2px solid $green;
-  padding: 64px 13px 20px;
+  padding: 60px 24px 43px;
   transform: translate(-50%, -50%) scale(0.3);
   transition: all $animations-long;
 }
-.inner__wrap.is-open {
+.modal-wrap.is-open {
   transform: translate(-50%, -50%) scale(1);
 }
 
 // Modal__btn-close & icon
-.modal__btn-close {
+.modal_btn-close {
+  @extend .btn-icon-main;
+
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -67,174 +68,174 @@
   padding: 6px;
 }
 
-.modal__icon-btn {
-  height: 100%;
-}
-
-// Modal__text-wrap
-.modal__text-wrap {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: $black;
-  font-size: 12px;
-  margin-bottom: 24px;
-  line-height: 1.36;
-  & h3 {
-    font-size: 12px;
-  }
-}
-.modal__text-wrap {
-  & h2,
-  & h3,
-  & p,
-  & .payment-text {
-    line-height: inherit;
-  }
-}
-
-.modal__title {
-  width: 232px;
-  margin-bottom: 12px;
-  font-size: 16px;
+.donate-title {
+  font-size: 20px;
   font-weight: 700;
+  line-height: 1.362;
+  margin-bottom: 32px;
   text-align: center;
-  line-height: normal;
 }
 
-.payment-list {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  gap: 4px;
+.donate_item:not(:last-child) {
+  padding-bottom: 16px;
   margin-bottom: 16px;
+  border-bottom: 1px solid $green;
 }
 
-.payment-text {
-  font-weight: 400;
-  line-height: normal;
+.donate_item-title {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.362;
+  margin-bottom: 8px;
 }
 
-/*
-.payment-text--size {
-    font-size: 13px;
-}*/
+.donate_block-text {
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding-right: 44px;
+  height: 44px;
+  font-size: 14px;
+  line-height: 1.362;
 
-// Modal__subtitle
-.modal__subtitle {
-  font-weight: 700;
-  line-height: 200%;
-  margin-bottom: 4px;
+  &:hover {
+    color: $dark-blue;
+    & svg {
+      fill: $dark-blue;
+    }
+  }
 }
 
-.modal__subtitle-text {
-  font-weight: 400;
-  line-height: normal;
+.donate_block-text svg {
+  transition: all $animations;
 }
 
-// Btn-copy
-.modal__btn-copy {
-  @include btn-advanced-s;
+.donate_block-text[success] svg.donate_icon-copy {
+  opacity: 0;
+}
+.donate_block-text[success] svg.donate_icon-success {
+  opacity: 1;
 }
 
-// MEDIA
+.donate_block-text:not([success]) svg.donate_icon-copy {
+  opacity: 1;
+}
+.donate_block-text:not([success]) svg.donate_icon-success {
+  opacity: 0;
+}
+
+.donate_item-text {
+
+}
+
+.donate_text-icon {
+  position: relative;
+  width: 44px;
+  height: 44px;
+  padding: 10px;
+}
+
+.donate_icon {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  cursor: pointer;
+  transform: translateY(-50%);
+  transition: all $animations;
+}
 
 @media screen and (min-width: 768px) {
-  .inner__wrap {
-    width: 505px;
-    padding: 87px 49px 32px;
+  .modal-wrap {
+    padding: 76px 40px 40px;
+    width: 571px;
   }
-
-  .modal__btn-close {
-    width: 44px;
-    height: 44px;
-    right: 16px;
-    top: 16px;
-  }
-
-  .modal__text-wrap {
-    margin-bottom: 40px;
-    font-size: 20px;
-    & h3 {
-      font-size: 20px;
-    }
-  }
-
-  .modal__title {
-    margin-bottom: 24px;
-    font-size: 24px;
-  }
-
-  .payment-list {
-    margin-bottom: 16px;
-  }
-  .modal__subtitle {
-    font-weight: 700;
-  }
-  .modal__btn-copy {
-    @include btn-advanced-m;
-  }
-  /*
-    .payment-text {
-        font-size: 20px;
-    }
-
-    .modal__subtitle {
-        font-size: 20px;
-        font-weight: 900;
-        line-height: normal;
-    }
-
-    .modal__subtitle-text {
-        font-size: 20px;
-    }
-    */
-}
-
-@media screen and (min-width: 1200px) {
-  .inner__wrap {
-    width: 656px;
-    padding: 96px 56px 48px;
-  }
-
-  .modal__text-wrap,
-  .modal__text-wrap h3 {
-    font-size: 24px;
-  }
-  .modal__btn-close {
+  
+  .modal_btn-close {
     width: 32px;
     height: 32px;
     right: 24px;
     top: 24px;
   }
-  .modal__title {
-    width: 567px;
-    font-weight: 600;
-    font-size: 32px;
-    margin-bottom: 32px;
-  }
-  .modal__subtitle {
-    font-weight: 700;
+
+  .donate-title {
+    font-size: 24px;
+    margin-bottom: 48px;
   }
 
-  /*
-    .payment-text {
-        font-size: 24px;
-    }
-
-    .modal__subtitle {
-        font-size: 24px;
-    }
-
-    .modal__subtitle-text {
-        font-size: 24px;
-    }
-*/
-  .modal__btn-copy {
-    @include btn-advanced-l;
+  .donate_item:not(:last-child){
+    padding-bottom: 24px;
   }
+
+  .donate_item-title{
+    font-size: 20px;
+    margin-bottom: 12px;
+  }
+
+  .donate_block-text{
+    font-size: 18px;
+  }
+
 }
+
+@media screen and (min-width: 1200px) {
+  .modal-wrap {
+    padding: 80px 48px 48px;
+    width: 629px;
+  }
+  
+  .modal_btn-close {
+    width: 32px;
+    height: 32px;
+    right: 24px;
+    top: 24px;
+  }
+
+  .donate-title {
+    font-size: 32px;
+    margin-bottom: 72px;
+  }
+
+  .donate_item-title{
+    font-size: 24px;
+  }
+
+  .donate_block-text{
+    font-size: 20px;
+  }
+
+}
+
+@media screen and (min-width: 1440px) {
+  /*
+  .modal-wrap {
+    padding: 80px 48px 48px;
+    width: 629px;
+  }
+  
+  .modal_btn-close {
+    width: 32px;
+    height: 32px;
+    right: 24px;
+    top: 24px;
+  }
+
+  .donate-title {
+    font-size: 32px;
+    margin-bottom: 72px;
+  }
+
+  .donate_item-title{
+    font-size: 24px;
+  }
+
+  .donate_block-text{
+    font-size: 20px;
+  }
+*/
+}
+
+
+
