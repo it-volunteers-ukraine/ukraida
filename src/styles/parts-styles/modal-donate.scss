@@ -57,15 +57,17 @@
 .modal_btn-close {
   @extend .btn-icon-main;
 
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 32px;
-  height: 32px;
+
+  width: 44px;
+  height: 44px;
   position: absolute;
-  right: 6px;
-  top: 6px;
-  padding: 6px;
+  right: 0;
+  top: 0;
+
+  & .icon{
+    width: 16px;
+    height: 16px;
+  }
 }
 
 .donate-title {
@@ -154,10 +156,13 @@
   }
   
   .modal_btn-close {
-    width: 32px;
-    height: 32px;
     right: 24px;
     top: 24px;
+
+    & .icon{
+      width: 24px;
+      height: 24px;
+    }
   }
 
   .donate-title {
@@ -187,8 +192,8 @@
   }
   
   .modal_btn-close {
-    width: 32px;
-    height: 32px;
+    width: 24px;
+    height: 24px;
     right: 24px;
     top: 24px;
   }
