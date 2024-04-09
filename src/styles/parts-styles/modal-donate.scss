@@ -6,9 +6,15 @@
   /* overflow: hidden;
   padding-right: 17px;
    */
-  overflow-y: hidden;
-  position: fixed;
-  width: 100%;
+  
+  
+
+  /*
+  position: fixed !important;
+  height: 100%;
+  overflow: hidden !important;
+  */
+  /*margin-right: 17px !important;*/
 }
 
 .modal {

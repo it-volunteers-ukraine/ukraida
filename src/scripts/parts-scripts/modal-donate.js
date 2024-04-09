@@ -1,3 +1,4 @@
+const body = document.querySelector('body')
 const btnDonateRef = document.getElementById("js-btn-donate");
 const btnCloseModalRef = document.getElementById("js-btn-close");
 const modalDonateRef = document.getElementById("donate-modal");
@@ -11,6 +12,10 @@ const donateItemRef = document.querySelector(".modal-wrap");
 
 console.log("modal script");
 
+function getBodyScrollTop() {
+  return self.pageYOffset || (document.documentElement && document.documentElement.ScrollTop) || (document.body && document.body.scrollTop);
+}
+
 const setNewAttributeSuccess = (event = null) => {
   for (let i = 0; i < allDonateBlock.length; i++) {
     if (allDonateBlock[i].hasAttribute("success")) {
@@ -23,17 +28,21 @@ const setNewAttributeSuccess = (event = null) => {
 };
 
 function openModal() {
-  bodyScrollTop = window.scrollY || document.documentElement.scrollTop;
+  /*bodyScrollTop = window.scrollY || document.documentElement.scrollTop;*/
   // Запрещаем прокрутку страницы
-  document.body.style.overflow = "hidden";
+  /* document.body.style.overflow = "hidden";
   document.body.style.paddingRight = getScrollbarWidth() + "px";
+  */
+
+  body.dataset.scrollY = getBodyScrollTop() // сохраним значение скролла
 
   modalDonateRef.classList.add("is-open"); //background
   modalWrapRef.classList.add("is-open");
   modalDonateRef.addEventListener("click", closeModal);
   document.addEventListener("keydown", closeModal);
   setNewAttributeSuccess();
-  // document.body.classList.add("modal-open");
+  document.body.classList.add("modal-open");
+  // document.html.classList.add("modal-open");
   // window.scroll(0, 0);
 
   // btnDonateCopyRef.addEventListener("click", copyIban);
@@ -48,19 +57,21 @@ function closeModal(evt) {
     evt.currentTarget === evt.target ||
     evt.currentTarget.id === "js-btn-close"
   ) {
+    /*
     document.body.style.overflow = "";
     // Удаляем отступ справа
     document.body.style.paddingRight = "";
     // Возвращаем скролл на прежнюю позицию
     window.scrollTo(0, bodyScrollTop);
-
+*/
     modalWrapRef.classList.remove("is-open");
     modalDonateRef.classList.remove("is-open");
     document.removeEventListener("keydown", closeModal);
     modalDonateRef.removeEventListener("click", closeModal);
 
     // btnDonateCopyRef.removeEventListener("click", copyIban);
-    // document.body.classList.remove("modal-open");
+    document.body.classList.remove("modal-open");
+    // document.html.classList.remove("modal-open");
   }
 }
 
