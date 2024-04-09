@@ -1,4 +1,4 @@
-@import "../components.scss" ;
+@import "../components.scss";
 
 /* 
 @import "../global";
@@ -7,42 +7,80 @@
 
 
 */
-.error{
+.error {
 
-    padding-top: 309px;
+    padding-top: 145px;
+    padding-bottom: 40px;
     text-align: center;
-    color:#85BBE4;
-   
 
-    &__title{
+        @media (min-width:768px) {
+            padding-top: 255px;
+            padding-bottom: 98px;
+        }
+        @media (min-width:1280px) {
+            padding-top: 185px;
+            padding-bottom: 20px;
+        }
+        @media (min-width:1600px) {
+            padding-bottom: 53px;
+        }
+    
+
+    & .container {
+        max-width: 630px;
+        @media (min-width:1200px) {
+            max-width: 740px;
+        }
+    }
+
+
+
+
+    &__title {
         margin-bottom: 10px;
         font-size: 80px;
         font-weight: 700;
         line-height: 120%;
+        color: #85BBE4;
+
         @media (min-width:767px) {
             font-size: 98px;
         }
 
         @media (min-width:1200px) {
-            font-size: 150px;
+            font-size: 125px;
         }
 
     }
-    &__title+p{
-        margin-bottom: 20px;
-        font-size: 18px;
+
+  
+
+    & p {
+        margin-bottom: 8px;
+        font-size: 16px;
         font-weight: 400;
+        color: #85BBE4;
+
         @media (min-width:767px) {
-            font-size: 32px;
+            font-size: 24px;
         }
-    
+
     }
-    & .button-secondary{
+    &__title+p {
+        margin-bottom: 12px;
+    }
+    &__mail {
+        color: #221F25;
+
+    }
+
+    & .button-secondary {
         @include btn-main-l;
-        margin-top: 56px;
+        margin-top: 24px;
+        @media (min-width:767px) {
+            margin-top: 40px;
+        }
     }
-    & p{
-        margin: 10px;
-    }
+
 
 }
