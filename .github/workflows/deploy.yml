@@ -19,10 +19,10 @@ jobs:
     - name: Sync files
       uses: SamKirkland/FTP-Deploy-Action@v4.3.4
       with:
-        server: ${{ secrets.REMOTE_HOST }}
-        username: ${{ secrets.FTP_USER }}
-        password: ${{ secrets.FTP_PASSWORD }}
-        server-dir: ${{ secrets.FTP_PATH }}
+        server: ${{ secrets.REMOTE_HOST_LIVE }}
+        username: ${{ secrets.FTP_USER_LIVE }}
+        password: ${{ secrets.FTP_PASSWORD_LIVE }}
+        server-dir: ${{ secrets.FTP_PATH_LIVE }}
         exclude: |
           **/.git*
           **/.git*/**
