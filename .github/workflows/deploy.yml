@@ -2,7 +2,7 @@ name: FTP deploy on push
 on: 
   push:
     branches:
-      - main
+      - live
 jobs:
   web-deploy:
     name: Deploy
