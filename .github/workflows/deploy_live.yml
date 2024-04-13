@@ -1,0 +1,34 @@
+name: FTP deploy on push
+on: 
+  push:
+    branches:
+      - live
+jobs:
+  web-deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    steps:
+    - name: Get latest code
+      uses: actions/checkout@v3
+      
+    - name: Install and Build 🔧
+      run: |
+        npm ci
+        gulp build
+        
+    - name: Sync files
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+      with:
+        server: ${{ secrets.REMOTE_HOST_LIVE }}
+        username: ${{ secrets.FTP_USER_LIVE }}
+        password: ${{ secrets.FTP_PASSWORD_LIVE }}
+        server-dir: ${{ secrets.FTP_PATH_LIVE }}
+        exclude: |
+          **/.git*
+          **/.git*/**
+          **/node_modules/**
+          fileToExclude.txt
+        dangerous-clean-slate: true
+        protocol: ftps
+        
+        
