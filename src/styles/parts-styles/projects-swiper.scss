@@ -308,6 +308,20 @@
   position: relative;
 }
 
+.swiper-thumbs .slider__item-fon{
+  opacity: 0.4;
+  transition: opacity $animations;
+}
+
+.swiper-slide{
+  background: $black;
+  border-radius: 15px;
+}
+
+.swiper-thumbs .swiper-slide-thumb-active .slider__item-fon{
+  opacity: 1;
+}
+
 .main-pagination{
   margin-top: 16px;
 
@@ -335,6 +349,6 @@
 
 
 .swiper-slide-thumb-active .slider__item-fon{
-  border: 3px solid $green;
+  border: 4px solid $green;
 
 }
