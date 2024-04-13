@@ -17,7 +17,9 @@ Template Name: devpage
                 Danke für Ihr Verständnis.
             </p>
             <div>
-                <button class="dev__btn">Zur Startseite</button>
+                <a href="/">
+                    <button class="dev__btn">Zur Startseite</button>
+                </a>
             </div>
         </div>
     </div>
