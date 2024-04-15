@@ -4,8 +4,8 @@
 
 .header {
   font-family: "Inter", sans-serif;
-  display: flex;
-  justify-content: center;
+  /*display: flex;
+  justify-content: center;*/
 
   position: fixed;
   width: 100%;
@@ -24,7 +24,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  position: fixed;
+  /*position: fixed;*/
   padding-top: 16px;
   background: $white;
   width: 100%;
@@ -79,7 +79,7 @@
   }
 }
 
-.menu__itm-lang.active{
+.menu__itm-lang.active {
   color: $dark-blue;
 }
 
@@ -358,20 +358,20 @@
 @media screen and (min-width: 1600px) {
   .wrap {
     flex-wrap: nowrap;
-    gap: 140px;
+    gap: 115px;
   }
 
   .nav__site {
     gap: 36px;
   }
+}
 
-  @media screen and (min-width: 1920px) {
-    .wrap {
-      gap: 161px;
-    }
+@media screen and (min-width: 1920px) {
+  .wrap {
+    gap: 135px;
+  }
 
-    .nav__site {
-      gap: 46px;
-    }
+  .nav__site {
+    gap: 46px;
   }
 }
