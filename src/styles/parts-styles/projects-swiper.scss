@@ -173,7 +173,7 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      border-radius: 15px;
+      /* border-radius: 15px; */
 
     }
 
@@ -309,17 +309,18 @@
 }
 
 .swiper-thumbs .slider__item-fon{
-  opacity: 0.4;
+  opacity: 1;
   transition: all $animations;
 }
 
 .swiper-slide{
   background: $black;
   border-radius: 15px;
+  overflow: hidden;
 }
 
 .swiper-thumbs .swiper-slide-thumb-active .slider__item-fon{
-  opacity: 1;
+  opacity: 0.4;
 }
 
 .main-pagination{
@@ -348,7 +349,8 @@
 }
 
 
-.swiper-slide-thumb-active .slider__item-fon{
+.swiper-slide-thumb-active {
   border: 4px solid $green;
+  overflow: hidden;
 
 }
