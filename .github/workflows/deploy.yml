@@ -28,6 +28,6 @@ jobs:
           **/.git*/**
           **/node_modules/**
           fileToExclude.txt
-        dangerous-clean-slate: true
+        dangerous-clean-slate: false
         
         
