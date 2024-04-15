@@ -8,7 +8,7 @@
         <div class="img-text__img">
             <picture>
                 <source media="(min-width: 650px)" srcset="<?php echo get_template_directory_uri() . '/src/images/home/about-1.svg' ?>">
-                <img src="<?php echo get_template_directory_uri() . '/src/images/home/about-1-mob.png' ?>" alt="">
+                <img src="<?php echo get_template_directory_uri() . '/src/images/home/about-1.svg' ?>" alt="">
             </picture>
 
         </div>

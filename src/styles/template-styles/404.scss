@@ -8,7 +8,7 @@
 
 */
 .error {
-
+    font-family: $font-main;
     padding-top: 145px;
     padding-bottom: 40px;
     text-align: center;
@@ -71,6 +71,7 @@
     }
     &__mail {
         color: #221F25;
+            font-weight: 500;
 
     }
 
