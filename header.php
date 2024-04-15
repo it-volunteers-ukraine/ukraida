@@ -16,7 +16,6 @@
                 <svg class="btn__img">
                     <use xlink:href="<?php bloginfo('template_url'); ?>/assets/images/header/sprite.svg#menu"></use>
                 </svg>
-                <!-- <img class="btn__img" src="<?php bloginfo('template_url'); ?>/assets/images/header/menu.svg" alt="menu" /> -->
             </button>
             <a href="/" class="logo"><img class="nav__img" src="<?php bloginfo('template_url'); ?>/assets/images/logo.svg" alt="Logo" /></a>
             <nav class="nav">
