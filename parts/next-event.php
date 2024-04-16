@@ -2,7 +2,7 @@
 <div class="event next-event__event">
     <!-- <br>font Lato: <br> -->
     <p class="event-title">
-    Die nächste Demonstration für Frieden in der Ukraine findet am XX.XX.XXXX auf dem Friedensplatz (Darmstadt) um 10:30 Uhr statt.
+    Die nächste Demonstration für Frieden in der Ukraine findet am 13.04.2024 auf dem Friedensplatz (Darmstadt) um 10:30 Uhr statt.
     </p>
     <!-- <p class="event-title">
         Die nächste Demonstration für den Frieden in der Ukraine findet am 3. Februar 2024 um 10:30 Uhr auf dem Friedensplatz (Darmstadt) statt.

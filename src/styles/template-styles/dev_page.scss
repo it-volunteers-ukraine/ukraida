@@ -47,7 +47,7 @@
 .title__text {
   font-size: 20px;
   font-weight: 700;
-  width: 150px;
+  width: 140px;
 }
 
 .text__item {
@@ -66,11 +66,11 @@
   background: $dark-blue;
   color: $white;
 
-  transition: 0.3s background;
+  transition: all 0.3s;
 }
 
 .dev__btn:hover {
-  background: $blue;
+  box-shadow: $btn-hover-shadow;
 }
 
 @media screen and (min-width: 768px) {
