@@ -30,6 +30,12 @@
         </div>
     </div>
 </div> -->
+
+
+<?php
+$currend_id = 'option';
+?>
+
 <div id="donate-modal" class="modal ">
     <div id="modal-wrap" class="modal-wrap">
         <button id="js-btn-close" type="button" class="modal_btn-close">
@@ -38,11 +44,11 @@
                 <use href="<?php bloginfo('template_url'); ?>/assets/images/sprites.svg#icon-close"></use>
             </svg>
         </button>
-        <h2 class="donate-title">Spendendetails</h2>
+        <h2 class="donate-title"><?php echo get_field('title', $currend_id); ?></h2>
         <div class="donate_item">
-            <p class="donate_item-title">Name des Empfängers:</p>
+            <p class="donate_item-title"><?php echo get_field('organisation_title', $currend_id); ?></p>
             <div class="donate_block-text">
-                <p class="donate_item-text">Ukrainischer Verein Darmstadt (UKRAIDA) e.V.</p>
+                <p class="donate_item-text"><?php echo get_field('organisation_value', $currend_id); ?></p>
                 <svg class="donate_icon-copy donate_icon">
                     <use href="<?php bloginfo('template_url'); ?>/assets/images/sprites.svg#icon-copy"></use>
                 </svg>
@@ -54,9 +60,9 @@
             </div>
         </div>
         <div class="donate_item">
-            <p class="donate_item-title">IBAN:</p>
+            <p class="donate_item-title"><?php echo get_field('iban_title', $currend_id); ?></p>
             <div class="donate_block-text">
-                <p class="donate_item-text">DE25508501500080014899</p>
+                <p class="donate_item-text"><?php echo get_field('iban_value', $currend_id); ?></p>
                 <svg class="donate_icon-copy donate_icon ">
                     <use href="<?php bloginfo('template_url'); ?>/assets/images/sprites.svg#icon-copy"></use>
                 </svg>
@@ -66,9 +72,9 @@
             </div>
         </div>
         <div class="donate_item">
-            <p class="donate_item-title">Verwendungszweck:</p>
+            <p class="donate_item-title"><?php echo get_field('payment_destination_title', $currend_id); ?></p>
             <div class="donate_block-text">
-                <p class="donate_item-text">Spende</p>
+                <p class="donate_item-text"><?php echo get_field('payment_destination_value', $currend_id); ?></p>
                 <svg class="donate_icon-copy donate_icon ">
                     <use href="<?php bloginfo('template_url'); ?>/assets/images/sprites.svg#icon-copy"></use>
                 </svg>
