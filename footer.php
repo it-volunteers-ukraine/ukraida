@@ -13,14 +13,14 @@
                             </ul>
                             <ul class="social-media__list">
                                 <li class="social-media__item">
-                                    <a class="social-media__link" href="https://www.instagram.com/ukraida_darmstadt/" target="_blank" rel="noopener noreferrer">
+                                    <a class="social-media__link" href="https://www.instagram.com/<?php the_field('instagram', 'option') ?>" target="_blank" rel="noopener noreferrer">
                                         <svg class="social__icon">
                                             <use xlink:href="<?php bloginfo('template_url'); ?>/assets/images/footer/sprites.svg#instagram"></use>
-                                        </svg>@ukraida_darmstadt
+                                        </svg>@<?php the_field('instagram', 'option') ?>
                                     </a>
                                 </li>
                                 <li class="social-media__item">
-                                    <a class="social-media__link" href="mailto:ukraidadarmstadt@gmail.com" target="_blank" rel="noopener noreferrer">
+                                    <a class="social-media__link" href="mailto:<?php the_field('email', 'option') ?>" target="_blank" rel="noopener noreferrer">
                                         <svg class="social__icon">
                                             <use xlink:href="<?php bloginfo('template_url'); ?>/assets/images/footer/sprites.svg#email"></use>
                                         </svg>ukraidadarmstadt@gmail.com
@@ -28,7 +28,7 @@
                                 </li>
                             </ul>
                         </div>
-                        <p class="copyright__desc">&#169; <?php echo date( "Y" ); ?> Ukrainischer Verein Darmstadt (UKRAIDA) e.V.</p>
+                        <p class="copyright__desc">&#169; <?php echo date( "Y" ); ?> <?php the_field('copyright_text', 'option') ?></p>
                     </div>
                 </div>
             </footer>
