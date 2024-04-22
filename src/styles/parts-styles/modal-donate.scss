@@ -87,7 +87,7 @@
 .donate_item-title {
   font-size: 16px;
   font-weight: 600;
-  line-height: 1.362;
+  line-height: 1.3616;
   margin-bottom: 8px;
 }
 
@@ -172,6 +172,7 @@
 
   .donate_item:not(:last-child){
     padding-bottom: 24px;
+    margin-bottom: 24px;
   }
 
   .donate_item-title{
@@ -208,6 +209,7 @@
   }
 
   .donate_block-text{
+    height: 32px;
     font-size: 20px;
   }
 
