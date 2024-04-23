@@ -8,7 +8,7 @@
 
 */
 .error {
-    font-family: $font-main;
+    font-family: $font-advanced;
     padding-top: 145px;
     padding-bottom: 40px;
     text-align: center;
@@ -77,10 +77,21 @@
 
     & .button-secondary {
         @include btn-main-l;
+        height: unset;
         margin-top: 24px;
+        font-size: 14px;
+        padding: 14px 12px;
         @media (min-width:767px) {
             margin-top: 40px;
+            font-size: 20px;
+            padding: 16px;
         }
+        @media (min-width:1280px) {
+            font-size: 24px;
+            padding: 24px 20px;
+        }
+        
+
     }
 
 
