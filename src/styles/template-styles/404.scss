@@ -8,7 +8,7 @@
 
 */
 .error {
-    font-family: $font-main;
+    font-family: $font-advanced;
     padding-top: 145px;
     padding-bottom: 40px;
     text-align: center;
@@ -59,7 +59,8 @@
         margin-bottom: 8px;
         font-size: 16px;
         font-weight: 400;
-        color: #85BBE4;
+        color: #221F25;
+       
 
         @media (min-width:767px) {
             font-size: 24px;
@@ -71,16 +72,27 @@
     }
     &__mail {
         color: #221F25;
-            font-weight: 500;
+            font-weight: 700;
 
     }
 
     & .button-secondary {
         @include btn-main-l;
+        height: unset;
         margin-top: 24px;
+        font-size: 14px;
+        padding: 14px 12px;
         @media (min-width:767px) {
             margin-top: 40px;
+            font-size: 20px;
+            padding: 16px;
         }
+        @media (min-width:1280px) {
+            font-size: 24px;
+            padding: 24px 20px;
+        }
+        
+
     }
 
 
