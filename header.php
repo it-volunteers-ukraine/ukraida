@@ -28,8 +28,8 @@
     <meta name="msapplication-square150x150logo" content="<?php bloginfo('template_url'); ?>/assets/images/favicon/ms-icon-150x150.png">
     <meta name="msapplication-wide310x150logo" content="<?php bloginfo('template_url'); ?>/assets/images/favicon/ms-icon-310x310.png">
     <meta name="msapplication-square310x310logo" content="<?php bloginfo('template_url'); ?>/assets/images/favicon/ms-icon-310x150.png">
-    <meta name="application-name" content="My Application">
-    <meta name="msapplication-config" content="<?php bloginfo('template_url'); ?>/assets/images/favicon/browserconfig.xml">
+    <meta name="application-name" content="Ukraida">
+    <!-- <meta name="msapplication-config" content="<?php bloginfo('template_url'); ?>/assets/images/favicon/browserconfig.xml"> -->
 
     <link rel="manifest" href="<?php bloginfo('template_url'); ?>/assets/images/favicon/manifest.json">
     <meta name="theme-color" content="#ffffff">
