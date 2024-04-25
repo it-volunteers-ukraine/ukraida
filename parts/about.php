@@ -1,52 +1,49 @@
 <!-- <h2 class="about">About parts  parts/about.php</h2> -->
 
+<?php 
+$rows = get_field('img-text');
+if( $rows ) {
+  
+};
+?>
 
 <section class="img-text section">
 
-    <h2 class="title__content img-text__title img-text__title--mob">Über uns</h2>
+    <h2 class="title__content img-text__title img-text__title--mob"><?php echo $rows[0]['img-text_title'] ?></h2>
     <div class="img-text__wrap">
         <div class="img-text__img">
             <picture>
-                <source media="(min-width: 650px)" srcset="<?php echo get_template_directory_uri() . '/src/images/home/about-1.svg' ?>">
-                <img src="<?php echo get_template_directory_uri() . '/src/images/home/about-1.svg' ?>" alt="">
+                <source
+                    media="(min-width: 650px)"
+                    srcset="<?php echo $rows[0]['img-text_fon']  ?>">
+                <img src="<?php echo $rows[0]['img-text_fon'] ?>" alt="">
             </picture>
 
         </div>
         <div class="img-text__content">
-            <h2 class="title__content img-text__title img-text__title--desc">Über uns</h2>
-            <p>
-                Der Ukrainische Verein Darmstadt (UKRAIDA) e.V. ist ein gemeinnütziger
-                Verein, der offiziell im Jahr 2023 von einem Team von Freiwilligen in
-                Darmstadt gegründet wurde. </p>
-                <p>
-                Wir haben uns aus persönlichen Gründen für die ehrenamtliche Arbeit
-                entschieden - wir wollten uns selbst helfen. Durch die Freiwilligenarbeit
-                haben wir inneren Frieden und Stolz gewonnen, einen Beitrag zur freien
-                Zukunft einer unabhängigen Ukraine zu leisten. Wir tragen zur
-                Entwicklung der demokratischen Werte und zur Verteidigung der
-                europäischen Zukunft bei.
-                </p>
-              <p>
-              Unsere ganze Kraft, unsere Kompetenzen und unsere Emotionen fließen in
-                die Freiwilligenarbeit und die kontinuierliche praktische Unterstützung der
-                Ukrainer:innen ein. Seit über 2 Jahren sammeln wir humanitäre Hilfe und
-                organisieren Wohltätigkeitsprojekte. Anderen zu helfen heißt, sich selbst
-                zu helfen, denn wir alle träumen von einem glücklichen und sicheren
-                Leben in einem friedlichen Europa.
+            <h2 class="title__content img-text__title img-text__title--mob"><?php echo $rows[0]['img-text_title'] ?></h2>
+            <?php echo $rows[0]['img-text_text'] ?>
 
-              </p>
-              
-              <div class="img-text__button">
-                <a href="/devpage" class="img-text__btn">Mehr Informationen</a>
+            <div class="img-text__button">
+                <a href="/devpage" class="img-text__btn">
+                    <?php echo $rows[0]['img-text-btn'] ?></a>
             </div>
 
         </div>
     </div>
 
 </section>
+<?php 
+$blockIcons = get_field('block-icons');
+if( $blockIcons ) {
+ 
+    
+    ?>
+
+
 <section class="block-icons section">
     <div class="block-icons__container">
-        <h2 class="title__content block-icons__title ">Unsere Ziele und Visionen sind</h2>
+        <h2 class="title__content block-icons__title "><?php echo $blockIcons[0]['block-icons_title'] ; ?></h2>
         <div class="block-icons__wrap">
             <div class="block-icons__item">
                 <div class="block-icons__icon">
@@ -56,8 +53,7 @@
 
                 </div>
                 <div class="block-icons__text">
-                    UKRAIDA ist Einheit. UKRAine + In + DArmstadt: wir
-                     kommen zusammen, um uns gegenseitig zu unterstützen.
+                <?php echo $blockIcons[0]['block-icons_content'][0]['block-icons__text'] ; ?>
                 </div>
             </div>
             <div class="block-icons__item">
@@ -67,7 +63,7 @@
                     </svg>
                 </div>
                 <div class="block-icons__text">
-                    UKRAIDA ist Hilfe. UKRaine + AId + DArmstadt: Wir helfen der Ukraine in Darmstadt. <br>&nbsp;
+                <?php echo $blockIcons[0]['block-icons_content'][1]['block-icons__text'] ; ?>
                 </div>
             </div>
             <div class="block-icons__item">
@@ -78,7 +74,7 @@
 
                 </div>
                 <div class="block-icons__text">
-                    UKRAIDA ist Dankbarkeit. UKRAIne + DAnkt: Wir danken jedem, der uns hilft und unterstützt.
+                <?php echo $blockIcons[0]['block-icons_content'][2]['block-icons__text'] ; ?>
                 </div>
             </div>
 
@@ -88,93 +84,61 @@
 
 <section class="block-icons section block-icons--num">
 
-    <h2 class="title__content block-icons__title block-icons__title--num ">Unsere Errungenschaften</h2>
+    <h2 class="title__content block-icons__title block-icons__title--num "><h2 class="title__content block-icons__title "><?php echo $blockIcons[1]['block-icons_title'] ; ?></h2></h2>
     <div class="block-icons__wrap">
+
+
+    <?php
+    foreach ( $blockIcons[1]['block-icons_content'] as $content) {
+   
+        ?>
+    
         <div class="block-icons__item">
 
-            <div class="block-icons__item-fon">
-                <div class="block-icons__item-fon-bl"></div>
-                <div class="block-icons__item-fon-ye"></div>
-            </div>
-            <div class="block-icons__num-inner">
-                <div class="block-icons__num">+ 30</div>
-                <div class="block-icons__text">Evakuierungsfahrzeuge und Krankenwagen
-                </div>
-            </div>
+<div class="block-icons__item-fon">
+    <div class="block-icons__item-fon-bl"></div>
+    <div class="block-icons__item-fon-ye"></div>
+</div>
+<div class="block-icons__num-inner">
+    <div class="block-icons__num">+ <?php echo $content['block-icons__num']; ?></div>
+    <div class="block-icons__text"><?php echo $content['block-icons__text']; ?>
+    </div>
+</div>
 
-        </div>
-        <div class="block-icons__item">
-            <div class="block-icons__item-fon">
-                <div class="block-icons__item-fon-bl"></div>
-                <div class="block-icons__item-fon-ye"></div>
-            </div>
-            <div class="block-icons__num-inner">
-                <div class="block-icons__num">
-                    + 100
-                </div>
-                <div class="block-icons__text">
-                    Mehr als 100 Demonstrationen zur Unterstützung der Ukraine
-                </div>
-            </div>
-        </div>
-        <div class="block-icons__item">
-            <div class="block-icons__item-fon">
-                <div class="block-icons__item-fon-bl"></div>
-                <div class="block-icons__item-fon-ye"></div>
-            </div>
-            <div class="block-icons__num-inner">
-                <div class="block-icons__num">
-                    + 5
-                </div>
-                <div class="block-icons__text">
-                    Wohltätigkeitsprojekte <br>&nbsp;
-                </div>
-            </div>
-        </div>
+</div>
+
+
+
+   <?php }
+    ?>
+
     </div>
 
 </section>
 
+<?php };
+?>
+
 <section class="img-text img-text--reverse section">
 
-    <h2 class="title__content img-text__title img-text__title--mob">Warum wir?</h2>
+    <h2 class="title__content img-text__title img-text__title--mob"><?php echo $rows[1]['img-text_title'] ?></h2>
     <div class="img-text__wrap">
 
         <div class="img-text__content">
-            <h2 class="title__content img-text__title img-text__title--desc">Warum wir?</h2>
-            <p>
-                Wir trafen uns erstmals am 24. Februar 2022 bei der ersten Demonstration
-                zur Unterstützung der Ukraine. Seitdem veranstalten wir jeden Samstag
-                gemeinsam Demonstrationen, um die Öffentlichkeit über die Ereignisse in
-                der Ukraine zu informieren und Spenden zu sammeln. Wir erreichen
-                unsere gemeinnützigen Ziele, weil wir <strong> vereint, zielgerichtet und
-                äußerst dankbar</strong> füreinander und für alle, die uns unterstützen, sind.
-                Ein wichtiger Teil unserer Arbeit ist die Bereitstellung von Evakuierungs-
-                und Krankentransporten für ukrainische Ärzte. Allein im Jahr 2023 haben
-                wir  <strong>22 Fahrzeuge</strong>  angeschafft. Man vertraut uns, weil wir zu 100 %
-             <strong> transparent</strong>   arbeiten. Sie können jedes gekaufte Fahrzeug bei unseren
-                Samstagsdemonstrationen sehen.
-            </p>
-            <p>
-                Für uns ist es wichtig, die <strong> Grundlage für eine glückliche, gebildete
-                und gesunde Generation</strong> von Ukrainer:innen zu schaffen. Deshalb liegt
-                uns das Wohl der Kinder am Herzen. Unser Team hat sich an der
-                Erstellung des Buches "Ein Jahr Solidarität mit der Ukraine in Darmstadt"
-                beteiligt, das mit Unterstützung der Stadt Darmstadt veröffentlicht wurde.
-                Der Erlös aus dem Buchverkauf wurde in ein Rehabilitationsprojekt für
-                ukrainische Teenager investiert. Wir haben noch viele weitere interessante
-                Projekte.
-            </p>
+            <h2 class="title__content img-text__title img-text__title--desc"><?php echo $rows[1]['img-text_title'] ?></h2>
+            <?php echo $rows[1]['img-text_text'] ?>
             <div class="img-text__button">
-                <a href="/devpage" class="img-text__btn-advanced">Wir machen weiter. Sind Sie dabei?</a>
+                <a href="/devpage" class="img-text__btn-advanced">
+                    <?php echo $rows[1]['img-text-btn'] ?></a>
             </div>
 
         </div>
         <div class="img-text__img">
-
             <picture>
-                <source media="(min-width: 650px)" srcset="<?php echo get_template_directory_uri() . '/src/images/home/about-2.png' ?>">
-                <img src="<?php echo get_template_directory_uri() . '/src/images/home/about-2-mob.png' ?>" alt="">
+                <source
+                    media="(min-width: 650px)"
+                    srcset="<?php echo $rows[1]['img-text_fon']  ?>">
+                <img src="<?php echo $rows[1]['img-text_fon'] ?>" alt="">
             </picture>
 
         </div>
