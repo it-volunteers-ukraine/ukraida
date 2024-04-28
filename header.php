@@ -20,14 +20,15 @@
                 </button>
                 <a href="/" class="logo"><img class="nav__img" src="<?php bloginfo('template_url'); ?>/assets/images/logo.svg" alt="Logo" /></a>
                 <nav class="nav">
-                    <ul class="nav__site">
-                        <li class="nav__item"><a class="link" href="/">Startseite</a></li>
-                        <li class="nav__item"><a class="link" href="/devpage">Über uns</a></li>
-                        <li class="nav__item"><a class="link" href="/devpage">Aktuelles</a></li>
-                        <li class="nav__item"><a class="link" href="/devpage">Spenden</a></li>
-                        <li class="nav__item"><a class="link" href="/devpage">Mitmachen</a></li>
-                        <li class="nav__item"><a class="link" href="/devpage">Projekte</a></li>
-                    </ul>
+                    <?php wp_nav_menu([
+                        'theme_location'       => 'header',
+                        'container'            => false,
+                        'menu_class'           => 'nav__site',
+                        'menu_id'              => false,
+                        'echo'                 => true,
+                        'items_wrap'           => '<ul id="%1$s" class="header_list %2$s">%3$s</ul>',
+                    ]);
+                    ?>
                 </nav>
                 <ul class="menu">
                     <li>
@@ -68,28 +69,15 @@
                             </li>
                         </ul>
                         <div class="nav__modal-wrap">
-                            <ul class="nav__modal">
-                                <li class="nav__item-modal">
-                                    <a class="link-modal" href="/">Startseite</a>
-                                </li>
-                                <li class="nav__item-modal">
-                                    <a class="link-modal" href="/devpage">Über uns</a>
-                                </li>
-                                <li class="nav__item-modal">
-                                    <a class="link-modal" href="/devpage">Aktuelles</a>
-                                </li>
-                            </ul>
-                            <ul class="nav__modal">
-                                <li class="nav__item-modal">
-                                    <a class="link-modal" href="/devpage">Spenden</a>
-                                </li>
-                                <li class="nav__item-modal">
-                                    <a class="link-modal" href="/devpage">Mitmachen</a>
-                                </li>
-                                <li class="nav__item-modal">
-                                    <a class="link-modal" href="/devpage">Projekte</a>
-                                </li>
-                            </ul>
+                            <?php wp_nav_menu([
+                                'theme_location'       => 'header',
+                                'container'            => false,
+                                'menu_class'           => 'nav__modal',
+                                'menu_id'              => false,
+                                'echo'                 => true,
+                                'items_wrap'           => '<ul id="%1$s" class="header_list %2$s">%3$s</ul>',
+                            ]);
+                            ?>
                         </div>
                         <div class="menu__item-modal">
                             <a href="https://www.instagram.com/ukraida_darmstadt/" target="_blank">

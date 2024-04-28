@@ -199,10 +199,6 @@
     height: 44px;
   }
 
-  .menu__modal-item {
-    font-size: 20px;
-  }
-
   .nav__modal-wrap {
     display: flex;
     flex-direction: row;
@@ -210,6 +206,16 @@
     margin: 68px 0;
   }
   .nav__item-modal {
+    font-size: 20px;
+  }
+
+  .nav__modal {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 38px 164px;
+  }
+
+  .nav__modal li {
     font-size: 20px;
   }
 }
@@ -262,12 +268,12 @@
     width: 100%;
   }
 
-  .link {
+  .menu-item a {
     text-decoration: none;
     color: $black;
   }
 
-  .link:hover {
+  .menu-item a:hover {
     border-bottom: 2px solid $black;
   }
 
