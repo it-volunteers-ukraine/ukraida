@@ -2,6 +2,39 @@
 <html <?php language_attributes(); ?>>
 
 <head>
+    <!-- Start Favicon -->
+    <link type="image/x-icon" rel="shortcut icon" href="<?php bloginfo('template_url'); ?>/assets/images/favicon/favicon.ico">
+    <link type="image/png" sizes="16x16" rel="icon" href="<?php bloginfo('template_url'); ?>/assets/images/favicon/favicon-16x16.png">
+    <link type="image/png" sizes="32x32" rel="icon" href="<?php bloginfo('template_url'); ?>/assets/images/favicon/favicon-32x32.png">
+    <link type="image/png" sizes="96x96" rel="icon" href="<?php bloginfo('template_url'); ?>/assets/images/favicon/favicon-96x96.png">
+    <!-- <link type="image/png" sizes="120x120" rel="icon" href="<?php bloginfo('template_url'); ?>/assets/images/favicon/favicon-120x120.png"> -->
+    <!-- <link type="image/png" sizes="192x192" rel="icon" href="<?php bloginfo('template_url'); ?>/assets/images/favicon/android-icon-192x192.png"> -->
+
+    <link sizes="57x57" rel="apple-touch-icon" href="<?php bloginfo('template_url'); ?>/assets/images/favicon/apple-icon-57x57.png">
+    <link sizes="60x60" rel="apple-touch-icon" href="<?php bloginfo('template_url'); ?>/assets/images/favicon/apple-icon-60x60.png">
+    <link sizes="72x72" rel="apple-touch-icon" href="<?php bloginfo('template_url'); ?>/assets/images/favicon/apple-icon-72x72.png">
+    <link sizes="76x76" rel="apple-touch-icon" href="<?php bloginfo('template_url'); ?>/assets/images/favicon/apple-icon-76x76.png">
+    <link sizes="114x114" rel="apple-touch-icon" href="<?php bloginfo('template_url'); ?>/assets/images/favicon/apple-icon-114x114.png">
+    <link sizes="120x120" rel="apple-touch-icon" href="<?php bloginfo('template_url'); ?>/assets/images/favicon/apple-icon-120x120.png">
+    <link sizes="144x144" rel="apple-touch-icon" href="<?php bloginfo('template_url'); ?>/assets/images/favicon/apple-icon-144x144.png">
+    <link sizes="152x152" rel="apple-touch-icon" href="<?php bloginfo('template_url'); ?>/assets/images/favicon/apple-icon-152x152.png">
+    <link sizes="180x180" rel="apple-touch-icon" href="<?php bloginfo('template_url'); ?>/assets/images/favicon/apple-icon-180x180.png">
+
+    <!-- <link color="#e52037" rel="mask-icon" href="<?php bloginfo('template_url'); ?>/assets/images/favicon/safari-pinned-tab.svg"> -->
+
+    <meta name="msapplication-TileColor" content="#2b5797">
+    <meta name="msapplication-TileImage" content="<?php bloginfo('template_url'); ?>/assets/images/favicon/ms-icon-144x144.png">
+    <meta name="msapplication-square70x70logo" content="<?php bloginfo('template_url'); ?>/assets/images/favicon/ms-icon-70x70.png">
+    <meta name="msapplication-square150x150logo" content="<?php bloginfo('template_url'); ?>/assets/images/favicon/ms-icon-150x150.png">
+    <meta name="msapplication-wide310x150logo" content="<?php bloginfo('template_url'); ?>/assets/images/favicon/ms-icon-310x310.png">
+    <meta name="msapplication-square310x310logo" content="<?php bloginfo('template_url'); ?>/assets/images/favicon/ms-icon-310x150.png">
+    <meta name="application-name" content="Ukraida">
+    <!-- <meta name="msapplication-config" content="<?php bloginfo('template_url'); ?>/assets/images/favicon/browserconfig.xml"> -->
+
+    <link rel="manifest" href="<?php bloginfo('template_url'); ?>/assets/images/favicon/manifest.json">
+    <meta name="theme-color" content="#ffffff">
+    <!-- End favicon -->
+
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">

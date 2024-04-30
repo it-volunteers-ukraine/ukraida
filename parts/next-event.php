@@ -6,9 +6,15 @@ $currend_id = get_the_ID();
 
 <div class="event next-event__event">
     <!-- <br>font Lato: <br> -->
+<<<<<<< HEAD
     <p class="event-title">
         <?php echo get_field('event_title', $currend_id); ?>
     </p>
+=======
+    <div class="event-title">
+    <?php echo get_field('event_title', $currend_id); ?>
+</dic>
+>>>>>>> main
     <!-- <p class="event-title">
         Die nächste Demonstration für den Frieden in der Ukraine findet am 3. Februar 2024 um 10:30 Uhr auf dem Friedensplatz (Darmstadt) statt.
     </p>

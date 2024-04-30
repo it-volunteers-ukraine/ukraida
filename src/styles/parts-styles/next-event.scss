@@ -1,53 +1,74 @@
-@import "../components.scss" ;
+@import "../components.scss";
 
-
-
-.event{
-    max-width: 1080px;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
+.event {
+  max-width: 1080px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.event-title{
+.event-title {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
     font-family: $font-main;
     font-size: 16px;
     font-weight: 700;
     line-height: 1.36;
+  }
 }
 
-.event-btn{
-    @include btn-advanced-s;
-    margin-top: 36px;
-    margin-left: auto;
-    margin-right: auto;
-    
-    @media screen and (min-width: 768px ){
-        @include btn-advanced-m;
-    }
-    @media screen and (min-width: 992px ){
-        @include btn-advanced-l;
-    }
+.event-btn {
+  @include btn-advanced-s;
+  margin-top: 36px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media screen and (min-width: 768px) {
+    @include btn-advanced-m;
+  }
+  @media screen and (min-width: 992px) {
+    @include btn-advanced-l;
+  }
 }
 
-@media screen and (min-width: 768px ){
-    .event-title{
-        font-size: 24px;
+@media screen and (min-width: 768px) {
+  .event-title {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p {
+      font-size: 24px;
     }
+  }
 }
 
 @media screen and (min-width: 992px) {
-    .event-title{
-        font-size: 32px;
-    }
-
+  .event-title {
+    h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p{
+      font-size: 32px;
+  }
+  }
 }
 
 @media screen and (min-width: 1200px) {
-    .event-title{
-        font-size: 32px;
-        font-weight: 600;
-    }
+  .event-title {
+    font-size: 32px;
+    font-weight: 600;
+  }
 }
 
 /*
@@ -59,4 +80,3 @@
         
 }
 */
-
