@@ -1,0 +1,129 @@
+@import "../variables";
+
+.section.news {
+  margin-top: 96px;
+}
+
+.news-title {
+  margin-bottom: 32px;
+  font-size: 18px;
+  line-height: 1.36;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.news-list {
+  text-align: center;
+}
+
+.news-item:not(:first-child) {
+  margin-top: 40px;
+}
+.news-item:not(:last-child) {
+  border-bottom: 2px solid $green;
+  padding-bottom: 40px;
+}
+
+.news_img {
+  margin-bottom: 24px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.news_title {
+  margin-bottom: 16px;
+  font-size: 16px;
+  line-height: 1.36;
+  font-weight: 700;
+}
+
+.news_text {
+  font-size: 14px;
+  line-height: 1.36;
+  text-align: unset;
+  max-width: 1356px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (min-width: 768px) {
+  .section.news {
+    margin-top: 186px;
+  }
+  .news-title {
+    font-size: 32px;
+    margin-bottom: 56px;
+  }
+  .news_img {
+    margin-bottom: 32px;
+    width: 464px;
+  }
+  .news_title {
+    margin-bottom: 24px;
+    font-size: 24px;
+  }
+  .news_text {
+    font-size: 20px;
+  }
+  .news-item:not(:last-child) {
+    padding-bottom: 48px;
+  }
+  .news-item:not(:first-child) {
+    margin-top: 48px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .section.news {
+    margin-top: 263px;
+  }
+  .news-title {
+    font-size: 36px;
+    margin-bottom: 107px;
+  }
+  .news_img {
+    width: 549px;
+  }
+  .news_title {
+    width: 970px;
+    font-size: 32px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .news_text {
+    font-size: 24px;
+  }
+  .news-item:not(:last-child) {
+    padding-bottom: 72px;
+  }
+  .news-item:not(:first-child) {
+    margin-top: 72px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .section.news {
+    margin-top: 210px;
+  }
+  .news-title {
+    font-size: 36px;
+    margin-bottom: 112px;
+  }
+  .news_img {
+    width: 674px;
+  }
+  .news_title {
+    width: 1080px;
+  }
+
+  .news_text {
+    font-size: 32px;
+  }
+  .news-item:not(:last-child) {
+    padding-bottom: 96px;
+  }
+  .news-item:not(:first-child) {
+    margin-top: 96px;
+  }
+}
