@@ -79,7 +79,7 @@
                             <span class="menu__itm-lang active">DE</span>&nbsp;/&nbsp;<span class="menu__itm-lang">UA</span></a>
                     </li>
                     <!-- <li><button type="button" id="js-btn-donate" class="menu__btn">Spenden</button></li> -->
-                    <li><button type="button" id="js-btn-donate" class="menu__btn"><?php echo get_field('header_button_text'); ?></button></li>
+                    <li><button type="button" id="js-btn-donate" class="menu__btn"><?php echo get_field('header_button_text', 'option'); ?></button></li>
                 </ul>
 
                 <!-- mobile menu -->
