@@ -52,6 +52,7 @@
                     </svg>
                 </button>
                 <a href="/" class="logo"><img class="nav__img" src="<?php bloginfo('template_url'); ?>/assets/images/logo.svg" alt="Logo" /></a>
+                <!-- <a href="/" class="logo"><img class="nav__img" src="<?php get_field('header_logo', 'options') ?>" alt="Logo" /></a> -->
                 <nav class="nav">
                     <?php wp_nav_menu([
                         'theme_location'       => 'header',
@@ -65,7 +66,8 @@
                 </nav>
                 <ul class="menu">
                     <li>
-                        <a href="https://www.instagram.com/ukraida_darmstadt/" target="_blank" class="menu__item-inst">
+                        <!-- <a href="https://www.instagram.com/ukraida_darmstadt/" target="_blank" class="menu__item-inst"> -->
+                        <a href="https://www.instagram.com/<?php the_field('header_instagram_link', 'option') ?>" target="_blank" class="menu__item-inst">
                             <svg>
                                 <use xlink:href="<?php bloginfo('template_url'); ?>/assets/images/header/sprite.svg#instagram"></use>
                             </svg>
