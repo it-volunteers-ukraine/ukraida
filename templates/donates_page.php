@@ -13,17 +13,17 @@ $rows = get_field('news_list', $currend_id);
     <h1 class="donate-title">Пожертвии</h1>
     <section class="section section__donate1">
         <div class="container container__donate1">
-            <?php get_template_part('parts/donate1', null, []); ?>
+            <?php get_template_part('parts/donates1', null, []); ?>
         </div>
     </section>  
     <section class="section section__donate2">
         <div class="container container__donate2">
-            <?php get_template_part('parts/donate2', null, []); ?>
+            <?php get_template_part('parts/donates2', null, []); ?>
         </div>
     </section>  
     <section class="section section__donate3">
         <div class="container container__donate3">
-            <?php get_template_part('parts/donate3', null, []); ?>
+            <?php get_template_part('parts/donates3', null, []); ?>
         </div>
     </section>  
     <section class="section donates">
