@@ -9,7 +9,7 @@ get_header();
         <div class="container container__next-event">
             <?php get_template_part('parts/next-event', null, []); ?>
         </div>
-    </section>
+    </section>  
 
     <section id="projects" class="section section__projects-swiper">
         <div class="container container__projects-swiper">
