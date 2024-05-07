@@ -51,8 +51,12 @@
                         <use xlink:href="<?php bloginfo('template_url'); ?>/assets/images/header/sprite.svg#menu"></use>
                     </svg>
                 </button>
-                <a href="/" class="logo"><img class="nav__img" src="<?php bloginfo('template_url'); ?>/assets/images/logo.svg" alt="Logo" /></a>
-                <!-- <a href="/" class="logo"><img class="nav__img" src="<?php get_field('header_logo', 'options') ?>" alt="Logo" /></a> -->
+                <!-- <a href="/" class="logo"><img class="nav__img" src="<?php bloginfo('template_url'); ?>/assets/images/logo.svg" alt="Logo" /></a> -->
+                <?php
+                $img = get_field('header_logo', 'option');
+                // var_dump($img);
+                ?>
+                <a href="/" class="logo"><img class="nav__img" src="<?php echo $img['url'] ?>" alt="Logo" /></a>
                 <nav class="nav">
                     <?php wp_nav_menu([
                         'theme_location'       => 'header',
