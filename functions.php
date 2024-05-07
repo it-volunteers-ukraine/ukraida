@@ -82,6 +82,19 @@ function wp_it_volunteers_scripts()
     wp_enqueue_style('dev_page-style', get_template_directory_uri() . '/assets/styles/template-styles/dev_page.css', array());
   }
 
+
+  if (is_page_template('templates/news_page.php')) {
+    wp_enqueue_style('news-style', get_template_directory_uri() . '/assets/styles/template-styles/news.css', array('main'));
+    // wp_enqueue_script('news-scripts', get_template_directory_uri() . '/assets/scripts/template-scripts/news.js', array(), false, true);
+  }
+
+  if (is_page_template('templates/donates_page.php')) {
+    wp_enqueue_style('donates-style', get_template_directory_uri() . '/assets/styles/template-styles/donates.css', array('main'));
+    // wp_enqueue_script('news-scripts', get_template_directory_uri() . '/assets/scripts/template-scripts/news.js', array(), false, true);
+  }
+
+
+
   // if (is_singular() && is_page_template('parts/gallery.php')) {
   //   wp_enqueue_style( 'gallery-parts-style', get_template_directory_uri() . '/assets/styles/parts-styles/gallery.css', array() );
   //   wp_enqueue_script( 'gallery-parts-scripts', get_template_directory_uri() . '/assets/scripts/parts-scripts/gallery.js', array(), false, true );
