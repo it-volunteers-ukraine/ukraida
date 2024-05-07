@@ -1,5 +1,20 @@
 @import "../variables";
 
+@mixin fontSizeHP($size, $weight: null) {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    font-size: $size;
+    @if $weight {
+      font-weight: $weight;
+    }
+  }
+}
+
 .section.news {
   margin-top: 96px;
 }
@@ -39,7 +54,7 @@
 }
 
 .news_text {
-  font-size: 14px;
+  @include fontSizeHP(14px, 400);
   line-height: 1.36;
   text-align: unset;
   max-width: 1356px;
@@ -60,11 +75,11 @@
     width: 464px;
   }
   .news_title {
-    margin-bottom: 24px;
     font-size: 24px;
+    margin-bottom: 24px;
   }
   .news_text {
-    font-size: 20px;
+    @include fontSizeHP(20px);
   }
   .news-item:not(:last-child) {
     padding-bottom: 48px;
@@ -92,7 +107,7 @@
     margin-right: auto;
   }
   .news_text {
-    font-size: 24px;
+    @include fontSizeHP(24px);
   }
   .news-item:not(:last-child) {
     padding-bottom: 72px;
@@ -118,7 +133,7 @@
   }
 
   .news_text {
-    font-size: 32px;
+    @include fontSizeHP(32px);
   }
   .news-item:not(:last-child) {
     padding-bottom: 96px;
