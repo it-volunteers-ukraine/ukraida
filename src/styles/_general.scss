@@ -1,9 +1,8 @@
 * {
   box-sizing: border-box;
-
 }
 
-html{
+html {
   scroll-behavior: smooth;
 }
 
@@ -16,12 +15,13 @@ body {
   line-height: 1.2;
 }
 
-body, html{
+body,
+html {
   height: 100%;
 }
 
-main{
-  flex: 1;
+main {
+  /* flex: 1; */
 }
 
 img {
@@ -41,7 +41,8 @@ p {
   padding: 0;
 }
 
-ul, ol {
+ul,
+ol {
   list-style: none;
   margin: 0;
   padding: 0;

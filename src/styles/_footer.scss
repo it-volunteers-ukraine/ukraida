@@ -139,6 +139,7 @@ svg {
 @media screen and (min-width: 768px) {
   .footer {
     padding: 24px 0;
+    margin-top: auto;
   }
 
   .footer__inner-wrap {
@@ -203,8 +204,6 @@ svg {
     gap: 16px;
   }
 
-
-
   // Copyright__desc
   .copyright__desc {
     font-size: 16px;
@@ -222,7 +221,6 @@ svg {
   }
   // Privacy__list
   .privacy__list {
-
     gap: 88px;
   }
 
@@ -251,7 +249,8 @@ svg {
 }
 
 @media screen and (min-width: 1440px) {
-  .logo1, .social-media__list{
+  .logo1,
+  .social-media__list {
     width: 27%;
   }
 }
