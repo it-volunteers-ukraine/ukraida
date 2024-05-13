@@ -10,7 +10,7 @@
   gap: 32px;
 }
 
-.donate-money {
+.donate1 .donate-money {
   max-width: 571px;
   margin-left: auto;
   margin-right: auto;
@@ -45,9 +45,9 @@
   .donate1 {
     gap: 56px;
   }
-  .donate-money {
-    width: 571px;
+  .donate1 .donate-money{
     padding-top: 40px;
+    max-width: unset;
   }
   .textblock-title {
     font-size: 32px;
@@ -72,7 +72,7 @@
     margin-left: auto;
     margin-right: auto;
   }
-  .donate-money {
+  .donate1 .donate-money {
     padding-top: 48px;
     margin-left: unset;
     margin-right: unset;
