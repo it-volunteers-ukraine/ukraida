@@ -40,17 +40,13 @@
   top: 50%;
   left: 50%;
   width: 284px;
-
-  border: 2px solid $green;
-  transform: translate(-50%, -50%) scale(0.3);
-}
-
-.donate-money {
-  padding: 60px 24px 43px;
-  border-radius: 15px;
-  background-color: $background;
   display: flex;
   flex-direction: column;
+  background-color: $background;
+  border-radius: 15px;
+  border: 2px solid $green;
+  padding: 60px 24px 43px;
+  transform: translate(-50%, -50%) scale(0.3);
   transition: all $animations-long;
 }
 .modal-wrap.is-open {
@@ -61,13 +57,14 @@
 .modal_btn-close {
   @extend .btn-icon-main;
 
+
   width: 44px;
   height: 44px;
   position: absolute;
   right: 0;
   top: 0;
 
-  & .icon {
+  & .icon{
     width: 16px;
     height: 16px;
   }
@@ -131,6 +128,7 @@
 }
 
 .donate_item-text {
+
 }
 
 .donate_text-icon {
@@ -152,18 +150,16 @@
 }
 
 @media screen and (min-width: 768px) {
-  .modal-wrap{
+  .modal-wrap {
+    padding: 76px 40px 40px;
     width: 571px;
   }
-  .donate-money {
-    padding: 76px 40px 40px;
-  }
-
+  
   .modal_btn-close {
     right: 24px;
     top: 24px;
 
-    & .icon {
+    & .icon{
       width: 24px;
       height: 24px;
     }
@@ -174,30 +170,28 @@
     margin-bottom: 48px;
   }
 
-  .donate_item:not(:last-child) {
+  .donate_item:not(:last-child){
     padding-bottom: 24px;
     margin-bottom: 24px;
   }
 
-  .donate_item-title {
+  .donate_item-title{
     font-size: 20px;
     margin-bottom: 12px;
   }
 
-  .donate_block-text {
+  .donate_block-text{
     font-size: 18px;
   }
+
 }
 
 @media screen and (min-width: 1200px) {
-  .modal-wrap{
-    width: 629px;
-  }
-  .donate-money {
+  .modal-wrap {
     padding: 80px 48px 48px;
     width: 629px;
   }
-
+  
   .modal_btn-close {
     width: 24px;
     height: 24px;
@@ -210,14 +204,15 @@
     margin-bottom: 72px;
   }
 
-  .donate_item-title {
+  .donate_item-title{
     font-size: 24px;
   }
 
-  .donate_block-text {
+  .donate_block-text{
     height: 32px;
     font-size: 20px;
   }
+
 }
 
 @media screen and (min-width: 1440px) {
@@ -248,3 +243,6 @@
   }
 */
 }
+
+
+

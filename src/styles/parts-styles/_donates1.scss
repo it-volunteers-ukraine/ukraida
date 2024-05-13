@@ -1,5 +1,100 @@
-.section__donate1{
-    margin-top: 150px;
+@import "../components.scss";
+
+.section__donate1 {
+  margin-top: 150px;
 }
 
+.donate1 {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
 
+.donate-money {
+  max-width: 571px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 43px;
+  box-shadow: 4px 4px 43px 0px #0000001c;
+  border-radius: 15px;
+  background-color: $background;
+}
+
+.textblock {
+  text-align: center;
+  line-height: 1.361;
+}
+
+.textblock-title {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 32px;
+}
+
+.textblock-text {
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 24px;
+}
+
+.textblock-btn {
+  @include btn-main-s;
+}
+
+@media screen and (min-width: 768px) {
+  .donate1 {
+    gap: 56px;
+  }
+  .donate-money {
+    width: 571px;
+    padding-top: 40px;
+  }
+  .textblock-title {
+    font-size: 32px;
+    margin-bottom: 56px;
+  }
+
+  .textblock-text {
+    font-size: 20px;
+    margin-bottom: 40px;
+  }
+
+  .textblock-btn {
+    @include btn-main-m;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .donate1 {
+    flex-direction: row;
+    gap: unset;
+    max-width: 1450px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .donate-money {
+    padding-top: 48px;
+    margin-left: unset;
+    margin-right: unset;
+  }
+
+  .textblock {
+    width: 475px;
+    margin-left: auto;
+  }
+
+  .textblock-btn {
+    @include btn-main-l;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .textblock {
+    width: 667px;
+  }
+
+  .textblock-text {
+    font-size: 24px;
+    margin-bottom: 48px;
+  }
+}
