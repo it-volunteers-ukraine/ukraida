@@ -9,19 +9,19 @@
 */
 .error {
     font-family: $font-advanced;
-    padding-top: 145px;
+    padding-top: 24px;
     padding-bottom: 40px;
     text-align: center;
 
         @media (min-width:768px) {
-            padding-top: 255px;
+            padding-top: 8px;
             padding-bottom: 98px;
         }
         @media (min-width:1280px) {
-            padding-top: 185px;
             padding-bottom: 20px;
         }
         @media (min-width:1600px) {
+            padding-top: 68px;
             padding-bottom: 53px;
         }
     

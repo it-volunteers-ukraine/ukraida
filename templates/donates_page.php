@@ -10,9 +10,9 @@ $rows = get_field('news_list', $currend_id);
 ?>
 
 <main>
-    <h1 class="donate-title">Пожертвии</h1>
     <section class="section section__donate1">
         <div class="container container__donate1">
+            <h1 class="donate-title">Пожертви</h1>
             <?php get_template_part('parts/donates1', null, []); ?>
         </div>
     </section>  

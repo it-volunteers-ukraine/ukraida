@@ -25,16 +25,13 @@ main {
 }
 
 .section {
-  padding-top: 24px;
   padding-bottom: 64px;
 
   @media screen and (min-width: 768px) {
-    padding-top: 48px;
     padding-bottom: 112px;
   }
 
   @media screen and (min-width: 1200px) {
-    padding-top: 40px;
     padding-bottom: 128px;
   }
 
@@ -44,18 +41,19 @@ main {
 }
 
 .section__next-event {
+  padding-top: 24px;
   padding-bottom: 24px;
 
-  /* @media screen and (min-width: 768px) {
-    padding-top: 158px;
+  @media screen and (min-width: 768px) {
+    padding-top: 48px;
   }
 
-  @media screen and (min-width: 992px) {
-    padding-top: 215px;
+  @media screen and (min-width: 990px) {
+    padding-top: 40px;
   }
-  */
+  
   @media screen and (min-width: 1200px) {
-    /* padding-top: 230px; */
+    /* padding-top: 230px; */ 
     padding-bottom: 64px;
   }
   /*

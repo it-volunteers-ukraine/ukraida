@@ -1,7 +1,7 @@
 @import "../components.scss";
 
 .section__donate1 {
-  margin-top: 150px;
+  padding-top: 24px;
 }
 
 .donate1 {
@@ -42,10 +42,13 @@
 }
 
 @media screen and (min-width: 768px) {
+  .section__donate1 {
+    padding-top: 48px;
+  }
   .donate1 {
     gap: 56px;
   }
-  .donate1 .donate-money{
+  .donate1 .donate-money {
     padding-top: 40px;
     max-width: unset;
   }
@@ -63,11 +66,16 @@
     @include btn-main-m;
   }
 }
-
+@media screen and (min-width: 1200px) {
+  .section__donate1 {
+    padding-top: 40px;
+  }
+}
 @media screen and (min-width: 1200px) {
   .donate1 {
     flex-direction: row;
     gap: unset;
+    justify-content: center;
     max-width: 1450px;
     margin-left: auto;
     margin-right: auto;
@@ -81,6 +89,9 @@
   .textblock {
     width: 475px;
     margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
   .textblock-btn {
