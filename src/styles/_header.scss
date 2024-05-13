@@ -233,10 +233,10 @@
     margin-top: 0;
   }
 
-  .wrap :nth-child(3) {
+  .wrap > :nth-child(3) {
     order: 4;
   }
-  .wrap :nth-child(4) {
+  .wrap > :nth-child(4) {
     order: 3;
   }
 
@@ -342,10 +342,10 @@
     gap: 90px;
   }
 
-  .wrap :nth-child(3) {
+  .wrap > :nth-child(3) {
     order: 3;
   }
-  .wrap :nth-child(4) {
+  .wrap > :nth-child(4) {
     order: 4;
   }
 
