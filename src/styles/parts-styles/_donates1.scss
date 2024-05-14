@@ -96,6 +96,8 @@
 
   .textblock-btn {
     @include btn-main-l;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
