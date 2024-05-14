@@ -26,12 +26,5 @@ $rows = get_field('news_list', $currend_id);
             <?php get_template_part('parts/donates3', null, []); ?>
         </div>
     </section>  
-    <section class="section donates">
-        <div class="container">
-
-            
-        </div>
-
-    </section>
 </main>
 <?php get_footer(); ?>
