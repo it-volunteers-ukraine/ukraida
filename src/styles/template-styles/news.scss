@@ -16,7 +16,7 @@
 }
 
 .section.news {
-  margin-top: 96px;
+  padding-top: 24px;
 }
 
 .news-title {
@@ -64,7 +64,7 @@
 
 @media screen and (min-width: 768px) {
   .section.news {
-    margin-top: 186px;
+    padding-top: 48px;
   }
   .news-title {
     font-size: 32px;
@@ -88,11 +88,13 @@
     margin-top: 48px;
   }
 }
-
 @media screen and (min-width: 1200px) {
   .section.news {
-    margin-top: 263px;
-  }
+    padding-top: 64px;
+  } 
+}
+@media screen and (min-width: 1200px) {
+
   .news-title {
     font-size: 36px;
     margin-bottom: 107px;
@@ -119,7 +121,7 @@
 
 @media screen and (min-width: 1440px) {
   .section.news {
-    margin-top: 210px;
+    padding-top: 210px;
   }
   .news-title {
     font-size: 36px;
