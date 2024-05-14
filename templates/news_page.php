@@ -9,11 +9,12 @@ Template Name: newspage
     <?php
     $currend_id = get_the_ID();
     $rows = get_field('news_list', $currend_id);
+    $news_title = get_field('title', $currend_id);
 
     ?>
     <section class="section news">
         <div class="container">
-            <h1 class="news-title">Новини</h1>
+            <h1 class="news-title"><?php echo $news_title; ?></h1>
 
             <?php if (have_rows('news_list')) : ?>
                 <ul class="news-list">

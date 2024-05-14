@@ -20,8 +20,9 @@
                 </a>
             </li>
         </ul>
-        <a href="" class="donate3-btn">Детальна інформація</a>
+        <a href="/devpage" class="donate3-btn">Детальна інформація</a>
     </div>
+    <div class="separator"></div>
     <div class="donate3-wrap">
         <h2 class="donate3-title">Квитанції</h2>
         <ul class="donate3-list">
@@ -42,6 +43,6 @@
                 </a>
             </li>
         </ul>
-        <a href="" class="donate3-btn">Детальна інформація</a>
+        <a href="/devpage" class="donate3-btn">Детальна інформація</a>
     </div>
 </div>
