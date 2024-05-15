@@ -262,20 +262,21 @@ You can use this class for button
   transition: all $animations;
 }
 
-.menu__btn.donate-btn:hover {
-  box-shadow: rgba(0, 0, 0, 0.08) 0 0 0 1px,
-    rgba(0, 0, 0, 0.2) 0 -1px 1px 0 inset,
-    rgba(255, 255, 255, 0.5) 0 1px 1px 0 inset,
-    0 2px 5px -1px rgba(0, 0, 0, 0.05), 0 1px 3px -1px rgba(0, 0, 0, 0.3),
-    3px 3px 7px 0px rgba(0, 0, 0, 0.2509803922);
-}
-
-.menu__btn.donate-btn:not(:hover) {
+.donate-animate {
   animation-name: jittery;
   animation-duration: 4s;
   animation-delay: 1s;
   animation-iteration-count: 2;
   /*animation: 1s jittery 4s 1; */
+}
+
+.menu__btn.donate-btn:hover {
+  /*animation: heartbeat 0.2s; */
+  box-shadow: rgba(0, 0, 0, 0.08) 0 0 0 1px,
+    rgba(0, 0, 0, 0.2) 0 -1px 1px 0 inset,
+    rgba(255, 255, 255, 0.5) 0 1px 1px 0 inset,
+    0 2px 5px -1px rgba(0, 0, 0, 0.05), 0 1px 3px -1px rgba(0, 0, 0, 0.3),
+    3px 3px 7px 0px rgba(0, 0, 0, 0.2509803922);
 }
 
 @keyframes jittery {
@@ -311,6 +312,12 @@ You can use this class for button
   }
   40% {
     transform: scale(1.15) rotate(0);
+  }
+}
+
+@keyframes heartbeat {
+  50% {
+    transform: scale(1);
   }
 }
 
