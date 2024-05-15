@@ -46,3 +46,6 @@
         <a href="/devpage" class="donate3-btn">Детальна інформація</a>
     </div>
 </div>
+<!-- <div class="item button-jittery" style="--bg-color: #f1c40f;">
+    <button class="btn-test">Spende</button>
+</div> -->
