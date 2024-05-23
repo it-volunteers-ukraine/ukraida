@@ -100,7 +100,10 @@ function wp_it_volunteers_scripts()
     wp_enqueue_script('donates2-swiper-scripts', get_template_directory_uri() . '/assets/scripts/parts-scripts/donates2-swiper.js', array(), false, true);
   }
 
-
+  if (is_page_template('templates/privacy.php')) {
+    wp_enqueue_style('privacy-style', get_template_directory_uri() . '/assets/styles/template-styles/privacy.css', array('main'));
+    // wp_enqueue_script('news-scripts', get_template_directory_uri() . '/assets/scripts/template-scripts/news.js', array(), false, true);
+  }
 
   // if (is_singular() && is_page_template('parts/gallery.php')) {
   //   wp_enqueue_style( 'gallery-parts-style', get_template_directory_uri() . '/assets/styles/parts-styles/gallery.css', array() );
