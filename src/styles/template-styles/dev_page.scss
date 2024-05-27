@@ -1,5 +1,10 @@
 @import "../variables";
 
+.dev__page-wrap {
+  padding-top: 22px;
+  padding-bottom: 22px;
+}
+
 .dev__page {
   font-family: "Inter", sans-serif;
   background: url("../../images/dev_page/bg_dev_page.svg");
@@ -74,6 +79,21 @@
 }
 
 @media screen and (min-width: 768px) {
+  .wrapper {
+    height: 100vh;
+    overflow: scroll;
+  }
+
+  main {
+    height: 100vh;
+  }
+
+  .dev__page-wrap {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
   .dev__page {
     background: url("../../images/dev_page/bg_dev_page2.svg");
     background-repeat: no-repeat;
@@ -121,13 +141,15 @@
   }
 }
 
-@media screen and (min-width: 1200px) {
-  .section__next-event {
-    padding-bottom: 24px;
+@media screen and (min-width: 992px) {
+  .dev__page-wrap {
   }
 }
 
 @media screen and (min-width: 1280px) {
+  .dev__page-wrap {
+  }
+
   .dev__page {
     background: url("../../images/dev_page/bg_dev_page4.svg");
     background-repeat: no-repeat;
@@ -171,6 +193,11 @@
   .dev__btn {
     font-size: 24px;
     padding: 24px 20px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .dev__page-wrap {
   }
 }
 

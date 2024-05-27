@@ -37,7 +37,7 @@ $currend_id = 'option';
 ?>
 
 <div id="donate-modal" class="modal ">
-    <div id="modal-wrap" class="modal-wrap">
+    <div id="modal-wrap" class="modal-wrap donate-money">
         <button id="js-btn-close" type="button" class="modal_btn-close">
             <!-- <svg class="modal__icon-btn icon"> -->
             <svg class="icon">

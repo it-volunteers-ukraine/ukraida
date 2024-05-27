@@ -1,3 +1,31 @@
 @import '../parts-styles/_donates1.scss';
 @import '../parts-styles/_donates2.scss';
 @import '../parts-styles/_donates3.scss';
+
+.donate-gl-title{
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+@media screen and (min-width: 768px) {
+    .donate-gl-title{
+        font-size: 32px;
+       margin-bottom: 56px;
+}
+
+}
+
+@media screen and (min-width: 1200px) {
+    .donate-gl-title{
+        font-size: 36px;
+        margin-bottom: 104px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .donate-gl-title{
+        margin-bottom: 112px;
+    }
+}
+

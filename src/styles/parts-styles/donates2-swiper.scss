@@ -1,0 +1,94 @@
+@import "../components/buttons";
+
+.slider__wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.slider__wrap,
+.slider__item-fon {
+  margin-left: auto;
+  margin-right: auto;
+  width: 288px;
+  height: 256px;
+
+  object-fit: cover;
+
+  @media (min-width: 768px) {
+    width: 455px;
+    height: 372px;
+  }
+
+  @media (min-width: 1280px) {
+    width: 540px;
+    height: 486px;
+  }
+
+  @media (min-width: 1920px) {
+    width: 658px;
+    height: 593px;
+  }
+}
+
+.slider__button {
+  display: none;
+  border: none;
+  background: #fff;
+  cursor: pointer;
+
+  @media (min-width: 1280px) {
+    display: block;
+  }
+}
+
+.slider__button svg {
+  transition: fill 0.3s;
+}
+
+.slider__button svg:hover {
+  fill: #cccccc;
+}
+
+.main-pagination {
+  margin-top: 16px;
+  width: auto !important;
+
+  display: flex;
+  justify-content: center;
+
+  @media screen and (min-width: 768px) {
+    margin-top: 40px;
+  }
+  @media screen and (min-width: 1280px) {
+    margin-top: 32px;
+  }
+  @media screen and (min-width: 1980px) {
+    margin-top: 40px;
+  }
+}
+
+.swiper-pagination-bullet-active {
+  background-color: $swiper-pagination-active;
+
+  @media screen and (min-width: 768px) {
+    width: 16px;
+    height: 16px;
+  }
+}
+.swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullets-dynamic {
+  transform: translateX(0);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.swiper-pagination-bullet,
+.swiper-pagination-bullet-active-prev,
+.swiper-pagination-bullet-active-next,
+.swiper-pagination-bullet-active-next-next,
+.swiper-pagination-bullet-active-prev-prev {
+  @media screen and (min-width: 768px) {
+    width: 16px !important;
+    height: 16px !important;
+  }
+}

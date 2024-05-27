@@ -1,3 +1,55 @@
+@import "../components/img-text";
 
+.don2__wrap {
+  display: flex;
+  flex-direction: column;
 
+  @media screen and (min-width: 1280px) {
+    flex-direction: row;
+    gap: 74px;
+  }
+}
 
+.don2__block {
+  text-align: center;
+  margin-bottom: 32px;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 56px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    width: 50%;
+  }
+}
+
+.don2__title {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.5em;
+  margin-bottom: 32px;
+
+  @media screen and (min-width: 768px) {
+    font-size: 32px;
+    margin-bottom: 56px;
+  }
+}
+
+.don2__text {
+  font-size: 14px;
+  margin-bottom: 24px;
+
+  @media screen and (min-width: 768px) {
+    font-size: 20px;
+    margin-bottom: 40px;
+  }
+
+  @media screen and (min-width: 1920px) {
+    font-size: 24px;
+  }
+}
+
+.don2__swip {
+  display: flex;
+  justify-content: center;
+}
