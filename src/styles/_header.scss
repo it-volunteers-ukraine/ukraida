@@ -4,9 +4,7 @@
 
 .header {
   font-family: "Inter", sans-serif;
-  /*display: flex;
-  justify-content: center;*/
-  box-shadow: 4px 4px 43px 0px #0000001C;
+  box-shadow: 4px 4px 43px 0px #0000001c;
 
   position: fixed;
   width: 100%;
@@ -19,6 +17,10 @@
 .menu__item,
 .menu__item-inst {
   display: none;
+}
+
+.current-menu-item a {
+  color: $dark-blue;
 }
 
 .wrap {
@@ -270,10 +272,13 @@
   .menu-item a {
     text-decoration: none;
     color: $black;
+
+    transition: color 0.3s;
   }
 
   .menu-item a:hover {
     border-bottom: 2px solid $black;
+    color: $black;
   }
 
   .menu {
@@ -323,6 +328,10 @@
   .menu__img {
     margin-right: 8px;
   }
+
+  .current-menu-item a {
+    color: $dark-blue;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -341,7 +350,11 @@
   }
 
   .wrap {
-    gap: 90px;
+    gap: 62px;
+  }
+
+  .menu {
+    margin-left: 0;
   }
 
   .wrap > :nth-child(3) {
