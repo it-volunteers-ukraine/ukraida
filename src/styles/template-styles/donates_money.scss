@@ -1,32 +1,47 @@
-@import '../parts-styles/_donates_money1.scss';
-@import '../parts-styles/_donates_money2.scss';
-@import '../parts-styles/_donates_money3.scss';
-@import '../parts-styles/_donates_money4.scss';
+@import "../parts-styles/_donates_money1.scss";
+@import "../parts-styles/_donates_money2.scss";
+@import "../parts-styles/_donates_money3.scss";
+@import "../parts-styles/_donates_money4.scss";
 
-.donate-gl-title{
-    font-size: 18px;
-    text-align: center;
-    margin-bottom: 32px;
+.section__donate1 {
+  padding-top: 24px;
+  padding-bottom: 32px;
+}
+.donate-gl-title {
+  font-size: 24px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 32px;
 }
 
 @media screen and (min-width: 768px) {
-    .donate-gl-title{
-        font-size: 32px;
-       margin-bottom: 56px;
-}
+  .section__donate1 {
+    margin-top: 48px;
+  }
 
+  .donate-gl-title {
+    font-size: 32px;
+    margin-bottom: 56px;
+  }
 }
 
 @media screen and (min-width: 1200px) {
-    .donate-gl-title{
-        font-size: 36px;
-        margin-bottom: 104px;
-    }
+  .section__donate1 {
+    padding-top: 64px;
+    padding-bottom: 128px;
+  }
+  .donate-gl-title {
+    font-size: 36px;
+    margin-bottom: 104px;
+  }
 }
 
 @media screen and (min-width: 1440px) {
-    .donate-gl-title{
-        margin-bottom: 112px;
-    }
+  .section__donate1 {
+    padding-top: 48px;
+    padding-bottom: 144px;
+  }
+  .donate-gl-title {
+    padding-top: 112px;
+  }
 }
-
