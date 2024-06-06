@@ -4,7 +4,7 @@
 @import "../parts-styles/_donates_money4.scss";
 
 .section__donate1 {
-  padding-top: 24px;
+  padding-top: 84px;
   padding-bottom: 32px;
 }
 .donate-gl-title {
@@ -16,7 +16,7 @@
 
 @media screen and (min-width: 768px) {
   .section__donate1 {
-    margin-top: 48px;
+    padding-top: 104px;
   }
 
   .donate-gl-title {
@@ -27,7 +27,7 @@
 
 @media screen and (min-width: 1200px) {
   .section__donate1 {
-    padding-top: 64px;
+    padding-top: 128px;
     padding-bottom: 128px;
   }
   .donate-gl-title {
@@ -38,10 +38,7 @@
 
 @media screen and (min-width: 1440px) {
   .section__donate1 {
-    padding-top: 48px;
     padding-bottom: 144px;
   }
-  .donate-gl-title {
-    padding-top: 112px;
-  }
+
 }
