@@ -31,6 +31,8 @@ function add_google_fonts()
  */
 add_action('wp_enqueue_scripts', 'wp_it_volunteers_scripts');
 
+
+
 function wp_it_volunteers_scripts()
 {
   wp_enqueue_style('main', get_stylesheet_uri());
@@ -101,9 +103,34 @@ function wp_it_volunteers_scripts()
   }
 
   if (is_page_template('templates/donates_money_page.php')) {
+    // wp_enqueue_script('jquery'); // Enqueue the core jQuery UI library
+    // wp_deregister_script('jquery');
+    // wp_enqueue_script('jquery', 'https://code.jquery.com/jquery-3.6.0.min.js', array(), '3.6.0', true);
+    // wp_enqueue_script('jquery-ui-core'); // Enqueue the core jQuery UI 
+    // wp_enqueue_style("wp-jquery-ui-dialog");
+    wp_enqueue_style('jquery-ui-style', 'https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css');
+    wp_enqueue_script('jquery-ui-accordion'); // Enqueue the core jQuery UI library
     wp_enqueue_style('donates-money-style', get_template_directory_uri() . '/assets/styles/template-styles/donates_money.css', array('main'));
-    // wp_enqueue_script('news-scripts', get_template_directory_uri() . '/assets/scripts/template-scripts/news.js', array(), false, true);
+    wp_enqueue_script('donates-money-scripts', get_template_directory_uri() . '/assets/scripts/parts-scripts/accordion.js', array('jquery', 'jquery-ui-core', 'jquery-ui-accordion'),  true);
   }
+  // function check_jquery()
+  // {
+  //   global $wp_scripts;
+  //   echo '<script>console.log("jQuery: ", jQuery);</script>';
+  // }
+  // add_action('wp_footer', 'check_jquery');
+
+  // function check_jquery_ui()
+  // {
+  //   echo '<script>console.log("jQuery UI: ", jQuery.ui);</script>';
+  // }
+  // add_action('wp_footer', 'check_jquery_ui');
+
+  // function check_accordion_script()
+  // {
+  //   echo '<script>console.log("Accordion script: ", jQuery.fn.accordion);</script>';
+  // }
+  // add_action('wp_footer', 'check_accordion_script');
 
 
   if (is_page_template('templates/privacy.php')) {
@@ -133,6 +160,7 @@ function wp_it_volunteers_scripts()
 
 
 // add_action( 'wp_enqueue_scripts', 'add_swiper' );
+
 
 /** Register menus */
 function wp_it_volunteers_menus()
@@ -227,7 +255,7 @@ if (function_exists('acf_add_options_page')) {
 //       $category_name = 'event';
 //       $category_id =  get_cat_ID($category_name);
 //       $page_events_id = get_page_by_path('events')->ID;
-      
+
 
 //       $loop_args = [
 //           'post_type'      => 'post',
@@ -272,74 +300,65 @@ if (function_exists('acf_add_options_page')) {
 // }
 
 
-function true_breadcrumbs(){
- 
-	// получаем номер текущей страницы
-	$page_num = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
- 
-	$separator = ' / '; //  разделяем обычным слэшем, но можете чем угодно другим
- 
-	// если главная страница сайта
-	if( is_front_page() ){
- 
-		if( $page_num > 1 ) {
-			echo '<a href="' . site_url() . '">Главная</a>' . $separator . $page_num . '-я страница';
-		} else {
-			echo 'Вы находитесь на главной странице';
-		}
- 
-	} else { // не главная
- 
-		echo '<a href="' . site_url() . '">Главная</a>' . $separator;
- 
- 
-		if( is_single() ){ // записи
- 
-			the_category( ', ' ); echo $separator; the_title();
- 
-		} elseif ( is_page() ){ // страницы WordPress 
- 
-			the_title();
- 
-		} elseif ( is_category() ) {
- 
-			single_cat_title();
- 
-		} elseif( is_tag() ) {
- 
-			single_tag_title();
- 
-		} elseif ( is_day() ) { // архивы (по дням)
- 
-			echo '<a href="' . get_year_link( get_the_time( 'Y' ) ) . '">' . get_the_time( 'Y' ) . '</a>' . $separator;
-			echo '<a href="' . get_month_link( get_the_time( 'Y' ), get_the_time( 'm' ) ) . '">' . get_the_time( 'F' ) . '</a>' . $separator;
-			echo get_the_time('d');
- 
-		} elseif ( is_month() ) { // архивы (по месяцам)
- 
-			echo '<a href="' . get_year_link( get_the_time( 'Y' ) ) . '">' . get_the_time( 'Y' ) . '</a>' . $separator;
-			echo get_the_time('F');
- 
-		} elseif ( is_year() ) { // архивы (по годам)
- 
-			echo get_the_time( 'Y' );
- 
-		} elseif ( is_author() ) { // архивы по авторам
- 
-			global $author;
-			$userdata = get_userdata( $author );
-			echo 'Опубликовал(а) ' . $userdata->display_name;
- 
-		} elseif ( is_404() ) { // если страницы не существует
- 
-			echo 'Ошибка 404';
- 
-		}
- 
-		if ( $page_num > 1 ) { // номер текущей страницы
-			echo ' (' . $page_num . '-я страница)';
-		}
- 
-	}
- 
+function true_breadcrumbs()
+{
+
+  // получаем номер текущей страницы
+  $page_num = (get_query_var('paged')) ? get_query_var('paged') : 1;
+
+  $separator = ' / '; //  разделяем обычным слэшем, но можете чем угодно другим
+
+  // если главная страница сайта
+  if (is_front_page()) {
+
+    if ($page_num > 1) {
+      echo '<a href="' . site_url() . '">Главная</a>' . $separator . $page_num . '-я страница';
+    } else {
+      echo 'Вы находитесь на главной странице';
+    }
+  } else { // не главная
+
+    echo '<a href="' . site_url() . '">Главная</a>' . $separator;
+
+
+    if (is_single()) { // записи
+
+      the_category(', ');
+      echo $separator;
+      the_title();
+    } elseif (is_page()) { // страницы WordPress 
+
+      the_title();
+    } elseif (is_category()) {
+
+      single_cat_title();
+    } elseif (is_tag()) {
+
+      single_tag_title();
+    } elseif (is_day()) { // архивы (по дням)
+
+      echo '<a href="' . get_year_link(get_the_time('Y')) . '">' . get_the_time('Y') . '</a>' . $separator;
+      echo '<a href="' . get_month_link(get_the_time('Y'), get_the_time('m')) . '">' . get_the_time('F') . '</a>' . $separator;
+      echo get_the_time('d');
+    } elseif (is_month()) { // архивы (по месяцам)
+
+      echo '<a href="' . get_year_link(get_the_time('Y')) . '">' . get_the_time('Y') . '</a>' . $separator;
+      echo get_the_time('F');
+    } elseif (is_year()) { // архивы (по годам)
+
+      echo get_the_time('Y');
+    } elseif (is_author()) { // архивы по авторам
+
+      global $author;
+      $userdata = get_userdata($author);
+      echo 'Опубликовал(а) ' . $userdata->display_name;
+    } elseif (is_404()) { // если страницы не существует
+
+      echo 'Ошибка 404';
+    }
+
+    if ($page_num > 1) { // номер текущей страницы
+      echo ' (' . $page_num . '-я страница)';
+    }
+  }
 }
