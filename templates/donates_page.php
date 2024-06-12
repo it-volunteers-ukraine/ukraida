@@ -12,7 +12,7 @@ $rows = get_field('news_list', $currend_id);
 <main>
     <section class="section section__donate1">
         <div class="container container__donate1">
-            <h1 class="donate-gl-title">Пожертви</h1>
+            <h1 class="donate-gl-title"><?php echo get_field('global_title', $currend_id); ?></h1>
             <?php get_template_part('parts/donates1', null, []); ?>
         </div>
     </section>  

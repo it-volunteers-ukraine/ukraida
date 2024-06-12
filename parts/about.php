@@ -18,7 +18,7 @@ if ($rows) {
 
         </div>
         <div class="img-text__content">
-            <h2 class="title__content img-text__title img-text__title--mob"><?php echo $rows[0]['img-text_title'] ?></h2>
+            <h2 class="title__content img-text__title img-text__title--desc"><?php echo $rows[0]['img-text_title'] ?></h2>
             <?php echo $rows[0]['img-text_text'] ?>
 
             <div class="img-text__button">

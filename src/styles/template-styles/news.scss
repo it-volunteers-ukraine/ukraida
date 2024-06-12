@@ -88,13 +88,12 @@
     margin-top: 48px;
   }
 }
+
 @media screen and (min-width: 1200px) {
+  
   .section.news {
     padding-top: 64px;
   } 
-}
-@media screen and (min-width: 1200px) {
-
   .news-title {
     font-size: 36px;
     margin-bottom: 107px;
@@ -120,9 +119,7 @@
 }
 
 @media screen and (min-width: 1440px) {
-  .section.news {
-    padding-top: 210px;
-  }
+
   .news-title {
     font-size: 36px;
     margin-bottom: 112px;
