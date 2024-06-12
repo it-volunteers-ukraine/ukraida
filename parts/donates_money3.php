@@ -3,13 +3,8 @@ $currend_id = get_the_ID();
 ?>
 <section class='donate-result'>
     <div class="donate-title__wrap">
-        <h2 class="donate-title">Наші результати</h2>
-        <p>Vorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Nunc vulputate libero et velit interdum, ac aliquet odio mattis.
-            Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
-            inceptos himenaeos.Vorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Nunc vulputate libero et velit interdum, ac aliquet odio mattis.
-            Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+        <h2 class="donate-title"><?php the_field('title-result') ?></h2>
+        <p><?php the_field('text-result') ?>
         </p>
     </div>
     <div class="result__container">
@@ -57,10 +52,10 @@ foreach( $my_posts as $post ){
 
 <?php }
 
-wp_reset_postdata(); // reset $post
+wp_reset_postdata(); 
 ?>
     </div>
 
-    <button class="btn">Завантажити більше</button>
+    <button class="btn"><?php the_field('btn-result') ?></button>
 
 </section>
