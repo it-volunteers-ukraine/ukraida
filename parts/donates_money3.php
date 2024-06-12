@@ -13,65 +13,39 @@ $currend_id = get_the_ID();
         </p>
     </div>
     <div class="result__container">
-        <div class="result-item">
+
+<?php 
+$my_posts = get_posts( [
+	'numberposts' => 3,
+	'category_name'    => 'Results',
+	'orderby'     => 'date',
+	'order'       => 'ASC',
+	'include'     => array(),
+	'exclude'     => array(),
+	'meta_key'    => '',
+	'meta_value'  =>'',
+	'post_type'   => 'post',
+	'suppress_filters' => true, // suppression of filters of SQL query change
+] );
+
+foreach( $my_posts as $post ){
+	setup_postdata( $post );
+
+
+?>
+	  <div class="result-item">
             <div class="result-item__wrap">
                 <div class="result-item__img">
-                <img src="<?php echo  get_template_directory_uri() . '/assets/images/donates/img_don2.jpg'; ?>" alt="">
+                <img src="<?php echo the_field('img')?>" alt="">
                 </div>
                 <div class="result-item__text">
-                    <h4>4 автомобілі швидкої допомоги</h4>
+                    <h4><?php the_field('title')?></h4>
                     <div class="result-item__inner">
-                        <p>Vorem ipsum dolor sit amet,
-                            consectetur adipiscing elit. Nunc vulputate libero et velit interdum,
-                            ac aliquet odio mattis. Nunc vulputate libero et velit interdum,
-                            ac aliquet odio mattis.
+                        <p>
+                            <?php the_field('text')?>
                         </p>
                         <p>Загальна сума збору: <br>
-                            <span>0000000000</span>
-                        </p>
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-        <div class="result-item">
-            <div class="result-item__wrap">
-                <div class="result-item__img">
-                <img src="<?php echo  get_template_directory_uri() . '/assets/images/donates/img_don2.jpg'; ?>" alt="">
-                </div>
-                <div class="result-item__text">
-                    <h4>4 автомобілі швидкої допомоги</h4>
-                    <div class="result-item__inner">
-                        <p>Vorem ipsum dolor sit amet,
-                            consectetur adipiscing elit. Nunc vulputate libero et velit interdum,
-                            ac aliquet odio mattis. Nunc vulputate libero et velit interdum,
-                            ac aliquet odio mattis.
-                        </p>
-                        <p>Загальна сума збору: <br>
-                            <span>0000000000</span>
-                        </p>
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-        <div class="result-item">
-            <div class="result-item__wrap">
-                <div class="result-item__img">
-                    <img src="<?php echo  get_template_directory_uri() . '/assets/images/donates/img_don2.jpg'; ?>" alt="">
-                </div>
-                <div class="result-item__text">
-                    <h4>4 автомобілі швидкої допомоги</h4>
-                    <div class="result-item__inner">
-                        <p>Vorem ipsum dolor sit amet,
-                            consectetur adipiscing elit. Nunc vulputate libero et velit interdum,
-                            ac aliquet odio mattis. Nunc vulputate libero et velit interdum,
-                            ac aliquet odio mattis.
-                        </p>
-                        <p>Загальна сума збору: <br>
-                            <span>0000000000</span>
+                            <span>  <?php the_field('sum')?></span>
                         </p>
                     </div>
                 </div>
@@ -80,6 +54,11 @@ $currend_id = get_the_ID();
 
         </div>
 
+
+<?php }
+
+wp_reset_postdata(); // reset $post
+?>
     </div>
 
     <button class="btn">Завантажити більше</button>
