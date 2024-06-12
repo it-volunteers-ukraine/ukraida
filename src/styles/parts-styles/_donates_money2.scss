@@ -1,4 +1,19 @@
 @import "../components.scss";
+@import "../components/img-text";
+
+.post-section {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  @media screen and (min-width: 1280px) {
+    gap: 32px;
+  }
+
+  @media screen and (min-width: 1920px) {
+    gap: 40px;
+  }
+}
 
 .post-type {
   min-width: 288px;
@@ -58,6 +73,12 @@
     }
   }
 
+  &__block {
+    @media screen and (min-width: 1920px) {
+      width: 780px;
+    }
+  }
+
   &__start {
     margin-bottom: 12px;
   }
@@ -67,6 +88,10 @@
     font-weight: 700;
     text-transform: uppercase;
     margin-bottom: 16px;
+
+    @media screen and (min-width: 768px) {
+      font-size: 24px;
+    }
   }
 
   &__text {
@@ -74,6 +99,15 @@
     font-style: italic;
 
     margin-bottom: 16px;
+
+    @media screen and (min-width: 768px) {
+      margin-bottom: 24px;
+      font-size: 16px;
+    }
+
+    @media screen and (min-width: 1280px) {
+      font-size: 24px;
+    }
   }
 
   &__value {
@@ -84,9 +118,41 @@
     font-size: 20px;
     font-weight: 600;
     margin-bottom: 24px;
+
+    @media screen and (min-width: 768px) {
+      margin-bottom: 40px;
+      font-size: 24px;
+    }
   }
 
   &__button {
     display: inline-block;
+  }
+
+  .dev__btn {
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500px;
+    padding: 14px 12px;
+    border-radius: 15px;
+    border: 0;
+    background: $dark-blue;
+    color: $white;
+
+    transition: all 0.3s;
+
+    @media screen and (min-width: 768px) {
+      font-size: 20px;
+      padding: 16px;
+    }
+
+    @media screen and (min-width: 1280px) {
+      font-size: 24px;
+      padding: 24px 20px;
+    }
+  }
+
+  .dev__btn:hover {
+    box-shadow: $btn-hover-shadow;
   }
 }
