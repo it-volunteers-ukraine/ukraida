@@ -103,6 +103,10 @@ function wp_it_volunteers_scripts()
   if (is_page_template('templates/donates_money_page.php')) {
     wp_enqueue_style('donates-money-style', get_template_directory_uri() . '/assets/styles/template-styles/donates_money.css', array('main'));
     // wp_enqueue_script('news-scripts', get_template_directory_uri() . '/assets/scripts/template-scripts/news.js', array(), false, true);
+          $front_scripts_args = [
+        'ajaxUrl' => admin_url('admin-ajax.php'),
+    ];
+    wp_localize_script('events-parts-scripts', 'vars', $front_scripts_args);
   }
 
 
@@ -270,3 +274,4 @@ if (function_exists('acf_add_options_page')) {
 //       wp_send_json($res);
 //     }
 // }
+add_theme_support( 'post-thumbnails', array( 'post' ) );
