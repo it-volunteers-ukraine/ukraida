@@ -15,7 +15,7 @@ svg {
   align-items: flex-start;
   gap: 24px;
 
-  margin-bottom: 56px;
+  margin-bottom: 40px;
 }
 
 .logo_img {
@@ -41,6 +41,7 @@ svg {
 // Privacy__list
 .privacy__list {
   display: flex;
+  gap:14px;
   flex-direction: column;
   row-gap: 8px;
   font-size: 14px;
@@ -48,11 +49,11 @@ svg {
 }
 
 .privacy__item {
-  padding-bottom: 14px;
 }
 
 .privacy__link {
   color: $black;
+  line-height: 45px;
 }
 .privacy__link:hover,
 .privacy__link:focus {
@@ -69,6 +70,7 @@ svg {
 .social-media__link {
   display: flex;
   align-items: center;
+  height: 45px;
   gap: 8px;
   color: $black;
   transition: fill $animations, color $animations;
@@ -145,18 +147,25 @@ svg {
   .footer__inner-wrap {
     flex-direction: row;
     justify-content: space-between;
+    gap: 32px 24px; 
     align-items: center;
-    margin-bottom: 47px;
-  }
+    margin-bottom: 40px;
+    flex-wrap: wrap;
 
+  }
+  .logo1{
+    width: 100%;
+  }
+  
   .logo_img {
     width: 121px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
-  // Privacy__list
   .privacy__list {
     align-items: start;
-    gap: 20px;
+    gap: 16px;
   }
 
   .privacy__item {
@@ -169,41 +178,57 @@ svg {
 
   // Social-media
   .social-media__list {
-    row-gap: 36px;
+    row-gap: 16px;
   }
 
   .social-media__link {
-    font-size: 18px;
+    font-size: 20px;
   }
   .copyright__desc {
     font-size: 14px;
   }
 }
 
-@media screen and (min-width: 990px) {
+@media screen and (min-width: 992px) {
   .footer {
     padding: 32px 0;
   }
 
   .footer__inner-wrap {
-    margin-bottom: 44px;
+    flex-wrap: nowrap;
   }
 
+  .footer__inner-wrap {
+    gap: 24px;
+  }
   // Privacy__list
   .privacy__list {
     flex-direction: row;
-    gap: 44px;
+    gap: 40px;
   }
 
+  .logo1{
+    width: unset;
+  }
+  .logo_img {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .privacy__item {
+    padding: 0;
+  }
   .privacy__link {
-    font-size: 16px;
+    font-size: 18px;
   }
 
   // Social-media
   .social-media__list {
-    gap: 16px;
   }
 
+  .social-media__link {
+    font-size: 20px;
+  }
   // Copyright__desc
   .copyright__desc {
     font-size: 16px;
@@ -212,7 +237,6 @@ svg {
 
 @media screen and (min-width: 1200px) {
   .footer__inner-wrap {
-    height: 153px;
     margin-bottom: 40px;
   }
 
@@ -221,7 +245,7 @@ svg {
   }
   // Privacy__list
   .privacy__list {
-    gap: 88px;
+    gap: 48px;
   }
 
   .privacy__link {
@@ -234,7 +258,7 @@ svg {
   }
 
   .social-media__link {
-    font-size: 24px;
+    height: unset;
   }
 
   .social__icon {
@@ -249,8 +273,7 @@ svg {
 }
 
 @media screen and (min-width: 1440px) {
-  .logo1,
   .social-media__list {
-    width: 27%;
+    font-style: 24px;
   }
 }
