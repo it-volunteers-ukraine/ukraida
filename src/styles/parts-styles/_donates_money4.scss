@@ -1,5 +1,7 @@
 @import "../components.scss";
+
 $icon-path: "../../../assets/images/icons/";
+
 
 .donate4 {
   max-width: 1356px;
@@ -39,6 +41,7 @@ $icon-path: "../../../assets/images/icons/";
 
 .ui-accordion {
   border: none;
+  font-family: $font-main;
   background: none;
 }
 .accordion-item {
