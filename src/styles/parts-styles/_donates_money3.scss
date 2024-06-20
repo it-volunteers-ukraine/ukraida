@@ -45,6 +45,11 @@
         min-width: 528px;
 
     }
+    &__wrap{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
 
     &__img {
         height: 288px;
@@ -58,6 +63,9 @@
     }
 
     &__text {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
         margin-top: 24px;
         color: #221F25;
         line-height: 32px;
@@ -71,22 +79,24 @@
     }
 
     &__inner {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
         margin-top: 16px;
 
         & p:first-child {
             font-size: 24px;
 
         }
+    }
+    &__sum {
+        margin-top: 16px;
+        font-size: 18px;
 
-        p+p {
-            margin-top: 16px;
-            font-size: 18px;
-
-            & span {
-                font-size: 24px;
-                font-weight: 600;
-            }
+        & span {
+            font-size: 24px;
+            font-weight: 600;
         }
-
     }
 }

@@ -112,6 +112,13 @@ function wp_it_volunteers_scripts()
     wp_enqueue_script('jquery-ui-accordion'); // Enqueue the core jQuery UI library
     wp_enqueue_style('donates-money-style', get_template_directory_uri() . '/assets/styles/template-styles/donates_money.css', array('main'));
     wp_enqueue_script('donates-money-scripts', get_template_directory_uri() . '/assets/scripts/parts-scripts/accordion.js', array('jquery', 'jquery-ui-core', 'jquery-ui-accordion'),  true);
+    // wp_enqueue_script('news-scripts', get_template_directory_uri() . '/assets/scripts/template-scripts/news.js', array(), false, true);
+          $front_scripts_args = [
+        'ajaxUrl' => admin_url('admin-ajax.php'),
+    ];
+    wp_localize_script('events-parts-scripts', 'vars', $front_scripts_args);
+
+
   }
   // function check_jquery()
   // {
@@ -299,6 +306,9 @@ if (function_exists('acf_add_options_page')) {
 //     }
 // }
 
+add_theme_support( 'post-thumbnails', array( 'post' ) );
+
+
 
 function true_breadcrumbs()
 {
@@ -362,3 +372,4 @@ function true_breadcrumbs()
     }
   }
 }
+
