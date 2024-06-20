@@ -7,8 +7,6 @@
     <link type="image/png" sizes="16x16" rel="icon" href="<?php bloginfo('template_url'); ?>/assets/images/favicon/favicon-16x16.png">
     <link type="image/png" sizes="32x32" rel="icon" href="<?php bloginfo('template_url'); ?>/assets/images/favicon/favicon-32x32.png">
     <link type="image/png" sizes="96x96" rel="icon" href="<?php bloginfo('template_url'); ?>/assets/images/favicon/favicon-96x96.png">
-    <!-- <link type="image/png" sizes="120x120" rel="icon" href="<?php bloginfo('template_url'); ?>/assets/images/favicon/favicon-120x120.png"> -->
-    <!-- <link type="image/png" sizes="192x192" rel="icon" href="<?php bloginfo('template_url'); ?>/assets/images/favicon/android-icon-192x192.png"> -->
 
     <link sizes="57x57" rel="apple-touch-icon" href="<?php bloginfo('template_url'); ?>/assets/images/favicon/apple-icon-57x57.png">
     <link sizes="60x60" rel="apple-touch-icon" href="<?php bloginfo('template_url'); ?>/assets/images/favicon/apple-icon-60x60.png">
@@ -20,7 +18,6 @@
     <link sizes="152x152" rel="apple-touch-icon" href="<?php bloginfo('template_url'); ?>/assets/images/favicon/apple-icon-152x152.png">
     <link sizes="180x180" rel="apple-touch-icon" href="<?php bloginfo('template_url'); ?>/assets/images/favicon/apple-icon-180x180.png">
 
-    <!-- <link color="#e52037" rel="mask-icon" href="<?php bloginfo('template_url'); ?>/assets/images/favicon/safari-pinned-tab.svg"> -->
 
     <meta name="msapplication-TileColor" content="#2b5797">
     <meta name="msapplication-TileImage" content="<?php bloginfo('template_url'); ?>/assets/images/favicon/ms-icon-144x144.png">
@@ -29,7 +26,6 @@
     <meta name="msapplication-wide310x150logo" content="<?php bloginfo('template_url'); ?>/assets/images/favicon/ms-icon-310x310.png">
     <meta name="msapplication-square310x310logo" content="<?php bloginfo('template_url'); ?>/assets/images/favicon/ms-icon-310x150.png">
     <meta name="application-name" content="Ukraida">
-    <!-- <meta name="msapplication-config" content="<?php bloginfo('template_url'); ?>/assets/images/favicon/browserconfig.xml"> -->
 
     <link rel="manifest" href="<?php bloginfo('template_url'); ?>/assets/images/favicon/manifest.json">
     <meta name="theme-color" content="#ffffff">

@@ -1,2 +1,158 @@
 @import "../components.scss";
+$icon-path: "../../../assets/images/icons/";
 
+.donate4 {
+  max-width: 1356px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ui-accordion .ui-accordion-content {
+  border: none;
+  background: none;
+}
+
+/* .ui-accordion .ui-accordion-header .ui-icon { */
+.accordion-icon {
+  margin-left: 16px;
+  width: 24px; /* Задайте желаемую ширину иконки */
+  height: 24px; /* Задайте желаемую высоту иконки */
+  background-image: url(#{$icon-path}eva_arrow-up-fill.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  display: inline-block;
+  text-indent: -9999px; /* Скрывает текст иконки */
+  transition: transform $animations-long;
+}
+
+.ui-accordion-header-active .accordion-icon {
+  transform: scale(1, -1);
+}
+
+.donate4-title {
+  text-align: center;
+  margin-bottom: 32px;
+  font-size: 18px;
+  color: $black;
+}
+
+.ui-accordion {
+  border: none;
+  background: none;
+}
+.accordion-item {
+  border-radius: 15px;
+  transition: box-shadow $animations;
+}
+
+.accordion-item-active {
+  box-shadow: 4px 4px 25px 0px #0000001c;
+}
+
+.accordion-item:not(:last-child) {
+  margin-bottom: 24px;
+}
+
+.ui-accordion .ui-accordion-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: none;
+  color: #000;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 17px 16px 17px 16px;
+  background: $background-accordion;
+  border-radius: 15px;
+  transition: background $animations-long;
+}
+.ui-accordion .ui-accordion-header-active {
+  background: none;
+}
+
+.ui-accordion .ui-accordion-content {
+  padding: 0 16px 16px 16px;
+  font-size: 14px;
+  font-style: italic;
+}
+
+.faq-text {
+  padding-top: 16px;
+  border-top: 1px solid $btn-disabled;
+}
+
+@media screen and (min-width: 768px) {
+  .accordion-item:not(:last-child) {
+    margin-bottom: 32px;
+  }
+  .accordion-icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .donate4-title {
+    font-size: 32px;
+    margin-bottom: 56px;
+  }
+  .ui-accordion .ui-accordion-header {
+    padding: 24px;
+    font-size: 20px;
+  }
+  .ui-accordion .ui-accordion-content {
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .accordion-icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .donate4-title {
+    margin-bottom: 64px;
+  }
+  .ui-accordion .ui-accordion-header {
+    font-size: 24px;
+  }
+  .ui-accordion .ui-accordion-content {
+    font-size: 18px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .ui-accordion .ui-accordion-content {
+    font-size: 18px;
+  }
+}
+
+.ui-accordion-header {
+}
+
+.ui-state-default {
+}
+
+.ui-accordion-header-active {
+}
+.header-active {
+}
+
+.ui-accordion-icons {
+}
+.accordion-item {
+}
+.ui-accordion-header-icon {
+}
+
+.ui-accordion-content {
+}
+
+.ui-accordion-content-active {
+}
+
+.faq-header {
+}
