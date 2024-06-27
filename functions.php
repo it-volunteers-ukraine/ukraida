@@ -103,10 +103,53 @@ function wp_it_volunteers_scripts()
   if (is_page_template('templates/donates_money_page.php')) {
     wp_enqueue_style('donates-money-style', get_template_directory_uri() . '/assets/styles/template-styles/donates_money.css', array('main'));
     // wp_enqueue_script('news-scripts', get_template_directory_uri() . '/assets/scripts/template-scripts/news.js', array(), false, true);
-          $front_scripts_args = [
-        'ajaxUrl' => admin_url('admin-ajax.php'),
+    $front_scripts_args = [
+      'ajaxUrl' => admin_url('admin-ajax.php'),
     ];
     wp_localize_script('events-parts-scripts', 'vars', $front_scripts_args);
+    wp_enqueue_script('jquery');
+    wp_enqueue_script(
+      'true_loadmore',
+      get_stylesheet_directory_uri() . '/assets/scripts/parts-scripts/loadmore.js',
+      array('jquery'),
+      time() // не кэшируем файл, убираем эту строчку после завершение разработки
+    );
+    wp_localize_script(
+      'true_loadmore',
+      'misha',
+      array( 'ajaxUrl' => admin_url('admin-ajax.php'))
+    );
+
+    wp_enqueue_script('true_loadmore');
+
+    
+  }
+
+  add_action('wp_ajax_loadmore', 'true_loadmore');
+  add_action('wp_ajax_nopriv_loadmore', 'true_loadmore');
+
+  function true_loadmore()
+  {
+
+    $paged = !empty($_POST['paged']) ? $_POST['paged'] : 1;
+    $paged++;
+
+    $args = array(
+      'paged' => $paged,
+      'post_status' => 'publish',
+      'category'    => 'Results',
+    );
+
+    query_posts($args);
+
+    while (have_posts()) : the_post();
+
+      get_template_part('templates/parts/result');
+
+
+    endwhile;
+
+    die;
   }
 
 
@@ -231,7 +274,7 @@ if (function_exists('acf_add_options_page')) {
 //       $category_name = 'event';
 //       $category_id =  get_cat_ID($category_name);
 //       $page_events_id = get_page_by_path('events')->ID;
-      
+
 
 //       $loop_args = [
 //           'post_type'      => 'post',
@@ -274,4 +317,4 @@ if (function_exists('acf_add_options_page')) {
 //       wp_send_json($res);
 //     }
 // }
-add_theme_support( 'post-thumbnails', array( 'post' ) );
+add_theme_support('post-thumbnails', array('post'));
