@@ -120,6 +120,10 @@ function wp_it_volunteers_scripts()
 
 
   }
+
+  if (is_page_template('templates/donates_things_page.php')) {
+    wp_enqueue_style('donates-things-style', get_template_directory_uri() . '/assets/styles/template-styles/donates_things.css', array('main'));
+  }
   // function check_jquery()
   // {
   //   global $wp_scripts;

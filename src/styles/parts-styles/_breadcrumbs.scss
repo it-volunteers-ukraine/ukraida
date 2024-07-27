@@ -1,0 +1,28 @@
+@import '../variables';
+
+nav.breadcrumbs {
+    margin-top: 20px;
+    margin-left: 55px;
+}
+
+/* Don't display on screens narrower than 1024 px */
+@media screen and (width < 1024px) {
+    nav.breadcrumbs {
+        display: none;
+    }
+}
+
+nav.breadcrumbs li {
+    display: inline;
+    color: $blue;
+}
+
+nav.breadcrumbs li.active {
+    color: $dark-blue;
+}
+
+nav.breadcrumbs li+li:before {
+    padding: 8px;
+    color: $grey;
+    content: "/\00a0";
+}
