@@ -105,3 +105,4 @@ for (let i = 0; i < allDonateBlock.length; i++) {
 btnDonateRef.addEventListener("click", openModal);
 btnCloseModalRef.addEventListener("click", closeModal);
 // donateItemRef.addEventListener("click", copyText);
+
