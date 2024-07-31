@@ -9,7 +9,7 @@ $currend_id = get_the_ID();
             <li class="donate3-item">
                 <a href="" class="donate3-link">
                     <svg class="donate3-icon">
-                        <use xlink:href="<?php bloginfo('template_url'); ?>/assets/images/sprites.svg#icon-report"></use>
+                        <use xlink:href="<?php bloginfo('template_url'); ?>/assets/images/symbol-defs.svg#icon-report"></use>
                     </svg>
                     <p class="donate3-text"><?php echo get_field('donates3_report1_period', $currend_id); ?></p>
                 </a>
@@ -17,7 +17,7 @@ $currend_id = get_the_ID();
             <li class="donate3-item">
                 <a href="" class="donate3-link">
                     <svg class="donate3-icon">
-                        <use xlink:href="<?php bloginfo('template_url'); ?>/assets/images/sprites.svg#icon-report"></use>
+                        <use xlink:href="<?php bloginfo('template_url'); ?>/assets/images/symbol-defs.svg#icon-report"></use>
                     </svg>
                     <p class="donate3-text"><?php echo get_field('donates3_report2_period', $currend_id); ?></p>
                 </a>
@@ -32,7 +32,7 @@ $currend_id = get_the_ID();
             <li class="donate3-item">
                 <a href="" class="donate3-link">
                     <svg class="donate3-icon">
-                        <use xlink:href="<?php bloginfo('template_url'); ?>/assets/images/sprites.svg#icon-receipt"></use>
+                        <use xlink:href="<?php bloginfo('template_url'); ?>/assets/images/symbol-defs.svg#icon-receipt"></use>
                     </svg>
                     <p class="donate3-text"><?php echo get_field('donates3_zvit1_period', $currend_id); ?></p>
                     <!-- <p class="donate3-text">Квитанція за</p> -->
@@ -41,7 +41,7 @@ $currend_id = get_the_ID();
             <li class="donate3-item">
                 <a href="" class="donate3-link">
                     <svg class="donate3-icon">
-                        <use xlink:href="<?php bloginfo('template_url'); ?>/assets/images/sprites.svg#icon-receipt"></use>
+                        <use xlink:href="<?php bloginfo('template_url'); ?>/assets/images/symbol-defs.svg#icon-receipt"></use>
                     </svg>
                     <p class="donate3-text"><?php echo get_field('donates3_zvit2_period', $currend_id); ?></p>
                     <!-- <p class="donate3-text">Квитанція за</p> -->
