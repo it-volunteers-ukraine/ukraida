@@ -15,6 +15,7 @@ $currend_id = get_the_ID();
                 <use xlink:href="<?php bloginfo('template_url'); ?>/assets/images/symbol-defs.svg#icon-instagram"></use>
             </svg>@<?php the_field('instagram', 'option') ?>
         </a>
+
         <a class="social-media__link" href="mailto:<?php the_field('email', 'option') ?>" target="_blank" rel="noopener noreferrer">
             <svg class="social__icon">
                 <use xlink:href="<?php bloginfo('template_url'); ?>/assets/images/symbol-defs.svg#icon-email"></use>
