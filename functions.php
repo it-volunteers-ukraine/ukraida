@@ -41,8 +41,6 @@ function wp_it_volunteers_scripts()
   wp_enqueue_script('wp-scripts', get_template_directory_uri() . '/assets/scripts/main.js', array(), false, true);
   wp_enqueue_style('modal-donate', get_template_directory_uri() . '/assets/styles/parts-styles/modal-donate.css', array());
   wp_enqueue_script('modal-donate-scripts', get_template_directory_uri() . '/assets/scripts/parts-scripts/modal-donate.js', array(), false, true);
-  wp_enqueue_style('modal-donate-things', get_template_directory_uri() . '/assets/styles/parts-styles/modal-things.css', array());
-  wp_enqueue_script('modal-donate-thing-scripts', get_template_directory_uri() . '/assets/scripts/parts-scripts/thingDonate.js', array(), false, true);
 
   if (is_page_template('templates/home.php')) {
     //   $front_scripts_args = [
