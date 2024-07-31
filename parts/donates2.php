@@ -15,25 +15,12 @@ $currend_id = get_the_ID();
                 <use xlink:href="<?php bloginfo('template_url'); ?>/assets/images/symbol-defs.svg#icon-instagram"></use>
             </svg>@<?php the_field('instagram', 'option') ?>
         </a>
-       <a id="modal-form" class="social-media__link" href="#">
-    <svg class="social__icon">
-        <use xlink:href="<?php bloginfo('template_url'); ?>/assets/images/symbol-defs.svg#icon-email"></use>
-    </svg>
-    <?php echo get_field('email', 'option'); ?>
-</a>
-
-<div id="modal-form-content" class="modal-things">
-    <div id="modal-form-wrap" class="modal-wrap-things">
-        <div class="modal-content-things">
-            <form>
-                <input type="text" placeholder="Name">
-                <input type="text" placeholder="Email">
-                <button class="button-submit" type="submit">Submit</button>
-                <button class="button-close" type="button" id="modal-btn-close">Close</button>
-            </form>
-        </div>
-    </div>
-</div>
+       <a class="social-media__link" href="#">
+            <svg class="social__icon">
+                <use xlink:href="<?php bloginfo('template_url'); ?>/assets/images/symbol-defs.svg#icon-email"></use>
+            </svg>
+            <?php echo get_field('email', 'option'); ?>
+        </a>
         <a style="margin-top: 30px" href="/devpage" class="img-text__btn"><?php echo get_field('donates2_button_text', $currend_id); ?></a> 
     </div>
     <div class="don2__swip">
