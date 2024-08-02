@@ -2,7 +2,7 @@
 @import "../components/buttons";
 
 .donate-things__block {
-  padding: 50px 0;
+  margin: 50px 0;
 }
 
 .donate-things__container {
@@ -28,6 +28,8 @@
 }
 
 .donate-things__media {
+  width: 100%;
+  max-width: 288px;
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -54,10 +56,26 @@
   .donate-things__title {
     padding-bottom: 56px;
   }
+
+  .donate-things__block-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    }
   .donate-things__text {
     max-width: 563px;
     font-size: 24px;
     line-height: 28.8px;
+  }
+  .donate-things__media-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .donate-things__media {
+    max-width: 563px;
   }
   .donate-things__media__text {
     font-size: 20px;
