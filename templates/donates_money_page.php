@@ -10,7 +10,7 @@ $rows = get_field('news_list', $currend_id);
 ?>
 
 <main>
-    <!-- <?php true_breadcrumbs(); ?> -->
+    <?php get_template_part('/parts/breadcrumbs'); ?>
     <section class="section section__donate1">
         <div class="container container__donate1">
             <h1 class="donate-gl-title"><?php echo get_field('title_page', $currend_id); ?></h1>
