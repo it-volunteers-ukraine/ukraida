@@ -14,7 +14,7 @@ $category_name = 'result';
 $category_id = get_cat_ID($category_name);
 
 $params = array(
-	'numberposts' => 3,
+	'posts_per_page' => 2,
 	'category'    => 'Results',
 	'order'       => 'DESC',
 	'post_type'   => 'post',
