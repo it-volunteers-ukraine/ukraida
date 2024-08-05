@@ -10,40 +10,40 @@
     }
 
     // Styles for different screens
-    @media screen and (width < 768px) {
-        h2 {
+    @media screen and (max-width: 768px) {
+        h2.donate-title {
             font-size: 18px;
             line-height: 24.5px;
             margin-bottom: 32px;
         }
 
-        p {
+        p.donate-text {
             font-size: 14px;
             line-height: 19px;
         }
     }
 
-    @media screen and (width >= 768px) {
-        h2 {
+    @media screen and (min-width: 768px) {
+        h2.donate-title {
             font-size: 24px;
             line-height: 32.6px;
             margin-bottom: 56px;
         }
 
-        p {
+        p.donate-text {
             font-size: 20px;
             line-height: 27.2px;
         }
     }
 
-    @media screen and (width >= 1280px) {
-        h2 {
+    @media screen and (min-width: 1280px) {
+        h2.donate-title {
             font-size: 32px;
             line-height: 43.5px;
             margin-bottom: 40px;
         }
 
-        p {
+        p.donate-text {
             font-size: 24px;
             line-height: 32.6px;
         }

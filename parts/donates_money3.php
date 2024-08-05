@@ -4,7 +4,7 @@ $currend_id = get_the_ID();
 <section class='donate-result'>
     <div class="donate-title__wrap">
         <h2 class="donate-title"><?php the_field('title-result') ?></h2>
-        <p><?php the_field('text-result') ?>
+        <p class="donate-text"><?php the_field('text-result') ?>
         </p>
     </div>
     <div class="result__container">
