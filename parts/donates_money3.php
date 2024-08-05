@@ -4,7 +4,7 @@ $currend_id = get_the_ID();
 <section class='donate-result'>
     <div class="donate-title__wrap">
         <h2 class="donate-title"><?php the_field('title-result') ?></h2>
-        <p><?php the_field('text-result') ?>
+        <p class="donate-text"><?php the_field('text-result') ?>
         </p>
     </div>
     <div class="result__container">
@@ -14,7 +14,7 @@ $category_name = 'result';
 $category_id = get_cat_ID($category_name);
 
 $params = array(
-	'numberposts' => 3,
+	'posts_per_page' => 2,
 	'category'    => 'Results',
 	'order'       => 'DESC',
 	'post_type'   => 'post',

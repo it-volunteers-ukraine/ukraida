@@ -23,9 +23,6 @@
         $parent_id = wp_get_post_parent_id($parent_id);
     }
 
-    // Finally main page item
-    $bcs[] = get_breadcrumb_item("/", "Головна");
-
     // Reversing items, joining them into one string
     $bcs_s = join("", array_reverse($bcs));
 
