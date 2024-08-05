@@ -2,6 +2,7 @@
 $currend_id = get_the_ID();
 ?>
 
+
 <div class="donate-things__block">
     <div class="donate-things__container">
         <h1 class="donate-things__title"><?php echo get_field('title__donate-things', $currend_id); ?></h1>
