@@ -1,7 +1,7 @@
 <?php
-$current_id = 'option';
-
+$currend_id = get_the_ID();
 ?>
+
 
 <div class="donate-things__block">
     <div class="donate-things__container">
