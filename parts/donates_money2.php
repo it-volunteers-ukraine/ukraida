@@ -71,3 +71,7 @@ $currend_id = get_the_ID();
         </div>
     </div> -->
 </section>
+
+<?php
+    // Reset $post after WP_Query
+    wp_reset_postdata();
