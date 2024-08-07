@@ -8,10 +8,10 @@ $currend_id = 'option';
     <div class="donate_block-text">
         <p class="donate_item-text"><?php echo get_field('organisation_value', $currend_id); ?></p>
         <svg class="donate_icon-copy donate_icon">
-            <use href="<?php bloginfo('template_url'); ?>/assets/images/sprites.svg#icon-copy"></use>
+            <use href="<?php bloginfo('template_url'); ?>/assets/images/symbol-defs.svg#icon-copy"></use>
         </svg>
         <svg class="donate_icon-success donate_icon is-hidden">
-            <use href="<?php bloginfo('template_url'); ?>/assets/images/sprites.svg#icon-copy-success"></use>
+            <use href="<?php bloginfo('template_url'); ?>/assets/images/symbol-defs.svg#icon-copy-success"></use>
         </svg>
         <!-- <div class="donate_text-icon">
         </div> -->
@@ -22,10 +22,10 @@ $currend_id = 'option';
     <div class="donate_block-text">
         <p class="donate_item-text"><?php echo get_field('iban_value', $currend_id); ?></p>
         <svg class="donate_icon-copy donate_icon ">
-            <use href="<?php bloginfo('template_url'); ?>/assets/images/sprites.svg#icon-copy"></use>
+            <use href="<?php bloginfo('template_url'); ?>/assets/images/symbol-defs.svg#icon-copy"></use>
         </svg>
         <svg class="donate_icon-success donate_icon is-hidden">
-            <use href="<?php bloginfo('template_url'); ?>/assets/images/sprites.svg#icon-copy-success"></use>
+            <use href="<?php bloginfo('template_url'); ?>/assets/images/symbol-defs.svg#icon-copy-success"></use>
         </svg>
     </div>
 </div>
@@ -34,10 +34,10 @@ $currend_id = 'option';
     <div class="donate_block-text">
         <p class="donate_item-text"><?php echo get_field('payment_destination_value', $currend_id); ?></p>
         <svg class="donate_icon-copy donate_icon ">
-            <use href="<?php bloginfo('template_url'); ?>/assets/images/sprites.svg#icon-copy"></use>
+            <use href="<?php bloginfo('template_url'); ?>/assets/images/symbol-defs.svg#icon-copy"></use>
         </svg>
         <svg class="donate_icon-success donate_icon is-hidden">
-            <use href="<?php bloginfo('template_url'); ?>/assets/images/sprites.svg#icon-copy-success"></use>
+            <use href="<?php bloginfo('template_url'); ?>/assets/images/symbol-defs.svg#icon-copy-success"></use>
         </svg>
     </div>
 </div>
