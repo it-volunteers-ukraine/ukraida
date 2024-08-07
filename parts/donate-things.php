@@ -11,7 +11,7 @@ $currend_id = get_the_ID();
             <div class="donate-things__text">
                 <?php echo get_field('text__donate-things', $currend_id); ?>
             </div>
-        </div> 
+        </div>
         <div class="donate-things__media-wrapper">
             <div class="donate-things__media">
                 <a class="social-media__link" href="https://www.instagram.com/<?php the_field('instagram', 'option') ?>" target="_blank" rel="noopener noreferrer">
@@ -27,10 +27,6 @@ $currend_id = get_the_ID();
                     <span class="donate-things__media-text"><?php echo get_field('email', 'option'); ?></span>
                 </a>
             </div>
-        </div>    
+        </div>
     </div>
 </div>
-    
-        
-
-    
