@@ -1,10 +1,10 @@
 <?php
-$currend_id = get_the_ID();
+$current_id = get_the_ID();
 ?>
 <section class='donate-result'>
-    <div class="donate-title__wrap">
-        <h2 class="donate-title"><?php the_field('title-result') ?></h2>
-        <p class="donate-text"><?php the_field('text-result') ?></p>
+    <div class="result-title__wrap">
+        <h2 class="result_title"><?php the_field('title-result') ?></h2>
+        <p class="result_text"><?php the_field('text-result') ?></p>
     </div>
     <div class="result__container">
         <?php
@@ -51,20 +51,17 @@ $currend_id = get_the_ID();
                 if ($actually == 0) {
         ?>
                     <div class="result-item">
-                        <div class="result-item__wrap">
-                            <div class="result-item__img">
+                        <div class="result-card_wrap">
+                            <div class="result-card_img">
                                 <img src="<?php echo esc_url($img['url']); ?>" alt="foto">
                             </div>
-                            <div class="result-item__text">
-                                <h4><?php echo esc_html(get_field('donates_money_title')); ?></h4>
-                                <div class="result-item__inner">
-                                    <p><?php echo esc_html(get_field('donates_money_text')); ?></p>
-                                    <div class="result-item__sum">
-                                        <p>Загальна сума збору: <br>
-                                            <span><?php echo esc_html(get_field('donates_money_sum')); ?></span>
-                                        </p>
-                                    </div>
-                                </div>
+                            <div class="result-card">
+                                <h2 class="result-card_title"><?php echo esc_html(get_field('donates_money_title')); ?></h2>
+                                <p class="result-card_text"><?php echo esc_html(get_field('donates_money_text')); ?></p>
+                                <!-- <div class="result-item__inner"> -->
+                                <!-- </div> -->
+                                <p class="result-card_sum-title"><?php echo get_field('title_archive_sum', $current_id); ?></p>
+                                <p class="result-card_sum-value"><?php echo esc_html(get_field('donates_money_sum')); ?></p>
                             </div>
                         </div>
                     </div>
@@ -76,7 +73,7 @@ $currend_id = get_the_ID();
         ?>
     </div>
 
-    <button class="btn" <?php echo $is_end_post_list ? 'hidden' : ''; ?>>
-        <?php the_field('btn-result') ?>
+    <button class="btn-load-more" <?php echo $is_end_post_list ? 'hidden' : ''; ?>>
+        <?php the_field('btn_load_more') ?>
     </button>
 </section>

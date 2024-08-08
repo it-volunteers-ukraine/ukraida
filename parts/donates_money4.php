@@ -3,7 +3,7 @@ $currend_id = get_the_ID();
 ?>
 
 <div class="donate4 ">
-    <h2 class="donate4-title"><?php echo get_field('donates_money_faq_tittle', $currend_id); ?></h2>
+    <h2 class="donate4-title"><?php echo get_field('donates_money_faq_title', $currend_id); ?></h2>
     <div id="accordion" class="faq">
         <?php if (have_rows('donates_money_faq')) : ?>
             <?php
