@@ -1,0 +1,49 @@
+@import "../components/_buttons";
+@import "../variables";
+
+.projects-item {
+  display: flex;
+  gap: 24px;
+}
+
+.projects-item-info {
+  vertical-align: top;
+}
+
+.projects-item-info-is-active-row {
+  margin-bottom: 24px;
+}
+
+.projects-item-info-is-active-badge {
+  font-family: $font-advanced;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: 400;
+  border: none;
+}
+
+.projects-item-info-is-active-badge.active {
+  background-color: $green;
+  color: $white;
+}
+
+.projects-item-info-is-active-badge.inactive {
+  background-color: $grey;
+  color: $black;
+}
+
+.projects-item-info-header-row {
+  margin-bottom: 24px;
+}
+
+.projects-item-info-excerpt-row {
+  margin-bottom: 46px;
+}
+
+.projects-item-info-detailed-btn {
+  @include btn-main;
+}
