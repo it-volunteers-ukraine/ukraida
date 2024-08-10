@@ -1,0 +1,18 @@
+@import "../components/_buttons";
+@import "../parts-styles/_projects-page-filter";
+@import "../parts-styles/_projects-page-items";
+@import "../parts-styles/_projects-page-swipers";
+@import "../variables";
+
+.section.projects {
+  margin-top: 64px;
+  margin-left: 144px;
+  margin-right: 144px;
+}
+
+.projects-title {
+  font-family: $font-main;
+  font-weight: 700;
+  font-size: 36px;
+  text-align: center;
+}

@@ -1,0 +1,52 @@
+@import "../components/_buttons";
+@import "../variables";
+
+.projects-filter {
+  margin-bottom: 48px;
+}
+  
+.projects-filter-text {
+  font-family: $font-main;
+  font-weight: 600;
+  font-size: 24px;
+}
+
+.projects-filter-btn {
+  font-family: $font-advanced;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: all $animations;
+
+  &:hover:not(:disabled),
+  &:focus-visible:not(:disabled) {
+    box-shadow: $btn-hover-shadow;
+  }
+
+  &:active:not(:disabled) {
+    background-color: $blue;
+  }
+
+  &:disabled {
+    background: none;
+    background-color: $btn-disabled;
+    cursor: initial;
+  }
+}
+
+.projects-filter-btn.active {
+  color: $white;
+  background-color: $btn-main;
+}
+
+.projects-filter-btn.inactive {
+  color: $black;
+  background-color: $light-blue;
+  border: 1px solid $blue;
+}
