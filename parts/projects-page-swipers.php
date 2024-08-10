@@ -41,5 +41,4 @@
         </button>
     </div>
     <div class="swiper-pagination main-pagination" id="<?= $pId ?>"></div>
-    </div>
 </section>
