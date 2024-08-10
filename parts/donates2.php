@@ -10,7 +10,7 @@ $currend_id = get_the_ID();
         <div class="don2__text">
             <?php echo get_field('donates2_text', $currend_id); ?>
         </div>
-        <?php if (get_field('donates2_button_text', $currend_id)) : ?>
+        <?php if (get_field('donates2_button_text', $currend_id) AND get_field('donates2_button_url', $currend_id)) : ?>
             <a href="<?php echo get_field('donates2_button_url', $currend_id); ?>" class="img-text__btn"><?php echo get_field('donates2_button_text', $currend_id); ?></a>
         <?php endif; ?>
     </div>
