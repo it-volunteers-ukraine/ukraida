@@ -1,4 +1,4 @@
-<div class="projects-items">
+<div class="projects-items" id="projectsItems">
     <?php
         $args = array(
             'post_type'         => 'post-types-project',
