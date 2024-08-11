@@ -419,7 +419,7 @@ function projects_get_items() {
   $index = 1;
   while ($query->have_posts()) {
     $query->the_post();
-    get_template_part('parts/projects-page-item');
+    get_template_part('parts/projects-page-item', null, ["index" => $index]);
     // hr after every odd post
     if ($index % 2) {
       echo '<hr class="projects-items-hr">';

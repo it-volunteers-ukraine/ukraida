@@ -11,7 +11,10 @@ function filterProjects() {
     type: 'GET',
     data: `action=projects_get_items&isActive=${filterData.isActive}`,
     success: function( data ) {
+      // Setting items
       jQuery('#projectsItems').empty().append(data);
+      // Initializing swipers again
+      initSwipers();
     }
   });
 }
