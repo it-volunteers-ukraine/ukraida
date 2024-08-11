@@ -1,4 +1,6 @@
 <?php
+    $index = $args["index"];
+
     $is_active = get_field("project_is_active");
     $is_active_class = $is_active ? "active" : "inactive";
     $is_active_text = $is_active ? __("Активний") : __("Не активний");

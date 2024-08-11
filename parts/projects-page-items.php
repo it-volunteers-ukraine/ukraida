@@ -10,7 +10,7 @@
         $index = 1;
         while ($query->have_posts()) {
             $query->the_post();
-            get_template_part('parts/projects-page-item');
+            get_template_part('parts/projects-page-item', null, ["index" => $index]);
     ?>
     <?php
             // hr after every odd post
