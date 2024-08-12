@@ -1,4 +1,4 @@
-<div class="projects-items">
+<div class="projects-items-and-pagination">
     <?php
         //
         $paged = max(get_query_var('paged'), 1);
@@ -25,6 +25,7 @@
 
         // Outputting items
         $index = 1;
+        echo '<div class="projects-items">';
         while ($query->have_posts()) {
             $query->the_post();
             // Project's item
@@ -36,6 +37,7 @@
 
             $index++;
         }
+        echo '</div>';
 
         // Pagination
         get_template_part(

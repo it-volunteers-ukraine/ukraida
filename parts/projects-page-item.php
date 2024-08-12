@@ -25,10 +25,15 @@
                 <?= get_field("project_excerpt") ?>
             </p>
         </div>
-        <div class="projects-item-info-detailed-row">
-            <a class="projects-item-info-detailed-btn" href="<?= get_the_permalink() ?>">
+        <div class="projects-item-detailed projects-item-detailed-wide">
+            <a class="projects-item-detailed-btn" href="<?= get_the_permalink() ?>">
                 <?= __("Детальна інформація") ?>
             </a>
         </div>
+    </div>
+    <div class="projects-item-detailed projects-item-detailed-narrow">
+        <a class="projects-item-detailed-btn" href="<?= get_the_permalink() ?>">
+            <?= __("Детальна інформація") ?>
+        </a>
     </div>
 </div>
