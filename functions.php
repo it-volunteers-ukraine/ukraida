@@ -156,10 +156,6 @@ function wp_it_volunteers_scripts()
 
     wp_enqueue_style('projects-style', get_template_directory_uri() . '/assets/styles/template-styles/projects.css', array('main'));
 
-    // Filter
-    wp_enqueue_script('projects-page-filter-scripts', get_template_directory_uri() . '/assets/scripts/parts-scripts/projects-page-filter.js', array('jquery'));
-    $front_scripts_args = ['ajaxUrl' => admin_url('admin-ajax.php')];
-    wp_localize_script('projects-page-filter-scripts', 'vars', $front_scripts_args);
     // Swipers
     wp_enqueue_script('projects-page-swipers-scripts', get_template_directory_uri() . '/assets/scripts/parts-scripts/projects-page-swipers.js', array(), false, true);
   }
@@ -390,44 +386,4 @@ function true_breadcrumbs()
       echo ' (' . $page_num . '-я страница)';
     }
   }
-}
-
-// AJAX handlers for projects get items action
-add_action( 'wp_ajax_projects_get_items', 'projects_get_items' );
-add_action( 'wp_ajax_nopriv_projects_get_items', 'projects_get_items' );
-// Returns project items based on query
-function projects_get_items() {
-  // Basic args
-  $args = array(
-    'post_type'         => 'post-types-project',
-    'posts_per_page'    => 2,
-    'order'             => 'DESC',
-  );
-
-  // Is active filter
-	$isActive = $_GET["isActive"] ?? "all";
-  if ($isActive == 'inactive') {
-    $args['meta_key'] = 'project_is_active';
-    $args['meta_value'] = 0;
-  } else if ($isActive == 'active') {
-    $args['meta_key'] = 'project_is_active';
-    $args['meta_value'] = 1;
-  }
-
-  $query = new WP_Query($args);
-
-  $index = 1;
-  while ($query->have_posts()) {
-    $query->the_post();
-    get_template_part('parts/projects-page-item', null, ["index" => $index]);
-    // hr after every odd post
-    if ($index % 2) {
-      echo '<hr class="projects-items-hr">';
-    }
-
-    $index++;
-  }
-  wp_reset_postdata();
-
-  die;
 }
