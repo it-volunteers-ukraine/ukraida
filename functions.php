@@ -76,6 +76,10 @@ function wp_it_volunteers_scripts()
 
   }
 
+  if (is_page_template('templates/about_page.php')) {
+    wp_enqueue_style('about_page-style', get_stylesheet_directory_uri() . '/assets/styles/template-styles/about_page.css', array('main'));
+  }
+
   if (is_page_template('404.php')) {
     wp_enqueue_style('error-style', get_stylesheet_directory_uri() . '/assets/styles/template-styles/404.css', array('main'));
   }
