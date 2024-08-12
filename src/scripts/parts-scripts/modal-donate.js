@@ -17,7 +17,7 @@ const setNewAttributeSuccess = (event = null) => {
       allDonateBlock[i].removeAttribute("success");
     }
   }
-  if(event) {
+  if (event) {
     event.currentTarget.setAttribute("success", "");
   }
 };
@@ -38,9 +38,6 @@ function openModal() {
 
   // btnDonateCopyRef.addEventListener("click", copyIban);
 }
-
-
-
 
 function closeModal(evt) {
   if (
@@ -77,8 +74,6 @@ function getScrollbarWidth() {
   return scrollbarWidth;
 }
 
-
-
 const copyToBuffer = (event) => {
   // console.log(`attribute success: ${event.currentTarget.hasAttribute('success')}`);
   data = event.currentTarget.firstElementChild.innerText;
@@ -105,3 +100,20 @@ for (let i = 0; i < allDonateBlock.length; i++) {
 btnDonateRef.addEventListener("click", openModal);
 btnCloseModalRef.addEventListener("click", closeModal);
 // donateItemRef.addEventListener("click", copyText);
+
+//button block donates money
+const donateButtons = document.querySelectorAll(".js-btn-donate");
+
+donateButtons.forEach((button) => {
+  button.addEventListener("click", function () {
+    const postTypeElement = this.closest(".post-type");
+
+    if (postTypeElement) {
+      const postId = postTypeElement.getAttribute("data-post-id");
+      const postTitle =
+        postTypeElement.querySelector(".post-type__title").textContent;
+
+      openModal(postTitle);
+    }
+  });
+});
