@@ -52,7 +52,7 @@
             $img = get_field('header_logo', 'option');
             // var_dump($img);
             ?>
-            <a href="/" class="logo"><img class="nav__img" src="<?php echo $img['url'] ?>" alt="Logo" /></a>
+            <a href="<?php echo esc_url(pll_home_url()); ?>" class="logo"><img class="nav__img" src="<?php echo $img['url'] ?>" alt="Logo" /></a>
             <nav class="nav">
                 <?php wp_nav_menu([
                     'theme_location'       => 'header',
@@ -66,7 +66,6 @@
             </nav>
             <ul class="menu">
                 <li>
-                    <!-- <a href="https://www.instagram.com/ukraida_darmstadt/" target="_blank" class="menu__item-inst"> -->
                     <a href="https://www.instagram.com/<?php the_field('header_instagram_link', 'option') ?>" target="_blank" class="menu__item-inst">
                         <svg>
                             <use xlink:href="<?php bloginfo('template_url'); ?>/assets/images/header/sprite.svg#instagram"></use>
@@ -74,11 +73,25 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="menu__item">
+                    <div class="menu__lang">
                         <svg class="menu__img">
                             <use xlink:href="<?php bloginfo('template_url'); ?>/assets/images/header/sprite.svg#language"></use>
                         </svg>
-                        <span class="menu__itm-lang active">DE</span>&nbsp;/&nbsp;<span class="menu__itm-lang">UA</span></a>
+                        <ul class="lang-list">
+                            <?php
+                            pll_the_languages(array(
+                                'dropdown' => 0, // Если 1, переключатель будет в виде выпадающего списка.
+                                'show_flags' => 0, // Если 1, будут показаны флаги.
+                                'show_names' => 1, // Если 1, будут показаны названия языков.
+                                'hide_if_no_translation' => 0, // Если 1, будет скрыт, если нет перевода на текущий язык.
+                                'hide_current' => 0, // Если 1, текущий язык не будет отображаться.
+                                'force_home' => 0, // Если 1, ссылка будет вести на главную страницу соответствующего языка.
+                            ));
+                            ?>
+
+                        </ul>
+                        <!-- <span class="menu__itm-lang active">DE</span>&nbsp;/&nbsp;<span class="menu__itm-lang">UA</span>  -->
+                        </div>
                 </li>
                 <!-- <li><button type="button" id="js-btn-donate" class="menu__btn">Spenden</button></li> -->
                 <li><button type="button" id="js-btn-donate" class="menu__btn donate-btn donate-animate"><?php echo get_field('header_button_text', 'option'); ?></button></li>
@@ -90,7 +103,7 @@
                 <div class="js-menu-container">
                     <ul class="menu__modal">
                         <li>
-                            <a href="/" class="menu__modal-item">
+                            <a href="<?php echo esc_url(pll_home_url()); ?>" class="menu__modal-item">
                                 <svg class="menu__modal-img">
                                     <use xlink:href="<?php bloginfo('template_url'); ?>/assets/images/header/sprite.svg#language"></use>
                                 </svg>

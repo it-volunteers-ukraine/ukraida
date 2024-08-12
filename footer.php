@@ -2,7 +2,7 @@
                 <div class="container">
                     <div class="footer-main__wrap">
                         <div class="footer__inner-wrap">
-                            <a href="/" class="logo1"><img class="logo_img" src="<?php bloginfo('template_url'); ?>/assets/images/logo.svg" alt="Logo" /></a>
+                            <a href="<?php echo esc_url(pll_home_url()); ?>" class="logo1"><img class="logo_img" src="<?php bloginfo('template_url'); ?>/assets/images/logo.svg" alt="Logo" /></a>
                             <ul class="privacy__list">
                                 <li class="privacy__item">
                                 <a href="/privacy/?type=policy" target="_blank" rel="noopener noreferrer" class="privacy__link"><?php the_field('privacy_policy_title', 'option') ?></a>
