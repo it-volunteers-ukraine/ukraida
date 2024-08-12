@@ -41,7 +41,7 @@ $current_id = get_the_ID();
                     <p class="post-type__value"><?php echo get_field('title_active_sum', $current_id); ?></p>
                     <p class="post-type__sum"><?php echo get_field('donates_money_sum'); ?></p>
                     <div class="post-type__button">
-                        <button id="js-btn-donate" class="img-text__btn"><?php echo get_field('donates_button_text', $current_id); ?></button>
+                        <button class="img-text__btn js-btn-donate"><?php echo get_field('donates_button_text', $current_id); ?></button>
                     </div>
                 </div>
             </div>
@@ -49,9 +49,9 @@ $current_id = get_the_ID();
         }
     }
     ?>
-    
+
 </section>
 
 <?php
-    // Reset $post after WP_Query
-    wp_reset_postdata();
+// Reset $post after WP_Query
+wp_reset_postdata();
