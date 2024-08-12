@@ -29,9 +29,9 @@
             $query->the_post();
             // Project's item
             get_template_part('parts/projects-page-item', null, ["index" => $index]);
-            // hr after every odd post
-            if ($index % 2) {
-                echo '<hr class="projects-items-hr">';
+            // Line after odd items, but only if there are more posts
+            if (($index % 2) && ($query->current_post + 1 < $query->post_count)) {
+                echo '<hr class="projects-items-hr" />';
             }
 
             $index++;
