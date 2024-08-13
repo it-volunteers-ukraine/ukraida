@@ -1,0 +1,53 @@
+@import "../components/_buttons";
+@import "../parts-styles/_projects-page-filter";
+@import "../parts-styles/_projects-page-items";
+@import "../parts-styles/_projects-page-pagination";
+@import "../parts-styles/_projects-page-swipers";
+@import "../variables";
+
+.projects-title {
+  font-family: $font-main;
+  font-weight: 700;
+  text-align: center;
+}
+
+@media screen and (max-width: 767.9px) {
+  .container.container__projects {
+    width: unset;
+    min-width: unset;
+  }
+
+  .projects-main {
+    padding-top: 120px;
+  }
+
+  .projects-title {
+    font-size: 24px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .projects-main {
+    padding-top: 220px;
+  }
+
+  .projects-title {
+    font-size: 32px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .projects-main {
+    padding-top: 327px;
+  }
+
+  .projects-title {
+    font-size: 36px;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .projects-main {
+    padding-top: 310px;
+  }
+}
