@@ -1,0 +1,125 @@
+@import "../components/_buttons";
+@import "../variables";
+
+.projects-filter {
+  margin-top: 32px;
+  margin-bottom: 48px;
+  display: flex;
+}
+  
+.projects-filter-text {
+  font-family: $font-main;
+  font-weight: 600;
+  font-size: 24px;
+}
+
+.projects-filter-buttons {
+  display: flex;
+  gap: 24px;
+}
+
+.projects-filter-btn {
+  font-family: $font-advanced;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: all $animations;
+
+  &:hover:not(:disabled),
+  &:focus-visible:not(:disabled) {
+    box-shadow: $btn-hover-shadow;
+  }
+
+  &:active:not(:disabled) {
+    background-color: $blue;
+  }
+
+  &:disabled {
+    background: none;
+    background-color: $btn-disabled;
+    cursor: initial;
+  }
+}
+
+.projects-filter-btn.active {
+  color: $white;
+  background-color: $btn-main;
+}
+
+.projects-filter-btn.inactive {
+  color: $black;
+  background-color: $light-blue;
+  border: 1px solid $blue;
+}
+
+@media screen and (max-width: 767.9px) {
+  .projects-filter {
+    width: 266px;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 40px;
+    margin-bottom: 32px;
+  }
+
+  .projects-filter-text {
+    font-size: 16px;
+  }
+
+  .projects-filter-buttons {
+    gap: 19px;
+  }
+
+  .projects-filter-btn {
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .projects-filter {
+    margin-top: 56px;
+    margin-bottom: 64px;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .projects-filter-text {
+    font-size: 20px;
+  }
+
+  .projects-filter-buttons {
+    gap: 24px;
+  }
+
+  .projects-filter-btn {
+    font-size: 18px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .projects-filter {
+    margin-top: 99px;
+    margin-bottom: 88px;
+    gap: 24px;
+  }
+
+  .projects-filter-text {
+    font-size: 24px;
+  }
+
+  .projects-filter-buttons {
+    gap: 16px;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .projects-filter {
+    margin-top: 64px;
+    margin-bottom: 48px;
+  }
+}
