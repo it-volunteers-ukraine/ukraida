@@ -113,12 +113,10 @@ function wp_it_volunteers_scripts()
     wp_enqueue_style('donates-money-style', get_template_directory_uri() . '/assets/styles/template-styles/donates_money.css', array('main'));
     wp_enqueue_script('donates-money-scripts', get_template_directory_uri() . '/assets/scripts/parts-scripts/accordion.js', array('jquery', 'jquery-ui-core', 'jquery-ui-accordion'),  true);
     // wp_enqueue_script('news-scripts', get_template_directory_uri() . '/assets/scripts/template-scripts/news.js', array(), false, true);
-          $front_scripts_args = [
-        'ajaxUrl' => admin_url('admin-ajax.php'),
+    $front_scripts_args = [
+      'ajaxUrl' => admin_url('admin-ajax.php'),
     ];
     wp_localize_script('events-parts-scripts', 'vars', $front_scripts_args);
-
-
   }
 
   if (is_page_template('templates/donates_things_page.php')) {
@@ -310,7 +308,7 @@ if (function_exists('acf_add_options_page')) {
 //     }
 // }
 
-add_theme_support( 'post-thumbnails', array( 'post' ) );
+add_theme_support('post-thumbnails', array('post'));
 
 
 
@@ -377,3 +375,55 @@ function true_breadcrumbs()
   }
 }
 
+
+// load more
+function enqueue_load_more_script()
+{
+  wp_enqueue_script('load-more', get_template_directory_uri() . '/assets/scripts/parts-scripts/load-more.js', array(), null, true);
+
+  wp_localize_script('load-more', 'ajax_load_more_params', array(
+    'ajax_url' => admin_url('admin-ajax.php'),
+  ));
+}
+add_action('wp_enqueue_scripts', 'enqueue_load_more_script');
+
+function load_more_posts()
+{
+  $paged = isset($_POST['page']) ? intval($_POST['page']) : 1;
+
+  $args = array(
+    'post_type' => 'post-types-donates-m',
+    'posts_per_page' => 2,
+    'paged' => $paged,
+  );
+
+  $query = new WP_Query($args);
+
+  if ($query->have_posts()) :
+    while ($query->have_posts()) : $query->the_post();
+      $img = get_field('donates_money_img');
+      $actually = get_field('donates_actually');
+
+      if ($actually != 1) : ?>
+        <div class="result-item">
+          <div class="result-card_wrap">
+            <div class="result-card_img">
+              <img src="<?php echo esc_url($img['url']); ?>" alt="foto">
+            </div>
+            <div class="result-card">
+              <h2 class="result-card_title"><?php echo esc_html(get_field('donates_money_title')); ?></h2>
+              <p class="result-card_text"><?php echo esc_html(get_field('donates_money_text')); ?></p>
+              <p class="result-card_sum-title"><?php echo get_field('title_archive_sum'); ?></p>
+              <p class="result-card_sum-value"><?php echo esc_html(get_field('donates_money_sum')); ?></p>
+            </div>
+          </div>
+        </div>
+<?php endif;
+    endwhile;
+  endif;
+
+  wp_die();
+}
+
+add_action('wp_ajax_load_more_posts', 'load_more_posts');
+add_action('wp_ajax_nopriv_load_more_posts', 'load_more_posts');
