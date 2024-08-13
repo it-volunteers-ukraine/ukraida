@@ -46,6 +46,13 @@
 
   @media (min-width: 1280px) {
     display: block;
+    width: 24px;
+    height: 24px;
+  }
+
+  @media (min-width: 1980px) {
+    width: 32px;
+    height: 32px;
   }
 }
 
@@ -55,6 +62,18 @@
 
 .slider__button svg:hover {
   fill: #cccccc;
+}
+
+.swiper-button-svg {
+  @media (min-width: 1280px) {
+    width: 13px;
+    height: 13px;
+  }
+
+  @media (min-width: 1980px) {
+    width: 17.4px;
+    height: 17.4px;
+  }
 }
 
 .main-pagination {
