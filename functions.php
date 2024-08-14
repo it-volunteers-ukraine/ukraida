@@ -76,6 +76,10 @@ function wp_it_volunteers_scripts()
 
   }
 
+  if (is_page_template('templates/about_page.php')) {
+    wp_enqueue_style('about_page-style', get_stylesheet_directory_uri() . '/assets/styles/template-styles/about_page.css', array('main'));
+  }
+
   if (is_page_template('404.php')) {
     wp_enqueue_style('error-style', get_stylesheet_directory_uri() . '/assets/styles/template-styles/404.css', array('main'));
   }
@@ -113,15 +117,20 @@ function wp_it_volunteers_scripts()
     wp_enqueue_style('donates-money-style', get_template_directory_uri() . '/assets/styles/template-styles/donates_money.css', array('main'));
     wp_enqueue_script('donates-money-scripts', get_template_directory_uri() . '/assets/scripts/parts-scripts/accordion.js', array('jquery', 'jquery-ui-core', 'jquery-ui-accordion'),  true);
     // wp_enqueue_script('news-scripts', get_template_directory_uri() . '/assets/scripts/template-scripts/news.js', array(), false, true);
-          $front_scripts_args = [
-        'ajaxUrl' => admin_url('admin-ajax.php'),
+    $front_scripts_args = [
+      'ajaxUrl' => admin_url('admin-ajax.php'),
     ];
     wp_localize_script('events-parts-scripts', 'vars', $front_scripts_args);
-
-
   }
 
   if (is_page_template('templates/donates_things_page.php')) {
+    // Swipers
+    wp_enqueue_style('swiper-bundle-style', get_template_directory_uri() . '/assets/styles/vendors/swiper-bundle.css', array());
+    wp_enqueue_script('swiper-scripts', get_template_directory_uri() . '/assets/scripts/vendors/swiper-bundle.min.js', array(), false, true);
+    wp_enqueue_style('swiper-style', get_template_directory_uri() . '/assets/styles/vendors/swiper.css', array());
+
+    wp_enqueue_script('donates-things-swipers-scripts', get_template_directory_uri() . '/assets/scripts/parts-scripts/donate-things-swipers.js', array('jquery'), false, true);
+
     wp_enqueue_style('donates-things-style', get_template_directory_uri() . '/assets/styles/template-styles/donates_things.css', array('main'));
   }
   // function check_jquery()
@@ -147,6 +156,18 @@ function wp_it_volunteers_scripts()
   if (is_page_template('templates/privacy.php')) {
     wp_enqueue_style('privacy-style', get_template_directory_uri() . '/assets/styles/template-styles/privacy.css', array('main'));
     // wp_enqueue_script('news-scripts', get_template_directory_uri() . '/assets/scripts/template-scripts/news.js', array(), false, true);
+  }
+
+  if (is_page_template('templates/projects.php')) {
+    // Swipers
+    wp_enqueue_style('swiper-bundle-style', get_template_directory_uri() . '/assets/styles/vendors/swiper-bundle.css', array());
+    wp_enqueue_script('swiper-scripts', get_template_directory_uri() . '/assets/scripts/vendors/swiper-bundle.min.js', array(), false, true);
+    wp_enqueue_style('swiper-style', get_template_directory_uri() . '/assets/styles/vendors/swiper.css', array());
+
+    wp_enqueue_script('projects-page-swipers-scripts', get_template_directory_uri() . '/assets/scripts/parts-scripts/projects-page-swipers.js', array(), false, true);
+
+    // Template style
+    wp_enqueue_style('projects-style', get_template_directory_uri() . '/assets/styles/template-styles/projects.css', array('main'));
   }
 
   // if (is_singular() && is_page_template('parts/gallery.php')) {
@@ -310,7 +331,7 @@ if (function_exists('acf_add_options_page')) {
 //     }
 // }
 
-add_theme_support( 'post-thumbnails', array( 'post' ) );
+add_theme_support('post-thumbnails', array('post'));
 
 
 
@@ -377,3 +398,16 @@ function true_breadcrumbs()
   }
 }
 
+
+// load more
+function enqueue_load_more_script()
+{
+  wp_enqueue_script('load-more', get_template_directory_uri() . '/assets/scripts/parts-scripts/load-more.js', array(), null, true);
+
+  wp_localize_script('load-more', 'ajax_load_more_params', array(
+    'ajax_url' => admin_url('admin-ajax.php'),
+  ));
+}
+add_action('wp_enqueue_scripts', 'enqueue_load_more_script');
+
+require get_template_directory() . '/parts/load-more.php';

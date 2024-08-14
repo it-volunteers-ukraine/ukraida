@@ -1,0 +1,146 @@
+.content {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.about__title-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about__title {
+  padding: 24px 0 32px 0;
+}
+
+.about__title-who-are-we-block {
+  display: none;
+}
+
+.about__text-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.about__text {
+  padding: 16px 0 24px 0;
+  line-height: 19.07px;
+}
+
+.about__button {
+  display: block;
+  width: 170px;
+  height: 45px;
+  background-color: #1C59A6;
+  border-radius: 15px;
+  color: #fff;
+  font-family: 'Inter', sans-serif;
+  line-height: 45px;
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+@media (min-width: 768px) {
+  .about__title {
+      padding-bottom: 48px 0 56px 0;
+    }
+  .about__img img {
+    width: 512px;
+    height: 412px;
+  }
+  .about__text {
+    padding: 24px 0 40px 0;
+    line-height: 19.07px;
+  }
+  .about__button {
+    width: 224px;
+    height: 56px;
+    line-height: 56px;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 112px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .content {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .content-who-are-we {
+    margin: 32px 0 112px 0;
+  }
+  .about__title {
+    padding: 64px 0 104px 0;
+    font-size: 36px;
+    font-weight: 700;
+  }
+  .about__title-who-are-we {
+    display: none;
+  }
+  .about__img img {
+    width: 573px;
+    height: 509px;
+  }
+  .about__text-wrapper {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .about__title-who-are-we-block {
+    display: block;
+    padding: 0 0 32px 0;
+    font-size: 32px;
+    font-weight: 700;
+  }
+  .about__text {
+    padding: 0;
+    font-size: 20px;
+    line-height: 27.24px;
+    margin-bottom: 40px;
+  }
+  .about__button {
+    width: 294px;
+    height: 77px;
+    line-height: 56px;
+    font-size: 24px;
+    line-height: 77px;
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: 1440px) {
+  .about__title {
+    padding-bottom: 112px;
+  }
+  .about__img img {
+    width: 666px;
+    height: 592px;
+  }
+  .about__text-wrapper {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .about__text {
+    font-size: 24px;
+    line-height: 32.68px;
+  }
+  .content-about-us {
+    justify-content: unset;
+    gap: 25px;
+  }
+  .content-who-are-we {
+    padding-left: 139px;
+    justify-content: unset;
+    gap: 25px;
+  }
+}
