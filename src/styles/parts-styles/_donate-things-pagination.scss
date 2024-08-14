@@ -25,7 +25,6 @@
 .donate-things-pagination-btn.inactive, .donate-things-pagination-btn.disabled {
   color: $black;
   background-color: $light-blue;
-  border: 1px solid $blue;
 }
 
 .donate-things-pagination-btn.active, .donate-things-pagination-btn.inactive {
@@ -40,6 +39,10 @@
   &:active:not(:disabled) {
     background-color: $blue;
   }
+}
+
+.donate-things-pagination-btn-with-border {
+  border: 1px solid $blue;
 }
 
 .donate-things-pagination-btn-wrap {

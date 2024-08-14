@@ -20,7 +20,7 @@
                     </svg>
                 </div>
                 <div class="donate-things-item-info-header-dtl-row-dtp-text-wrap">
-                    $dtp
+                    <p class="donate-things-item-info-header-dtl-row-dtp-text">$dtp</p>
                 </div>
             </div>
         ROW;
@@ -43,9 +43,20 @@
                         <use xlink:href="$location_svg_href"></use>
                     </svg>
                 </div>
-                <div class="donate-things-item-info-header-dtl-row-l-text-wrap">
-                    <a href="$href">$text</a>
+                <div class="donate-things-item-info-header-dtl-row-l-link-wrap">
+                    <a class="donate-things-item-info-header-dtl-row-l-link" href="$href">$text</a>
                 </div>
+            </div>
+        ROW;
+    }
+
+    //
+    $dtl_row = "";
+    if (($dtp_row) || ($location_row)) {
+        $dtl_row = <<<ROW
+            <div class="donate-things-item-info-header-dtl-row">
+                $dtp_row
+                $location_row
             </div>
         ROW;
     }
@@ -61,15 +72,10 @@
                     <?= get_field("donates_things_title") ?>
                 </h2>
             </div>
-            <div class="donate-things-item-info-header-dtl-row">
-                <?= $dtp_row ?>
-            </div>
-            <div class="donate-things-item-info-header-l-row">
-                <?= $location_row ?>
-            </div>
+            <?= $dtl_row ?>
         </div>
-        <div class="donate-things-item-info-excerpt-row">
-            <p class="donate-things-item-info-excerpt">
+        <div class="donate-things-item-info-text-row">
+            <p class="donate-things-item-info-text">
                 <?= get_field("donates_things_text") ?>
             </p>
         </div>

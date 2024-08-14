@@ -1,2 +1,7 @@
 @import "../parts-styles/_breadcrumbs.scss";
 @import "../parts-styles/_donate-things.scss";
+@import "../variables";
+
+.donate-things-main {
+    background-color: $background;
+}

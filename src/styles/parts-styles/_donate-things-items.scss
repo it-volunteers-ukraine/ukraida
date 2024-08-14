@@ -5,96 +5,198 @@
 .donate-things-items-and-pagination,
 .donate-things-items,
 .donate-things-item,
-.donate-things-item-info {
+.donate-things-item-info,
+.donate-things-item-info-header-row,
+.donate-things-item-info-header-dtl-row,
+.donate-things-item-info-header-dtl-row-dtp,
+.donate-things-item-info-header-dtl-row-dtp-icon-wrap,
+.donate-things-item-info-header-dtl-row-dtp-text-wrap,
+.donate-things-item-info-header-dtl-row-l,
+.donate-things-item-info-header-dtl-row-l-icon-wrap,
+.donate-things-item-info-header-dtl-row-l-link-wrap {
   display: flex;
+}
+
+.donate-things-items-and-pagination,
+.donate-things-items,
+.donate-things-item,
+.donate-things-item-info,
+.donate-things-item-info-header-row,
+.donate-things-item-info-header-dtl-row {
   flex-direction: column;
 }
 
-.donate-things-item-info-header {
+.donate-things-item {
+  background-color: $white;
+  box-shadow: 4px 4px 43px 0px #0000001C;
+  border-radius: 15px;
+}
+
+.donate-things-item-info {
+  padding: 0px 8px;
+}
+
+.donate-things-item-header-title {
   font-family: $font-main;
   font-weight: 700;
 }
 
-.donate-things-item-info-excerpt {
+.donate-things-item-info-header-dtl-row-dtp-icon-wrap,
+.donate-things-item-info-header-dtl-row-dtp-text-wrap,
+.donate-things-item-info-header-dtl-row-l-icon-wrap,
+.donate-things-item-info-header-dtl-row-l-link-wrap {
+  align-items: center;
+}
+
+.donate-things-item-info-header-dtl-row-dtp-icon-svg {
+  fill: $white;
+  stroke: $dark-blue;
+}
+
+.donate-things-item-info-header-dtl-row-l-icon-svg {
+  fill: $dark-blue;
+}
+
+.donate-things-item-info-header-dtl-row-dtp-text {
+  font-family: $font-main;
+  font-weight: 600;
+}
+
+.donate-things-item-info-header-dtl-row-l-link {
+  font-family: $font-advanced;
+  font-weight: 500;
+  text-decoration: underline;
+}
+
+.donate-things-item-info-text {
   font-family: $font-main;
   font-weight: 400;
   font-style: italic;
 }
 
 @media screen and (max-width: 767.9px) {
-  .donate-things-items-and-pagination,
-  .donate-things-items {
+  .donate-things-items-and-pagination {
+    margin-top: 32px;
     gap: 56px;
   }
 
-  .donate-things-item {
+  .donate-things-items,
+  .donate-things-item,
+  .donate-things-item-info {
     gap: 24px;
   }
 
-  .donate-things-item-info {
+  .donate-things-item {
+    padding: 16px 0px;
+  }
+
+  .donate-things-item-info-header-row,
+  .donate-things-item-info-header-dtl-row {
     gap: 16px;
   }
 
-  .donate-things-item-info-header {
+  .donate-things-item-header-title {
     font-size: 18px;
   }
 
-  .donate-things-item-info-excerpt {
+  .donate-things-item-info-header-dtl-row-dtp,
+  .donate-things-item-info-header-dtl-row-l {
+    gap: 12px;
+  }
+
+  .donate-things-item-info-header-dtl-row-dtp-icon-svg,
+  .donate-things-item-info-header-dtl-row-l-icon-svg {
+    width: 32px;
+    height: 32px;
+  }
+
+  .donate-things-item-info-header-dtl-row-dtp-text,
+  .donate-things-item-info-header-dtl-row-l-link,
+  .donate-things-item-info-text {
     font-size: 16px;
   }
 }
 
 @media screen and (min-width: 768px) {
   .donate-things-items-and-pagination {
-    gap: 104px;
+    margin-top: 64px;
+    gap: 64px;
   }
 
   .donate-things-items {
-    gap: 56px;
+    gap: 48px;
   }
 
-  .donate-things-item {
-    gap: 32px;
-  }
-
+  .donate-things-item,
   .donate-things-item-info {
     gap: 24px;
   }
 
-  .donate-things-item-info-header {
+  .donate-things-item {
+    padding: 24px 16px;
+  }
+
+  .donate-things-item-info-header-row,
+  .donate-things-item-info-header-dtl-row {
+    gap: 24px;
+  }
+
+  .donate-things-item-header-title {
     font-size: 24px;
   }
 
-  .donate-things-item-info-excerpt {
+  .donate-things-item-info-header-dtl-row-dtp,
+  .donate-things-item-info-header-dtl-row-l {
+    gap: 12px;
+  }
+
+  .donate-things-item-info-header-dtl-row-dtp-icon-svg,
+  .donate-things-item-info-header-dtl-row-l-icon-svg {
+    width: 32px;
+    height: 32px;
+  }
+
+  .donate-things-item-info-header-dtl-row-dtp-text,
+  .donate-things-item-info-header-dtl-row-l-link,
+  .donate-things-item-info-text {
     font-size: 20px;
   }
 }
 
 @media screen and (min-width: 1280px) {
-  .donate-things-item {
-    flex-direction: row;
-    gap: 20px;
+  .donate-things-items-and-pagination {
+    margin-top: 56px;
+    gap: 88px;
   }
 
-  .donate-things-item-info-excerpt {
-    font-size: 20px;
+  .donate-things-items {
+    gap: 40px;
+  }
+
+  .donate-things-item,
+  .donate-things-item-info,
+  .donate-things-item-info-header-row {
+    gap: 32px;
+  }
+  
+  .donate-things-item {
+    flex-direction: row;
+    padding: 40px 8px;
+  }
+
+  .donate-things-item-header-title,
+  .donate-things-item-info-text {
+    font-size: 32px;
+  }
+
+  .donate-things-item-info-header-dtl-row-dtp-text,
+  .donate-things-item-info-header-dtl-row-l-link {
+    font-size: 24px;
   }
 }
 
 @media screen and (min-width: 1920px) {
-  .donate-things-items {
-    gap: 64px;
-  }
-
-  .donate-things-item {
-    gap: 40px;
-  }
-
-  .donate-things-item-info-header {
-    font-size: 32px;
-  }
-
-  .donate-things-item-info-excerpt {
-    font-size: 32px;
+  .donate-things-items-and-pagination {
+    margin-top: 64px;
   }
 }

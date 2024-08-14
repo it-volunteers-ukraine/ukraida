@@ -1,11 +1,12 @@
 <?php
     // Returns button's code for the specific page with specific text
-    function getPageButton($page_number, $page_text = null) {
+    function getPageButton($page_number, $page_text = null, $with_border = false) {
         $page_url = get_pagenum_link($page_number);
         $text = $page_text ?? $page_number;
+        $border_class = $with_border ? "donate-things-pagination-btn-with-border" : "";
         
         return <<<BTN
-            <a class="donate-things-pagination-btn inactive" href="$page_url">$text</a>
+            <a class="donate-things-pagination-btn $border_class inactive" href="$page_url">$text</a>
         BTN;
     }
 
@@ -49,11 +50,13 @@
 
             // Previous button
             if ($current_page > 1) {
-                $s .= getPageButton($current_page - 1, getPrevSvg(true));
+                $s .= getPageButton($current_page - 1, getPrevSvg(true), true);
             } else {
                 $svg = getPrevSvg(false);
                 $s .= <<<BTN
-                    <span class="donate-things-pagination-btn disabled">$svg</span>
+                    <span class="donate-things-pagination-btn donate-things-pagination-btn-with-border disabled">
+                        $svg
+                    </span>
                 BTN; 
             }
 
@@ -102,11 +105,13 @@
 
             // Next button
             if ($current_page < $max_num_pages) {
-                $s .= getPageButton($current_page + 1, getNextSvg(true));
+                $s .= getPageButton($current_page + 1, getNextSvg(true), true);
             } else {
                 $svg = getNextSvg(false);
                 $s .= <<<BTN
-                    <span class="donate-things-pagination-btn disabled">$svg</span>
+                    <span class="donate-things-pagination-btn donate-things-pagination-btn-with-border disabled">
+                        $svg
+                    </span>
                 BTN; 
             }
 
@@ -129,11 +134,13 @@
 
             // Previous button
             if ($current_page > 1) {
-                $s .= getPageButton($current_page - 1, getPrevSvg(true));
+                $s .= getPageButton($current_page - 1, getPrevSvg(true), true);
             } else {
                 $svg = getPrevSvg(false);
                 $s .= <<<BTN
-                    <span class="donate-things-pagination-btn disabled">$svg</span>
+                    <span class="donate-things-pagination-btn donate-things-pagination-btn-with-border disabled">
+                        $svg
+                    </span>
                 BTN; 
             }
 
@@ -180,11 +187,13 @@
 
             // Next button
             if ($current_page < $max_num_pages) {
-                $s .= getPageButton($current_page + 1, getNextSvg(true));
+                $s .= getPageButton($current_page + 1, getNextSvg(true), true);
             } else {
                 $svg = getNextSvg(false);
                 $s .= <<<BTN
-                    <span class="donate-things-pagination-btn disabled">$svg</span>
+                    <span class="donate-things-pagination-btn donate-things-pagination-btn-with-border disabled">
+                        $svg
+                    </span>
                 BTN; 
             }
 
