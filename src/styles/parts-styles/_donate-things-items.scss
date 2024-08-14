@@ -1,0 +1,100 @@
+@import "./donate-things-pagination";
+@import "./donate-things-swipers";
+@import "../variables";
+
+.donate-things-items-and-pagination,
+.donate-things-items,
+.donate-things-item,
+.donate-things-item-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.donate-things-item-info-header {
+  font-family: $font-main;
+  font-weight: 700;
+}
+
+.donate-things-item-info-excerpt {
+  font-family: $font-main;
+  font-weight: 400;
+  font-style: italic;
+}
+
+@media screen and (max-width: 767.9px) {
+  .donate-things-items-and-pagination,
+  .donate-things-items {
+    gap: 56px;
+  }
+
+  .donate-things-item {
+    gap: 24px;
+  }
+
+  .donate-things-item-info {
+    gap: 16px;
+  }
+
+  .donate-things-item-info-header {
+    font-size: 18px;
+  }
+
+  .donate-things-item-info-excerpt {
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .donate-things-items-and-pagination {
+    gap: 104px;
+  }
+
+  .donate-things-items {
+    gap: 56px;
+  }
+
+  .donate-things-item {
+    gap: 32px;
+  }
+
+  .donate-things-item-info {
+    gap: 24px;
+  }
+
+  .donate-things-item-info-header {
+    font-size: 24px;
+  }
+
+  .donate-things-item-info-excerpt {
+    font-size: 20px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .donate-things-item {
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .donate-things-item-info-excerpt {
+    font-size: 20px;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .donate-things-items {
+    gap: 64px;
+  }
+
+  .donate-things-item {
+    gap: 40px;
+  }
+
+  .donate-things-item-info-header {
+    font-size: 32px;
+  }
+
+  .donate-things-item-info-excerpt {
+    font-size: 32px;
+  }
+}

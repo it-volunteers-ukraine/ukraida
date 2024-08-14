@@ -28,5 +28,6 @@ $currend_id = get_the_ID();
                 </a>
             </div>
         </div>
+        <?php get_template_part('parts/donate-things-items') ?>
     </div>
 </div>

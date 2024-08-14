@@ -126,6 +126,13 @@ function wp_it_volunteers_scripts()
   }
 
   if (is_page_template('templates/donates_things_page.php')) {
+    // Swipers
+    wp_enqueue_style('swiper-bundle-style', get_template_directory_uri() . '/assets/styles/vendors/swiper-bundle.css', array());
+    wp_enqueue_script('swiper-scripts', get_template_directory_uri() . '/assets/scripts/vendors/swiper-bundle.min.js', array(), false, true);
+    wp_enqueue_style('swiper-style', get_template_directory_uri() . '/assets/styles/vendors/swiper.css', array());
+
+    wp_enqueue_script('donates-things-swipers-scripts', get_template_directory_uri() . '/assets/scripts/parts-scripts/donate-things-swipers.js', array('jquery'), false, true);
+
     wp_enqueue_style('donates-things-style', get_template_directory_uri() . '/assets/styles/template-styles/donates_things.css', array('main'));
   }
   // function check_jquery()
