@@ -11,10 +11,13 @@
     //
     $dtp_row = "";
     if ($dtp) {
+        $dtp_svg_href = get_bloginfo('template_url') . "/assets/images/symbol-defs.svg#icon-calendar";
         $dtp_row = <<<ROW
             <div class="donate-things-item-info-header-dtl-row-dtp">
                 <div class="donate-things-item-info-header-dtl-row-dtp-icon-wrap">
-                    i
+                    <svg class="donate-things-item-info-header-dtl-row-dtp-icon-svg">
+                        <use xlink:href="$dtp_svg_href"></use>
+                    </svg>
                 </div>
                 <div class="donate-things-item-info-header-dtl-row-dtp-text-wrap">
                     $dtp
@@ -32,10 +35,13 @@
         $href = get_home_url() . "/#event-map";
         $text = __("Локація");
         //
+        $location_svg_href = get_bloginfo('template_url') . "/assets/images/symbol-defs.svg#icon-location";
         $location_row = <<<ROW
             <div class="donate-things-item-info-header-dtl-row-l">
                 <div class="donate-things-item-info-header-dtl-row-l-icon-wrap">
-                    i
+                    <svg class="donate-things-item-info-header-dtl-row-l-icon-svg">
+                        <use xlink:href="$location_svg_href"></use>
+                    </svg>
                 </div>
                 <div class="donate-things-item-info-header-dtl-row-l-text-wrap">
                     <a href="$href">$text</a>
