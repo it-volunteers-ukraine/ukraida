@@ -4,6 +4,11 @@
     $is_active = get_field("project_is_active");
     $is_active_class = $is_active ? "active" : "inactive";
     $is_active_text = $is_active ? __("Активний") : __("Не активний");
+
+    //
+    // Коли буде готова сторінка окремого проекта
+    // $link = get_the_permalink();
+    $link = site_url('/devpage/');
 ?>
 <div class="projects-item">
     <div class="projects-item-images">
@@ -26,13 +31,13 @@
             </p>
         </div>
         <div class="projects-item-detailed projects-item-detailed-wide">
-            <a class="projects-item-detailed-btn" href="<?= get_the_permalink() ?>">
+            <a class="projects-item-detailed-btn" href="<?= $link ?>">
                 <?= __("Детальна інформація") ?>
             </a>
         </div>
     </div>
     <div class="projects-item-detailed projects-item-detailed-narrow">
-        <a class="projects-item-detailed-btn" href="<?= get_the_permalink() ?>">
+        <a class="projects-item-detailed-btn" href="<?= $link ?>">
             <?= __("Детальна інформація") ?>
         </a>
     </div>
