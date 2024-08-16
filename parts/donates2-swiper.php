@@ -1,3 +1,6 @@
+<?php 
+$current_id = get_the_ID();
+?>
 <section>
     <div class="slider__wrapper">
         <button class="slider__button swiper-button-prev">
@@ -8,17 +11,17 @@
         <div class="slider">
             <div class="slider__container">
                 <div class="slider__wrap slider-main swiper-main swiper">
-                    <div class="slider__track-big swiper-wrapper">
-                        <div class="slider__item swiper-slide slider__item--big">
-                            <img class="slider__item-fon" src="<?php echo  get_template_directory_uri() . '/assets/images/donates/img_don2.jpg'; ?>" alt="">
+                    <!-- <?php print_r(get_field('donates2_repeat_img', $current_id)); ?> -->
+                    <?php if (have_rows('donates2_repeat_img', $current_id)): ?>
+                        <div class="slider__track-big swiper-wrapper">
+                            <?php while ( have_rows('donates2_repeat_img', $current_id)): the_row();
+                                $img = get_sub_field('donates2_img'); ?>
+                                <div class="slider__item swiper-slide slider__item--big">
+                                    <img class="slider__item-fon" src="<?php echo esc_url($img['sizes']['large']); ?>" alt="<?php echo esc_attr($img['alt']); ?>">
+                                </div>
+                            <?php endwhile;?>
                         </div>
-                        <div class="slider__item swiper-slide slider__item--big">
-                            <img class="slider__item-fon" src="<?php echo  get_template_directory_uri() . '/assets/images/donates/img_don2.jpg'; ?>" alt="">
-                        </div>
-                        <div class="slider__item swiper-slide slider__item--big">
-                            <img class="slider__item-fon" src="<?php echo  get_template_directory_uri() . '/assets/images/donates/img_don2.jpg'; ?>" alt="">
-                        </div>
-                    </div>
+                    <?php endif ?>
                 </div>
             </div>
         </div>
