@@ -5,7 +5,7 @@ Template Name: projects
     $currend_id = get_the_ID();
 ?>
 
-<main class="projects-main">
+<main>
     <section class="section projects">
         <div class="container container__projects">
             <h1 class="projects-title"><?php echo get_field('title', $currend_id); ?></h1>
