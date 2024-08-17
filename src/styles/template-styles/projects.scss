@@ -17,7 +17,7 @@
     min-width: unset;
   }
 
-  .projects-main {
+  .section.projects {
     padding-top: 96px;
   }
 
@@ -27,7 +27,7 @@
 }
 
 @media screen and (min-width: 768px) {
-  .projects-main {
+  .section.projects {
     padding-top: 180px;
   }
 
@@ -36,8 +36,11 @@
   }
 }
 
+@media screen and (min-width: 920px) {
+}
+
 @media screen and (min-width: 1280px) {
-  .projects-main {
+  .section.projects {
     padding-top: 263px;
   }
 
@@ -47,7 +50,7 @@
 }
 
 @media screen and (min-width: 1920px) {
-  .projects-main {
+  .section.projects {
     padding-top: 210px;
   }
 }
