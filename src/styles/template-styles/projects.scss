@@ -18,7 +18,7 @@
   }
 
   .section.projects {
-    padding-top: 96px;
+    padding-top: 24px;
   }
 
   .projects-title {
@@ -28,7 +28,7 @@
 
 @media screen and (min-width: 768px) {
   .section.projects {
-    padding-top: 180px;
+    padding-top: 64px;
   }
 
   .projects-title {
@@ -41,7 +41,7 @@
 
 @media screen and (min-width: 1280px) {
   .section.projects {
-    padding-top: 263px;
+    padding-top: 64px;
   }
 
   .projects-title {
@@ -50,7 +50,4 @@
 }
 
 @media screen and (min-width: 1920px) {
-  .section.projects {
-    padding-top: 210px;
-  }
 }
