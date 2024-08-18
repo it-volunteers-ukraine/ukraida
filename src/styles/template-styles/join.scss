@@ -24,6 +24,7 @@
     justify-content: center;
 }
 .join-file {
+    padding-bottom: 8px;
     border-radius: 4px;
     width: 110px;
     transition: box-shadow $animations;
@@ -60,6 +61,7 @@
     }
     .join-file {
         width: 248px;
+        padding-bottom: 16px;
     }
     .join-icon {
         width: 248px;
