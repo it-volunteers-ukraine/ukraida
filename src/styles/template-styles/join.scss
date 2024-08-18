@@ -24,7 +24,13 @@
     justify-content: center;
 }
 .join-file {
+    border-radius: 4px;
     width: 110px;
+    transition: box-shadow $animations;
+}
+
+.join-file:hover {
+    box-shadow: $file-card-shadow;
 }
 .join-icon {
     width: 110px;
