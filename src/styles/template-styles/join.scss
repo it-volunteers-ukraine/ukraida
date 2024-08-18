@@ -1,0 +1,89 @@
+@import "../_variables";
+
+.section__join {
+    margin-top: 24px;
+}
+.container__join {
+    font-family: $font-main;
+    line-height: 1.36;
+}
+.join-title {
+    margin-bottom: 32px;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+}
+.join-text {
+    margin-bottom: 64px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+.join-file-list {
+    display: flex;
+    gap: 48px;
+    justify-content: center;
+}
+.join-file {
+    width: 110px;
+}
+.join-icon {
+    width: 110px;
+    height: 110px;
+    margin-bottom: 24px;
+}
+.join-filename {
+    text-align: center;
+    text-wrap: wrap;
+    font-size: 14px;
+}
+
+@media screen and (min-width: 768px) {
+    .section__join {
+        margin-top: 48px;
+    }
+    .join-title {
+        margin-bottom: 56px;
+        font-size: 32px;
+    }
+    .join-text {
+        margin-bottom: 112px;
+        font-size: 20px;
+    }
+    .join-file-list {
+        gap: 40px;
+    }
+    .join-file {
+        width: 248px;
+    }
+    .join-icon {
+        width: 248px;
+        height: 248px;
+    }
+    .join-filename {
+        font-size: 24px;
+    }
+    
+}
+
+@media screen and (min-width: 1200px) {
+    .section__join {
+        margin-top: 64px;
+    }
+    .join-title {
+        margin-bottom: 104px;
+        font-size: 36px;
+    }
+    .join-text {
+        margin-bottom: 128px;
+        font-size: 24px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .join-title {
+        margin-bottom: 64px;
+    }
+    .join-text {
+        margin-bottom: 104px;
+    }
+}
