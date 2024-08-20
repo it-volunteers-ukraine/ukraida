@@ -1,0 +1,111 @@
+@import "../_variables";
+
+.section__join {
+    margin-top: 24px;
+}
+.container__join {
+    font-family: $font-main;
+    line-height: 1.36;
+}
+.join-title {
+    margin-bottom: 32px;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+}
+.join-text {
+    margin-bottom: 64px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+.join-file-list {
+    display: flex;
+    gap: 48px;
+    justify-content: center;
+}
+.join-file {
+    padding-bottom: 8px;
+    border-radius: 4px;
+    width: 96px;
+    transition: box-shadow $animations;
+}
+
+.join-file:hover {
+    box-shadow: $file-card-shadow;
+}
+.join-icon {
+    width: 96px;
+    height: 96px;
+    margin-bottom: 24px;
+}
+.join-filename {
+    text-align: center;
+    text-wrap: wrap;
+    font-size: 14px;
+}
+
+@media screen and (min-width: 768px) {
+    .section__join {
+        margin-top: 48px;
+    }
+    .join-title {
+        margin-bottom: 56px;
+        font-size: 32px;
+    }
+    .join-text {
+        margin-bottom: 112px;
+        font-size: 20px;
+    }
+    .join-file-list {
+        gap: 40px;
+    }
+    .join-file {
+        width: 176px;
+        padding-bottom: 16px;
+    }
+    .join-icon {
+        width: 176px;
+        height: 176px;
+    }
+    .join-filename {
+        font-size: 24px;
+    }
+    
+}
+
+@media screen and (min-width: 1200px) {
+    .section__join {
+        margin-top: 64px;
+    }
+    .join-title {
+        margin-bottom: 104px;
+        font-size: 36px;
+    }
+    .join-text {
+        margin-bottom: 128px;
+        font-size: 24px;
+    }
+    .join-file {
+        width: 204px;
+    }
+    .join-icon {
+        width: 204px;
+        height: 204px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .join-title {
+        margin-bottom: 64px;
+    }
+    .join-text {
+        margin-bottom: 104px;
+    }
+    .join-file {
+        width: 212px;
+    }
+    .join-icon {
+        width: 212px;
+        height: 212px;
+    }
+}

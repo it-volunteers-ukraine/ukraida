@@ -17,8 +17,8 @@
     min-width: unset;
   }
 
-  .projects-main {
-    padding-top: 120px;
+  .section.projects {
+    padding-top: 24px;
   }
 
   .projects-title {
@@ -27,8 +27,8 @@
 }
 
 @media screen and (min-width: 768px) {
-  .projects-main {
-    padding-top: 220px;
+  .section.projects {
+    padding-top: 64px;
   }
 
   .projects-title {
@@ -36,18 +36,14 @@
   }
 }
 
-@media screen and (min-width: 1280px) {
-  .projects-main {
-    padding-top: 327px;
-  }
+@media screen and (min-width: 990px) {
+}
 
+@media screen and (min-width: 1200px) {
   .projects-title {
     font-size: 36px;
   }
 }
 
-@media screen and (min-width: 1920px) {
-  .projects-main {
-    padding-top: 310px;
-  }
+@media screen and (min-width: 1440px) {
 }
