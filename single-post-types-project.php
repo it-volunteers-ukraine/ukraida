@@ -10,7 +10,7 @@
                 <h1 class="project-title"><?= esc_html(get_field('project_title')) ?></h1>
                 <div class="project-items">
                     <?php
-                        $i++;
+                        $i = 1;
                         while (have_rows('project_items')):
                             the_row();
 
