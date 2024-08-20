@@ -1,0 +1,157 @@
+@import "./variables";
+
+.project-title {
+  font-family: $font-main;
+  font-weight: 700;
+  text-align: center;
+}
+
+.container__project,
+.project-items, 
+.project-items-item {
+  display: flex;
+}
+
+.container__project,
+.project-items {
+  flex-direction: column;
+}
+
+.project-title {
+  text-transform: uppercase;
+}
+
+.project-items-item {
+  align-items: center;
+}
+
+.project-items-item-image {
+  border-radius: 15px;
+  object-fit: cover;
+}
+
+.project-items-item-text {
+  font-family: $font-main;
+  font-weight: 400;
+  text-align: center;
+}
+
+@media screen and (max-width: 767.9px) {
+  .section.project {
+    padding-top: 24px;
+  }
+
+  .container__project {
+    gap: 32px;
+  }
+
+  .project-title {
+    font-size: 18px;
+  }
+
+  .project-items {
+    gap: 64px;
+  }
+  
+  .project-items-item {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .project-items-item-image {
+    width: 288px;
+    height: 256px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .section.project {
+    padding-top: 48px;
+  }
+
+  .container__project {
+    gap: 56px;
+  }
+
+  .project-title {
+    font-size: 32px;
+  }
+
+  .project-items {
+    gap: 48px;
+  }
+  
+  .project-items-item {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .project-items-item-image {
+    width: 420px;
+    height: 374px;
+  }
+
+  .project-items-item-text {
+    font-size: 20px;
+  }
+}
+
+@media screen and (min-width: 990px) {
+}
+
+@media screen and (min-width: 1200px) {
+  .section.project {
+    padding-top: 64px;
+  }
+
+  .container__project {
+    gap: 104px;
+  }
+
+  .project-items {
+    gap: 40px;
+  }
+  
+  .project-items-item {
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .project-items-item-image {
+    min-width: 574px;
+    width: 574px;
+    height: 510px;
+  }
+
+  .project-items-item-even .project-items-item-image-wrap {
+    order: 2;
+  }
+
+  .project-items-item-text {
+    font-size: 24px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .container__project {
+    gap: 101px;
+  }
+
+  .project-title {
+    font-size: 36px;
+  }
+
+  .project-items {
+    gap: 64px;
+  }
+  
+  .project-items-item {
+    gap: 24px;
+  }
+
+  .project-items-item-image {
+    min-width: 666px;
+    width: 666px;
+    height: 592px;
+  }
+}
