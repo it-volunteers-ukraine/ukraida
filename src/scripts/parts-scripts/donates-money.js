@@ -10,9 +10,12 @@ const startAnimate = async (target) => {
   const completeSumClass = ".post-type_complete-sum";
   const percentSumClass = ".post-type_complete";
 
+  
   const totalSumRef = parentTarget.querySelector(totalSumClass);
   const completeSumRef = parentTarget.querySelector(completeSumClass);
   const percentSumRef = parentTarget.querySelector(percentSumClass);
+  
+//   percentSumRef.parentElement.classList.add('animation');
 
   const totalSum = totalSumRef.textContent;
   const completeSum = completeSumRef.dataset.sum;
@@ -33,6 +36,8 @@ const startAnimate = async (target) => {
     completeSumRef.textContent = sumAnimate;
     await sleep(animateDelay);
   }
+//   percentSumRef.parentElement.classList.remove('animation');
+
 
 };
 
