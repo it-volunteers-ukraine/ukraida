@@ -420,3 +420,10 @@ function enqueue_load_more_script()
 add_action('wp_enqueue_scripts', 'enqueue_load_more_script');
 
 require get_template_directory() . '/parts/load-more.php';
+
+// progress bar
+function enqueue_progress_bar_script()
+{
+  wp_enqueue_script('progress-bar', get_template_directory_uri() . '/assets/scripts/parts-scripts/progress-bar.js', array(), null, true);
+}
+add_action('wp_enqueue_scripts', 'enqueue_progress_bar_script');
