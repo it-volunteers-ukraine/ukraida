@@ -6,9 +6,7 @@
     $is_active_text = $is_active ? __("Активний") : __("Не активний");
 
     //
-    // Коли буде готова сторінка окремого проекта
-    // $link = get_the_permalink();
-    $link = site_url('/devpage/');
+    $link = get_the_permalink();
 ?>
 <div class="projects-item">
     <div class="projects-item-images">
