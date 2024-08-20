@@ -38,8 +38,12 @@ $current_id = get_the_ID();
                     <p class="post-type__text">
                         <?php echo get_field('donates_money_text'); ?>
                     </p>
+                    <div class="post-type_percent"> 
+                        <div class="post-type_complete" style="width: 0"></div>
+                    </div>
                     <p class="post-type__value"><?php echo get_field('title_active_sum', $current_id); ?></p>
                     <p class="post-type__sum"><?php echo get_field('donates_money_sum'); ?></p>
+                    <p class="post-type__sum post-type_complete-sum" data-sum="<?php echo get_field('donates_money_complete_sum'); ?>">0</p>
                     <div class="post-type__button">
                         <button class="img-text__btn js-btn-donate"><?php echo get_field('donates_button_text', $current_id); ?></button>
                     </div>
