@@ -26,7 +26,7 @@
 .join-file {
     padding-bottom: 8px;
     border-radius: 4px;
-    width: 110px;
+    width: 96px;
     transition: box-shadow $animations;
 }
 
@@ -34,8 +34,8 @@
     box-shadow: $file-card-shadow;
 }
 .join-icon {
-    width: 110px;
-    height: 110px;
+    width: 96px;
+    height: 96px;
     margin-bottom: 24px;
 }
 .join-filename {
@@ -60,12 +60,12 @@
         gap: 40px;
     }
     .join-file {
-        width: 248px;
+        width: 176px;
         padding-bottom: 16px;
     }
     .join-icon {
-        width: 248px;
-        height: 248px;
+        width: 176px;
+        height: 176px;
     }
     .join-filename {
         font-size: 24px;
@@ -85,6 +85,13 @@
         margin-bottom: 128px;
         font-size: 24px;
     }
+    .join-file {
+        width: 204px;
+    }
+    .join-icon {
+        width: 204px;
+        height: 204px;
+    }
 }
 
 @media screen and (min-width: 1440px) {
@@ -93,5 +100,12 @@
     }
     .join-text {
         margin-bottom: 104px;
+    }
+    .join-file {
+        width: 212px;
+    }
+    .join-icon {
+        width: 212px;
+        height: 212px;
     }
 }
