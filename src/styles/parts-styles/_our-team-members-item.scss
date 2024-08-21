@@ -1,0 +1,148 @@
+@import "../variables";
+
+.our-team-members-items-item,
+.our-team-members-items-item-info,
+.our-team-members-items-item-info-wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.our-team-members-items-item {
+  position: relative;
+}
+
+.our-team-members-items-item-image,
+.our-team-members-items-item-wrap {
+  border-radius: 15px;
+}
+
+.our-team-members-items-item-image {
+  box-shadow: 4px 4px 44px 0px #0000001C;
+  object-fit: cover;
+}
+
+.our-team-members-items-item-wrap {
+  position: absolute;
+  top: 0px;
+  background-color: rgba(34, 31, 37, 0.65);
+  display: none;
+}
+
+.our-team-members-items-item:nth-child(odd) .our-team-members-items-item-wrap {
+  right: 0px;
+}
+
+.our-team-members-items-item:nth-child(even) .our-team-members-items-item-wrap {
+  left: 0px;
+}
+
+.our-team-members-items-item-image:hover + .our-team-members-items-item-wrap,
+.our-team-members-items-item-wrap:hover {
+  display: block;
+}
+
+.our-team-members-items-item-info {
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+  color: $white;
+  gap: 32px;
+  overflow: hidden;
+}
+
+.our-team-members-items-item-info-name {
+  font-family: $font-main;
+  font-weight: 600;
+}
+
+.our-team-members-items-item-info-wrap {
+  gap: 24px;
+}
+
+.our-team-members-items-item-info-short-info,
+.our-team-members-items-item-info-instagram {
+  font-family: $font-main;
+  font-weight: 400;
+}
+
+.our-team-members-items-item-info-short-info {
+  font-style: italic;
+}
+
+@media screen and (max-width: 767.9px) {
+  .our-team-members-items-item-wrap,
+  .our-team-members-items-item-image {
+    width: 288px;
+    height: 318px;
+  }
+
+  .our-team-members-items-item-info-name {
+    font-size: 18px;
+  }
+
+  .our-team-members-items-item-info-wrap {
+    width: 212px;
+  }
+
+  .our-team-members-items-item-info-short-info,
+  .our-team-members-items-item-info-instagram {
+    font-size: 16px;
+  }
+}
+  
+@media screen and (min-width: 768px) {
+  .our-team-members-items-item-wrap,
+  .our-team-members-items-item-image {
+    width: 334px;
+    height: 345px;
+  }
+
+  .our-team-members-items-item-info-name {
+    font-size: 20px;
+  }
+
+  .our-team-members-items-item-info-wrap {
+    width: 245px;
+  }
+
+  .our-team-members-items-item-info-short-info,
+  .our-team-members-items-item-info-instagram {
+    font-size: 18px;
+  }
+}
+  
+@media screen and (min-width: 990px) {
+}
+  
+@media screen and (min-width: 1200px) {
+  .our-team-members-items-item-wrap,
+  .our-team-members-items-item-image {
+    width: 574px;
+    height: 595px;
+  }
+
+  .our-team-members-items-item-info-name {
+    font-size: 32px;
+  }
+
+  .our-team-members-items-item-info-wrap {
+    width: 421px;
+  }
+
+  .our-team-members-items-item-info-short-info,
+  .our-team-members-items-item-info-instagram {
+    font-size: 24px;
+  }
+}
+  
+@media screen and (min-width: 1440px) {
+  .our-team-members-items-item-wrap,
+  .our-team-members-items-item-image {
+    width: 528px;
+    height: 547px;
+  }
+
+  .our-team-members-items-item-info-wrap {
+    width: 390px;
+  }
+}
