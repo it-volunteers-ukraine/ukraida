@@ -21,7 +21,9 @@
                     <?= $short_info ?>
                 </span>
                 <span class="our-team-members-items-item-info-instagram">
-                    <a href="<?= $instagram_link ?>"><?= "@$instagram_name" ?></a>
+                    <a href="<?= $instagram_link ?>" target="_blank" rel="noopener noreferrer">
+                        <?= "@$instagram_name" ?>
+                    </a>
                 </span>
             </div>
         </div>
