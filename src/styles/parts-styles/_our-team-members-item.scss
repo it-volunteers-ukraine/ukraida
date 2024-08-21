@@ -36,7 +36,8 @@
   left: 0px;
 }
 
-.our-team-members-items-item-image:hover + .our-team-members-items-item-wrap {
+.our-team-members-items-item-image:hover + .our-team-members-items-item-wrap,
+.our-team-members-items-item-wrap:hover {
   display: block;
 }
 
