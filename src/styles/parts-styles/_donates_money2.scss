@@ -98,10 +98,7 @@
     font-size: 14px;
     font-style: italic;
 
-    margin-bottom: 16px;
-
     @media screen and (min-width: 768px) {
-      margin-bottom: 24px;
       font-size: 16px;
     }
 
@@ -110,8 +107,17 @@
     }
   }
 
+  &__money {
+    display: flex;
+    justify-content: space-between;
+  }
+
   &__value {
     margin-bottom: 8px;
+
+    @media screen and (min-width: 768px) {
+      font-size: 18px;
+    }
   }
 
   &__sum {
@@ -155,4 +161,21 @@
   .dev__btn:hover {
     box-shadow: $btn-hover-shadow;
   }
+}
+
+.post-type__progress {
+  width: 100%;
+  border: solid 1px #cccccc;
+  border-radius: 20px;
+  overflow: hidden;
+  margin: 32px 0;
+  padding: 4px;
+}
+
+.post-type__progress-bar {
+  height: 16px;
+  background-color: $dark-blue;
+  width: 0;
+  border-radius: 20px;
+  transition: width 0.4s ease;
 }

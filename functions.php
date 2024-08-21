@@ -78,6 +78,13 @@ function wp_it_volunteers_scripts()
 
   if (is_page_template('templates/about_page.php')) {
     wp_enqueue_style('about_page-style', get_stylesheet_directory_uri() . '/assets/styles/template-styles/about_page.css', array('main'));
+    
+    wp_enqueue_style('projects-bundle-style', get_template_directory_uri() . '/assets/styles/vendors/swiper-bundle.css', array());
+    wp_enqueue_script('projects-scripts', get_template_directory_uri() . '/assets/scripts/vendors/swiper-bundle.min.js', array(), false, true);
+    wp_enqueue_style('projects-style', get_template_directory_uri() . '/assets/styles/vendors/swiper.css', array());
+
+    wp_enqueue_style('projects-swiper-style', get_template_directory_uri() . '/assets/styles/parts-styles/donates2-swiper.css', array());
+      wp_enqueue_script('about_page-script', get_stylesheet_directory_uri() . '/assets/scripts/template-scripts/about_page.js', array(), false, true);
   }
 
   if (is_page_template('404.php')) {
@@ -437,6 +444,13 @@ function enqueue_load_more_script()
 add_action('wp_enqueue_scripts', 'enqueue_load_more_script');
 
 require get_template_directory() . '/parts/load-more.php';
+
+// progress bar
+function enqueue_progress_bar_script()
+{
+  wp_enqueue_script('progress-bar', get_template_directory_uri() . '/assets/scripts/parts-scripts/progress-bar.js', array(), null, true);
+}
+add_action('wp_enqueue_scripts', 'enqueue_progress_bar_script');
 
 // Load more action for "Our team members" page
 require get_template_directory() . '/parts/our-team-members-load-more.php';
