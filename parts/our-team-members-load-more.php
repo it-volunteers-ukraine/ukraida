@@ -24,6 +24,6 @@
         wp_die();
     }
 
-    // AJAX handlers for projects get items action
+    // AJAX handlers for the action
     add_action('wp_ajax_our_team_members_get_items', 'our_team_members_get_items');
     add_action('wp_ajax_nopriv_our_team_members_get_items', 'our_team_members_get_items');
