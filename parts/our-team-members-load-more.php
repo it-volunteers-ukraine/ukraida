@@ -9,7 +9,8 @@
             'post_type'         => 'post-types-our-team-',
             'posts_per_page'    => $count,
             'offset'            => $offset,
-            'order'             => 'DESC',
+            'meta_key'          => 'our_team_member_order_rank',
+            'orderby'           => ['meta_value_num' => 'ASC', 'date' => 'DESC'],
         );
 
         // Query and items output
