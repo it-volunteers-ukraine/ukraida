@@ -41,19 +41,17 @@ $current_id = get_the_ID();
                     <p class="post-type__text">
                         <?php echo get_field('donates_money_text'); ?>
                     </p>
-                    <div class="post-type__progress"
-                        data-collected="<?php echo $sum_collected; ?>"
-                        data-target="<?php echo $sum_target; ?>">
-                        <div class="post-type__progress-bar"></div>
+                    <div class="post-type__progress">
+                        <div class="post-type__progress-bar">0</div>
                     </div>
                     <div class="post-type__money">
                         <div>
                             <p class="post-type__value"><?php echo get_field('title_active_sum', $current_id); ?></p>
-                            <p class="post-type__sum colected-sum"><?php echo get_field('donates_money_sum'); ?></p>
+                            <p class="post-type__sum colected-sum" data-sum='<?php echo $sum_collected; ?>'>0</p>
                         </div>
                         <div>
                             <p class="post-type__value"><?php echo get_field('title_active_sum_end', $current_id); ?></p>
-                            <p class="post-type__sum total-sum"><?php echo get_field('donates_money_sum_end'); ?></p>
+                            <p class="post-type__sum total-sum"><?php echo $sum_target; ?></p>
                         </div>
                     </div>
                     <div class="post-type__button">

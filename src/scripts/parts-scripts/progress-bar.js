@@ -35,7 +35,7 @@ const startAnimate = async (target) => {
   const percentSumRef = parentTarget.querySelector(".post-type__progress-bar");
   
   const totalSum = totalSumRef.textContent;
-  const completeSum = completeSumRef.textContent;
+  const completeSum = completeSumRef.dataset.sum;
   const completePercent = (completeSum / totalSum) * 100;
   // console.log(totalSum, completeSum,completePercent);
 
@@ -43,13 +43,12 @@ const startAnimate = async (target) => {
 
   stepAnimate = animateTime / animateDelay;
   let sumAnimate = 0;
-
   for (
     let index = 0;
     sumAnimate < completeSum || index < stepAnimate;
     index++
   ) {
-    sumAnimate = (completeSum / stepAnimate) * index;
+    sumAnimate = parseInt((completeSum / stepAnimate) * index);
     sumAnimate = sumAnimate >= completeSum ? completeSum : sumAnimate;
     completeSumRef.textContent = sumAnimate;
     await sleep(animateDelay);
