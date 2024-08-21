@@ -15,9 +15,9 @@ function loadMoreOurTeamMembers() {
     isLoadingMoreTeamMembers = true;
 
     // Determining how many items to load depending on window width
-    let count = 6;
-    if (window.innerWidth < 768) count = 2;
-    else if (window.innerWidth < 1920) count = 4;
+    let count = 9;
+    if (window.innerWidth < 768) count = 3;
+    else if (window.innerWidth < 1920) count = 6;
 
     // Query
     jQuery.ajax({
