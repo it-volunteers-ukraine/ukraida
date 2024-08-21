@@ -165,6 +165,23 @@ function wp_it_volunteers_scripts()
     // wp_enqueue_script('news-scripts', get_template_directory_uri() . '/assets/scripts/template-scripts/news.js', array(), false, true);
   }
 
+  if (is_page_template('templates/our_team_members.php')) {
+    // Style
+    wp_enqueue_style(
+      'our-team-members-style',
+      get_template_directory_uri() . '/assets/styles/template-styles/our-team-members.css',
+      array('main')
+    );
+    // Script
+    wp_enqueue_script(
+      'our-team-members-scripts', 
+      get_template_directory_uri() . '/assets/scripts/template-scripts/our-team-members.js',
+      array('jquery')
+    );
+    $front_scripts_args = ['ajaxUrl' => admin_url('admin-ajax.php')];
+    wp_localize_script('our-team-members-scripts', 'vars', $front_scripts_args);
+  }
+
   if (is_page_template('templates/privacy.php')) {
     wp_enqueue_style('privacy-style', get_template_directory_uri() . '/assets/styles/template-styles/privacy.css', array('main'));
     // wp_enqueue_script('news-scripts', get_template_directory_uri() . '/assets/scripts/template-scripts/news.js', array(), false, true);
@@ -434,3 +451,6 @@ function enqueue_progress_bar_script()
   wp_enqueue_script('progress-bar', get_template_directory_uri() . '/assets/scripts/parts-scripts/progress-bar.js', array(), null, true);
 }
 add_action('wp_enqueue_scripts', 'enqueue_progress_bar_script');
+
+// Load more action for "Our team members" page
+require get_template_directory() . '/parts/our-team-members-load-more.php';
