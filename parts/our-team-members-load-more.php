@@ -11,7 +11,6 @@
             'offset'            => $offset,
             'meta_key'          => 'our_team_member_order_rank',
             'orderby'           => ['meta_value_num' => 'ASC', 'date' => 'DESC'],
-            'order'             => 'ASC',
         );
 
         // Query and items output
