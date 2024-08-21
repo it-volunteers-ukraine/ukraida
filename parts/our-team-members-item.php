@@ -11,15 +11,19 @@
 ?>
 <div class="our-team-members-items-item">
     <img class="our-team-members-items-item-image" src="<?= $photo_url ?>"/>
-    <div class="our-team-members-items-item-info">
-        <span class="our-team-members-items-item-info-name">
-            <?= $name ?>
-        </span>
-        <span class="our-team-members-items-item-info-short-info">
-            <?= $short_info ?>
-        </span>
-        <span class="our-team-members-items-item-info-short-info">
-            <a href="<?= $instagram_link ?>"><?= $instagram_name ?></a>
-        </span>
+    <div class="our-team-members-items-item-wrap">
+        <div class="our-team-members-items-item-info">
+            <span class="our-team-members-items-item-info-name">
+                <?= $name ?>
+            </span>
+            <div class="our-team-members-items-item-info-wrap">
+                <span class="our-team-members-items-item-info-short-info">
+                    <?= $short_info ?>
+                </span>
+                <span class="our-team-members-items-item-info-instagram">
+                    <a href="<?= $instagram_link ?>"><?= "@$instagram_name" ?></a>
+                </span>
+            </div>
+        </div>
     </div>
 </div>
