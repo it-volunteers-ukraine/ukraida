@@ -21,7 +21,9 @@ $current_id = get_the_ID();
                 $img = get_field('donates_money_img');
                 $actually = get_field('donates_actually');
 
-                if ($actually != 1) : ?>
+                if ($actually != 1) :
+                    $title_archive_sum = get_field('title_archive_sum', $current_id);
+        ?>
                     <div class="result-item">
                         <div class="result-card_wrap">
                             <div class="result-card_img">
@@ -30,7 +32,7 @@ $current_id = get_the_ID();
                             <div class="result-card">
                                 <h2 class="result-card_title"><?php echo esc_html(get_field('donates_money_title')); ?></h2>
                                 <p class="result-card_text"><?php echo esc_html(get_field('donates_money_text')); ?></p>
-                                <p class="result-card_sum-title"><?php echo get_field('title_archive_sum'); ?></p>
+                                <p class="result-card_sum-title"><?php echo esc_html($title_archive_sum); ?></p>
                                 <p class="result-card_sum-value"><?php echo esc_html(get_field('donates_money_sum')); ?></p>
                             </div>
                         </div>
