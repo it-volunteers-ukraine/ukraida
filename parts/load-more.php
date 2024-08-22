@@ -2,6 +2,7 @@
 // Функция для загрузки дополнительных постов
 function load_more_posts()
 {
+    $current_id = get_the_ID();
     $paged = isset($_POST['page']) ? intval($_POST['page']) : 1;
     $per_page = 2;
     $args = array(
@@ -18,6 +19,8 @@ function load_more_posts()
     if ($query->have_posts()) : ?>
         <span id="res-params" hidden data-total-post='<?php echo $query->found_posts; ?>' data-current-page='<?php echo $paged; ?> '></span>
         <?php 
+        echo $current_id;
+
         while ($query->have_posts()) {
             $query->the_post();
             $actually = get_field('donates_actually');
