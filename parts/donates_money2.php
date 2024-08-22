@@ -42,7 +42,7 @@ $current_id = get_the_ID();
                         <?php echo get_field('donates_money_text'); ?>
                     </p>
                     <div class="post-type__progress">
-                        <div class="post-type__progress-bar">0</div>
+                        <div class="post-type__progress-bar"></div>
                     </div>
                     <div class="post-type__money">
                         <div>
