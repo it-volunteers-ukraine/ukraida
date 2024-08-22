@@ -24,16 +24,10 @@
 .our-team-members-items-item-wrap {
   position: absolute;
   top: 0px;
+  left: 0px;
+  max-width: 100%;
   background-color: rgba(34, 31, 37, 0.65);
   display: none;
-}
-
-.our-team-members-items-item:nth-child(odd) .our-team-members-items-item-wrap {
-  right: 0px;
-}
-
-.our-team-members-items-item:nth-child(even) .our-team-members-items-item-wrap {
-  left: 0px;
 }
 
 .our-team-members-items-item-image:hover + .our-team-members-items-item-wrap,
@@ -95,6 +89,10 @@
   .our-team-members-items-item-image {
     width: 334px;
     height: 345px;
+  }
+
+  .our-team-members-items-item:nth-child(odd) .our-team-members-items-item-wrap {
+    right: 0px;
   }
 
   .our-team-members-items-item-info-name {
