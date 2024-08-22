@@ -1,9 +1,10 @@
 <?php
     $index = $args["index"];
 
+    //
     $is_active = get_field("project_is_active");
     $is_active_class = $is_active ? "active" : "inactive";
-    $is_active_text = $is_active ? __("Активний") : __("Не активний");
+    $is_active_text = $is_active ? $args["texts"]["active"] : $args["texts"]["inactive"];
 
     //
     $link = get_the_permalink();
@@ -30,13 +31,13 @@
         </div>
         <div class="projects-item-detailed projects-item-detailed-wide">
             <a class="projects-item-detailed-btn" href="<?= $link ?>">
-                <?= __("Детальна інформація") ?>
+                <?= $args["texts"]["detailed_information"] ?>
             </a>
         </div>
     </div>
     <div class="projects-item-detailed projects-item-detailed-narrow">
         <a class="projects-item-detailed-btn" href="<?= $link ?>">
-            <?= __("Детальна інформація") ?>
+            <?= $args["texts"]["detailed_information"] ?>
         </a>
     </div>
 </div>
