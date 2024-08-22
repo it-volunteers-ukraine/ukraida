@@ -4,142 +4,32 @@
             <div class="slider__track-big swiper-wrapper">
                 <div class="slider__item swiper-slide slider__item--big">
                     <img class="slider__item-fon" src="<?php echo  get_template_directory_uri() . '/assets/images/projects/f-01.jpg'; ?>" alt="">
-                    <!-- <div class="slider__item-text">
-                        <div class="slider__item-text-inner">
-                            <h4 class="slider__item-title">
-                                Наш новий проєкт під назвою “Український літературний простір у Дармштадті”
-                            </h4>
-                            <p>
-                                Дуже хочеться, аби наш новий дім, місто Дармштадт, став для нас ще затишнішим. Ми впевнені,
-                                що цього можна досягти завдяки читанню книг українською мовою і теплим бесідам про них.
-                            </p>
-                            <a href="#" class="button-secondary slider__item-btn">Детальна інформація</a>
-                        </div>
-                    </div> -->
                 </div>
                 <div class="slider__item swiper-slide slider__item--big">
                     <img class="slider__item-fon" src="<?php echo  get_template_directory_uri() . '/assets/images/projects/f-02.jpg'; ?>" alt="">
-                    <!-- <div class="slider__item-text">
-                        <div class="slider__item-text-inner">
-                            <h4 class="slider__item-title">
-                                Наш новий проєкт під назвою “Український літературний простір у Дармштадті”
-                            </h4>
-                            <p>
-                                Дуже хочеться, аби наш новий дім, місто Дармштадт, став для нас ще затишнішим. Ми впевнені,
-                                що цього можна досягти завдяки читанню книг українською мовою і теплим бесідам про них.
-                            </p>
-                            <a href="#" class="button-secondary slider__item-btn">Детальна інформація</a>
-                        </div>
-                    </div> -->
                 </div>
                 <div class="slider__item swiper-slide slider__item--big">
                     <img class="slider__item-fon" src="<?php echo  get_template_directory_uri() . '/assets/images/projects/f-03.jpg'; ?>" alt="">
-                    <!-- <div class="slider__item-text">
-                        <div class="slider__item-text-inner">
-                            <h4 class="slider__item-title">
-                                Наш новий проєкт під назвою “Український літературний простір у Дармштадті”
-                            </h4>
-                            <p>
-                                Дуже хочеться, аби наш новий дім, місто Дармштадт, став для нас ще затишнішим. Ми впевнені,
-                                що цього можна досягти завдяки читанню книг українською мовою і теплим бесідам про них.
-                            </p>
-                            <a href="#" class="button-secondary slider__item-btn">Детальна інформація</a>
-                        </div>
-                    </div> -->
                 </div>
                 <div class="slider__item swiper-slide slider__item--big">
                     <img class="slider__item-fon" src="<?php echo  get_template_directory_uri() . '/assets/images/projects/f-04.jpg'; ?>" alt="">
-                    <!-- <div class="slider__item-text">
-                        <div class="slider__item-text-inner">
-                            <h4 class="slider__item-title">
-                                Наш новий проєкт під назвою “Український літературний простір у Дармштадті”
-                            </h4>
-                            <p>
-                                Дуже хочеться, аби наш новий дім, місто Дармштадт, став для нас ще затишнішим. Ми впевнені,
-                                що цього можна досягти завдяки читанню книг українською мовою і теплим бесідам про них.
-                            </p>
-                            <a href="#" class="button-secondary slider__item-btn">Детальна інформація</a>
-                        </div>
-                    </div> -->
                 </div>
                 <div class="slider__item swiper-slide slider__item--big">
                     <img class="slider__item-fon" src="<?php echo  get_template_directory_uri() . '/assets/images/projects/f-05.jpg'; ?>" alt="">
-                    <!-- <div class="slider__item-text">
-                        <div class="slider__item-text-inner">
-                            <h4 class="slider__item-title">
-                                Наш новий проєкт під назвою “Український літературний простір у Дармштадті”
-                            </h4>
-                            <p>
-                                Дуже хочеться, аби наш новий дім, місто Дармштадт, став для нас ще затишнішим. Ми впевнені,
-                                що цього можна досягти завдяки читанню книг українською мовою і теплим бесідам про них.
-                            </p>
-                            <a href="#" class="button-secondary slider__item-btn">Детальна інформація</a>
-                        </div>
-                    </div> -->
                 </div>
                 <div class="slider__item swiper-slide slider__item--big">
                     <img class="slider__item-fon" src="<?php echo  get_template_directory_uri() . '/assets/images/projects/f-06.jpg'; ?>" alt="">
-                    <!-- <div class="slider__item-text">
-                        <div class="slider__item-text-inner">
-                            <h4 class="slider__item-title">
-                                Наш новий проєкт під назвою “Український літературний простір у Дармштадті”
-                            </h4>
-                            <p>
-                                Дуже хочеться, аби наш новий дім, місто Дармштадт, став для нас ще затишнішим. Ми впевнені,
-                                що цього можна досягти завдяки читанню книг українською мовою і теплим бесідам про них.
-                            </p>
-                            <a href="#" class="button-secondary slider__item-btn">Детальна інформація</a>
-                        </div>
-                    </div> -->
                 </div>
                 <div class="slider__item swiper-slide slider__item--big">
                     <img class="slider__item-fon" src="<?php echo  get_template_directory_uri() . '/assets/images/projects/f-07.jpg'; ?>" alt="">
-                    <!-- <div class="slider__item-text">
-                        <div class="slider__item-text-inner">
-                            <h4 class="slider__item-title">
-                                Наш новий проєкт під назвою “Український літературний простір у Дармштадті”
-                            </h4>
-                            <p>
-                                Дуже хочеться, аби наш новий дім, місто Дармштадт, став для нас ще затишнішим. Ми впевнені,
-                                що цього можна досягти завдяки читанню книг українською мовою і теплим бесідам про них.
-                            </p>
-                            <a href="#" class="button-secondary slider__item-btn">Детальна інформація</a>
-                        </div>
-                    </div> -->
                 </div>
                 <div class="slider__item swiper-slide slider__item--big">
                     <img class="slider__item-fon" src="<?php echo  get_template_directory_uri() . '/assets/images/projects/f-08.jpg'; ?>" alt="">
-                    <!-- <div class="slider__item-text">
-                        <div class="slider__item-text-inner">
-                            <h4 class="slider__item-title">
-                                Наш новий проєкт під назвою “Український літературний простір у Дармштадті”
-                            </h4>
-                            <p>
-                                Дуже хочеться, аби наш новий дім, місто Дармштадт, став для нас ще затишнішим. Ми впевнені,
-                                що цього можна досягти завдяки читанню книг українською мовою і теплим бесідам про них.
-                            </p>
-                            <a href="#" class="button-secondary slider__item-btn">Детальна інформація</a>
-                        </div>
-                    </div> -->
                 </div>
                 <div class="slider__item swiper-slide slider__item--big">
                     <img class="slider__item-fon" src="<?php echo  get_template_directory_uri() . '/assets/images/projects/f-09.jpg'; ?>" alt="">
-                    <!-- <div class="slider__item-text">
-                        <div class="slider__item-text-inner">
-                            <h4 class="slider__item-title">
-                                Наш новий проєкт під назвою “Український літературний простір у Дармштадті”
-                            </h4>
-                            <p>
-                                Дуже хочеться, аби наш новий дім, місто Дармштадт, став для нас ще затишнішим. Ми впевнені,
-                                що цього можна досягти завдяки читанню книг українською мовою і теплим бесідам про них.
-                            </p>
-                            <a href="#" class="button-secondary slider__item-btn">Детальна інформація</a>
-                        </div>
-                    </div> -->
                 </div>
             </div>
-            <!-- <div class="swiper-button-prev">Prev</div>
-            <div class="swiper-button-next">Next</div> -->
         </div>
 
         <div class="swiper-thumbs-container">

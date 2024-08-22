@@ -16,6 +16,9 @@ $current_id = get_the_ID();
         $img = get_field('donates_money_img');
         $actually = get_field('donates_actually');
 
+        $sum_collected = get_field('donates_money_sum');
+        $sum_target = get_field('donates_money_sum_end');
+
         // echo get_field('donates_money_title');
         // echo get_field('donates_money_start');
         // echo get_field('donates_actually');
@@ -38,10 +41,21 @@ $current_id = get_the_ID();
                     <p class="post-type__text">
                         <?php echo get_field('donates_money_text'); ?>
                     </p>
-                    <p class="post-type__value"><?php echo get_field('title_active_sum', $current_id); ?></p>
-                    <p class="post-type__sum"><?php echo get_field('donates_money_sum'); ?></p>
+                    <div class="post-type__progress">
+                        <div class="post-type__progress-bar"></div>
+                    </div>
+                    <div class="post-type__money">
+                        <div>
+                            <p class="post-type__value"><?php echo get_field('title_active_sum', $current_id); ?></p>
+                            <p class="post-type__sum colected-sum" data-sum='<?php echo $sum_collected; ?>'>0</p>
+                        </div>
+                        <div>
+                            <p class="post-type__value"><?php echo get_field('title_active_sum_end', $current_id); ?></p>
+                            <p class="post-type__sum total-sum"><?php echo $sum_target; ?></p>
+                        </div>
+                    </div>
                     <div class="post-type__button">
-                        <button class="img-text__btn js-btn-donate"><?php echo get_field('donates_button_text', $current_id); ?></button>
+                        <button class="menu__btn js-btn-donate"><?php echo get_field('donates_button_text', $current_id); ?></button>
                     </div>
                 </div>
             </div>
