@@ -33,7 +33,7 @@
     if ($location_iframe) {
         //
         $href = get_home_url() . "/#event-map";
-        $text = __("Локація");
+        $text = $args["location_text"];
         //
         $location_svg_href = get_bloginfo('template_url') . "/assets/images/symbol-defs.svg#icon-location";
         $location_row = <<<ROW

@@ -13,12 +13,22 @@
 
         $query = new WP_Query($args);
 
+        // Text
+        $currend_id = get_the_ID();
+        $location_text = acf_esc_html(get_field('location_text__donate-things', $currend_id));
+
         // Outputting items
         echo '<div class="donate-things-items">';
         while ($query->have_posts()) {
             $query->the_post();
             // Project's item
-            get_template_part('parts/donate-things-item', null);
+            get_template_part(
+                'parts/donate-things-item',
+                null,
+                [
+                    "location_text" => $location_text,
+                ]
+            );
         }
         echo '</div>';
 
