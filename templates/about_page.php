@@ -24,7 +24,7 @@ $currend_id = get_the_ID();
                 <div class="about__text">
                     <?php echo get_field('text_about', $currend_id); ?>
                 </div>
-                <a href="<?php echo site_url('/devpage/'); ?>" class="about__button" rel="noopener noreferrer">
+                <a href="<?php echo site_url('/join/'); ?>" class="about__button" rel="noopener noreferrer">
                     <?php echo get_field('text_button', $currend_id); ?>
                 </a>
             </div>
@@ -45,7 +45,7 @@ $currend_id = get_the_ID();
                 <div class="about__text">
                     <?php echo get_field('text_about', $currend_id); ?>
                 </div>
-                <a href="<?php echo site_url('/devpage/'); ?>" class="about__button" rel="noopener noreferrer">
+                <a href="<?php echo site_url('/our-team-members/'); ?>" class="about__button" rel="noopener noreferrer">
                     <?php echo get_field('text_button', $currend_id); ?>
                 </a>
             </div>
