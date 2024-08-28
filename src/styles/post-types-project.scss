@@ -47,6 +47,7 @@
 
   .project-title {
     font-size: 18px;
+    min-height: 100px;
   }
 
   .project-items {
@@ -75,6 +76,7 @@
 
   .project-title {
     font-size: 32px;
+    min-height: 132px;
   }
 
   .project-items {
@@ -108,6 +110,10 @@
     gap: 104px;
   }
 
+  .project-title {
+    min-height: 88px;
+  }
+
   .project-items {
     gap: 40px;
   }
@@ -135,11 +141,12 @@
 
 @media screen and (min-width: 1440px) {
   .container__project {
-    gap: 101px;
+    gap: 112px;
   }
 
   .project-title {
     font-size: 36px;
+    min-height: 98px;
   }
 
   .project-items {
