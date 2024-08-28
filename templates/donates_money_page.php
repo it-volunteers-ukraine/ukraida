@@ -7,10 +7,13 @@ Template Name: donates money
 $currend_id = get_the_ID();
 $rows = get_field('news_list', $currend_id);
 
+
 ?>
 
 <main>
-    <?php get_template_part('/parts/breadcrumbs'); ?>
+    
+    <?php 
+    get_template_part('/parts/breadcrumbs'); ?>
     <section class="section section__donate1">
         <div class="container container__donate1">
             <h1 class="donate-gl-title"><?php echo get_field('title_page', $currend_id); ?></h1>
