@@ -1,3 +1,5 @@
+@import "../components/buttons";
+
 .about__title-wrapper {
   display: flex;
   justify-content: center;
@@ -39,16 +41,8 @@
 }
 
 .about__button {
-  display: block;
-  width: 170px;
-  height: 45px;
-  background-color: #1C59A6;
-  border-radius: 15px;
-  color: #fff;
-  font-family: 'Inter', sans-serif;
-  line-height: 45px;
-  text-align: center;
-  margin-bottom: 64px;
+  @include btn-main-l;
+  
 }
 
 
@@ -186,12 +180,7 @@
   }
 
   .about__button {
-    width: 224px;
-    height: 56px;
-    line-height: 56px;
-    font-size: 20px;
-    font-weight: 500;
-    margin-bottom: 112px;
+
   }
 
   .about__title-wrapper-slider {
@@ -305,11 +294,7 @@
   }
 
   .about__content {
-    text-align: center;
-    display: flex;
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
     gap: 20px;
   }
 
@@ -354,12 +339,7 @@
   }
 
   .about__button {
-    width: 294px;
-    height: 77px;
-    line-height: 56px;
-    font-size: 24px;
-    line-height: 77px;
-    margin-bottom: 0;
+
   }
 
   .about__slider-container {

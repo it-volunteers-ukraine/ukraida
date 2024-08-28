@@ -15,7 +15,8 @@ document.addEventListener("DOMContentLoaded", function () {
       xhr.onload = function () {
         if (xhr.status === 200) {
           var response = xhr.responseText.trim();
-
+          // const resParams = response.getElementById("res-params");
+          // console.log(resParams);
           if (response !== "") {
             var container = document.getElementById("donate-post-container");
             container.innerHTML += response;
