@@ -9,7 +9,7 @@ get_header();
         <div class="container container__next-event">
             <?php get_template_part('parts/next-event', null, []); ?>
         </div>
-    </section>  
+    </section>
 
     <section id="projects" class="section section__projects-swiper">
         <div class="container container__projects-swiper">
@@ -34,7 +34,13 @@ get_header();
             <?php get_template_part('parts/event-map', null, []); ?>
         </div>
     </section>
+    <section class="sectiom">
+        <div class="container container-instagram">
+        <?php get_template_part('parts/posts-instagram', null, []); ?>
 
+        </div>
+    </section>
+    
 </main>
 
 <?php get_footer(); ?>
