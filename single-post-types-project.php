@@ -17,13 +17,12 @@
                             $item_class = ($i % 2) ? 'project-items-item-odd' : 'project-items-item-even';
 
                             // Image block
-                            $image_url = get_sub_field('project_items_image');
+                            $image = get_sub_field('project_items_image');
                             $image_block = '';
-                            if ($image_url) {
+                            if ($image) {
+                                $image_tag = ImageHelper::get_image_tag($image, 'project-items-item-image');
                                 $image_block = <<<BLOCK
-                                    <div class="project-items-item-image-wrap">
-                                        <img class="project-items-item-image" src="$image_url" />
-                                    </div>
+                                    <div class="project-items-item-image-wrap">$image_tag</div>
                                 BLOCK;
                             }
                             // Text
