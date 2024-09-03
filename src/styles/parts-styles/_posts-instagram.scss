@@ -1,0 +1,13 @@
+.instagram-list {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  
+}
+
+.instagram-item {
+  width: 528px;
+  padding: 16px;
+  border-radius: 15px;
+  border: 2px solid $green;
+}

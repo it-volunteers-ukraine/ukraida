@@ -34,7 +34,7 @@ get_header();
             <?php get_template_part('parts/event-map', null, []); ?>
         </div>
     </section>
-    <section class="sectiom">
+    <section class="section">
         <div class="container container-instagram">
         <?php get_template_part('parts/posts-instagram', null, []); ?>
 
