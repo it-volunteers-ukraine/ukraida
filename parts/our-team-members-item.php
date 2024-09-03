@@ -14,11 +14,11 @@
     if ($instagram_name) {
         $instagram_link = "https://www.instagram.com/$instagram_name/";
         $instagram_block = <<<BLOCK
-            <span class="our-team-members-items-item-info-instagram">
+            <div class="our-team-members-items-item-info-instagram">
                 <a href="$instagram_link" target="_blank" rel="noopener noreferrer">
                     @$instagram_name
                 </a>
-            </span>
+            </div>
         BLOCK;
     }
 ?>
