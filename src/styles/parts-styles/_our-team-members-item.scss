@@ -2,7 +2,8 @@
 
 .our-team-members-items-item,
 .our-team-members-items-item-info,
-.our-team-members-items-item-info-wrap {
+.our-team-members-items-item-info-wrap,
+.our-team-members-items-item-info-instagram {
   display: flex;
   flex-direction: column;
 }
@@ -37,10 +38,7 @@
 
 .our-team-members-items-item-info {
   position: absolute;
-  bottom: 24px;
-  left: 24px;
   color: $white;
-  gap: 32px;
   overflow: hidden;
 }
 
@@ -49,18 +47,21 @@
   font-weight: 600;
 }
 
-.our-team-members-items-item-info-wrap {
-  gap: 24px;
-}
-
 .our-team-members-items-item-info-short-info,
 .our-team-members-items-item-info-instagram {
-  font-family: $font-main;
   font-weight: 400;
+  overflow: hidden;
 }
 
 .our-team-members-items-item-info-short-info {
+  font-family: $font-main;
   font-style: italic;
+}
+
+.our-team-members-items-item-info-instagram {
+  font-family: $font-advanced;
+  font-weight: 400;
+  justify-content: center;
 }
 
 @media screen and (max-width: 767.9px) {
@@ -70,17 +71,32 @@
     height: 318px;
   }
 
+  .our-team-members-items-item-info {
+    width: 258px;
+    top: 92px;
+    left: 12px;
+    gap: 24px;
+  }
+
   .our-team-members-items-item-info-name {
-    font-size: 18px;
+    font-size: 20px;
   }
 
   .our-team-members-items-item-info-wrap {
-    width: 212px;
+    gap: 8px;
   }
 
   .our-team-members-items-item-info-short-info,
   .our-team-members-items-item-info-instagram {
     font-size: 16px;
+  }
+
+  .our-team-members-items-item-info-short-info {
+    height: 110px;
+  }
+
+  .our-team-members-items-item-info-instagram {
+    height: 45px;
   }
 }
   
@@ -95,17 +111,29 @@
     right: 0px;
   }
 
+  .our-team-members-items-item-info {
+    width: 258px;
+    top: 104px;
+    left: 16px;
+    gap: 24px;
+  }
+
   .our-team-members-items-item-info-name {
-    font-size: 20px;
+    font-size: 24px;
   }
 
   .our-team-members-items-item-info-wrap {
-    width: 245px;
+    gap: 8px;
   }
 
-  .our-team-members-items-item-info-short-info,
+  .our-team-members-items-item-info-short-info {
+    font-size: 16px;
+    height: 110px;
+  }
+
   .our-team-members-items-item-info-instagram {
-    font-size: 18px;
+    font-size: 24px;
+    height: 50px;
   }
 }
   
@@ -119,17 +147,31 @@
     height: 595px;
   }
 
+  .our-team-members-items-item-info {
+    width: 390px;
+    top: 269px;
+    left: 24px;
+    gap: 32px;
+  }
+
   .our-team-members-items-item-info-name {
     font-size: 32px;
+    line-height: 43px;
   }
 
   .our-team-members-items-item-info-wrap {
-    width: 421px;
+    gap: 24px;
   }
 
-  .our-team-members-items-item-info-short-info,
+  .our-team-members-items-item-info-short-info {
+    font-size: 24px;
+    height: 165px;
+    line-height: 32px;
+  }
+
   .our-team-members-items-item-info-instagram {
     font-size: 24px;
+    height: 29px;
   }
 }
   
@@ -140,7 +182,8 @@
     height: 547px;
   }
 
-  .our-team-members-items-item-info-wrap {
-    width: 390px;
+  .our-team-members-items-item-info {
+    top: 221px;
+    gap: 24px;
   }
 }
