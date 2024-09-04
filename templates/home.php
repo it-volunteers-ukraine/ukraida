@@ -11,11 +11,7 @@ get_header();
         </div>
     </section>
 
-    <section id="projects" class="section section__projects-swiper">
-        <div class="container container__projects-swiper">
-            <?php get_template_part('parts/projects-swiper', null, []); ?>
-        </div>
-    </section>
+
 
     <section id="about" class="section section__about">
         <div class="container container__about">
@@ -23,21 +19,16 @@ get_header();
         </div>
     </section>
 
-    <!-- <section id="posts-instagramm" class="section section__instagram" >
+    <section class="section section__instagram">
         <div class="container container__instagram">
-            <?php get_template_part('parts/posts-instagram', null, []); ?>
+        <?php get_template_part('parts/posts-instagram', null, []); ?>
+
         </div>
-    </section> -->
+    </section>
 
     <section id="event-map" class="section container__map">
         <div class="container container-map">
             <?php get_template_part('parts/event-map', null, []); ?>
-        </div>
-    </section>
-    <section class="section">
-        <div class="container container-instagram">
-        <?php get_template_part('parts/posts-instagram', null, []); ?>
-
         </div>
     </section>
     

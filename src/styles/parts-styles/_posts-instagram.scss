@@ -1,13 +1,46 @@
 .instagram-list {
-  display: flex;
-  gap: 24px;
-  justify-content: center;
-  
 }
 
-.instagram-item {
-  width: 528px;
-  padding: 16px;
-  border-radius: 15px;
+.instagram-list .instagram-item {
+  width: 239px;
+  margin-right: 16px;
+  padding: 12px; 
   border: 2px solid $green;
+}
+
+.instagram-media{
+  min-width: unset !important;
+}
+
+.EmbedFrame{
+  padding: 10px;
+  padding-bottom: 100% !important;
+}
+.swiper-pagination{
+  margin-top: 24px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (min-width: 768px) {
+  .instagram-list .instagram-item {
+    width: 334px;
+    margin-right: 20px;
+    padding: 16px; 
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .instagram-list .instagram-item {
+    width: 376px;
+    padding: 8px; 
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .instagram-list .instagram-item {
+    width: 528px;
+    margin-right: 24px;
+    padding: 16px; 
+  }
 }
