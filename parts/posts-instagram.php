@@ -11,7 +11,7 @@ $current_id = get_the_ID();
                 get_template_part('parts/instagram-card', null, []);
             ?>
             <?php endwhile; ?>
-            <script async src="//www.instagram.com/embed.js"></script>
+            <script src="//www.instagram.com/embed.js"></script>
         <?php endif; ?>
 
     </div>

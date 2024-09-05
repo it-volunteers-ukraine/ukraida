@@ -60,14 +60,14 @@ function wp_it_volunteers_scripts()
     wp_enqueue_style('projects-bundle-style', get_template_directory_uri() . '/assets/styles/vendors/swiper-bundle.css', array());
     wp_enqueue_script('projects-scripts', get_template_directory_uri() . '/assets/scripts/vendors/swiper-bundle.min.js', array(), false, true);
 
-    // wp_enqueue_style('projects-swiper-style', get_template_directory_uri() . '/assets/styles/parts-styles/projects-swiper.css', array());
-    // wp_enqueue_script('projects-swiper-scripts', get_template_directory_uri() . '/assets/scripts/parts-scripts/projects-swiper.js', array(), false, true);
+    wp_enqueue_style('projects-swiper-style', get_template_directory_uri() . '/assets/styles/parts-styles/projects-swiper.css', array());
+    wp_enqueue_script('projects-swiper-scripts', get_template_directory_uri() . '/assets/scripts/parts-scripts/projects-swiper.js', array(), false, true);
 
     wp_enqueue_style('about-style', get_template_directory_uri() . '/assets/styles/parts-styles/about.css', array());
     wp_enqueue_script('about-scripts', get_template_directory_uri() . '/assets/scripts/parts-scripts/about.js', array(), false, true);
 
-    wp_enqueue_style('posts-instagram-style', get_template_directory_uri() . '/assets/styles/parts-styles/posts-instagram.css', array());
-    wp_enqueue_script('posts-instagram-scripts', get_template_directory_uri() . '/assets/scripts/parts-scripts/posts-instagram.js', array(), false, true);
+    // wp_enqueue_style('posts-instagram-style', get_template_directory_uri() . '/assets/styles/parts-styles/posts-instagram.css', array());
+    // wp_enqueue_script('posts-instagram-scripts', get_template_directory_uri() . '/assets/scripts/parts-scripts/posts-instagram.js', array(), false, true);
 
     wp_enqueue_style('event-map-style', get_template_directory_uri() . '/assets/styles/parts-styles/event-map.css', array());
     wp_enqueue_script('event-map-scripts', get_template_directory_uri() . '/assets/scripts/parts-scripts/event-map.js', array(), false, true);

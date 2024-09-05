@@ -67,3 +67,16 @@ const adaptiveSlider = (e) => {
 window.addEventListener("resize", (e) => {
   debounce(adaptiveSlider, intervalDebounce);
 });
+
+
+document.addEventListener('load', function() {
+    // Найти все элементы с классом "Content EmbedFrame"
+    console.log("Start find elements");
+    var elements = document.querySelectorAll('.Content.EmbedFrame');
+    console.log(elements);
+    // Пройтись по каждому элементу и изменить его стиль
+    elements.forEach(function(element) {
+        element.style.padding.bottom = '100%'; // Пример изменения стиля
+        // element.style.border = '2px solid red'; // Пример изменения стиля
+    });
+});
