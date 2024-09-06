@@ -75,11 +75,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="menu__item">
-                        <svg class="menu__img">
-                            <use xlink:href="<?php bloginfo('template_url'); ?>/assets/images/header/sprite.svg#language"></use>
-                        </svg>
-                        <span class="menu__itm-lang active">DE</span>&nbsp;/&nbsp;<span class="menu__itm-lang">UA</span></a>
+                    <?php get_template_part('parts/lang-switcher', null, ["type" => ""]); ?>
                 </li>
                 <!-- <li><button type="button" id="js-btn-donate" class="menu__btn">Spenden</button></li> -->
                 <li><button type="button" id="js-btn-donate" class="menu__btn donate-btn donate-animate"><?php echo get_field('header_button_text', 'option'); ?></button></li>
@@ -91,11 +87,7 @@
                 <div class="js-menu-container">
                     <ul class="menu__modal">
                         <li>
-                            <a href="/" class="menu__modal-item">
-                                <svg class="menu__modal-img">
-                                    <use xlink:href="<?php bloginfo('template_url'); ?>/assets/images/header/sprite.svg#language"></use>
-                                </svg>
-                                <span class="menu__itm-lang active">DE</span>&nbsp;/&nbsp;<span class="menu__itm-lang">UA</span></a>
+                            <?php get_template_part('parts/lang-switcher', null, ["type" => "modal"]); ?>
                         </li>
                         <li>
                             <button class="modal__btn js-close-menu">
