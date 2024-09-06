@@ -42,6 +42,10 @@
             // Adding prepared element to the switcher
             $langs[] = $element;
         }
+    } else {
+        // In case if Polylang is not installed and activated add something to show
+        $langs[] = '<a href="/" class="menu__itm-lang active">DE</a>';
+        $langs[] = '<span class="menu__itm-lang">UA</span>';
     }
     // Imploding all elements with separator " / "
     $langs_str = implode("&nbsp;/&nbsp;", $langs);
