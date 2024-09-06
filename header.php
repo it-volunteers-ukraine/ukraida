@@ -55,6 +55,7 @@
             <a href="/" class="logo"><img class="nav__img" src="<?php echo $img['url'] ?>" alt="Logo" /></a>
             <nav class="nav">
                 <?php wp_nav_menu([
+                    'menu'                 => 'Header',
                     'theme_location'       => 'header',
                     'container'            => false,
                     'menu_class'           => 'nav__site',
@@ -106,6 +107,7 @@
                     </ul>
                     <div class="nav__modal-wrap">
                         <?php wp_nav_menu([
+                            'menu'                 => 'Header',
                             'theme_location'       => 'header',
                             'container'            => false,
                             'menu_class'           => 'nav__modal',
