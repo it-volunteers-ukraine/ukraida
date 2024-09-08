@@ -51,8 +51,9 @@
             <?php
             $img = get_field('header_logo', 'option');
             // var_dump($img);
+            $home_url = function_exists('pll_home_url') ? esc_url(pll_home_url()) : '/';
             ?>
-            <a href="/" class="logo"><img class="nav__img" src="<?php echo $img['url'] ?>" alt="Logo" /></a>
+            <a href="<?= $home_url ?>" class="logo"><img class="nav__img" src="<?php echo $img['url'] ?>" alt="Logo" /></a>
             <nav class="nav">
                 <?php wp_nav_menu([
                     'menu'                 => 'Header',

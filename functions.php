@@ -457,3 +457,6 @@ require get_template_directory() . '/parts/our-team-members-load-more.php';
 
 // Helper functions to work with images
 require get_template_directory() . '/parts/image-helper.php';
+
+// Helper functions to work with Polylang
+require get_template_directory() . '/parts/pll-helper.php';

@@ -6,6 +6,9 @@ Template Name: about us
 
 <?php
 $currend_id = get_the_ID();
+
+// Get the current translation for the devpage
+$dev_page_url = PllHelper::get_current_translation('/devpage');
 ?>
 
 <main class="about about__wrapper">
@@ -96,7 +99,7 @@ $currend_id = get_the_ID();
 
                     <div class="swiper-pagination about__slider-pagination"></div>
                     <div class="about__slider-button">
-                        <a href="<?php echo site_url('/devpage/'); ?>" class="about__button" rel="noopener noreferrer">
+                        <a href="<?= $dev_page_url ?>" class="about__button" rel="noopener noreferrer">
                             <?php echo get_field('text_button', $currend_id); ?>
                         </a>
                     </div>
@@ -146,7 +149,7 @@ $currend_id = get_the_ID();
             </div>
                 <?php endif; ?>
             <div class="about__slider-button-bottom">
-                <a href="<?php echo site_url('/devpage/'); ?>" class="about__button" rel="noopener noreferrer">
+                <a href="<?= $dev_page_url ?>" class="about__button" rel="noopener noreferrer">
                     <?php echo get_field('text_button', $currend_id); ?>
                 </a>
             </div>
