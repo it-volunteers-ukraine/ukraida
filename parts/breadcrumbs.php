@@ -2,13 +2,13 @@
     // Helper function to get the breadcrumb item
     function get_breadcrumb_item($url, $title) {
         $s = <<<ITEM
-        <li><a href="$url">$title</a></li>
+        <li class="breadcrumbs-item"><a href="$url">$title</a></li>
         ITEM;
         return $s;
     }
 
     // Active item
-    $active = '<li class="active">' . get_the_title() . '</li>';
+    $active = '<li class="breadcrumbs-item active">' . get_the_title() . '</li>';
     $bcs = [$active];
 
     // Retrieving all parent items one by one and adding them to breadcrumbs array
@@ -32,10 +32,8 @@
     // Reversing items, joining them into one string
     $bcs_s = join("", array_reverse($bcs));
 
-    // Determining language class
-    $current_lang_slug = function_exists('pll_current_language') ? pll_current_language() : 'de';
-    $lang_class = "breadcrumbs-$current_lang_slug";
-
     echo <<<BREADCRUMBS
-    <nav class="breadcrumbs $lang_class"><ul>$bcs_s</ul></nav>
+        <div class="container container__breadcrumbs">
+            <nav class="breadcrumbs"><ul>$bcs_s</ul></nav>
+        </div>
     BREADCRUMBS;
