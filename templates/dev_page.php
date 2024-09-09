@@ -5,6 +5,8 @@ Template Name: devpage
     $header_text = esc_html(get_field('header_text'));
     $paragraph_text = esc_html(get_field('paragraph_text'));
     $button_text = esc_html(get_field('return_to_home_button_text'));
+
+    $home_url = function_exists('pll_home_url') ? esc_url(pll_home_url()) : '/';
 ?>
 <div class="wrapper">
     <main>
@@ -17,7 +19,7 @@ Template Name: devpage
                     <h2 class="title__text"><?= $header_text ?></h2>
                     <p class="text__item"><?= $paragraph_text ?></p>
                     <div>
-                        <a href="/">
+                        <a href="<?= $home_url ?>">
                             <button class="dev__btn"><?= $button_text ?></button>
                         </a>
                     </div>
