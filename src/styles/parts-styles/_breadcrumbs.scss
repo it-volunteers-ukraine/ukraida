@@ -33,28 +33,51 @@ nav.breadcrumbs {
 @media screen and (min-width: 1440px) {
     nav.breadcrumbs {
         padding-left: 0px;
+    }
 
+    nav.breadcrumbs-ua {
         /* Widths of header items and gaps */
         width: calc(
             114px + 62px + 767.583px + 62px + 367.312px
         );
     }
+
+    nav.breadcrumbs-de {
+        /* Widths of header items and gaps */
+        width: calc(
+            114px + 62px + 767.583px + 62px + 340.25px
+        );
+    }
 }
 
 @media screen and (min-width: 1600px) {
-    nav.breadcrumbs {
+    nav.breadcrumbs-ua {
         /* Widths of header items and gaps */
         width: calc(
             114px + 115px + 827.58px + 115px + 367.312px
         );
     }
+
+    nav.breadcrumbs-de {
+        /* Widths of header items and gaps */
+        width: calc(
+            114px + 115px + 827.58px + 115px + 340.25px
+        );
+    }
 }
 
 @media screen and (min-width: 1920px) {
-    nav.breadcrumbs {
+    nav.breadcrumbs-ua {
         /* Widths of header items and gaps */
         width: calc(
             114px + 135px + 877.58px + 135px + 367.312px
+        );
+    }
+
+    nav.breadcrumbs-de {
+        /* Widths of header items and gaps */
+        width: calc(
+            114px + 135px + 877.58px + 135px + 340.25px
         );
     }
 }
