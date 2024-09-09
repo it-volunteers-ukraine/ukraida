@@ -51,10 +51,12 @@
             <?php
             $img = get_field('header_logo', 'option');
             // var_dump($img);
+            $home_url = function_exists('pll_home_url') ? esc_url(pll_home_url()) : '/';
             ?>
-            <a href="/" class="logo"><img class="nav__img" src="<?php echo $img['url'] ?>" alt="Logo" /></a>
+            <a href="<?= $home_url ?>" class="logo"><img class="nav__img" src="<?php echo $img['url'] ?>" alt="Logo" /></a>
             <nav class="nav">
                 <?php wp_nav_menu([
+                    'menu'                 => 'Header',
                     'theme_location'       => 'header',
                     'container'            => false,
                     'menu_class'           => 'nav__site',
@@ -74,11 +76,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="menu__item">
-                        <svg class="menu__img">
-                            <use xlink:href="<?php bloginfo('template_url'); ?>/assets/images/header/sprite.svg#language"></use>
-                        </svg>
-                        <span class="menu__itm-lang active">DE</span>&nbsp;/&nbsp;<span class="menu__itm-lang">UA</span></a>
+                    <?php get_template_part('parts/lang-switcher', null, ["type" => ""]); ?>
                 </li>
                 <!-- <li><button type="button" id="js-btn-donate" class="menu__btn">Spenden</button></li> -->
                 <li><button type="button" id="js-btn-donate" class="menu__btn donate-btn donate-animate"><?php echo get_field('header_button_text', 'option'); ?></button></li>
@@ -90,11 +88,7 @@
                 <div class="js-menu-container">
                     <ul class="menu__modal">
                         <li>
-                            <a href="/" class="menu__modal-item">
-                                <svg class="menu__modal-img">
-                                    <use xlink:href="<?php bloginfo('template_url'); ?>/assets/images/header/sprite.svg#language"></use>
-                                </svg>
-                                <span class="menu__itm-lang active">DE</span>&nbsp;/&nbsp;<span class="menu__itm-lang">UA</span></a>
+                            <?php get_template_part('parts/lang-switcher', null, ["type" => "modal"]); ?>
                         </li>
                         <li>
                             <button class="modal__btn js-close-menu">
@@ -106,6 +100,7 @@
                     </ul>
                     <div class="nav__modal-wrap">
                         <?php wp_nav_menu([
+                            'menu'                 => 'Header',
                             'theme_location'       => 'header',
                             'container'            => false,
                             'menu_class'           => 'nav__modal',

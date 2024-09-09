@@ -6,6 +6,9 @@ Template Name: about us
 
 <?php
 $currend_id = get_the_ID();
+
+// Get the current translation for the devpage
+$dev_page_url = PllHelper::get_current_translation('/devpage');
 ?>
 
 <main class="about about__wrapper">
@@ -93,7 +96,6 @@ $currend_id = get_the_ID();
                             <?php endwhile; ?>
                             <?php endif; ?>
                         </div>
-
                         <div class="swiper-pagination about__slider-pagination"></div>
                         <div class="about__button-wrapper">
                             <a href="<?php echo site_url('/devpage/'); ?>" class="about__button about__slider-button" rel="noopener noreferrer">

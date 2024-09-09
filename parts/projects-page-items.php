@@ -23,13 +23,30 @@
 
         $query = new WP_Query($args);
 
+        // Texts
+        $currend_id = get_the_ID();
+        $active_text = acf_esc_html(get_field('projects_active_text', $currend_id));
+        $inactive_text = acf_esc_html(get_field('projects_inactive_text', $currend_id));
+        $detailed_information_text = acf_esc_html(get_field('projects_detailed_information_text', $currend_id));
+
         // Outputting items
         $index = 1;
         echo '<div class="projects-items">';
         while ($query->have_posts()) {
             $query->the_post();
             // Project's item
-            get_template_part('parts/projects-page-item', null, ["index" => $index]);
+            get_template_part(
+                'parts/projects-page-item',
+                null,
+                [
+                    "index" => $index,
+                    "texts" => [
+                        "active" => $active_text,
+                        "inactive" => $inactive_text,
+                        "detailed_information" => $detailed_information_text,
+                    ],
+                ],
+            );
             // Line after odd items, but only if there are more posts
             if (($index % 2) && ($query->current_post + 1 < $query->post_count)) {
                 echo '<hr class="projects-items-hr" />';

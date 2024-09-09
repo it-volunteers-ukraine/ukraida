@@ -454,3 +454,9 @@ add_action('wp_enqueue_scripts', 'enqueue_progress_bar_script');
 
 // Load more action for "Our team members" page
 require get_template_directory() . '/parts/our-team-members-load-more.php';
+
+// Helper functions to work with images
+require get_template_directory() . '/parts/image-helper.php';
+
+// Helper functions to work with Polylang
+require get_template_directory() . '/parts/pll-helper.php';
