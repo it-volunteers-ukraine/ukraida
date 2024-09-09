@@ -23,6 +23,12 @@
         $parent_id = wp_get_post_parent_id($parent_id);
     }
 
+    // Home page
+    $home_url = function_exists('pll_home_url') ? pll_home_url() : '/';
+    $home_id = url_to_postid($home_url);
+    $home_title = get_the_title($home_id);
+    $bcs[] = get_breadcrumb_item($home_url, $home_title);
+
     // Reversing items, joining them into one string
     $bcs_s = join("", array_reverse($bcs));
 
