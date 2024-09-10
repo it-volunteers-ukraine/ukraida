@@ -54,7 +54,7 @@ $currend_id = get_the_ID();
  
     <section class="slider__wrapper about__slider-wrapper container">
         <button class="slider__button swiper-button-prev">
-            <svg width="32" height="32">
+            <svg class="dsadasda">
                 <use xlink:href="#left-arrow"></use>
             </svg>
         </button>
