@@ -1,38 +1,38 @@
 console.log('script part/posts-instagram')
 
-// const intervalDebounce = 300;
-// let debounceTimer;
+const intervalDebounce1 = 300;
+let debounceTimer1;
 
-// const debounce = (callback, time) => {
-//   window.clearTimeout(debounceTimer);
-//   debounceTimer = window.setTimeout(callback, time);
-// };
+const debounce1 = (callback, time) => {
+  window.clearTimeout(debounceTimer1);
+  debounceTimer1 = window.setTimeout(callback, time);
+};
 
-// function calulateThumbs() {
-//   const widtWin = window.innerWidth;
-//   countThumbs = 0;
-//   if (widtWin < 767) {
-//     countThumbs = 1.1;
-//   } else if (widtWin < 1199) {
-//     countThumbs = 2;
-//   } else {
-//     countThumbs = 3;
-//   }
-//   return countThumbs;
-// }
+function calulateThumbs1() {
+  const widtWin = window.innerWidth;
+  countThumbs = 0;
+  if (widtWin < 767) {
+    countThumbs = 1.1;
+  } else if (widtWin < 1199) {
+    countThumbs = 2;
+  } else {
+    countThumbs = 3;
+  }
+  return countThumbs;
+}
 
-// function calculateSpaceBetween() {
-//   const widtWin = window.innerWidth;
-//   countSpaceBetween = 0;
-//   if (widtWin < 767) {
-//     countSpaceBetween = 16;
-//   } else if (widtWin < 1439) {
-//     countSpaceBetween = 20;
-//   } else {
-//     countSpaceBetween = 24;
-//   }
-//   return countSpaceBetween;
-// }
+function calculateSpaceBetween1() {
+  const widtWin = window.innerWidth;
+  countSpaceBetween = 0;
+  if (widtWin < 767) {
+    countSpaceBetween = 16;
+  } else if (widtWin < 1439) {
+    countSpaceBetween = 20;
+  } else {
+    countSpaceBetween = 24;
+  }
+  return countSpaceBetween;
+}
 
 const swiperInstagram = new Swiper(".swiper-instagram", {
   // Optional parameters
@@ -46,23 +46,23 @@ const swiperInstagram = new Swiper(".swiper-instagram", {
   },
   direction: "horizontal",
   loop: true,
-  slidesPerView: calulateThumbs(),
-  spaceBetween: calculateSpaceBetween(),
+  slidesPerView: calulateThumbs1(),
+  spaceBetween: calculateSpaceBetween1(),
   speed: 500,
 });
 
 
-// const adaptiveSlider = (e) => {
-//   const widtWin = window.innerWidth;
-//   swiperInstagram.params.slidesPerView = calulateThumbs();
-//   swiperInstagram.params.spaceBetween = calculateSpaceBetween();
-//   swiperInstagram.update();
-// };
+const adaptiveSlider1 = (e) => {
+  const widtWin = window.innerWidth;
+  swiperInstagram.params.slidesPerView = calulateThumbs1();
+  swiperInstagram.params.spaceBetween = calculateSpaceBetween1();
+  swiperInstagram.update();
+};
 
 
-// window.addEventListener("resize", (e) => {
-//   debounce(adaptiveSlider, intervalDebounce);
-// });
+window.addEventListener("resize", (e) => {
+  debounce1(adaptiveSlider1, intervalDebounce1);
+});
 
 
 document.addEventListener('load', function() {
