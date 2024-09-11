@@ -440,6 +440,12 @@ function true_breadcrumbs()
 }
 
 
+// function remove_oembed_captions($html, $data, $url) {
+//   // Удаляем подписи из HTML
+//   $html = preg_replace('/<div class="Caption">.*?<\/div>/', '', $html);
+//   return $html;
+// }
+// add_filter('oembed_dataparse', 'remove_oembed_captions', 10, 3);
 // load more
 function enqueue_load_more_script()
 {
@@ -449,7 +455,7 @@ function enqueue_load_more_script()
     'ajax_url' => admin_url('admin-ajax.php'),
   ));
 }
-add_action('wp_enqueue_scripts', 'enqueue_load_more_script');
+// add_action('wp_enqueue_scripts', 'enqueue_load_more_script');
 
 require get_template_directory() . '/parts/load-more.php';
 
@@ -466,5 +472,12 @@ require get_template_directory() . '/parts/our-team-members-load-more.php';
 // Helper functions to work with images
 require get_template_directory() . '/parts/image-helper.php';
 
+// function remove_oembed_caption_block($html, $data, $url) {
+//   // Удаляем блок <div class="Caption"></div> из HTML
+//   $html = preg_replace('/<div class="Caption"[^>]*>.*?<\/div>/s', '', $html);
+//   return $html;
+// }
+// add_filter('oembed_dataparse', 'remove_oembed_caption_block', 10, 3);
 // Helper functions to work with Polylang
 require get_template_directory() . '/parts/pll-helper.php';
+
