@@ -241,8 +241,11 @@
   }
 
   .about__partners-list {
+    max-width: 800px;
     column-gap: 64px;
     row-gap: 56px;
+    margin-left: auto;
+    margin-right: auto;
   }
   
   .partners-item:nth-child(-n + 3) {
@@ -262,9 +265,9 @@
   }
 
   .partners-list-img {
+    margin-bottom: 32px;
     width: 124px;
     height: 124px;
-    margin-bottom: 32px;
   }
 
   .partners-list-img figcaption {
@@ -281,7 +284,7 @@
     flex-direction: row;
     gap: 20px;
   }
-
+  
   .content-who-are-we {
     margin: 32px 0 0 0;
   }
