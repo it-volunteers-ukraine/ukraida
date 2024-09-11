@@ -11,7 +11,8 @@ $currend_id = get_the_ID();
 $dev_page_url = PllHelper::get_current_translation('/devpage');
 
 //
-$detailed_text = get_field('about_detailed_text');
+$detailed_information_button_text = esc_html(get_field('detailed_information_button_text', $currend_id));
+$detailed_text = esc_html(get_field('about_detailed_text', $currend_id));
 ?>
 
 <main class="about about__wrapper">
@@ -39,7 +40,7 @@ $detailed_text = get_field('about_detailed_text');
                         <?php echo wp_kses_post(get_sub_field('about_us_text')); ?>
                     </div>
                     <a href="<?php echo esc_url(get_sub_field('button_link_page')); ?>" class="about__button" rel="noopener noreferrer">
-                        <?php echo esc_html(get_sub_field('about_us_button_text')); ?>
+                        <?php echo $detailed_information_button_text; ?>
                     </a>
                 </div>
             </div>
@@ -94,7 +95,7 @@ $detailed_text = get_field('about_detailed_text');
                         <div class="swiper-pagination about__slider-pagination"></div>
                         <div class="about__button-wrapper">
                             <a href="<?= $dev_page_url ?>" class="about__button about__slider-button" rel="noopener noreferrer">
-                                <?php echo get_field('text_button', $currend_id); ?>
+                                <?php echo $detailed_information_button_text; ?>
                             </a>
                         </div> 
                     </div>
@@ -135,7 +136,7 @@ $detailed_text = get_field('about_detailed_text');
 
             <div class="about__slider-button about__slider-button-bottom">
                 <a href="<?= $dev_page_url ?>" class="about__button" rel="noopener noreferrer">
-                    <?php echo get_field('text_button', $currend_id); ?>
+                    <?php echo $detailed_information_button_text; ?>
                 </a>
             </div>
         </div>
