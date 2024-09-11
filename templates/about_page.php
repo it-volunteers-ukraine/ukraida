@@ -11,45 +11,36 @@ $currend_id = get_the_ID();
 <main class="about about__wrapper">
     <section class="section">
         <div class="container">
-            <h1 class="about__title"><?php echo get_field('title_about', $currend_id); ?></h1>
+            <h1 class="about__title"><?php echo esc_html(get_field('title_about', $currend_id)); ?></h1>
+                <?php if( have_rows('about_us', $currend_id) ): ?>
+                <?php while( have_rows('about_us', $currend_id) ): the_row(); ?>
             <div class="about__content content-about-us">
+                <?php $about_us_title = get_sub_field('about_us_title'); ?>
+                <?php if( $about_us_title ): ?>
+                <h2 class="about__title about__title-who-are-we"><?php echo esc_html($about_us_title); ?></h2>
+                    <?php endif; ?>
+                    <?php $image = get_sub_field('about_us_img'); ?>
+                    <?php if( $image ): ?>
                 <div class="about__img">
-                    <?php $image = get_field('img_about', $currend_id);
-                    if( !empty($image) ): ?>
                     <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>">
-                        <?php endif; ?>
                 </div>
+                    <?php endif; ?>
                 <div>
+                    <?php if( $about_us_title ): ?>
+                    <h2 class="about__title about__title-who-are-we-block"><?php echo esc_html($about_us_title); ?></h2>
+                        <?php endif; ?>
                     <div class="about__text">
-                        <?php echo get_field('text_about', $currend_id); ?>
+                        <?php echo wp_kses_post(get_sub_field('about_us_text')); ?>
                     </div>
-                    <a href="<?php echo get_field('link_section_one', $currend_id); ?>" class="about__button" rel="noopener noreferrer">
-                        <?php echo get_field('text_button', $currend_id); ?>
+                    <a href="<?php echo esc_url(get_sub_field('button_link_page')); ?>" class="about__button" rel="noopener noreferrer">
+                        <?php echo esc_html(get_sub_field('about_us_button_text')); ?>
                     </a>
                 </div>
             </div>
-
-            <div class="about__content content-who-are-we">
-                <h2 class="about__title about__title-who-are-we"><?php echo get_field('title_section_who_are_we', $currend_id); ?></h2>
-                <div class="about__img">
-                    <?php $image = get_field('img_section_who_are_we', $currend_id);
-                    if( !empty($image) ): ?>
-                    <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>">
-                        <?php endif; ?>
-                </div>
-                <div>
-                    <h2 class="about__title about__title-who-are-we-block"><?php echo get_field('title_section_who_are_we', $currend_id); ?></h2>
-                    <div class="about__text">
-                        <?php echo get_field('text_about', $currend_id); ?>
-                    </div>
-                    <a href="<?php echo get_field('link_section_two', $currend_id); ?>" class="about__button" rel="noopener noreferrer">
-                        <?php echo get_field('text_button', $currend_id); ?>
-                    </a>
-                </div>
-            </div>
+            <?php endwhile; ?>
+            <?php endif; ?>
         </div>
     </section>
-
 
     <section class="section slider__wrapper">
         <div class="container about__slider-container">

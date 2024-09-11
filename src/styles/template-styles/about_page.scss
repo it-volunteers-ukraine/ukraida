@@ -6,12 +6,16 @@
   text-align: center;
 }
 
-.about__title-who-are-we-block {
-  display: none;
+.about__content:nth-child(3) .about__title {
+  padding: 64px 0 16px 0;
+}
+
+.about__content:nth-child(3) .about__img {
+  padding-top: 64px;
 }
 
 .about__title-who-are-we {
-  padding: 64px 0 32px 0;
+  display: none;
 }
 
 .about__content {
@@ -158,8 +162,8 @@
     padding: 45px 0 56px 0;
   }
 
-  .about__title-who-are-we {
-    padding: 112px 0 56px 0;
+  .about__content:nth-child(3) .about__title {
+    padding: 112px 0 24px 0;
   }
 
   .about__img img {
@@ -270,6 +274,7 @@
   }
 }                                                                                                                                                                                             
 
+
 @media (min-width: 1200px) {
   .about__content {
     text-align: center;
@@ -287,8 +292,16 @@
     font-weight: 700;
   }
 
-  .about__title-who-are-we {
-    display: none;
+  .about__content:nth-child(3) .about__title {
+    padding: 0 0 56px 0;
+  }
+
+  .about__content:nth-child(3) {
+    margin-top: 32px;
+  }
+
+  .about__content:nth-child(3) .about__img {
+    padding-top: 0;
   }
 
   .about__img img {
@@ -296,6 +309,10 @@
     height: 509px;
     max-width: unset;
     object-fit: cover;
+  }
+
+  .about__title-who-are-we {
+    display: none;
   }
 
   .about__title-who-are-we-block {
@@ -390,6 +407,7 @@
     padding: 0; 
   }
 }
+
 
 @media (min-width: 1440px) {
   .about__title {
