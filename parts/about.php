@@ -4,6 +4,9 @@
 $rows = get_field('img-text');
 if ($rows) {
 };
+
+// Get the current translation for the devpage
+$dev_page_url = PllHelper::get_current_translation('/devpage');
 ?>
 
 <section class="img-text section">
@@ -22,7 +25,7 @@ if ($rows) {
             <?php echo $rows[0]['img-text_text'] ?>
 
             <div class="img-text__button">
-                <a href="/devpage" class="img-text__btn">
+                <a href="<?= $dev_page_url ?>" class="img-text__btn">
                     <?php echo $rows[0]['img-text-btn'] ?></a>
             </div>
 
@@ -119,7 +122,7 @@ if ($rowNumber) { ?>
             <h2 class="title__content img-text__title img-text__title--desc"><?php echo $rows[1]['img-text_title'] ?></h2>
             <?php echo $rows[1]['img-text_text'] ?>
             <div class="img-text__button">
-                <a href="/devpage" class="img-text__btn-advanced">
+                <a href="<?= $dev_page_url ?>" class="img-text__btn-advanced">
                     <?php echo $rows[1]['img-text-btn'] ?></a>
             </div>
 

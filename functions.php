@@ -165,6 +165,14 @@ function wp_it_volunteers_scripts()
     // wp_enqueue_script('news-scripts', get_template_directory_uri() . '/assets/scripts/template-scripts/news.js', array(), false, true);
   }
 
+  if (is_page_template('templates/our_partners_and_sponsors.php')) {
+    wp_enqueue_style(
+      'our-partners-and-sponsors-style',
+      get_template_directory_uri() . '/assets/styles/template-styles/our-partners-and-sponsors.css',
+      array('main')
+    );    
+  }
+
   if (is_page_template('templates/our_team_members.php')) {
     // Style
     wp_enqueue_style(
@@ -464,10 +472,12 @@ require get_template_directory() . '/parts/our-team-members-load-more.php';
 // Helper functions to work with images
 require get_template_directory() . '/parts/image-helper.php';
 
-
 // function remove_oembed_caption_block($html, $data, $url) {
 //   // Удаляем блок <div class="Caption"></div> из HTML
 //   $html = preg_replace('/<div class="Caption"[^>]*>.*?<\/div>/s', '', $html);
 //   return $html;
 // }
 // add_filter('oembed_dataparse', 'remove_oembed_caption_block', 10, 3);
+// Helper functions to work with Polylang
+require get_template_directory() . '/parts/pll-helper.php';
+
