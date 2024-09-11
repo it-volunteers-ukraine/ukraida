@@ -9,9 +9,6 @@ $currend_id = get_the_ID();
 
 // Get the current translation for the devpage
 $dev_page_url = PllHelper::get_current_translation('/devpage');
-
-//
-$detailed_text = get_field('about_detailed_text');
 ?>
 
 <main class="about about__wrapper">
@@ -83,7 +80,7 @@ $detailed_text = get_field('about_detailed_text');
                                             <?php 
                                             $link = get_sub_field('about_in_media_link');
                                             if( $link ): ?>
-                                        <div class="slider__item-link"><a href="<?php echo esc_url($link); ?>"><?= $detailed_text ?></a></div> 
+                                        <div class="slider__item-link"><a href="<?php echo esc_url($link); ?>">Детальніше</a></div> 
                                         <?php endif; ?>
                                     </div>
                                 </div>
