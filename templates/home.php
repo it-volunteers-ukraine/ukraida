@@ -3,6 +3,7 @@
 Template Name: home
 */
 get_header();
+$current_id = get_the_ID();
 ?>
 <main>
     <section id="next-event" class="section section__next-event">
@@ -29,7 +30,11 @@ get_header();
 
             <h2 style="margin-top: 100px; text-align: center;">Feed Them Social - Page, Post, Video and Photo Galleries. Basic setting</h3>
             <?php
-            echo do_shortcode('[feed_them_social cpt_id=535]');
+            $shortcode = get_field('short_code_feed_them_social', $current_id); 
+            // echo 'shortcode=' . $shortcode;
+            // echo $shortcode;
+            echo do_shortcode($shortcode);
+            // echo do_shortcode('[feed_them_social cpt_id=535]');
             // echo do_shortcode('[feed_them_social cpt_id=541]');
             ?>
             <h2 style="margin-top: 100px; text-align: center;">Feed Them Social - Page, Post, Video and Photo Galleries. Buisnes setting</h3>
