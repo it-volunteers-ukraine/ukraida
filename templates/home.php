@@ -39,8 +39,11 @@ $current_id = get_the_ID();
             ?>
             <h2 style="margin-top: 100px; text-align: center;">Feed Them Social - Page, Post, Video and Photo Galleries. Buisnes setting</h3>
             <?php
+            $shortcode = get_field('short_code_feed_them_social_buisness', $current_id); 
+            echo do_shortcode($shortcode);
+
             // echo do_shortcode('[feed_them_social cpt_id=535]');
-            echo do_shortcode('[feed_them_social cpt_id=541]');
+            // echo do_shortcode('[feed_them_social cpt_id=541]');
             ?>
             <h2 style="margin-top: 100px; text-align: center;">Instagram Feed от Smash Balloon</h3>
             <?php
