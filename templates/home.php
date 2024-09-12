@@ -25,8 +25,29 @@ get_header();
 
     <section class="section section__instagram">
         <div class="container container__instagram">
-        <?php get_template_part('parts/posts-instagram', null, []); ?>
+            <?php get_template_part('parts/posts-instagram', null, []); ?>
 
+            <h2 style="margin-top: 100px; text-align: center;">Feed Them Social - Page, Post, Video and Photo Galleries. Basic setting</h3>
+            <?php
+            echo do_shortcode('[feed_them_social cpt_id=535]');
+            // echo do_shortcode('[feed_them_social cpt_id=541]');
+            ?>
+            <h2 style="margin-top: 100px; text-align: center;">Feed Them Social - Page, Post, Video and Photo Galleries. Buisnes setting</h3>
+            <?php
+            // echo do_shortcode('[feed_them_social cpt_id=535]');
+            echo do_shortcode('[feed_them_social cpt_id=541]');
+            ?>
+            <h2 style="margin-top: 100px; text-align: center;">Instagram Feed от Smash Balloon</h3>
+            <?php
+            // echo do_shortcode('[feed_them_social cpt_id=535]');
+            echo do_shortcode('[instagram-feed feed=2]');
+            ?>
+            <h2 style="margin-top: 100px; text-align: center;">Instagram Feed от Smash Balloon Oembeds</h3>
+            <?php
+            $instagram_url = 'https://www.instagram.com/p/C_AY9RetP6n/';
+            echo wp_oembed_get($instagram_url);
+            // echo do_shortcode('[feed_them_social cpt_id=535]');
+            ?>
         </div>
     </section>
 
@@ -35,7 +56,7 @@ get_header();
             <?php get_template_part('parts/event-map', null, []); ?>
         </div>
     </section>
-    
+
 </main>
 
 <?php get_footer(); ?>
