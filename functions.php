@@ -128,6 +128,12 @@ function wp_it_volunteers_scripts()
       'ajaxUrl' => admin_url('admin-ajax.php'),
     ];
     wp_localize_script('events-parts-scripts', 'vars', $front_scripts_args);
+
+    // Load more part
+    wp_enqueue_script('load-more', get_template_directory_uri() . '/assets/scripts/parts-scripts/load-more.js', array(), null, true);
+    wp_localize_script('load-more', 'ajax_load_more_params', array(
+      'ajax_url' => admin_url('admin-ajax.php'),
+    ));
   }
 
   if (is_page_template('templates/donates_things_page.php')) {
@@ -447,15 +453,6 @@ function true_breadcrumbs()
 // }
 // add_filter('oembed_dataparse', 'remove_oembed_captions', 10, 3);
 // load more
-function enqueue_load_more_script()
-{
-  wp_enqueue_script('load-more', get_template_directory_uri() . '/assets/scripts/parts-scripts/load-more.js', array(), null, true);
-
-  wp_localize_script('load-more', 'ajax_load_more_params', array(
-    'ajax_url' => admin_url('admin-ajax.php'),
-  ));
-}
-// add_action('wp_enqueue_scripts', 'enqueue_load_more_script');
 
 require get_template_directory() . '/parts/load-more.php';
 
