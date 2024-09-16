@@ -1,13 +1,13 @@
 {
     "description": "DO NOT DELETE THIS FILE. This file is used to keep track of which files have been synced in the most recent deployment. If you delete this file a resync will need to be done (which can take a while) - read more: https://github.com/SamKirkland/FTP-Deploy-Action",
     "version": "1.0.0",
-    "generatedTime": 1722941936160,
+    "generatedTime": 1726151920156,
     "data": [
         {
             "type": "file",
             "name": ".ftp-deploy-sync-state.json",
-            "size": 63378,
-            "hash": "febf0ac8b461e6edead5917236829b89dae597c484ff571ad7228870732ed3c5"
+            "size": 66266,
+            "hash": "65315d2798250e9549be2cf7dd2fb8df9475947041115bd14bacf35de1b20239"
         },
         {
             "type": "file",
@@ -22,20 +22,26 @@
             "hash": "c0ef4dc5005335fa5803f3c5490e92e264ea5e4cb61ced31ea7f269450a5de05"
         },
         {
+            "type": "file",
+            "name": "aaa.js",
+            "size": 157019,
+            "hash": "575fae6cc4780af571d5259f0d37e7bfc72b2147b8d2c2f7ed30105c3766a8bf"
+        },
+        {
             "type": "folder",
             "name": "assets"
         },
         {
             "type": "file",
             "name": "footer.php",
-            "size": 3915,
-            "hash": "4d35a958b24e135caa97196962ca68d12ef055f6f8bc7e7dd61ddb5e25a8c343"
+            "size": 4155,
+            "hash": "70c8f3831c173ece0676fa78e66e2c4a7cb7afdcc4c4ee854bafe800fa90145d"
         },
         {
             "type": "file",
             "name": "functions.php",
-            "size": 16475,
-            "hash": "7e6ee3cbdf054cc2b87616bc98678568db9a919809b583bb4280f11132541010"
+            "size": 21612,
+            "hash": "6d4768b2dec8d7f5dfdf41ac9c26b047725e371cbf15c4655b3851f88e2087bb"
         },
         {
             "type": "file",
@@ -46,8 +52,8 @@
         {
             "type": "file",
             "name": "header.php",
-            "size": 7885,
-            "hash": "33e64a2b1511224baf81ed3d8135ffcaeb407cd5900c788ebbeaabeafe0e9ec4"
+            "size": 7486,
+            "hash": "8fdaf07cc16586e611be9e13ee4a1ac8eb2da29c3c6e91d05755f0b5561092b8"
         },
         {
             "type": "file",
@@ -58,20 +64,14 @@
         {
             "type": "file",
             "name": "package-lock.json",
-            "size": 329614,
-            "hash": "46d329b649310f28ffbfd64eacd48995367e1d19eab70fc117237d046e8043cd"
+            "size": 329615,
+            "hash": "a4c7d5968fd8ba86d2d137ce30a659df98a41740cc6641495de6c24e305829d5"
         },
         {
             "type": "file",
             "name": "package.json",
             "size": 574,
             "hash": "e7fb808ecd3bb9c64bf2c2cfeca7736a6863380dc970dfa1cecb6a4b90c57489"
-        },
-        {
-            "type": "file",
-            "name": "package_.json",
-            "size": 648,
-            "hash": "7e4f04520bebf15dbf3975897d74b5d67456af1d9989ecdf16009f7ed820b5c8"
         },
         {
             "type": "file",
@@ -94,6 +94,12 @@
             "name": "sidebar.php",
             "size": 358,
             "hash": "16f30410aa5bb535e33445388ab73f177288d8f80a26c29ab069387428a33730"
+        },
+        {
+            "type": "file",
+            "name": "single-post-types-project.php",
+            "size": 1800,
+            "hash": "ed49457757b720ef302e4c27b2c90ebd7e97c7b289eaeae369321122eff33aa4"
         },
         {
             "type": "file",
@@ -130,38 +136,62 @@
         {
             "type": "file",
             "name": "parts/about.php",
-            "size": 3930,
-            "hash": "679c16e76642f83a3a1067cf6ac47efaf750d2d1d7867c093ad342b53491459c"
+            "size": 4066,
+            "hash": "dd250353520302c2684e21a182d71dd43ed98d3cebb51c775da0bb573287ae1c"
         },
         {
             "type": "file",
             "name": "parts/breadcrumbs.php",
-            "size": 1009,
-            "hash": "afd987d225715d046db172814d3d39802c736dc291d63f7cc34cc0ddd1b19a21"
+            "size": 1361,
+            "hash": "ae35ae83333e49d2250e3f09221958aa4122474b15cf06168435928c2510c631"
+        },
+        {
+            "type": "file",
+            "name": "parts/donate-things-items.php",
+            "size": 1227,
+            "hash": "58a7108a7fe56bee0e3a1ed06c7641d5ba2f899b9858bcf16df3a5bee3f5c157"
+        },
+        {
+            "type": "file",
+            "name": "parts/donate-things-item.php",
+            "size": 3095,
+            "hash": "201708454c0c9dfde0584c8b91b848b7dacdea68e9cfa3b41a5ef5088f68b3da"
+        },
+        {
+            "type": "file",
+            "name": "parts/donate-things-pagination.php",
+            "size": 7445,
+            "hash": "6d336cb9bf3c452c00a1b981005158e2d0cca18b6a11cf478f01da4ef47ec938"
+        },
+        {
+            "type": "file",
+            "name": "parts/donate-things-swipers.php",
+            "size": 2352,
+            "hash": "da3d4f4df46e96c9385b30402d213da45fdb82dceeff334fde8abe49b208dfa8"
         },
         {
             "type": "file",
             "name": "parts/donate-things.php",
-            "size": 1577,
-            "hash": "d489318c0d0c101df771e061dcd883f7e45f5e74a9a59cc195a8f6873a2b4a7b"
+            "size": 1599,
+            "hash": "047146b70c25fa47afe9661cd2e124724b51bcd385a1c329eddf45607536a82e"
         },
         {
             "type": "file",
             "name": "parts/donates1.php",
-            "size": 568,
-            "hash": "cc4a90afd0530b0d1aa43d06cea70b3cc49c9eec95dc20bc2044c01b18d5535c"
+            "size": 939,
+            "hash": "f29f546b1703e19f0a49341a813316d9e678157b9b02c2eb0e88239b7ab246c0"
         },
         {
             "type": "file",
             "name": "parts/donates2-swiper.php",
-            "size": 2954,
-            "hash": "c860869bb109d7c6b03ab463a0bb87c18990c1fa7c6a96f8fd85c2ad7755da8a"
+            "size": 2912,
+            "hash": "834047571f32dbdafedae67df2d404de32969ccecc6aab0d074c08918766258a"
         },
         {
             "type": "file",
             "name": "parts/donates2.php",
-            "size": 741,
-            "hash": "99a15bc406a4746040a0d77f80961d060803577514d08b6a558ebb910224a9ab"
+            "size": 1117,
+            "hash": "8c1c073b9375cbc8f66fcffc0cd8e7a7581a3a9cabf359f915c29144ba155dbd"
         },
         {
             "type": "file",
@@ -184,20 +214,26 @@
         {
             "type": "file",
             "name": "parts/donates_money2.php",
-            "size": 2929,
-            "hash": "703334d00e13aadf84a7a0ff77ddb84e10fe12a75e22d0dc4c252deb1eb129fb"
+            "size": 2637,
+            "hash": "c252a920506510081def0611d865604d0a7e0a3cfc4252eaef9c039f0bcbcbf6"
         },
         {
             "type": "file",
             "name": "parts/donates_money3.php",
-            "size": 1825,
-            "hash": "51457559a909f97ec1643f0b48dcf8834e51057f104a4e8cf61a067ee9ec6e75"
+            "size": 2901,
+            "hash": "b53f24245b408561564131a7f6b705ce1471d72bb0237d14ded86caa96dd104b"
         },
         {
             "type": "file",
             "name": "parts/donates_money4.php",
-            "size": 895,
-            "hash": "54e9227b8bc1da20abe0ca4d326669b49c475293176627395b928504d4afcd65"
+            "size": 894,
+            "hash": "5584762a19d348e3db4da533e8cd7ae67ea3299c9b77122506a02edff6f81979"
+        },
+        {
+            "type": "file",
+            "name": "parts/donates_money_result_card.php",
+            "size": 972,
+            "hash": "587a431e3943901924eb9beeacc540b4fd35c674cd4b9b06cb438775ad92c19b"
         },
         {
             "type": "file",
@@ -207,15 +243,57 @@
         },
         {
             "type": "file",
+            "name": "parts/image-helper.php",
+            "size": 1534,
+            "hash": "608a1d9a892ca1f5ac03454a42fd315a95335ff54467e0af20859d32f79f6df7"
+        },
+        {
+            "type": "file",
+            "name": "parts/instagram-card.php",
+            "size": 8188,
+            "hash": "6136a23508a9d993d273c464cbfa65777b6377ff5445c8c1be7d4ac6fea40929"
+        },
+        {
+            "type": "file",
+            "name": "parts/instagram-card_test.php",
+            "size": 1640,
+            "hash": "e481be7bb02b1eb7d01332974acc348b8ce50afdf3c01d9288faa049525bae0d"
+        },
+        {
+            "type": "file",
+            "name": "parts/instagram-card_test2.php",
+            "size": 282,
+            "hash": "48eaf1e3df1dba0a03bd51a2e8b3fb1f7ee33695a70ee91bff474589b49bd66e"
+        },
+        {
+            "type": "file",
+            "name": "parts/lang-switcher.php",
+            "size": 1975,
+            "hash": "5efa14de3fcabf988ecc69850631812d35f8a88b25b82d8505de2d72317aabb1"
+        },
+        {
+            "type": "file",
+            "name": "parts/load-more.php",
+            "size": 1084,
+            "hash": "7cb1a12716c7cc15433c0ba2986b99db17c7d6c2cebca59a57e7287cd3077e80"
+        },
+        {
+            "type": "file",
+            "name": "parts/modal-donate.php",
+            "size": 3111,
+            "hash": "e52c6b939b8ac3096e1a21c9a3965847786a5413b3136ed1d9ba2a765237d89b"
+        },
+        {
+            "type": "file",
             "name": "parts/modal-donate_v0.php",
             "size": 1827,
             "hash": "b6ba2bb7f7de9e666eae9a8a159c178dbc83c4696011d109f9567050571dc52c"
         },
         {
             "type": "file",
-            "name": "parts/modal-donate.php",
-            "size": 4642,
-            "hash": "8df42909a05054109151e8661c4e2e5de755fc1285ecb157f585bb0e9ff759a1"
+            "name": "parts/our-partners-and-sponsors-item.php",
+            "size": 2132,
+            "hash": "5a2cadbf71fa31459446a42b8fc96b7409ace5a19199c3dbdd25514eccb06933"
         },
         {
             "type": "file",
@@ -225,25 +303,79 @@
         },
         {
             "type": "file",
+            "name": "parts/our-partners-and-sponsors-items.php",
+            "size": 932,
+            "hash": "4a2076a17e62998366206a9bd258f937be2ba3dc80b0aa1403e27528124e592e"
+        },
+        {
+            "type": "file",
+            "name": "parts/our-team-members-item.php",
+            "size": 1498,
+            "hash": "252f17d5c381f43eef604281cef4d7592d41b182f266783d478659bea6ab8db4"
+        },
+        {
+            "type": "file",
+            "name": "parts/our-team-members-load-more.php",
+            "size": 1130,
+            "hash": "b99d8d63a3cbf38e0bc444afda4d122125403bd2674239838e4dec3519941c88"
+        },
+        {
+            "type": "file",
+            "name": "parts/pll-helper.php",
+            "size": 827,
+            "hash": "620079eea607e01b30d01de7b72d96c8419a97fdb6e9fced3916a5352e445a49"
+        },
+        {
+            "type": "file",
             "name": "parts/posts-instagram.php",
-            "size": 69,
-            "hash": "08b613c7c8c95ad297da8f4e74b00bb081aa9f79d9921c90273bba4e4eece7bc"
+            "size": 929,
+            "hash": "0ccf5d44b8fb3efd83a891f683b240aa7c21d6654d7c19e2bdc63381fcdadea4"
+        },
+        {
+            "type": "file",
+            "name": "parts/projects-page-filter.php",
+            "size": 1423,
+            "hash": "629ae7505d1f75832032eae8c40da10baffc029628a5b98e8915dfba9493f069"
+        },
+        {
+            "type": "file",
+            "name": "parts/projects-page-item.php",
+            "size": 1561,
+            "hash": "953eb02cd203f40db44f15e6a68105df26bdc3706bc87620e0b884e919a8cae0"
+        },
+        {
+            "type": "file",
+            "name": "parts/projects-page-items.php",
+            "size": 2249,
+            "hash": "5095ccf2ff8db1e11d99ce198ee08e0cdae79fe25f3e09aeba261eff250dbd6e"
+        },
+        {
+            "type": "file",
+            "name": "parts/projects-page-pagination.php",
+            "size": 6854,
+            "hash": "87695e39b1b0225d88e0ebc4bea3349a9261d3d1f1bd6cbc18789849848be9db"
+        },
+        {
+            "type": "file",
+            "name": "parts/projects-page-swipers.php",
+            "size": 2306,
+            "hash": "c9314789085fc764ce7ba0590853049cbdd81df87d9ba0dd144d35f9cea625ce"
         },
         {
             "type": "file",
             "name": "parts/projects-swiper.php",
-            "size": 16280,
-            "hash": "04d17f26684eff0288532e8f70876a37580feebcd818ca2bc1b22171eb7fff18"
+            "size": 6900,
+            "hash": "b206892c16c58ded6503435296d518ed1e2a714e8a17f2e7199948426b50cbef"
+        },
+        {
+            "type": "folder",
+            "name": "src/images"
         },
         {
             "type": "file",
             "name": "src/console.txt",
             "size": 104,
             "hash": "4eb0e185890dd7a065c1aa1274540dcd9470d103312674e0a5a52a0324584415"
-        },
-        {
-            "type": "folder",
-            "name": "src/images"
         },
         {
             "type": "folder",
@@ -255,15 +387,27 @@
         },
         {
             "type": "file",
+            "name": "templates/about_page.php",
+            "size": 8606,
+            "hash": "5a0d3cd37d34b398c8438047fdb06a6eb104c0453543905458b03e845cb7160b"
+        },
+        {
+            "type": "file",
             "name": "templates/contacts.php",
             "size": 101,
             "hash": "5c6b0150d895376d63ef599b97725d836bf8ffa4268ecd2d0beb6fa4724c1dae"
         },
         {
             "type": "file",
+            "name": "templates/dev_page.php",
+            "size": 1360,
+            "hash": "3b82fc518d8ae1ab4ecf4563d7f9f661efd358236093df260c1c1dda0ef7cd93"
+        },
+        {
+            "type": "file",
             "name": "templates/donates_money_page.php",
-            "size": 1146,
-            "hash": "b0cfbc6a6a6b9603db99f9f4cd598fbcd7af56531a378f9d9216fb8d0908b932"
+            "size": 1157,
+            "hash": "802e20e369e579fd4ce880de2863a7749190befd33353bf3ab37ae8783a96bcd"
         },
         {
             "type": "file",
@@ -274,20 +418,20 @@
         {
             "type": "file",
             "name": "templates/donates_things_page.php",
-            "size": 207,
-            "hash": "c47fa881a94c7b271ecde7533e37ff77bf069a306ee03f1a1b145674ee77af29"
+            "size": 234,
+            "hash": "c7360517396342bb897312a50d92d746ab340c046ad687d9e804210650cf6c3b"
         },
         {
             "type": "file",
             "name": "templates/home.php",
-            "size": 1191,
-            "hash": "a885d37f911ffd3967f01eed3c45a79264d878e75dd466bd7b26067b05237eaf"
+            "size": 2730,
+            "hash": "6cbc50829618f6ef29208b80f03b75895032f59f28b2e993acf8021fea69a13e"
         },
         {
             "type": "file",
-            "name": "templates/dev_page.php",
-            "size": 1340,
-            "hash": "274511c447fdc68844b0c04483fb218a7d3483cc7428e33951eea9f471c6892c"
+            "name": "templates/join_page.php",
+            "size": 1660,
+            "hash": "8d200ecf33ea5b24dd9b71378fcab98985859568acf7c77091fb8592d15db593"
         },
         {
             "type": "file",
@@ -297,9 +441,27 @@
         },
         {
             "type": "file",
+            "name": "templates/our_partners_and_sponsors.php",
+            "size": 518,
+            "hash": "11c60b1d54ec971c40fe3edae5984e57a45156a571d96fa0a6d98542a902217b"
+        },
+        {
+            "type": "file",
             "name": "templates/privacy.php",
             "size": 1271,
             "hash": "8e253d6fc5a676fa2c495c5b9150e6203f75958dbde57edb53ddc47064c98536"
+        },
+        {
+            "type": "file",
+            "name": "templates/our_team_members.php",
+            "size": 441,
+            "hash": "b18fa17fa15f61bcac3b7d1f9f5947357489534060a275fae4ee67682fab2528"
+        },
+        {
+            "type": "file",
+            "name": "templates/projects.php",
+            "size": 481,
+            "hash": "07dff977676cf3ef99afc8d9d76ba59255f1d42f150eb54a1c7d70ac19566ae7"
         },
         {
             "type": "file",
@@ -358,8 +520,8 @@
         {
             "type": "file",
             "name": "assets/images/symbol-defs.svg",
-            "size": 9236,
-            "hash": "aa1bbd165406a05583fc9a6cd8d11741b614d39fcb0146fa111bbf1d3f0c91ca"
+            "size": 10398,
+            "hash": "713bb64f16515e6dfc99f825dd55e428833a9e87df2f51ae9b06ca1675a4eab4"
         },
         {
             "type": "file",
@@ -382,12 +544,18 @@
         {
             "type": "file",
             "name": "assets/styles/main.css",
-            "size": 26896,
-            "hash": "e03c424fc68bc668234f813a6aed1592b478c1e4180aca335ab46f454af392a9"
+            "size": 27308,
+            "hash": "d7777f36b48be3ccc5b9fa818b97fb226f9c8f4a12e8e97eaa1d0b4b2b8cdb95"
         },
         {
             "type": "folder",
             "name": "assets/styles/parts-styles"
+        },
+        {
+            "type": "file",
+            "name": "assets/styles/post-types-project.css",
+            "size": 2129,
+            "hash": "715845ef78733678b4a491de8126efa4c1b35e06a1885f83d40474d15b1aa1fd"
         },
         {
             "type": "folder",
@@ -413,19 +581,15 @@
         },
         {
             "type": "folder",
-            "name": "src/images/footer"
-        },
-        {
-            "type": "folder",
             "name": "src/images/favicon"
         },
         {
             "type": "folder",
-            "name": "src/images/header"
+            "name": "src/images/footer"
         },
         {
             "type": "folder",
-            "name": "src/images/home"
+            "name": "src/images/header"
         },
         {
             "type": "folder",
@@ -436,6 +600,10 @@
             "name": "src/images/logo.svg",
             "size": 23703,
             "hash": "07a35e91481e249415ec067672f7fab461cd05ba63d538cee29ae2d805ac4e29"
+        },
+        {
+            "type": "folder",
+            "name": "src/images/home"
         },
         {
             "type": "file",
@@ -454,14 +622,8 @@
         {
             "type": "file",
             "name": "src/images/symbol-defs.svg",
-            "size": 13810,
-            "hash": "f6f727c279fa42146efb279772bc3ac2af544faf5c1cf8cb937b0a61441322cf"
-        },
-        {
-            "type": "file",
-            "name": "src/scripts/footer.js",
-            "size": 27,
-            "hash": "acbeceafceee70598f292170e2d8f64a89166e9e2f7c809643eb4196a11daa67"
+            "size": 16926,
+            "hash": "df03980b0d3f39f164636cda6866a5899ea4a7ea09071832252495a4b7632c9e"
         },
         {
             "type": "file",
@@ -471,13 +633,19 @@
         },
         {
             "type": "file",
-            "name": "src/scripts/main.js",
-            "size": 20,
-            "hash": "ff6098093f75c38b7963e70bc91cb499e61bacf81695346b0e7a5e574e5e892c"
+            "name": "src/scripts/footer.js",
+            "size": 27,
+            "hash": "acbeceafceee70598f292170e2d8f64a89166e9e2f7c809643eb4196a11daa67"
         },
         {
             "type": "folder",
             "name": "src/scripts/parts-scripts"
+        },
+        {
+            "type": "file",
+            "name": "src/scripts/main.js",
+            "size": 20,
+            "hash": "ff6098093f75c38b7963e70bc91cb499e61bacf81695346b0e7a5e574e5e892c"
         },
         {
             "type": "folder",
@@ -507,25 +675,31 @@
         },
         {
             "type": "file",
+            "name": "src/styles/_header.scss",
+            "size": 5246,
+            "hash": "12387937b67d03ce1cf66192c08fe45c26cd96d8478a2f1e507ec2e816b2d931"
+        },
+        {
+            "type": "file",
             "name": "src/styles/_global.scss",
             "size": 1816,
             "hash": "3ccf556fc0f2467a7d9dada1cad2c3c4a9419642b9db216828546832ba16936c"
         },
         {
+            "type": "folder",
+            "name": "src/styles/components"
+        },
+        {
             "type": "file",
-            "name": "src/styles/_header.scss",
-            "size": 5206,
-            "hash": "4cd04eb67b77030cd1148bbf62d37767b89eedffff4221be20afa35957d7fab4"
+            "name": "src/styles/main.scss",
+            "size": 362,
+            "hash": "1274a63358005899d6066f9d5ffc7d9ba76f93268211d4f3eda8af268183a25c"
         },
         {
             "type": "file",
             "name": "src/styles/_variables.scss",
-            "size": 966,
-            "hash": "98b3ed770ef23fdf5d839b5e8e854f6dc3adbc390ecf0505c172a1727dffea12"
-        },
-        {
-            "type": "folder",
-            "name": "src/styles/components"
+            "size": 1044,
+            "hash": "a8f971644b013daa54855e3a694e6eec289619894567c21b51ca81c831f22e68"
         },
         {
             "type": "folder",
@@ -533,9 +707,9 @@
         },
         {
             "type": "file",
-            "name": "src/styles/main.scss",
-            "size": 362,
-            "hash": "1274a63358005899d6066f9d5ffc7d9ba76f93268211d4f3eda8af268183a25c"
+            "name": "src/styles/post-types-project.scss",
+            "size": 2290,
+            "hash": "48aae6aed7abcd89b21be2924a1d392862220e6166dd95af370a4fc3c7415853"
         },
         {
             "type": "folder",
@@ -553,15 +727,15 @@
         },
         {
             "type": "file",
-            "name": "assets/images/dev_page/bg_dev_page2.svg",
-            "size": 326,
-            "hash": "6d8fc74958b490335b012e98378ddf8e801c072f10cc4be70b4644a061ed6256"
-        },
-        {
-            "type": "file",
             "name": "assets/images/dev_page/bg_dev_page3.svg",
             "size": 339,
             "hash": "4f15a17b9e6672e2a25f2e58a55124c56d9beb6a522af9e95084e7b534555a82"
+        },
+        {
+            "type": "file",
+            "name": "assets/images/dev_page/bg_dev_page2.svg",
+            "size": 326,
+            "hash": "6d8fc74958b490335b012e98378ddf8e801c072f10cc4be70b4644a061ed6256"
         },
         {
             "type": "file",
@@ -577,15 +751,15 @@
         },
         {
             "type": "file",
-            "name": "assets/images/dev_page/dev_page-img3.png",
-            "size": 16323,
-            "hash": "85004ca65cff4f68441cfd2d0d0e7246a0727b8a9bd8de69af56bb8752e13df3"
-        },
-        {
-            "type": "file",
             "name": "assets/images/dev_page/dev_page-img2.png",
             "size": 18038,
             "hash": "6a5769be932bb1c5fd633931a1a3bdc0e960557a7a345d50385bb24e2b8e1919"
+        },
+        {
+            "type": "file",
+            "name": "assets/images/dev_page/dev_page-img3.png",
+            "size": 16323,
+            "hash": "85004ca65cff4f68441cfd2d0d0e7246a0727b8a9bd8de69af56bb8752e13df3"
         },
         {
             "type": "file",
@@ -607,15 +781,15 @@
         },
         {
             "type": "file",
-            "name": "assets/images/favicon/android-icon-192x192.png",
-            "size": 12792,
-            "hash": "be5e0d2545f9cf60652464b3b46edee675731f57955febdea0698dc434d06cb9"
-        },
-        {
-            "type": "file",
             "name": "assets/images/favicon/android-icon-36x36.png",
             "size": 2070,
             "hash": "2c0016cb147cf355df89b0f27f2cef182beec45616fe2e874872dc0e1bb1531f"
+        },
+        {
+            "type": "file",
+            "name": "assets/images/favicon/android-icon-192x192.png",
+            "size": 12792,
+            "hash": "be5e0d2545f9cf60652464b3b46edee675731f57955febdea0698dc434d06cb9"
         },
         {
             "type": "file",
@@ -625,15 +799,15 @@
         },
         {
             "type": "file",
-            "name": "assets/images/favicon/android-icon-96x96.png",
-            "size": 6365,
-            "hash": "654feb49581fafed20b2067e82f74a6a044e524760bb50061d6cf5ef32d56960"
-        },
-        {
-            "type": "file",
             "name": "assets/images/favicon/android-icon-72x72.png",
             "size": 4530,
             "hash": "de79a91afdd2e4ad4a1973f667771e510a1daf06be8c5e7a8241fa6a8227c5bb"
+        },
+        {
+            "type": "file",
+            "name": "assets/images/favicon/android-icon-96x96.png",
+            "size": 6365,
+            "hash": "654feb49581fafed20b2067e82f74a6a044e524760bb50061d6cf5ef32d56960"
         },
         {
             "type": "file",
@@ -643,15 +817,15 @@
         },
         {
             "type": "file",
-            "name": "assets/images/favicon/apple-icon-144x144.png",
-            "size": 10134,
-            "hash": "50bb6e1507cfe1f88867061cb51b61fbc64211d5299ef2b9abcad4bdde13d595"
-        },
-        {
-            "type": "file",
             "name": "assets/images/favicon/apple-icon-120x120.png",
             "size": 8008,
             "hash": "9715ccdb8bb21554244152d6109879a874b7b5949e5ac777195897a99363b844"
+        },
+        {
+            "type": "file",
+            "name": "assets/images/favicon/apple-icon-144x144.png",
+            "size": 10134,
+            "hash": "50bb6e1507cfe1f88867061cb51b61fbc64211d5299ef2b9abcad4bdde13d595"
         },
         {
             "type": "file",
@@ -667,15 +841,15 @@
         },
         {
             "type": "file",
-            "name": "assets/images/favicon/apple-icon-57x57.png",
-            "size": 3474,
-            "hash": "ce7a85520a21792bfed7fa0b885c3eb468047a7297efeaa92914d70688800c4b"
-        },
-        {
-            "type": "file",
             "name": "assets/images/favicon/apple-icon-60x60.png",
             "size": 3683,
             "hash": "1ece3d918b1aad80d9497e827bbce24fb7df4f94978aee01603003b63d528cce"
+        },
+        {
+            "type": "file",
+            "name": "assets/images/favicon/apple-icon-57x57.png",
+            "size": 3474,
+            "hash": "ce7a85520a21792bfed7fa0b885c3eb468047a7297efeaa92914d70688800c4b"
         },
         {
             "type": "file",
@@ -709,15 +883,15 @@
         },
         {
             "type": "file",
-            "name": "assets/images/favicon/favicon-32x32.png",
-            "size": 1743,
-            "hash": "8f4183dbcfd38e34c1dc003c078aba2f9bc82065f346a2813d402da25d67b33c"
-        },
-        {
-            "type": "file",
             "name": "assets/images/favicon/favicon-16x16.png",
             "size": 877,
             "hash": "1e0fc5bdcabae25843027999b73fd106c2b5951baaec02a4340c2b07daad60aa"
+        },
+        {
+            "type": "file",
+            "name": "assets/images/favicon/favicon-32x32.png",
+            "size": 1743,
+            "hash": "8f4183dbcfd38e34c1dc003c078aba2f9bc82065f346a2813d402da25d67b33c"
         },
         {
             "type": "file",
@@ -763,15 +937,15 @@
         },
         {
             "type": "file",
-            "name": "assets/images/footer/Logo_Ukraida.svg",
-            "size": 11014,
-            "hash": "4207b6e7d08069f5adfeb3ce628793a2b216ac41e679df00d5caca03a6daf9c5"
-        },
-        {
-            "type": "file",
             "name": "assets/images/footer/sprites.svg",
             "size": 10941,
             "hash": "d9a2924112387f95bde79d1fe5302d7565c7c81d4f5ca124859810cc8481d5f3"
+        },
+        {
+            "type": "file",
+            "name": "assets/images/footer/Logo_Ukraida.svg",
+            "size": 11014,
+            "hash": "4207b6e7d08069f5adfeb3ce628793a2b216ac41e679df00d5caca03a6daf9c5"
         },
         {
             "type": "file",
@@ -787,9 +961,21 @@
         },
         {
             "type": "file",
+            "name": "assets/images/home/about-1.png",
+            "size": 273713,
+            "hash": "716baf9fcdf02d260e718040305ba8517e67da751fe7ee47525e5f637773ed66"
+        },
+        {
+            "type": "file",
             "name": "assets/images/home/about-2-mob.png",
             "size": 104753,
             "hash": "b82db635525aa3a6cf3aed22333f341339ed432de669474c6da660c63ede0a80"
+        },
+        {
+            "type": "file",
+            "name": "assets/images/home/about-2.png",
+            "size": 536200,
+            "hash": "1775b2c5e952bc84bd8c1fefc3b7eb0f03eafb217caf65f03f6341c31036a530"
         },
         {
             "type": "file",
@@ -799,31 +985,13 @@
         },
         {
             "type": "file",
-            "name": "assets/images/home/about-1.png",
-            "size": 273713,
-            "hash": "716baf9fcdf02d260e718040305ba8517e67da751fe7ee47525e5f637773ed66"
-        },
-        {
-            "type": "file",
             "name": "assets/images/home/block-icon-fon.png",
             "size": 180713,
             "hash": "cf6b82e88ff001061944fb64117c512e368989fbbdb3c23dd1924cfead6f4c53"
         },
         {
-            "type": "file",
-            "name": "assets/images/home/about-2.png",
-            "size": 536200,
-            "hash": "1775b2c5e952bc84bd8c1fefc3b7eb0f03eafb217caf65f03f6341c31036a530"
-        },
-        {
             "type": "folder",
             "name": "assets/images/home/slider"
-        },
-        {
-            "type": "file",
-            "name": "assets/images/news/news.jpg",
-            "size": 58783,
-            "hash": "c0bff4de5a5f633af7688e8ed6ce512cc92b242597c725f57b3dbd4e842125f1"
         },
         {
             "type": "file",
@@ -860,6 +1028,12 @@
             "name": "assets/images/icons/success.svg",
             "size": 256,
             "hash": "ba0e33ed1160828c27ccababdb675ae46c3781f07ec82d5cd15e74fdbc79a532"
+        },
+        {
+            "type": "file",
+            "name": "assets/images/news/news.jpg",
+            "size": 58783,
+            "hash": "c0bff4de5a5f633af7688e8ed6ce512cc92b242597c725f57b3dbd4e842125f1"
         },
         {
             "type": "file",
@@ -923,15 +1097,27 @@
         },
         {
             "type": "file",
+            "name": "assets/scripts/parts-scripts/accordion.js",
+            "size": 418,
+            "hash": "aac2f72266835fe2fcb343f8467288f1c4b06dea93a89719a671f6295fe5729a"
+        },
+        {
+            "type": "file",
+            "name": "assets/scripts/parts-scripts/donate-things-swipers.js",
+            "size": 357,
+            "hash": "3d070d7b9be1ad8f1aa40689c7cc6010590817682eb2d1397af46a05417a7a46"
+        },
+        {
+            "type": "file",
             "name": "assets/scripts/parts-scripts/donates2-swiper.js",
             "size": 267,
             "hash": "6a4aca245ddaa48ba65b643a3462ea133ad36bc698d8ec94aa5ed65939ebdd60"
         },
         {
             "type": "file",
-            "name": "assets/scripts/parts-scripts/accordion.js",
-            "size": 418,
-            "hash": "aac2f72266835fe2fcb343f8467288f1c4b06dea93a89719a671f6295fe5729a"
+            "name": "assets/scripts/parts-scripts/load-more.js",
+            "size": 665,
+            "hash": "885f8af4fc2089a6536d766df0fbe6e0d35df53e3a13a02e335e23185836dca3"
         },
         {
             "type": "file",
@@ -947,15 +1133,15 @@
         },
         {
             "type": "file",
-            "name": "assets/scripts/parts-scripts/modal-donate.js",
-            "size": 2222,
-            "hash": "5301db210fb904b9d9fcfed7bdd914bc2cad4685985f4386aa17bea4bc5429b7"
-        },
-        {
-            "type": "file",
             "name": "assets/scripts/parts-scripts/modal-donate_v0.js",
             "size": 2221,
             "hash": "8f15315ed8b083bd86b21025881de003e9d2e5ce6256829f37c5576f6182b718"
+        },
+        {
+            "type": "file",
+            "name": "assets/scripts/parts-scripts/modal-donate.js",
+            "size": 2491,
+            "hash": "e4628e21d3fae5f52e39032a5e6247461e5659572fda7b4b3159fc0715029973"
         },
         {
             "type": "file",
@@ -965,9 +1151,21 @@
         },
         {
             "type": "file",
+            "name": "assets/scripts/parts-scripts/progress-bar.js",
+            "size": 670,
+            "hash": "21ee5f6e199498802827c1c3575bee2b334c7d68c9aa683ae35723d5d33b962e"
+        },
+        {
+            "type": "file",
             "name": "assets/scripts/parts-scripts/posts-instagram.js",
-            "size": 43,
-            "hash": "e8d706cb616838d5401d5a02cb87ad1f460f50ee522797eee2ac72a91aec5170"
+            "size": 1207,
+            "hash": "b06d6c7392a0b765d40d0a44c1ecba734d5ed3a37da41b51b24b59a36f84306c"
+        },
+        {
+            "type": "file",
+            "name": "assets/scripts/parts-scripts/projects-page-swipers.js",
+            "size": 335,
+            "hash": "6fadf48d57dcb2950eed70cc707cabc6f16ac2a38d53f5aa42865770b0497a46"
         },
         {
             "type": "file",
@@ -977,9 +1175,21 @@
         },
         {
             "type": "file",
+            "name": "assets/scripts/template-scripts/about_page.js",
+            "size": 289,
+            "hash": "74b1d1d07a06997cc18c7bf43f6acdebf0c1ac3375998d5b82e66bfe89c5e7fd"
+        },
+        {
+            "type": "file",
             "name": "assets/scripts/template-scripts/home.js",
             "size": 55,
             "hash": "79e11deae5328afb514e6d5a540b5be90e52c0349811c96442fc15b263703cbc"
+        },
+        {
+            "type": "file",
+            "name": "assets/scripts/template-scripts/our-team-members.js",
+            "size": 816,
+            "hash": "5f61f002a58d664776db226c9a877bd0b6397f01221e7fa6cf378d2bfe226c2f"
         },
         {
             "type": "file",
@@ -1009,7 +1219,7 @@
             "type": "file",
             "name": "assets/styles/parts-styles/about.css",
             "size": 13807,
-            "hash": "b16b714524e532dd94e1caa64100ea33261a59a4cbc37ce4e5878a5e33c92e27"
+            "hash": "e75b329b19a10e0366bc1f32e47ffef13424c5a3ede43a314ae5485e0ac77ea8"
         },
         {
             "type": "file",
@@ -1039,13 +1249,13 @@
             "type": "file",
             "name": "assets/styles/parts-styles/modal-donate_v0.css",
             "size": 10670,
-            "hash": "4caf3adedf38a9f3abfe93e8619637bae309e7adf25c9f142fe3e02af03f2c76"
+            "hash": "aa0d776eb38346206b075d097e00c732ce5e9e911a06664d2338fa4fe3f4f86d"
         },
         {
             "type": "file",
             "name": "assets/styles/parts-styles/next-event.css",
             "size": 7626,
-            "hash": "eb4d72729fe03d158988399818a06d1d1733a616429ef33f481866b318714e35"
+            "hash": "f2048c74b4e09339a82ae246efc2945ae09221ecba0a04b8e74b5e8cc6e69421"
         },
         {
             "type": "file",
@@ -1057,13 +1267,25 @@
             "type": "file",
             "name": "assets/styles/parts-styles/projects-swiper.css",
             "size": 8666,
-            "hash": "b00f850aebef405edefc9c4ee6bbae2805c19aacd697143b06e1355f08eadd26"
+            "hash": "f055c1fd5dae3b824af6e381b97ac10bf1fe0891a3862943039ef79a0c467de4"
+        },
+        {
+            "type": "file",
+            "name": "assets/styles/parts-styles/projects-swiper__.css",
+            "size": 0,
+            "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
         },
         {
             "type": "file",
             "name": "assets/styles/template-styles/404.css",
             "size": 5514,
             "hash": "15021db3100dd03f42186b92d878f2abbb6d583469c0aa211a047f4538c07f0b"
+        },
+        {
+            "type": "file",
+            "name": "assets/styles/template-styles/about_page.css",
+            "size": 12962,
+            "hash": "a750f88eb955ef3ea4521676d6f72694c9f0a32559dbacf8525b8931c624ed93"
         },
         {
             "type": "file",
@@ -1075,19 +1297,31 @@
             "type": "file",
             "name": "assets/styles/template-styles/donates.css",
             "size": 22736,
-            "hash": "242ffd170969253abeb48038e891b575504f27d61fd89f747abbbc1032fafedf"
+            "hash": "d4380d9e56144aeef6bb81ba49e0d13b0cb842fd4233958a0d3110667325534a"
         },
         {
             "type": "file",
             "name": "assets/styles/template-styles/donates_money.css",
-            "size": 34329,
-            "hash": "55215ea0ed010b272268fa432e1f1ee5fac3bb6054ef67bb83750336b4583280"
+            "size": 35495,
+            "hash": "ebe9d29228f80bac5d5d3a1b6e80d197edb91fdaca667c0c986c6e5e42a4d8f3"
         },
         {
             "type": "file",
             "name": "assets/styles/template-styles/donates_things.css",
-            "size": 5812,
-            "hash": "792799e9e50c9099615143693bb12b1ff2c5bd287b15e6e523a8e6bf12c90693"
+            "size": 20755,
+            "hash": "cfaeb863694792be65cd0529718c014201e8034962acb884e034b783d59e4149"
+        },
+        {
+            "type": "file",
+            "name": "assets/styles/template-styles/home.css",
+            "size": 22785,
+            "hash": "c0cea5ca27cf428770330ca5182909a6e7866a23e10e940677567eb98f8eef12"
+        },
+        {
+            "type": "file",
+            "name": "assets/styles/template-styles/join.css",
+            "size": 1761,
+            "hash": "69b881c482cbda79ff97c761e8b05aabeb7bd0a5c47ec0625a60b695530ee183"
         },
         {
             "type": "file",
@@ -1097,15 +1331,27 @@
         },
         {
             "type": "file",
-            "name": "assets/styles/template-styles/home.css",
-            "size": 22154,
-            "hash": "edf964ab57ea222ca7dc6a412943305396bf8a14dd7f8397c2fe14f7721e9425"
+            "name": "assets/styles/template-styles/our-partners-and-sponsors.css",
+            "size": 3604,
+            "hash": "45edeb2dec5f025e10cbf58c17e3ff3b721ad3091e356009b2d480b46d3c8da5"
+        },
+        {
+            "type": "file",
+            "name": "assets/styles/template-styles/our-team-members.css",
+            "size": 4344,
+            "hash": "b66b0e93c2097b5ab44550aea62ffb6494f2f66d578024f0f2aaeaff849485f0"
         },
         {
             "type": "file",
             "name": "assets/styles/template-styles/privacy.css",
             "size": 179,
             "hash": "fe81c23e1d7ed201c714858761cd5f1193aa0cd5299667cda8be3fefdbfeb0d0"
+        },
+        {
+            "type": "file",
+            "name": "assets/styles/template-styles/projects.css",
+            "size": 27460,
+            "hash": "855338cbb36e96bb2a1570197e86240a26d13840d7d4428a038c86f2cb77f33c"
         },
         {
             "type": "file",
@@ -1133,15 +1379,15 @@
         },
         {
             "type": "file",
-            "name": "src/images/dev_page/bg_dev_page2.svg",
-            "size": 367,
-            "hash": "0f0ea097aa927a01b5550d3a6a53428d10dcb3d94baa52cdcae4b60e2ff0eb2d"
-        },
-        {
-            "type": "file",
             "name": "src/images/dev_page/bg_dev_page3.svg",
             "size": 386,
             "hash": "65abdfba8c4d0b3db77f51be81a3642aa5882633c4b4b5f37ae08a4331c86547"
+        },
+        {
+            "type": "file",
+            "name": "src/images/dev_page/bg_dev_page2.svg",
+            "size": 367,
+            "hash": "0f0ea097aa927a01b5550d3a6a53428d10dcb3d94baa52cdcae4b60e2ff0eb2d"
         },
         {
             "type": "file",
@@ -1181,18 +1427,6 @@
         },
         {
             "type": "file",
-            "name": "src/images/footer/Logo_Ukraida.svg",
-            "size": 12808,
-            "hash": "57e6f0cb01624ecea55e07f06c9c7448ce8b2a15cbec0b893da000042cece33b"
-        },
-        {
-            "type": "file",
-            "name": "src/images/footer/sprites.svg",
-            "size": 10941,
-            "hash": "d9a2924112387f95bde79d1fe5302d7565c7c81d4f5ca124859810cc8481d5f3"
-        },
-        {
-            "type": "file",
             "name": "src/images/favicon/android-icon-144x144.png",
             "size": 11035,
             "hash": "08b79347823c7bb6389bcc272a4e2b22b868ded336a9b90985290d02f18580a9"
@@ -1223,15 +1457,15 @@
         },
         {
             "type": "file",
-            "name": "src/images/favicon/apple-icon-114x114.png",
-            "size": 8474,
-            "hash": "3441d7cb113b43312a16f16e5f4b341fd0887cc380fd869065d7d7e7453d6e59"
-        },
-        {
-            "type": "file",
             "name": "src/images/favicon/android-icon-96x96.png",
             "size": 7127,
             "hash": "ba7e10bdb31dbb9d56b8c9535b1766467eadebf7ffead76c072fa826fd5b080e"
+        },
+        {
+            "type": "file",
+            "name": "src/images/favicon/apple-icon-114x114.png",
+            "size": 8474,
+            "hash": "3441d7cb113b43312a16f16e5f4b341fd0887cc380fd869065d7d7e7453d6e59"
         },
         {
             "type": "file",
@@ -1259,15 +1493,15 @@
         },
         {
             "type": "file",
-            "name": "src/images/favicon/apple-icon-60x60.png",
-            "size": 4314,
-            "hash": "b102103d3dd5197525b60440ac93f98f0f8c04e35071304a3e5946ac34632c61"
-        },
-        {
-            "type": "file",
             "name": "src/images/favicon/apple-icon-57x57.png",
             "size": 4093,
             "hash": "fbda373aa980284744679c310c71e6d0d94e3b3895ce2927fde0854ab4e26440"
+        },
+        {
+            "type": "file",
+            "name": "src/images/favicon/apple-icon-60x60.png",
+            "size": 4314,
+            "hash": "b102103d3dd5197525b60440ac93f98f0f8c04e35071304a3e5946ac34632c61"
         },
         {
             "type": "file",
@@ -1319,6 +1553,12 @@
         },
         {
             "type": "file",
+            "name": "src/images/favicon/favicon.ico",
+            "size": 1150,
+            "hash": "f2c5d37b8d4c66aaef33d0c851c8eb07d5d8eff3e3111425a2091d650786fbc2"
+        },
+        {
+            "type": "file",
             "name": "src/images/favicon/manifest.json",
             "size": 720,
             "hash": "27eca3e8297eb7ff340deb3849b210185a459b3845456aa4d0036f6d966b3518"
@@ -1328,12 +1568,6 @@
             "name": "src/images/favicon/ms-icon-144x144.png",
             "size": 11035,
             "hash": "08b79347823c7bb6389bcc272a4e2b22b868ded336a9b90985290d02f18580a9"
-        },
-        {
-            "type": "file",
-            "name": "src/images/favicon/favicon.ico",
-            "size": 1150,
-            "hash": "f2c5d37b8d4c66aaef33d0c851c8eb07d5d8eff3e3111425a2091d650786fbc2"
         },
         {
             "type": "file",
@@ -1355,9 +1589,57 @@
         },
         {
             "type": "file",
+            "name": "src/images/footer/Logo_Ukraida.svg",
+            "size": 12808,
+            "hash": "57e6f0cb01624ecea55e07f06c9c7448ce8b2a15cbec0b893da000042cece33b"
+        },
+        {
+            "type": "file",
+            "name": "src/images/footer/sprites.svg",
+            "size": 10941,
+            "hash": "d9a2924112387f95bde79d1fe5302d7565c7c81d4f5ca124859810cc8481d5f3"
+        },
+        {
+            "type": "file",
             "name": "src/images/header/sprite.svg",
             "size": 5777,
             "hash": "9ba343a13917dcf13a46dec1f9c0e7a2e588dd4c68c2acf6ad11181bdd5c8632"
+        },
+        {
+            "type": "file",
+            "name": "src/images/icons/arrow-next.svg",
+            "size": 764,
+            "hash": "edf7a921cbef0fd86abb85e9e3e86cfb004459a38d9cc39dce70c5b1c9488467"
+        },
+        {
+            "type": "file",
+            "name": "src/images/icons/eva_arrow-up-fill.svg",
+            "size": 749,
+            "hash": "132e634ff55f6602e9f1d0b3b5c71eaaeba42d19e4cd2d74347675a4a25367ae"
+        },
+        {
+            "type": "file",
+            "name": "src/images/icons/hands.svg",
+            "size": 8879,
+            "hash": "4625d70c01b9e7e1bd801a60ddcb13551b21c01411215aff2520e2cc25794f58"
+        },
+        {
+            "type": "file",
+            "name": "src/images/icons/heart.svg",
+            "size": 1819,
+            "hash": "27be4a84db1745cd924ee946a1376e94f26c7c1bb91586f6b89bcf85ec63ef1c"
+        },
+        {
+            "type": "file",
+            "name": "src/images/icons/people.svg",
+            "size": 1916,
+            "hash": "4618965875cf665fd8777374fbb7232a30a80ab3e8020c17a6ac67c574b5e028"
+        },
+        {
+            "type": "file",
+            "name": "src/images/icons/success.svg",
+            "size": 522,
+            "hash": "da80ffb2e7cccf45d9702a2b5e502216bfc3669347e80d20e0381d3a482897b7"
         },
         {
             "type": "file",
@@ -1401,42 +1683,6 @@
         },
         {
             "type": "file",
-            "name": "src/images/icons/arrow-next.svg",
-            "size": 764,
-            "hash": "edf7a921cbef0fd86abb85e9e3e86cfb004459a38d9cc39dce70c5b1c9488467"
-        },
-        {
-            "type": "file",
-            "name": "src/images/icons/eva_arrow-up-fill.svg",
-            "size": 749,
-            "hash": "132e634ff55f6602e9f1d0b3b5c71eaaeba42d19e4cd2d74347675a4a25367ae"
-        },
-        {
-            "type": "file",
-            "name": "src/images/icons/hands.svg",
-            "size": 8879,
-            "hash": "4625d70c01b9e7e1bd801a60ddcb13551b21c01411215aff2520e2cc25794f58"
-        },
-        {
-            "type": "file",
-            "name": "src/images/icons/heart.svg",
-            "size": 1819,
-            "hash": "27be4a84db1745cd924ee946a1376e94f26c7c1bb91586f6b89bcf85ec63ef1c"
-        },
-        {
-            "type": "file",
-            "name": "src/images/icons/people.svg",
-            "size": 1916,
-            "hash": "4618965875cf665fd8777374fbb7232a30a80ab3e8020c17a6ac67c574b5e028"
-        },
-        {
-            "type": "file",
-            "name": "src/images/icons/success.svg",
-            "size": 522,
-            "hash": "da80ffb2e7cccf45d9702a2b5e502216bfc3669347e80d20e0381d3a482897b7"
-        },
-        {
-            "type": "file",
             "name": "src/images/news/news.jpg",
             "size": 422416,
             "hash": "67ad87a7b5b268c88360e1c70ed86568e689812766bae8020491004fcc842593"
@@ -1455,15 +1701,15 @@
         },
         {
             "type": "file",
-            "name": "src/images/projects/f-03.jpg",
-            "size": 326675,
-            "hash": "5229611228b716f4863592e433d205b179261630576053a8ecb8984ed7826185"
-        },
-        {
-            "type": "file",
             "name": "src/images/projects/f-04.jpg",
             "size": 511731,
             "hash": "b2c867dc61f89eee001e046507076889d71ce1e4c15f78d2a276ffa560bc8f66"
+        },
+        {
+            "type": "file",
+            "name": "src/images/projects/f-03.jpg",
+            "size": 326675,
+            "hash": "5229611228b716f4863592e433d205b179261630576053a8ecb8984ed7826185"
         },
         {
             "type": "file",
@@ -1485,15 +1731,15 @@
         },
         {
             "type": "file",
-            "name": "src/images/projects/f-09.jpg",
-            "size": 304150,
-            "hash": "e7496d85624073b8252d800e601c83c3b485bb6fda950eaa406a3a8b15ea3350"
-        },
-        {
-            "type": "file",
             "name": "src/images/projects/f-08.jpg",
             "size": 591569,
             "hash": "82dabd383d9bd42a92838f4c8adcacd4998517ff7703b00f4c34b422e571dcdf"
+        },
+        {
+            "type": "file",
+            "name": "src/images/projects/f-09.jpg",
+            "size": 304150,
+            "hash": "e7496d85624073b8252d800e601c83c3b485bb6fda950eaa406a3a8b15ea3350"
         },
         {
             "type": "file",
@@ -1509,6 +1755,12 @@
         },
         {
             "type": "file",
+            "name": "src/scripts/parts-scripts/donate-things-swipers.js",
+            "size": 586,
+            "hash": "10086fbeac2ae90db96dd623a17b08dded3e6c888b2e78914a4bf6f5770a0ab1"
+        },
+        {
+            "type": "file",
             "name": "src/scripts/parts-scripts/donates2-swiper.js",
             "size": 366,
             "hash": "28da8279930abe23e5c4a0f9d6f67009a8153e79bc9d0b911b3a90b51dc1c2fc"
@@ -1521,6 +1773,12 @@
         },
         {
             "type": "file",
+            "name": "src/scripts/parts-scripts/load-more.js",
+            "size": 1168,
+            "hash": "40dde049f7c4446f49db51538d9ace0ae8c74b16bb73867912695322ca12d76d"
+        },
+        {
+            "type": "file",
             "name": "src/scripts/parts-scripts/modal-donate copy.js",
             "size": 2324,
             "hash": "66fad520adcd8cf2699789649c7ca31fad04002c2ff973ec936a532f30b359e9"
@@ -1528,8 +1786,8 @@
         {
             "type": "file",
             "name": "src/scripts/parts-scripts/modal-donate.js",
-            "size": 3630,
-            "hash": "5e36cb45fcf17d6bae18592e60e0b39078078e18d2d76dc1a3e27e0a7108b994"
+            "size": 4101,
+            "hash": "c7fecfe7937f0c8ecf6a2fccb6c1bf55a3b8abc281134c9f14834212fa1c71ee"
         },
         {
             "type": "file",
@@ -1546,8 +1804,20 @@
         {
             "type": "file",
             "name": "src/scripts/parts-scripts/posts-instagram.js",
-            "size": 42,
-            "hash": "756c7c3ecf4a5aec4d3d838c91299fabd13f0a64046d0a4c1ff06764a04cbefa"
+            "size": 2081,
+            "hash": "f9a41a9b3435de2ea6f2e0caabeea8d58e27a158db8c12194f97479f1ca0c905"
+        },
+        {
+            "type": "file",
+            "name": "src/scripts/parts-scripts/progress-bar.js",
+            "size": 2224,
+            "hash": "e4dd204b67a221f4c506c087f61f0fe3c0ed5c45f46fdd3c31ad92d2f8c00686"
+        },
+        {
+            "type": "file",
+            "name": "src/scripts/parts-scripts/projects-page-swipers.js",
+            "size": 554,
+            "hash": "9a785ac567f6c7bf4603b6ea30d336f2533675b8b361cf110462e646033bdc72"
         },
         {
             "type": "file",
@@ -1557,21 +1827,33 @@
         },
         {
             "type": "file",
+            "name": "src/scripts/template-scripts/about_page.js",
+            "size": 403,
+            "hash": "edb9f65c98a753d1a76ef677b0703ddbf7781e516593b0eb76920cbb131d9884"
+        },
+        {
+            "type": "file",
             "name": "src/scripts/template-scripts/home.js",
             "size": 56,
             "hash": "7635f2c79e4c7d0439b29e6924a264224c153ed7f6b892702cf64533690f560b"
         },
         {
             "type": "file",
-            "name": "src/scripts/vendors/lightbox-plus-jquery.js",
-            "size": 314493,
-            "hash": "c45bb182187a6cd49dde976a3f57cc3ef06db5ad483da0ff851975cf4a3ebe10"
+            "name": "src/scripts/template-scripts/our-team-members.js",
+            "size": 2258,
+            "hash": "6982a5844e084dd9724c7d71a2fa5aa5b10a676118c27c2e25ca3fd71dd4bd2c"
         },
         {
             "type": "file",
             "name": "src/scripts/vendors/_swiper-bundle.js",
             "size": 334584,
             "hash": "481ff7ecc5c1aa175650b4cfbc9e4009c962dd2699c8a1ea7c5280140a215bb4"
+        },
+        {
+            "type": "file",
+            "name": "src/scripts/vendors/lightbox-plus-jquery.js",
+            "size": 314493,
+            "hash": "c45bb182187a6cd49dde976a3f57cc3ef06db5ad483da0ff851975cf4a3ebe10"
         },
         {
             "type": "file",
@@ -1611,21 +1893,39 @@
         },
         {
             "type": "file",
+            "name": "src/styles/parts-styles/_breadcrumbs.scss",
+            "size": 530,
+            "hash": "f8f4459238ac86dbff4f66aec8c0233c156c1f87d79476649d1e338fd07074d3"
+        },
+        {
+            "type": "file",
+            "name": "src/styles/parts-styles/_donate-things-items.scss",
+            "size": 4268,
+            "hash": "95c282565ef1a5ac68af8831e5410ae7f169ba371554601f911ceef5cad8ee93"
+        },
+        {
+            "type": "file",
             "name": "src/styles/parts-styles/_btn-test.scss",
             "size": 8125,
             "hash": "bbc25ec4d2d910af484074a6367d9d99fa9271b1ef921a6d9302725f53e4606e"
         },
         {
             "type": "file",
-            "name": "src/styles/parts-styles/_breadcrumbs.scss",
-            "size": 1491,
-            "hash": "6be2b2ab839cceb4ce060527226c6da842eefb12715b16994a6bdbd8943e98df"
+            "name": "src/styles/parts-styles/_donate-things-pagination.scss",
+            "size": 2256,
+            "hash": "b755733b5e358690050c7ad3c0e589ff4b4e2341d94604432f4fd0c2809ce0c3"
+        },
+        {
+            "type": "file",
+            "name": "src/styles/parts-styles/_donate-things-swipers.scss",
+            "size": 2076,
+            "hash": "5fc60df918bf274276787c3011961e18c227153c7d21b0d190ec23b85f4913ab"
         },
         {
             "type": "file",
             "name": "src/styles/parts-styles/_donate-things.scss",
-            "size": 1755,
-            "hash": "8c5e7c37628cf3268b2afa11f623e056dfe410a9c9a4067d3821494e922b5554"
+            "size": 1945,
+            "hash": "451bb7c4fbcfb97796e0b2ffcbee20a6d4497e5ea420fbb4b4451861ef7041b7"
         },
         {
             "type": "file",
@@ -1654,20 +1954,74 @@
         {
             "type": "file",
             "name": "src/styles/parts-styles/_donates_money2.scss",
-            "size": 2580,
-            "hash": "6918001705c1bda0e84f3eff94073fc5d4c94eb07657bcd526bed1d71db60d0e"
+            "size": 2964,
+            "hash": "adea5756950e4d60ea3318b3846aca5f4db67b1049d5a1c7530366a6490d2eee"
         },
         {
             "type": "file",
             "name": "src/styles/parts-styles/_donates_money3.scss",
-            "size": 2662,
-            "hash": "e1806930082d9477b4af9d82e10cb360fad545dd0e2d4a64aa13b58fbfd5ab8b"
+            "size": 2342,
+            "hash": "1d353226c4b62584dc266b8dcaa1eff4a80d83694037a2253ec04aabc0a112cf"
+        },
+        {
+            "type": "file",
+            "name": "src/styles/parts-styles/_lang_switcher.scss",
+            "size": 573,
+            "hash": "6a7ef9f3a37f8db67c7c0b26dc1fe4316b52fcb11bc9e33127d13132b056441d"
         },
         {
             "type": "file",
             "name": "src/styles/parts-styles/_donates_money4.scss",
             "size": 2892,
             "hash": "2994e436791fb1b7562f6f96dd13f113c498d295e946f5f84c9ab03013867795"
+        },
+        {
+            "type": "file",
+            "name": "src/styles/parts-styles/_our-partners-and-sponsors-item.scss",
+            "size": 2863,
+            "hash": "b8f79d6227dab07de1bb5e094cde5a732fae054b6b4f1acfe24b80751fcd6048"
+        },
+        {
+            "type": "file",
+            "name": "src/styles/parts-styles/_our-partners-and-sponsors-items.scss",
+            "size": 562,
+            "hash": "47459dd86fc03fb1567ddfb10bf37c79d93ca4863b27e96731e1ce4969125976"
+        },
+        {
+            "type": "file",
+            "name": "src/styles/parts-styles/_our-team-members-item.scss",
+            "size": 3602,
+            "hash": "6e5715d625d2dcfbd0b45143175f8affb36f58f99b8b020c5d157f5183e1b13f"
+        },
+        {
+            "type": "file",
+            "name": "src/styles/parts-styles/_posts-instagram.scss",
+            "size": 801,
+            "hash": "76801160c1c86ba2c24fb07bf965e8fa01aa6a0e781093ef1b52dd6728ab3dfc"
+        },
+        {
+            "type": "file",
+            "name": "src/styles/parts-styles/_projects-page-filter.scss",
+            "size": 2007,
+            "hash": "31c197c8fe67d08f5401a4a8f411bfb9434659ce55cfbd2de5ada1050c43bccd"
+        },
+        {
+            "type": "file",
+            "name": "src/styles/parts-styles/_projects-page-items.scss",
+            "size": 2743,
+            "hash": "51627d3328deb10fc1b918a4268beb7f9a748d617b9a7ed4e3bc8895fcdc2623"
+        },
+        {
+            "type": "file",
+            "name": "src/styles/parts-styles/_projects-page-pagination.scss",
+            "size": 2089,
+            "hash": "633b680f08a859b1b2393137c4e0fc705c511f1dfbad59ccf0453d6b5ff4d552"
+        },
+        {
+            "type": "file",
+            "name": "src/styles/parts-styles/_projects-page-swipers.scss",
+            "size": 2076,
+            "hash": "04460442bd0ffe87840cf27953f6df7045afe1c8eecf2c05fb4d8d26744286ef"
         },
         {
             "type": "file",
@@ -1689,6 +2043,12 @@
         },
         {
             "type": "file",
+            "name": "src/styles/parts-styles/event-map.scss",
+            "size": 138,
+            "hash": "2e3ebe73f4b834505e01cdb444c844999c7186d8f1f3bd5aa68672385c946ec5"
+        },
+        {
+            "type": "file",
             "name": "src/styles/parts-styles/modal-donate.scss",
             "size": 3796,
             "hash": "fdd595e8885cfc5c24711d13a4b165f34818aafad6096f29f72f414d3006ac57"
@@ -1698,12 +2058,6 @@
             "name": "src/styles/parts-styles/modal-donate_v0.scss",
             "size": 3769,
             "hash": "9d862cf36c680dbbce33b22286a593df98151b6cb5ead773c053f98416258a28"
-        },
-        {
-            "type": "file",
-            "name": "src/styles/parts-styles/event-map.scss",
-            "size": 138,
-            "hash": "2e3ebe73f4b834505e01cdb444c844999c7186d8f1f3bd5aa68672385c946ec5"
         },
         {
             "type": "file",
@@ -1720,8 +2074,14 @@
         {
             "type": "file",
             "name": "src/styles/parts-styles/projects-swiper.scss",
-            "size": 5385,
-            "hash": "1a50aeaa117ccfcf7cf5300335539a4f87634fa882bd9d2a5be4600959e192d6"
+            "size": 5384,
+            "hash": "ee4ba52f081a5b5b21da1d8cfe7dfe40da9ae46b9f70b1d76cedca162d1919ba"
+        },
+        {
+            "type": "file",
+            "name": "src/styles/parts-styles/projects-swiper__.scss",
+            "size": 0,
+            "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
         },
         {
             "type": "file",
@@ -1731,15 +2091,15 @@
         },
         {
             "type": "file",
-            "name": "src/styles/template-styles/dev_page.scss",
-            "size": 3436,
-            "hash": "035ee98b468011c5541a9873377c934e7cb8724fa86c93d30c12b79e5b79395b"
+            "name": "src/styles/template-styles/about_page.scss",
+            "size": 7918,
+            "hash": "88f34c461a79d051e26562dfbd7ab4cb9ae377c131ee10b5bbf8e49f14ebe509"
         },
         {
             "type": "file",
-            "name": "src/styles/template-styles/donates_money.scss",
-            "size": 864,
-            "hash": "bb143f16084a8d05952b3f7a5d38f4689a9a08d0191041d26ca7e658eec1a818"
+            "name": "src/styles/template-styles/dev_page.scss",
+            "size": 3436,
+            "hash": "035ee98b468011c5541a9873377c934e7cb8724fa86c93d30c12b79e5b79395b"
         },
         {
             "type": "file",
@@ -1749,15 +2109,27 @@
         },
         {
             "type": "file",
+            "name": "src/styles/template-styles/donates_money.scss",
+            "size": 864,
+            "hash": "bb143f16084a8d05952b3f7a5d38f4689a9a08d0191041d26ca7e658eec1a818"
+        },
+        {
+            "type": "file",
             "name": "src/styles/template-styles/donates_things.scss",
-            "size": 91,
-            "hash": "7443735931d0b635ee754ba4e94b7d46396a51347ff2b377bad7bda704a120aa"
+            "size": 175,
+            "hash": "ec95bf3f23dbad2df099b0dd80e14b7162425be2505ad27d58271c4d8f71d742"
         },
         {
             "type": "file",
             "name": "src/styles/template-styles/home.scss",
-            "size": 185,
-            "hash": "f72046d2dd2f5d85b8cfea8df079bc4fde2c9b8ff0fdd66a8ab5e4ca498df608"
+            "size": 233,
+            "hash": "0d45eea0e3a6cf90a3ce1f5a103ac2b2aadc45558eb6a9d1da2dd668bf621650"
+        },
+        {
+            "type": "file",
+            "name": "src/styles/template-styles/join.scss",
+            "size": 1996,
+            "hash": "0a79160827ac6d2d720bc13d1236c77720db9ba205a5fbf36693568108cbefd6"
         },
         {
             "type": "file",
@@ -1767,9 +2139,27 @@
         },
         {
             "type": "file",
+            "name": "src/styles/template-styles/our-partners-and-sponsors.scss",
+            "size": 958,
+            "hash": "310a943f3207ed1596ed8227b8a3ea8e960f9d80bb656d3b95a6bb30b97534dd"
+        },
+        {
+            "type": "file",
+            "name": "src/styles/template-styles/our-team-members.scss",
+            "size": 1566,
+            "hash": "2de09224ef5a80bbcb708242b47d618be03592ff6ff19b328c653d83f267d506"
+        },
+        {
+            "type": "file",
             "name": "src/styles/template-styles/privacy.scss",
             "size": 207,
             "hash": "8da6018949476be411f2eccf24a0f80e4b1ed548f5f1f5c1a4d116332e709a19"
+        },
+        {
+            "type": "file",
+            "name": "src/styles/template-styles/projects.scss",
+            "size": 877,
+            "hash": "bf02af1e41a15b3ada80f6fefc568d48ed098cb8108ac811953babf11649b89f"
         },
         {
             "type": "file",
@@ -1803,15 +2193,15 @@
         },
         {
             "type": "file",
-            "name": "src/styles/vendors/swiper-bundle.scss",
-            "size": 5428,
-            "hash": "a4b829dd35faa724eeaeae8b91a56804b170f2d373abfc4f2229290ca98cf5b7"
-        },
-        {
-            "type": "file",
             "name": "src/styles/vendors/swiper.css.map",
             "size": 1745,
             "hash": "4b290c356cde9bd34389da6e54346d7d50b1a3d8fef0cdf14819a36a8e59565b"
+        },
+        {
+            "type": "file",
+            "name": "src/styles/vendors/swiper-bundle.scss",
+            "size": 5428,
+            "hash": "a4b829dd35faa724eeaeae8b91a56804b170f2d373abfc4f2229290ca98cf5b7"
         },
         {
             "type": "file",

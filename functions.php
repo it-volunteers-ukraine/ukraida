@@ -79,11 +79,11 @@ function wp_it_volunteers_scripts()
   if (is_page_template('templates/about_page.php')) {
     wp_enqueue_style('about_page-style', get_stylesheet_directory_uri() . '/assets/styles/template-styles/about_page.css', array('main'));
     
-    wp_enqueue_style('projects-bundle-style', get_template_directory_uri() . '/assets/styles/vendors/swiper-bundle.css', array());
-    wp_enqueue_script('projects-scripts', get_template_directory_uri() . '/assets/scripts/vendors/swiper-bundle.min.js', array(), false, true);
-    wp_enqueue_style('projects-style', get_template_directory_uri() . '/assets/styles/vendors/swiper.css', array());
+    wp_enqueue_style('about_page-bundle-style', get_template_directory_uri() . '/assets/styles/vendors/swiper-bundle.css', array());
+    wp_enqueue_script('about_page-bundle-scripts', get_template_directory_uri() . '/assets/scripts/vendors/swiper-bundle.min.js', array(), false, true);
+    wp_enqueue_style('about_page-swiper-style', get_template_directory_uri() . '/assets/styles/vendors/swiper.css', array());
 
-    wp_enqueue_style('projects-swiper-style', get_template_directory_uri() . '/assets/styles/parts-styles/donates2-swiper.css', array());
+    wp_enqueue_style('about_page-donate-style', get_template_directory_uri() . '/assets/styles/parts-styles/donates2-swiper.css', array());
       wp_enqueue_script('about_page-script', get_stylesheet_directory_uri() . '/assets/scripts/template-scripts/about_page.js', array(), false, true);
   }
 
