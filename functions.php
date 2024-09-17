@@ -38,7 +38,7 @@ function wp_it_volunteers_scripts()
   wp_enqueue_style('main', get_stylesheet_uri());
   wp_enqueue_style('wp-style', get_template_directory_uri() . '/assets/styles/main.css', array('main'));
   wp_enqueue_style('normalize', 'https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css');
-  wp_enqueue_script('wp-scripts', get_template_directory_uri() . '/assets/scripts/main.js', array(), false, true);
+  // wp_enqueue_script('wp-scripts', get_template_directory_uri() . '/assets/scripts/main.js', array(), false, true);
   wp_enqueue_style('modal-donate', get_template_directory_uri() . '/assets/styles/parts-styles/modal-donate.css', array());
   wp_enqueue_script('modal-donate-scripts', get_template_directory_uri() . '/assets/scripts/parts-scripts/modal-donate.js', array(), false, true);
 
@@ -51,10 +51,10 @@ function wp_it_volunteers_scripts()
     // wp_localize_script('events-parts-scripts', 'vars', $front_scripts_args);
 
     wp_enqueue_style('home-style', get_template_directory_uri() . '/assets/styles/template-styles/home.css', array('main'));
-    wp_enqueue_script('home-scripts', get_template_directory_uri() . '/assets/scripts/template-scripts/home.js', array(), false, true);
+    // wp_enqueue_script('home-scripts', get_template_directory_uri() . '/assets/scripts/template-scripts/home.js', array(), false, true);
 
     wp_enqueue_style('next-event-style', get_template_directory_uri() . '/assets/styles/parts-styles/next-event.css', array());
-    wp_enqueue_script('next-event-scripts', get_template_directory_uri() . '/assets/scripts/parts-scripts/next-event.js', array(), false, true);
+    // wp_enqueue_script('next-event-scripts', get_template_directory_uri() . '/assets/scripts/parts-scripts/next-event.js', array(), false, true);
 
     wp_enqueue_style('projects-style', get_template_directory_uri() . '/assets/styles/vendors/swiper.css', array());
     wp_enqueue_style('projects-bundle-style', get_template_directory_uri() . '/assets/styles/vendors/swiper-bundle.css', array());
@@ -63,14 +63,14 @@ function wp_it_volunteers_scripts()
     wp_enqueue_style('projects-swiper-style', get_template_directory_uri() . '/assets/styles/parts-styles/projects-swiper.css', array());
     wp_enqueue_script('projects-swiper-scripts', get_template_directory_uri() . '/assets/scripts/parts-scripts/projects-swiper.js', array(), false, true);
 
-    wp_enqueue_style('about-style', get_template_directory_uri() . '/assets/styles/parts-styles/about.css', array());
-    wp_enqueue_script('about-scripts', get_template_directory_uri() . '/assets/scripts/parts-scripts/about.js', array(), false, true);
+    // wp_enqueue_style('about-style', get_template_directory_uri() . '/assets/styles/parts-styles/about.css', array());
+    // wp_enqueue_script('about-scripts', get_template_directory_uri() . '/assets/scripts/parts-scripts/about.js', array(), false, true);
 
     wp_enqueue_style('posts-instagram-style', get_template_directory_uri() . '/assets/styles/parts-styles/posts-instagram.css', array());
     wp_enqueue_script('posts-instagram-scripts', get_template_directory_uri() . '/assets/scripts/parts-scripts/posts-instagram.js', array(), false, true);
 
     wp_enqueue_style('event-map-style', get_template_directory_uri() . '/assets/styles/parts-styles/event-map.css', array());
-    wp_enqueue_script('event-map-scripts', get_template_directory_uri() . '/assets/scripts/parts-scripts/event-map.js', array(), false, true);
+    // wp_enqueue_script('event-map-scripts', get_template_directory_uri() . '/assets/scripts/parts-scripts/event-map.js', array(), false, true);
 
     // posts-instagram
 
@@ -134,6 +134,13 @@ function wp_it_volunteers_scripts()
     wp_localize_script('load-more', 'ajax_load_more_params', array(
       'ajax_url' => admin_url('admin-ajax.php'),
     ));
+
+    // progress bar
+    function enqueue_progress_bar_script()
+    {
+      wp_enqueue_script('progress-bar', get_template_directory_uri() . '/assets/scripts/parts-scripts/progress-bar.js', array(), null, true);
+    }
+    add_action('wp_enqueue_scripts', 'enqueue_progress_bar_script');
   }
 
   if (is_page_template('templates/donates_things_page.php')) {
@@ -456,12 +463,7 @@ function true_breadcrumbs()
 
 require get_template_directory() . '/parts/load-more.php';
 
-// progress bar
-function enqueue_progress_bar_script()
-{
-  wp_enqueue_script('progress-bar', get_template_directory_uri() . '/assets/scripts/parts-scripts/progress-bar.js', array(), null, true);
-}
-add_action('wp_enqueue_scripts', 'enqueue_progress_bar_script');
+
 
 // Load more action for "Our team members" page
 require get_template_directory() . '/parts/our-team-members-load-more.php';

@@ -1,4 +1,3 @@
-console.log("script part/projects-swiper");
 const intervalDebounce = 300;
 let debounceTimer;
 
