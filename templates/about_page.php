@@ -49,64 +49,58 @@ $detailed_text = esc_html(get_field('about_detailed_text', $currend_id));
         </div>
     </section>
 
-    <section class="section slider__wrapper">
-        <div class="container about__slider-container">
-            <button class="slider__button about__slider-button--left swiper-button-prev">
-                <svg class="about__arrow">
-                    <use xlink:href="#left-arrow"></use>
-                </svg>
-            </button>
-
-            <div class="slide about__slide">
-                <h2 class="about__title about__title-slider"><?php echo get_field('section_articles_title', $currend_id); ?></h2>
-            
-                <div class="about__slider-container">
-                    <div class="slider-main swiper-main swiper">
-                        <div class="slider__track-big swiper-wrapper slider-wrapper about__slider-cards">
-                            <?php if( have_rows('about_in_media') ): ?>
-                            <?php while( have_rows('about_in_media') ): the_row(); ?>
-                            <div class="swiper-slide slider__item-wrapper">
-                                <div class="slider__item-container">
-                                    <div>
-                                        <div class="slider__item-photo">
-                                        <?php $image = get_sub_field('photo_journalist', $currend_id);
-                                        if( !empty($image) ): ?>
+    <section class="section">
+        <div class="container">
+            <h2 class="about__title about__title-slider"><?php echo get_field('section_articles_title', $currend_id); ?></h2>
+            <div class="about__slider-wrapper">
+                <button class="slider__button about__slider-button--left swiper-button-prev">
+                    <svg class="about__arrow">
+                        <use xlink:href="#left-arrow"></use>
+                    </svg>
+                </button>
+                <div class="slider-main swiper-main swiper about__slider-container">
+                    <div class="slider__track-big swiper-wrapper slider-wrapper about__slider-cards">
+                    <?php if( have_rows('about_in_media') ): ?>
+                    <?php while( have_rows('about_in_media') ): the_row(); ?>
+                        <div class="swiper-slide slider__item-wrapper">
+                            <div class="slider__item-container">
+                                <div>
+                                    <div class="slider__item-photo">
+                                    <?php $image = get_sub_field('photo_journalist', $currend_id);
+                                    if( !empty($image) ): ?>
                                         <img  src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>">
                                         <?php endif; ?>
                                     </div>
                                     <div class="slider__item-subtitle"><?php the_sub_field('about_in_media_subtitle'); ?></div>
-                                    </div>
-                                    
-                                    <div>
-                                        <h3 class="slider__item-title"><?php the_sub_field('about_in_media_title'); ?></h3>
-                                        <p class="slider__date"><?php the_sub_field('date_of_publication'); ?></p>
-                                        <p class="slider__item-text"><?php the_sub_field('about_in_media_text'); ?></p>
-                                            <?php 
-                                            $link = get_sub_field('about_in_media_link');
-                                            if( $link ): ?>
-                                        <div class="slider__item-link"><a href="<?php echo esc_url($link); ?>"><?= $detailed_text ?></a></div> 
+                                </div>
+                                <div>
+                                    <h3 class="slider__item-title"><?php the_sub_field('about_in_media_title'); ?></h3>
+                                    <p class="slider__date"><?php the_sub_field('date_of_publication'); ?></p>
+                                    <p class="slider__item-text"><?php the_sub_field('about_in_media_text'); ?></p>
+                                        <?php 
+                                        $link = get_sub_field('about_in_media_link');
+                                        if( $link ): ?>
+                                    <div class="slider__item-link"><a href="<?php echo esc_url($link); ?>"><?= $detailed_text ?></a></div> 
                                         <?php endif; ?>
-                                    </div>
                                 </div>
                             </div>
-                            <?php endwhile; ?>
-                            <?php endif; ?>
                         </div>
-                        <div class="swiper-pagination about__slider-pagination"></div>
-                        <div class="about__button-wrapper">
-                            <a href="<?= $dev_page_url ?>" class="about__button about__slider-button" rel="noopener noreferrer">
-                                <?php echo $detailed_information_button_text; ?>
-                            </a>
-                        </div> 
+                        <?php endwhile; ?>
+                        <?php endif; ?>
                     </div>
                 </div>
+                <button class="slider__button about__slider-button--right swiper-button-next">
+                    <svg class="about__arrow">
+                        <use xlink:href="#right-arrow"></use>
+                    </svg>
+                </button>
             </div>
-
-            <button class="slider__button about__slider-button--right swiper-button-next">
-                <svg class="about__arrow">
-                    <use xlink:href="#right-arrow"></use>
-                </svg>
-            </button> 
+            <div class="swiper-pagination about__slider-pagination"></div>
+            <div class="about__button-wrapper">
+                <a href="<?= $dev_page_url ?>" class="about__button about__slider-button" rel="noopener noreferrer">
+                <?php echo $detailed_information_button_text; ?>
+                </a>
+            </div>
         </div>
     </section>
 
@@ -135,7 +129,7 @@ $detailed_text = esc_html(get_field('about_detailed_text', $currend_id));
             </ul>
 
             <div class="about__slider-button about__slider-button-bottom">
-                <a href="<?= $dev_page_url ?>" class="about__button" rel="noopener noreferrer">
+                <a href="<?php echo esc_url(get_field('link_page_partners', $currend_id)); ?>" class="about__button" rel="noopener noreferrer">
                     <?php echo $detailed_information_button_text; ?>
                 </a>
             </div>
