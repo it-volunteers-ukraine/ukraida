@@ -12,29 +12,25 @@
 
     // Returns code for SVG for previous button
     function getPrevSvg($is_enabled) {
-        $class = "donate-things-pagination-btn-wrap-svg-" . ($is_enabled ? "enabled" : "disabled");
-        $href = get_bloginfo('template_url') . "/assets/images/symbol-defs.svg#icon-arrow-prev";
+        $class = "donate-things-pagination-btn-svg-" . ($is_enabled ? "enabled" : "disabled");
+        $href = get_bloginfo('template_url') . "/assets/images/symbol-defs.svg#icon-arrow-left";
 
         return <<<BTN
-            <span class="donate-things-pagination-btn-wrap">
-                <svg class="donate-things-pagination-btn-wrap-svg $class">
-                    <use xlink:href="$href"></use>
-                </svg>
-            </span>
+            <svg class="donate-things-pagination-btn-svg $class">
+                <use xlink:href="$href"></use>
+            </svg>
         BTN;
     }
 
     // Returns code for SVG for previous button
     function getNextSvg($is_enabled) {
-        $class = "donate-things-pagination-btn-wrap-svg-" . ($is_enabled ? "enabled" : "disabled");
-        $href = get_bloginfo('template_url') . "/assets/images/symbol-defs.svg#icon-arrow-next";
+        $class = "donate-things-pagination-btn-svg-" . ($is_enabled ? "enabled" : "disabled");
+        $href = get_bloginfo('template_url') . "/assets/images/symbol-defs.svg#icon-arrow-right";
 
         return <<<BTN
-            <span class="donate-things-pagination-btn-wrap">
-                <svg class="donate-things-pagination-btn-wrap-svg $class">
-                    <use xlink:href="$href"></use>
-                </svg>
-            </span>
+            <svg class="donate-things-pagination-btn-svg $class">
+                <use xlink:href="$href"></use>
+            </svg>
         BTN;
     }
 

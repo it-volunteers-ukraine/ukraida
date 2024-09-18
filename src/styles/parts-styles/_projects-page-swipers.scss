@@ -43,14 +43,10 @@
   border: none;
   background: #fff;
   cursor: pointer;
+  padding: 0px;
 
   @media (min-width: 1280px) {
     display: block;
-    width: 24px;
-    height: 24px;
-  }
-
-  @media (min-width: 1980px) {
     width: 32px;
     height: 32px;
   }
@@ -65,15 +61,8 @@
 }
 
 .swiper-button-svg {
-  @media (min-width: 1280px) {
-    width: 13px;
-    height: 13px;
-  }
-
-  @media (min-width: 1980px) {
-    width: 17.4px;
-    height: 17.4px;
-  }
+  width: 32px;
+  height: 32px;
 }
 
 .main-pagination {
