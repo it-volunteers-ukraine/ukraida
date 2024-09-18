@@ -18,7 +18,7 @@ $detailed_text = esc_html(get_field('about_detailed_text', $currend_id));
 <main class="about about__wrapper">
     <section class="section">
         <div class="container">
-            <h1 class="about__title"><?php echo esc_html(get_field('title_about', $currend_id)); ?></h1>
+            <h1 class="about__title about__title-main"><?php echo esc_html(get_field('title_about', $currend_id)); ?></h1>
                 <?php if( have_rows('about_us', $currend_id) ): ?>
                 <?php while( have_rows('about_us', $currend_id) ): the_row(); ?>
             <div class="about__content content-about-us">

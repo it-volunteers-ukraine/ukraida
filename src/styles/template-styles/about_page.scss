@@ -277,9 +277,18 @@
     margin: 32px 0 0 0;
   }
 
+  .about__title-main {
+    font-size: 36px;
+  }
+
+  .about__title-who-are-we-block,
+  .about__title-slider,
+  .about__title-partners {
+    font-size: 32px;
+  }
+
   .about__title {
     padding: 64px 0 104px 0;
-    font-size: 32px;
     font-weight: 700;
   }
 
@@ -309,7 +318,6 @@
   .about__title-who-are-we-block {
     display: block;
     padding: 0 0 32px 0;
-    font-size: 32px;
     font-weight: 700;
   }
 
