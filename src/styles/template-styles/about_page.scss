@@ -18,6 +18,7 @@
   display: none;
 }
 
+
 .about__content {
   text-align: center;
   display: flex;
@@ -485,12 +486,10 @@
     
   .about__slider-button--left {
     left: calc(10px + (130 - 10) * ((100vw - 1440px) / (1920 - 1440)));
-    transition: left 0.3s ease;
   }
 
   .about__slider-button--right {
       right: calc(20px + (140 - 20) * ((100vw - 1440px) / (1920 - 1440)));
-      transition: right 0.3s ease;
   }
 
   .about__partners-list {
@@ -512,11 +511,11 @@
 }
 
 @media (min-width: 1920px) {
-  .slider-button-left {
+  .about__slider-button--left {
     left: 130px;
   }
 
-  .slider-button-right {
+  .about__slider-button--right {
     right: 140px;
   }
 }
