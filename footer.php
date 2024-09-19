@@ -1,14 +1,18 @@
+            <?php
+                $home_url = function_exists('pll_home_url') ? esc_url(pll_home_url()) : '/';
+                $privacy_url = PllHelper::get_current_translation('/privacy');
+            ?>
             <footer class="footer">
                 <div class="container">
                     <div class="footer-main__wrap">
                         <div class="footer__inner-wrap">
-                            <a href="/" class="logo1"><img class="logo_img" src="<?php bloginfo('template_url'); ?>/assets/images/logo.svg" alt="Logo" /></a>
+                            <a href="<?= $home_url ?>" class="logo1"><img class="logo_img" src="<?php bloginfo('template_url'); ?>/assets/images/logo.svg" alt="Logo" /></a>
                             <ul class="privacy__list">
                                 <li class="privacy__item">
-                                <a href="/privacy/?type=policy" target="_blank" rel="noopener noreferrer" class="privacy__link"><?php the_field('privacy_policy_title', 'option') ?></a>
+                                <a href="<?= $privacy_url ?>?type=policy" target="_blank" rel="noopener noreferrer" class="privacy__link"><?php the_field('privacy_policy_title', 'option') ?></a>
                                 </li>
                                 <li class="privacy__item privacy__item-order">
-                                    <a href="/privacy/?type=data" target="_blank" rel="noopener noreferrer" class="privacy__link"><?php the_field('privacy_data_title', 'option') ?></a>
+                                    <a href="<?= $privacy_url ?>?type=data" target="_blank" rel="noopener noreferrer" class="privacy__link"><?php the_field('privacy_data_title', 'option') ?></a>
                                 </li>
                             </ul>
                             <ul class="social-media__list">

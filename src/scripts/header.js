@@ -3,6 +3,8 @@ const openMenuBtn = document.querySelector(".js-open-menu");
 const overlayMenu = document.querySelector(".menu__overlay");
 const closeMenuBtn = document.querySelector(".js-close-menu");
 
+// console.log("header script");
+
 const toggleMenu = () => {
   mobileMenu.classList.toggle("is__open");
   overlayMenu.classList.toggle("backdrop");

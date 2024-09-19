@@ -1,0 +1,31 @@
+@import "./our-partners-and-sponsors-item";
+@import "../variables";
+
+.our-partners-and-sponsors-items {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+@media screen and (max-width: 767.9px) {
+}
+  
+@media screen and (min-width: 768px) {
+}
+  
+@media screen and (min-width: 990px) {
+}
+  
+@media screen and (min-width: 1200px) {
+  .our-partners-and-sponsors-items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px 20px;
+  }
+}
+  
+@media screen and (min-width: 1440px) {
+  .our-partners-and-sponsors-items {
+    gap: 24px;
+  }
+}

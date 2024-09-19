@@ -24,6 +24,7 @@
     justify-content: center;
 }
 .join-file {
+    min-height: 154px;
     padding-bottom: 8px;
     border-radius: 4px;
     width: 92px;
@@ -64,6 +65,7 @@
     }
     .join-file {
         width: 204px;
+        min-height: 244px;
         padding-bottom: 16px;
     }
     .join-icon {
@@ -98,10 +100,17 @@
         margin-bottom: 64px;
     }
     .join-text {
+        font-size: 24px;
         margin-bottom: 104px;
+    }
+    .join-file {
+        width: 212px;
     }
     .join-icon {
         width: 156px;
         height: 156px;
+    }
+    .join-filename {
+        font-size: 24px;
     }
 }

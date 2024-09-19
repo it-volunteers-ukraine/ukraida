@@ -1,76 +1,33 @@
 @import '../variables';
 
-nav.breadcrumbs {
+.container__breadcrumbs {
+    display: none;
+    margin-top: 40px;
+}
+
+.breadcrumbs {
     font-size: 24px;
     font-family: $font-advanced;
-    margin-top: 20px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-/* Don't display on screens narrower than 1024 px */
-@media screen and (width < 1024px) {
-    nav.breadcrumbs {
-        display: none;
-    }
-}
-
-/* Adjustments so breadcrumbs will remain under logo on different screens */
-@media screen and (min-width: 992px) {
-    nav.breadcrumbs {
-        width: 992px;
-        padding-left: 40px;
-    }
 }
 
 @media screen and (min-width: 1200px) {
-    nav.breadcrumbs {
-        width: 1200px;
-        padding-left: 16px;
-    }
-}
-
-@media screen and (min-width: 1440px) {
-    nav.breadcrumbs {
-        padding-left: 0px;
-
-        /* Widths of header items and gaps */
-        width: calc(
-            114px + 62px + 767.583px + 62px + 367.312px
-        );
-    }
-}
-
-@media screen and (min-width: 1600px) {
-    nav.breadcrumbs {
-        /* Widths of header items and gaps */
-        width: calc(
-            114px + 115px + 827.58px + 115px + 367.312px
-        );
-    }
-}
-
-@media screen and (min-width: 1920px) {
-    nav.breadcrumbs {
-        /* Widths of header items and gaps */
-        width: calc(
-            114px + 135px + 877.58px + 135px + 367.312px
-        );
+    .container__breadcrumbs {
+        display: block;
     }
 }
 
 /* */
-nav.breadcrumbs li {
+.breadcrumbs .breadcrumbs-item {
     display: inline;
     color: $blue;
 }
 
-nav.breadcrumbs li.active {
+.breadcrumbs .breadcrumbs-item.active {
     color: $dark-blue;
 }
 
-nav.breadcrumbs li+li:before {
+.breadcrumbs .breadcrumbs-item+.breadcrumbs-item:before {
     padding: 8px;
     color: $grey;
-    content: "/\00a0";
+    content: "/";
 }

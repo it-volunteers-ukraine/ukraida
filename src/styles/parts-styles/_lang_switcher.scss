@@ -1,0 +1,38 @@
+@import "../variables";
+
+.lang-list {
+  display: flex;
+  text-transform: uppercase;
+}
+
+.lang-list .lang-item:first-child::after {
+  content: '/';
+  color: $black;
+}
+
+.lang-item a {
+  text-decoration: none;
+}
+
+.lang-item.active a {
+  color: $dark-blue;
+}
+
+.lang-item a:hover {
+  color: $dark-blue;
+  text-decoration: none;
+}
+
+.lang-item.current-lang a {
+  color: $dark-blue;
+}
+
+// Styles for the switcher in the menu modal
+
+.menu__modal .lang-list .lang-item {
+  padding: 13px 0px 13px 11px;
+}
+
+.menu__modal .lang-list .lang-item:first-child::after {
+  padding-left: 11px;
+}
