@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Get latest code
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
       
     - name: Install and Build 🔧
       run: |
@@ -17,7 +17,7 @@ jobs:
         gulp build
         
     - name: Sync files
-      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.5
       with:
         server: ${{ secrets.REMOTE_HOST_LIVE }}
         username: ${{ secrets.FTP_USER_LIVE }}
