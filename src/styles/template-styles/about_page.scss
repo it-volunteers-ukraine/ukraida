@@ -403,6 +403,7 @@
     z-index: 10;
     background-color: transparent;
     border: none;
+    cursor: pointer; 
   }
   
   .about__slider-button--right {
@@ -414,13 +415,17 @@
     z-index: 10;
     background-color: transparent;
     border: none;
-  }
+    cursor: pointer; 
+  } 
   
   .about__arrow {
     width: 24px;
     height: 24px;
+    &:hover {
+      fill: #abb8c3;
+    }
   }
-  
+
   .about__slider-pagination {
     position: absolute;
     bottom: -24px !important;
