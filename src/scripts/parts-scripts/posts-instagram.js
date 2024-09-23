@@ -1,4 +1,4 @@
-console.log('script part/posts-instagram')
+// console.log('script part/posts-instagram')
 
 const intervalDebounce1 = 300;
 let debounceTimer1;
