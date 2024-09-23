@@ -10,7 +10,6 @@ $dev_page_url = PllHelper::get_current_translation('/devpage');
 ?>
 
 <section class="img-text section">
-
     <h2 class="title__content img-text__title img-text__title--mob"><?php echo $rows[0]['img-text_title']; ?></h2>
     <div class="img-text__wrap">
         <div class="img-text__img">
@@ -31,12 +30,12 @@ $dev_page_url = PllHelper::get_current_translation('/devpage');
             </div>
         </div>
     </div>
-
 </section>
+
+
 <?php
 $blockIcons = get_field('block-icons');
 if ($blockIcons) : ?>
-
     <section class="block-icons section">
         <div class="block-icons__container">
             <h2 class="title__content block-icons__title "><?php echo $blockIcons[0]['title'];  ?></h2>
@@ -56,6 +55,7 @@ if ($blockIcons) : ?>
         </div>
     </section>
 <?php endif; ?>
+
 
 <?php
 $rowNumber = get_field('block-number');
@@ -81,7 +81,6 @@ if ($rowNumber) : ?>
         </div>
     </section>
 <?php endif; ?>
-
 
 
 <section class="img-text img-text--reverse section">
