@@ -5,6 +5,9 @@ Template Name: about media
 ?>
 
 <main>
+    <?php
+    get_template_part('/parts/breadcrumbs'); // Breadcrumbs
+    ?>
     <section class="section container about__media">
         <h1 class="about__media-title"><?php echo esc_html(get_field('about_us_in_the_media_title')); ?> </h1>
         <ul class="about__media-list">
