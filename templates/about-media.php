@@ -24,6 +24,7 @@ Template Name: about media
 
             $query = new WP_Query($args);
 
+            // Если есть посты
             if ($query->have_posts()) :
                 while ($query->have_posts()) : $query->the_post();
                     $img = get_field('about_media_img');
@@ -32,7 +33,7 @@ Template Name: about media
                         <div class="about__media-wrap">
                             <div class="about__media-img-block">
                                 <div class="about__media-img">
-                                    <img src="<?php echo $img['url'] ?>" alt="foto">
+                                    <img src="<?php echo esc_url($img['url']) ?>" alt="foto">
                                 </div>
                                 <p class="about__media-avtor"><?php the_field('about_media_title'); ?></p>
                             </div>
@@ -62,12 +63,12 @@ Template Name: about media
             ?>
         </div>
 
-
-
     <?php
+            // Если постов нет
             else :
                 echo '<p>' . __('Нет публикаций') . '</p>';
             endif;
+
             // Сбрасываем данные поста
             wp_reset_postdata();
     ?>
