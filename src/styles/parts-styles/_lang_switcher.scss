@@ -12,19 +12,20 @@
 
 .lang-item a {
   text-decoration: none;
+  transition: $animations;
 }
 
 .lang-item.active a {
   color: $dark-blue;
 }
 
-.lang-item a:hover {
-  color: $dark-blue;
-  text-decoration: none;
-}
-
 .lang-item.current-lang a {
   color: $dark-blue;
+}
+
+.lang-item a:hover {
+  color: $blue;
+  text-decoration: none;
 }
 
 // Styles for the switcher in the menu modal
