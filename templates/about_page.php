@@ -8,7 +8,7 @@ Template Name: about us
 $currend_id = get_the_ID();
 
 // Get the current translation for the devpage
-$dev_page_url = PllHelper::get_current_translation('/devpage');
+$dev_page_url = PllHelper::get_current_translation('/about/about-media');
 
 //
 $detailed_information_button_text = esc_html(get_field('detailed_information_button_text', $currend_id));
@@ -19,32 +19,32 @@ $detailed_text = esc_html(get_field('about_detailed_text', $currend_id));
     <section class="section">
         <div class="container">
             <h1 class="about__title about__title-main"><?php echo esc_html(get_field('title_about', $currend_id)); ?></h1>
-                <?php if( have_rows('about_us', $currend_id) ): ?>
-                <?php while( have_rows('about_us', $currend_id) ): the_row(); ?>
-            <div class="about__content content-about-us">
-                <?php $about_us_title = get_sub_field('about_us_title'); ?>
-                <?php if( $about_us_title ): ?>
-                <h2 class="about__title about__title-who-are-we"><?php echo esc_html($about_us_title); ?></h2>
-                    <?php endif; ?>
-                    <?php $image = get_sub_field('about_us_img'); ?>
-                    <?php if( $image ): ?>
-                <div class="about__img">
-                    <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>">
-                </div>
-                    <?php endif; ?>
-                <div>
-                    <?php if( $about_us_title ): ?>
-                    <h2 class="about__title about__title-who-are-we-block"><?php echo esc_html($about_us_title); ?></h2>
+            <?php if (have_rows('about_us', $currend_id)): ?>
+                <?php while (have_rows('about_us', $currend_id)): the_row(); ?>
+                    <div class="about__content content-about-us">
+                        <?php $about_us_title = get_sub_field('about_us_title'); ?>
+                        <?php if ($about_us_title): ?>
+                            <h2 class="about__title about__title-who-are-we"><?php echo esc_html($about_us_title); ?></h2>
                         <?php endif; ?>
-                    <div class="about__text">
-                        <?php echo wp_kses_post(get_sub_field('about_us_text')); ?>
+                        <?php $image = get_sub_field('about_us_img'); ?>
+                        <?php if ($image): ?>
+                            <div class="about__img">
+                                <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>">
+                            </div>
+                        <?php endif; ?>
+                        <div>
+                            <?php if ($about_us_title): ?>
+                                <h2 class="about__title about__title-who-are-we-block"><?php echo esc_html($about_us_title); ?></h2>
+                            <?php endif; ?>
+                            <div class="about__text">
+                                <?php echo wp_kses_post(get_sub_field('about_us_text')); ?>
+                            </div>
+                            <a href="<?php echo esc_url(get_sub_field('button_link_page')); ?>" class="about__button" rel="noopener noreferrer">
+                                <?php echo $detailed_information_button_text; ?>
+                            </a>
+                        </div>
                     </div>
-                    <a href="<?php echo esc_url(get_sub_field('button_link_page')); ?>" class="about__button" rel="noopener noreferrer">
-                        <?php echo $detailed_information_button_text; ?>
-                    </a>
-                </div>
-            </div>
-            <?php endwhile; ?>
+                <?php endwhile; ?>
             <?php endif; ?>
         </div>
     </section>
@@ -54,37 +54,37 @@ $detailed_text = esc_html(get_field('about_detailed_text', $currend_id));
             <h2 class="about__title about__title-slider"><?php echo get_field('section_articles_title', $currend_id); ?></h2>
             <div class="about__slider">
                 <div class="about__slider-wrapper">
-                    <button class="swiper-button-prev about__slider-button--left" >
+                    <button class="swiper-button-prev about__slider-button--left">
                         <svg class="about__arrow">
                             <use xlink:href="#left-arrow" x="-4" y="-2"></use>
                         </svg>
                     </button>
                     <div class="swiper">
                         <div class="swiper-wrapper about__slider-container">
-                            <?php if( have_rows('about_in_media') ): ?>
-                            <?php while( have_rows('about_in_media') ): the_row(); ?>
-                            <div class="swiper-slide slider__item-container">
-                                <div class="slider__item--left">
-                                    <div class="slider__item-photo">
-                                        <?php $image = get_sub_field('photo_journalist', $currend_id);
-                                        if( !empty($image) ): ?>
-                                        <img  src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>">
-                                        <?php endif; ?>
+                            <?php if (have_rows('about_in_media')): ?>
+                                <?php while (have_rows('about_in_media')): the_row(); ?>
+                                    <div class="swiper-slide slider__item-container">
+                                        <div class="slider__item--left">
+                                            <div class="slider__item-photo">
+                                                <?php $image = get_sub_field('photo_journalist', $currend_id);
+                                                if (!empty($image)): ?>
+                                                    <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>">
+                                                <?php endif; ?>
+                                            </div>
+                                            <div class="slider__item-subtitle"><?php the_sub_field('about_in_media_subtitle'); ?></div>
+                                        </div>
+                                        <div class="slider__item--right">
+                                            <h3 class="slider__item-title"><?php the_sub_field('about_in_media_title'); ?></h3>
+                                            <p class="slider__date"><?php the_sub_field('date_of_publication'); ?></p>
+                                            <p class="slider__item-text"><?php the_sub_field('about_in_media_text'); ?></p>
+                                            <?php
+                                            $link = get_sub_field('about_in_media_link');
+                                            if ($link): ?>
+                                                <div class="slider__item-link"><a href="<?php echo esc_url($link); ?>" target="_blank" rel="noopener noreferrer"><?= $detailed_text ?></a></div>
+                                            <?php endif; ?>
+                                        </div>
                                     </div>
-                                    <div class="slider__item-subtitle"><?php the_sub_field('about_in_media_subtitle'); ?></div>
-                                </div>
-                                <div class="slider__item--right">
-                                    <h3 class="slider__item-title"><?php the_sub_field('about_in_media_title'); ?></h3>
-                                    <p class="slider__date"><?php the_sub_field('date_of_publication'); ?></p>
-                                    <p class="slider__item-text"><?php the_sub_field('about_in_media_text'); ?></p>
-                                    <?php 
-                                    $link = get_sub_field('about_in_media_link');
-                                    if( $link ): ?>
-                                    <div class="slider__item-link"><a href="<?php echo esc_url($link); ?>" target="_blank" rel="noopener noreferrer"><?= $detailed_text ?></a></div> 
-                                    <?php endif; ?>
-                                </div>   
-                            </div>
-                            <?php endwhile; ?>
+                                <?php endwhile; ?>
                             <?php endif; ?>
                         </div>
                     </div>
@@ -109,22 +109,22 @@ $detailed_text = esc_html(get_field('about_detailed_text', $currend_id));
             <h2 class="about__title about__title-partners"><?php echo get_field('title_our_partners', $currend_id); ?></h2>
             <ul class="about__partners-list">
                 <?php
-                $field = get_field_object('our_partners_img', $currend_id); 
-                $images = $field['value']; 
-                if ($images): 
-                foreach ($images as $image): 
+                $field = get_field_object('our_partners_img', $currend_id);
+                $images = $field['value'];
+                if ($images):
+                    foreach ($images as $image):
                 ?>
-                <li class="partners-item">
-                    <div class="partners-list-img">
-                        <figure>
-                            <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
-                            <figcaption><?php echo esc_html($image['caption']); ?></figcaption>
-                        </figure>
-                    </div>
-                </li>
-                <?php 
-                endforeach;
-                endif; 
+                        <li class="partners-item">
+                            <div class="partners-list-img">
+                                <figure>
+                                    <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+                                    <figcaption><?php echo esc_html($image['caption']); ?></figcaption>
+                                </figure>
+                            </div>
+                        </li>
+                <?php
+                    endforeach;
+                endif;
                 ?>
             </ul>
 
@@ -146,4 +146,3 @@ $detailed_text = esc_html(get_field('about_detailed_text', $currend_id));
     </symbol>
 </svg>
 <?php get_footer(); ?>
-
