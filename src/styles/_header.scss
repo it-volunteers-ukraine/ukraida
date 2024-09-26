@@ -274,7 +274,7 @@
     text-decoration: none;
     color: $black;
 
-    transition: color 0.3s;
+    transition: all $animations;
   }
 
   .menu-item a:hover {

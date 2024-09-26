@@ -12,7 +12,7 @@
 
 .lang-item a {
   text-decoration: none;
-  transition: $animations;
+  transition: color $animations;
 }
 
 .lang-item.active a {
