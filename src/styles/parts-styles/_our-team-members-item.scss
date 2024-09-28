@@ -18,7 +18,7 @@
 }
 
 .our-team-members-items-item-image {
-  box-shadow: 4px 4px 44px 0px #0000001C;
+  box-shadow: 4px 4px 4px 0px #0000001C;
   object-fit: cover;
 }
 
@@ -28,12 +28,18 @@
   left: 0px;
   max-width: 100%;
   background-color: rgba(34, 31, 37, 0.65);
-  display: none;
+  opacity: 0;
+  transition: all $animations;
+}
+
+.our-team-members-items-item-image:hover,
+.our-team-members-items-item-image + .our-team-members-items-item-wrap:hover{
+  box-shadow: 4px 4px 44px 0px #0000001C;
 }
 
 .our-team-members-items-item-image:hover + .our-team-members-items-item-wrap,
 .our-team-members-items-item-wrap:hover {
-  display: block;
+  opacity: 1;
 }
 
 .our-team-members-items-item-info {
