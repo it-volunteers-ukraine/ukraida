@@ -30,7 +30,7 @@
         STR;
     }
 ?>
-    <div href="#" class="<?= $item_class ?>">
+    <div class="<?= $item_class ?>">
         <svg class="<?= $img_class ?>">
             <use xlink:href="<?php bloginfo('template_url'); ?>/assets/images/header/sprite.svg#language"></use>
         </svg>
