@@ -29,6 +29,7 @@ Template Name: about media
                 while ($query->have_posts()) : $query->the_post();
                     $img = get_field('about_media_img');
             ?>
+
                     <li class="about__media-item">
                         <div class="about__media-wrap">
                             <div class="about__media-img-block">
@@ -42,7 +43,7 @@ Template Name: about media
                                 <p class="about__media-date"><?php the_field('about_media_date'); ?></p>
                                 <p class="about__media-text"><?php the_field('about_media_text'); ?></p>
                                 <p class="about__media-link">
-                                    <a href="#">Перейти на статтю</a>
+                                    <a target="_blank" href="<?php the_field('link_article'); ?>"><?php the_field('link_title'); ?></a>
                                 </p>
                             </div>
                         </div>
@@ -66,9 +67,9 @@ Template Name: about media
     <?php
             // Если постов нет
             else :
-                echo '<p>' . __('Нет публикаций') . '</p>';
+                $no_post_message = get_field('no_post_message');
+                echo '<p class="about__media-nopost">' . esc_html($no_post_message) . '</p>';
             endif;
-
             // Сбрасываем данные поста
             wp_reset_postdata();
     ?>
