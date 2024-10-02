@@ -149,6 +149,12 @@
   line-height: 1.36;
   margin-bottom: 16px;
 
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
   @media screen and (min-width: 768px) {
     font-size: 20px;
   }
@@ -182,4 +188,8 @@
 
   @media screen and (min-width: 1920px) {
   }
+}
+
+.about__media-nopost {
+  text-align: center;
 }
