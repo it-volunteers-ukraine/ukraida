@@ -467,7 +467,14 @@
     object-fit: cover;
     width: 244px;
     height: 244px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
+
+  .partners-list-img img {
+    width: 224px !important;
+  }      
 
   .partners-list-img figcaption {
     display: none;
