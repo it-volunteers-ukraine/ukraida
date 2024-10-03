@@ -1,1 +1,1 @@
-// console.log('footer part');
+console.log('footer part');

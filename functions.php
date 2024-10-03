@@ -51,10 +51,10 @@ function wp_it_volunteers_scripts()
     // wp_localize_script('events-parts-scripts', 'vars', $front_scripts_args);
 
     wp_enqueue_style('home-style', get_template_directory_uri() . '/assets/styles/template-styles/home.css', array('main'));
-    // wp_enqueue_script('home-scripts', get_template_directory_uri() . '/assets/scripts/template-scripts/home.js', array(), false, true);
+    wp_enqueue_script('home-scripts', get_template_directory_uri() . '/assets/scripts/template-scripts/home.js', array(), false, true);
 
     wp_enqueue_style('next-event-style', get_template_directory_uri() . '/assets/styles/parts-styles/next-event.css', array());
-    // wp_enqueue_script('next-event-scripts', get_template_directory_uri() . '/assets/scripts/parts-scripts/next-event.js', array(), false, true);
+    wp_enqueue_script('next-event-scripts', get_template_directory_uri() . '/assets/scripts/parts-scripts/next-event.js', array(), false, true);
 
     wp_enqueue_style('projects-style', get_template_directory_uri() . '/assets/styles/vendors/swiper.css', array());
     wp_enqueue_style('projects-bundle-style', get_template_directory_uri() . '/assets/styles/vendors/swiper-bundle.css', array());
@@ -64,20 +64,16 @@ function wp_it_volunteers_scripts()
     wp_enqueue_script('projects-swiper-scripts', get_template_directory_uri() . '/assets/scripts/parts-scripts/projects-swiper.js', array(), false, true);
 
     wp_enqueue_style('about-style', get_template_directory_uri() . '/assets/styles/parts-styles/about.css', array());
-    // wp_enqueue_script('about-scripts', get_template_directory_uri() . '/assets/scripts/parts-scripts/about.js', array(), false, true);
+    wp_enqueue_script('about-scripts', get_template_directory_uri() . '/assets/scripts/parts-scripts/about.js', array(), false, true);
 
     wp_enqueue_style('posts-instagram-style', get_template_directory_uri() . '/assets/styles/parts-styles/posts-instagram.css', array());
     wp_enqueue_script('posts-instagram-scripts', get_template_directory_uri() . '/assets/scripts/parts-scripts/posts-instagram.js', array(), false, true);
 
     wp_enqueue_style('event-map-style', get_template_directory_uri() . '/assets/styles/parts-styles/event-map.css', array());
-    // wp_enqueue_script('event-map-scripts', get_template_directory_uri() . '/assets/scripts/parts-scripts/event-map.js', array(), false, true);
+    wp_enqueue_script('event-map-scripts', get_template_directory_uri() . '/assets/scripts/parts-scripts/event-map.js', array(), false, true);
 
     // posts-instagram
 
-  }
-
-  if (is_page_template('templates/about-media.php')) {
-    wp_enqueue_style('about_media-style', get_stylesheet_directory_uri() . '/assets/styles/template-styles/about_media.css', array('main'));
   }
 
   if (is_page_template('templates/about_page.php')) {
@@ -135,13 +131,6 @@ function wp_it_volunteers_scripts()
     wp_localize_script('load-more', 'ajax_load_more_params', array(
       'ajax_url' => admin_url('admin-ajax.php'),
     ));
-
-    // progress bar
-    function enqueue_progress_bar_script()
-    {
-      wp_enqueue_script('progress-bar', get_template_directory_uri() . '/assets/scripts/parts-scripts/progress-bar.js', array(), null, true);
-    }
-    add_action('wp_enqueue_scripts', 'enqueue_progress_bar_script');
   }
 
   if (is_page_template('templates/donates_things_page.php')) {
@@ -184,7 +173,7 @@ function wp_it_volunteers_scripts()
       'our-partners-and-sponsors-style',
       get_template_directory_uri() . '/assets/styles/template-styles/our-partners-and-sponsors.css',
       array('main')
-    );
+    );    
   }
 
   if (is_page_template('templates/our_team_members.php')) {
@@ -196,7 +185,7 @@ function wp_it_volunteers_scripts()
     );
     // Script
     wp_enqueue_script(
-      'our-team-members-scripts',
+      'our-team-members-scripts', 
       get_template_directory_uri() . '/assets/scripts/template-scripts/our-team-members.js',
       array('jquery')
     );
@@ -464,7 +453,12 @@ function true_breadcrumbs()
 
 require get_template_directory() . '/parts/load-more.php';
 
-
+// progress bar
+function enqueue_progress_bar_script()
+{
+  wp_enqueue_script('progress-bar', get_template_directory_uri() . '/assets/scripts/parts-scripts/progress-bar.js', array(), null, true);
+}
+add_action('wp_enqueue_scripts', 'enqueue_progress_bar_script');
 
 // Load more action for "Our team members" page
 require get_template_directory() . '/parts/our-team-members-load-more.php';
@@ -480,3 +474,4 @@ require get_template_directory() . '/parts/image-helper.php';
 // add_filter('oembed_dataparse', 'remove_oembed_caption_block', 10, 3);
 // Helper functions to work with Polylang
 require get_template_directory() . '/parts/pll-helper.php';
+

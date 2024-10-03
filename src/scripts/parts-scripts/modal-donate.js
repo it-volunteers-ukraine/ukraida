@@ -9,6 +9,8 @@ const allDonateBlock = document.querySelectorAll(".donate_block-text");
 
 const donateItemRef = document.querySelector(".modal-wrap");
 
+console.log("modal script");
+
 const setNewAttributeSuccess = (event = null) => {
   for (let i = 0; i < allDonateBlock.length; i++) {
     if (allDonateBlock[i].hasAttribute("success")) {
@@ -91,7 +93,7 @@ const copyToBuffer = (event) => {
 };
 
 for (let i = 0; i < allDonateBlock.length; i++) {
-  // console.log("add for: ", allDonateBlock[i]);
+  console.log("add for: ", allDonateBlock[i]);
   allDonateBlock[i].addEventListener("click", (e) => copyToBuffer(e));
 }
 

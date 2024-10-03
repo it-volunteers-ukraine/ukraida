@@ -12,8 +12,8 @@
         $p_id = "swiper" . $sin . "Pagination";
 
         // Slider's previous and next svg button's hrefs
-        $prev_btn_href = get_bloginfo('template_url') . "/assets/images/symbol-defs.svg#icon-arrow-left";
-        $next_btn_href = get_bloginfo('template_url') . "/assets/images/symbol-defs.svg#icon-arrow-right";
+        $prev_btn_href = get_bloginfo('template_url') . "/assets/images/symbol-defs.svg#icon-arrow-prev";
+        $next_btn_href = get_bloginfo('template_url') . "/assets/images/symbol-defs.svg#icon-arrow-next";
 ?>
 
         <section>

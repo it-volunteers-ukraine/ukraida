@@ -4,7 +4,7 @@ const modalContainerRef = document.getElementById("js-modal");
 const modalInnerRef = document.getElementById("js-inner__wrap");
 const btnDonateCopyRef = document.getElementById("js-btn-donate-copy");
 
-// console.log("modal script");
+console.log("modal script");
 
 function openModal() {
   bodyScrollTop = window.scrollY || document.documentElement.scrollTop;
