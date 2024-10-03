@@ -19,6 +19,7 @@ $detailed_text = esc_html(get_field('about_detailed_text', $currend_id));
     <section class="section">
         <div class="container">
             <h1 class="about__title about__title-main"><?php echo esc_html(get_field('title_about', $currend_id)); ?></h1>
+<<<<<<< HEAD
             <?php 
             $args = array(
                 'post_type' => 'post-types-about-med',
@@ -27,6 +28,9 @@ $detailed_text = esc_html(get_field('about_detailed_text', $currend_id));
 
             $query = new WP_Query($args);
             if (have_rows('about_us', $currend_id)): ?>
+=======
+            <?php if (have_rows('about_us', $currend_id)): ?>
+>>>>>>> main
                 <?php while (have_rows('about_us', $currend_id)): the_row(); ?>
                     <div class="about__content content-about-us">
                         <?php $about_us_title = get_sub_field('about_us_title'); ?>
@@ -79,6 +83,7 @@ $detailed_text = esc_html(get_field('about_detailed_text', $currend_id));
                     </button>
                     <div class="swiper">
                         <div class="swiper-wrapper about__slider-container">
+<<<<<<< HEAD
                         <?php 
                         while ($query->have_posts()): $query->the_post(); ?>
                             <div class="swiper-slide slider__item-container">
@@ -108,6 +113,7 @@ $detailed_text = esc_html(get_field('about_detailed_text', $currend_id));
                                 </div>
                             </div>
                             <?php endwhile; ?>
+
                         </div>
                     </div>
                     <button class="swiper-button-next about__slider-button--right">
@@ -147,10 +153,12 @@ $detailed_text = esc_html(get_field('about_detailed_text', $currend_id));
             <h2 class="about__title about__title-partners"><?php echo esc_html(get_field('title_our_partners', $currend_id)); ?></h2>
             <ul class="about__partners-list">
                 <?php
+
                 while ($partners_query->have_posts()): $partners_query->the_post();
                     // Get ACF fields for 'name' and 'logo'
                     $partner_name = get_field('our_partners_and_sponsors_name'); 
                     $partner_logo = get_field('our_partners_and_sponsors_logo'); 
+
                 ?>
                     <li class="partners-item">
                         <div class="partners-list-img">
