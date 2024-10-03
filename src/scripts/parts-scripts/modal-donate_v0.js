@@ -4,11 +4,11 @@ const modalContainerRef = document.getElementById("js-modal");
 const modalInnerRef = document.getElementById("js-inner__wrap");
 const btnDonateCopyRef = document.getElementById("js-btn-donate-copy");
 
-console.log("modal script");
+// console.log("modal script");
 
 function openModal() {
   bodyScrollTop = window.scrollY || document.documentElement.scrollTop;
-    // Запрещаем прокрутку страницы
+  // Запрещаем прокрутку страницы
   document.body.style.overflow = 'hidden';
   document.body.style.paddingRight = getScrollbarWidth() + 'px';
 
