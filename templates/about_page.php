@@ -8,7 +8,7 @@ Template Name: about us
 $currend_id = get_the_ID();
 
 // Get the current translation for the devpage
-$dev_page_url = PllHelper::get_current_translation('/devpage');
+$dev_page_url = PllHelper::get_current_translation('/about/about-media');
 
 //
 $detailed_information_button_text = esc_html(get_field('detailed_information_button_text', $currend_id));
@@ -56,12 +56,23 @@ $detailed_text = esc_html(get_field('about_detailed_text', $currend_id));
         </div>
     </section>
 
+<!-----Початок секції "About in press"------------>  
+    <?php 
+    $args = array(
+        'post_type' => 'post-types-about-med',
+        'posts_per_page' => -1, // Retrieve all posts
+    );
+
+    $query = new WP_Query($args);
+        
+    // Check if there are any posts to display
+    if ($query->have_posts()): ?>
     <section class="section">
         <div class="container">
-            <h2 class="about__title about__title-slider"><?php echo get_field('section_articles_title', $currend_id); ?></h2>
+            <h2 class="about__title about__title-slider"><?php echo esc_html(get_field('section_articles_title', $currend_id)); ?></h2>
             <div class="about__slider">
                 <div class="about__slider-wrapper">
-                    <button class="swiper-button-prev about__slider-button--left" >
+                    <button class="swiper-button-prev about__slider-button--left">
                         <svg class="about__arrow">
                             <use xlink:href="#left-arrow" x="-4" y="-2"></use>
                         </svg>
@@ -73,23 +84,28 @@ $detailed_text = esc_html(get_field('about_detailed_text', $currend_id));
                             <div class="swiper-slide slider__item-container">
                                 <div class="slider__item--left">
                                     <div class="slider__item-photo">
-                                        <?php $image = get_sub_field('photo_journalist', $currend_id);
-                                        if( !empty($image) ): ?>
-                                        <img  src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>">
+                                        <?php 
+                                        $image = get_field('about_media_img');
+                                        if ($image): ?>
+                                            <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>">
                                         <?php endif; ?>
                                     </div>
-                                    <div class="slider__item-subtitle"><?php the_sub_field('about_in_media_subtitle'); ?></div>
+                                    <div class="slider__item-subtitle"><?php echo esc_html(get_field('about_media_title')); ?></div>
                                 </div>
                                 <div class="slider__item--right">
-                                    <h3 class="slider__item-title"><?php the_sub_field('about_in_media_title'); ?></h3>
-                                    <p class="slider__date"><?php the_sub_field('date_of_publication'); ?></p>
-                                    <p class="slider__item-text"><?php the_sub_field('about_in_media_text'); ?></p>
-                                    <?php 
-                                    $link = get_sub_field('about_in_media_link');
-                                    if( $link ): ?>
-                                    <div class="slider__item-link"><a href="<?php echo esc_url($link); ?>" target="_blank" rel="noopener noreferrer"><?= $detailed_text ?></a></div> 
+                                    <h3 class="slider__item-title"><?php the_field('about_media_name_article'); ?></h3>
+                                    <p class="slider__date"><?php the_field('about_media_date'); ?></p>
+                                    <p class="slider__item-text"><?php the_field('about_media_text'); ?></p>
+                                    <?php
+                                    $link = get_field('article_link');
+                                    if ($link): ?>
+                                    <div class="slider__item-link">
+                                        <a href="<?php echo esc_url($link); ?>" target="_blank" rel="noopener noreferrer">
+                                            <?php echo esc_html(get_field('link_text')); ?> 
+                                        </a>
+                                    </div>
                                     <?php endif; ?>
-                                </div>   
+                                </div>
                             </div>
                             <?php endwhile; ?>
                         </div>
@@ -103,16 +119,32 @@ $detailed_text = esc_html(get_field('about_detailed_text', $currend_id));
                 </div>
             </div>
             <div class="about__button-wrapper">
-                <a href="<?= $dev_page_url ?>" class="about__button about__slider-button" rel="noopener noreferrer">
-                    <?php echo get_field('about_press_button_text', $currend_id); ?>
+                <a href="<?php echo esc_url(get_field('link_button_press', $currend_id)); ?>" class="about__button about__slider-button" rel="noopener noreferrer">
+                    <?php echo esc_html(get_field('about_press_button_text', $currend_id)); ?>
                 </a>
             </div>
         </div>
     </section>
+    <?php endif; 
+    
+    // Reset post data after custom query
+    wp_reset_postdata(); ?>
+<!-----Закінчення секції "About in press"------------>
 
+
+<!-----Початок секції "Our partners and sponsors"------------>
+<?php
+    $args = array(
+        'post_type' => 'post-types-our-partn', // Custom post type slug
+        'posts_per_page' => -1, // Retrieve all partner posts
+    );
+    $partners_query = new WP_Query($args);
+
+    // Check if there are any posts to display
+    if ($partners_query->have_posts()): ?>
     <section class="section">
         <div class="container">
-            <h2 class="about__title about__title-partners"><?php echo get_field('title_our_partners', $currend_id); ?></h2>
+            <h2 class="about__title about__title-partners"><?php echo esc_html(get_field('title_our_partners', $currend_id)); ?></h2>
             <ul class="about__partners-list">
                 <?php
                 while ($partners_query->have_posts()): $partners_query->the_post();
@@ -120,27 +152,31 @@ $detailed_text = esc_html(get_field('about_detailed_text', $currend_id));
                     $partner_name = get_field('our_partners_and_sponsors_name'); 
                     $partner_logo = get_field('our_partners_and_sponsors_logo'); 
                 ?>
-                <li class="partners-item">
-                    <div class="partners-list-img">
-                        <figure>
-                            <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
-                            <figcaption><?php echo esc_html($image['caption']); ?></figcaption>
-                        </figure>
-                    </div>
-                </li>
-                <?php 
-                endforeach;
-                endif; 
-                ?>
+                    <li class="partners-item">
+                        <div class="partners-list-img">
+                            <figure>
+                                <?php if ($partner_logo): ?>
+                                    <img src="<?php echo esc_url($partner_logo['url']); ?>" alt="<?php echo esc_attr($partner_logo['alt']); ?>" />
+                                <?php endif; ?>
+                                <figcaption><?php echo esc_html($partner_name); ?></figcaption> 
+                            </figure>
+                        </div>
+                    </li>
+                <?php endwhile; ?>
             </ul>
 
             <div class="about__slider-button about__slider-button-bottom">
                 <a href="<?php echo esc_url(get_field('link_page_partners', $currend_id)); ?>" class="about__button" rel="noopener noreferrer">
-                    <?php echo $detailed_information_button_text; ?>
+                    <?php echo esc_html($detailed_information_button_text); ?>
                 </a>
             </div>
         </div>
     </section>
+    <?php
+    wp_reset_postdata(); // Reset post data after the loop
+    endif; 
+    ?>
+<!-----Завершення секції "Our partners and sponsors"------------>
 </main>
 
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="display:none;">

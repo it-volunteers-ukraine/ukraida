@@ -76,6 +76,10 @@ function wp_it_volunteers_scripts()
 
   }
 
+  if (is_page_template('templates/about-media.php')) {
+    wp_enqueue_style('about_media-style', get_stylesheet_directory_uri() . '/assets/styles/template-styles/about_media.css', array('main'));
+  }
+
   if (is_page_template('templates/about_page.php')) {
     wp_enqueue_style('about_page-style', get_stylesheet_directory_uri() . '/assets/styles/template-styles/about_page.css', array('main'));
     wp_enqueue_style('about_page-bundle-style', get_template_directory_uri() . '/assets/styles/vendors/swiper-bundle.css', array());
