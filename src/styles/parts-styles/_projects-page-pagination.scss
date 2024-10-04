@@ -22,13 +22,15 @@
   background-color: $btn-main;
 }
 
-.projects-pagination-btn.inactive, .projects-pagination-btn.disabled {
+.projects-pagination-btn.inactive,
+.projects-pagination-btn.disabled {
   color: $black;
   background-color: $light-blue;
   border: 1px solid $blue;
 }
 
-.projects-pagination-btn.active, .projects-pagination-btn.inactive {
+.projects-pagination-btn.active,
+.projects-pagination-btn.inactive {
   cursor: pointer;
   transition: all $animations;
 
