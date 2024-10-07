@@ -154,18 +154,16 @@ $detailed_text = esc_html(get_field('about_detailed_text', $currend_id));
                 ?>
                     <li class="partners-item">
                         <div class="partners-list-img">
-                            <figure>
-                                <?php if ($partner_logo): ?>
-                                    <img src="<?php echo esc_url($partner_logo['url']); ?>" alt="<?php echo esc_attr($partner_logo['alt']); ?>" />
-                                <?php endif; ?>
-                                <figcaption><?php echo esc_html($partner_name); ?></figcaption> 
-                            </figure>
+                            <?php if ($partner_logo): ?>
+                            <img src="<?php echo esc_url($partner_logo['url']); ?>" alt="<?php echo esc_attr($partner_logo['alt']); ?>" />
+                            <?php endif; ?>
+                            <p><?php echo esc_html($partner_name); ?></p> 
                         </div>
                     </li>
                 <?php endwhile; ?>
             </ul>
 
-            <div class="about__slider-button about__slider-button-bottom">
+            <div class="about__partners-button">
                 <a href="<?php echo esc_url(get_field('link_page_partners', $currend_id)); ?>" class="about__button" rel="noopener noreferrer">
                     <?php echo esc_html($detailed_information_button_text); ?>
                 </a>

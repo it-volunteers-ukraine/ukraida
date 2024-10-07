@@ -3,7 +3,7 @@ function setEqualHeight() {
   const slides = document.querySelectorAll('.swiper-slide');
 
   slides.forEach((slide) => {
-    slide.style.height = 'auto'; // Обнуляємо висоту перед розрахунком
+    slide.style.height = 'auto'; // Обнуляємо висоту
   });
 
   // Знаходимо максимальну висоту слайду
@@ -14,10 +14,26 @@ function setEqualHeight() {
     }
   });
 
-  // Встановлюємо однакоу висоту для всіх слайдів
+  // Встановлюємо однакову висоту для всіх слайдів
   slides.forEach((slide) => {
     slide.style.height = maxHeight + 'px';
   });
+}
+
+function setCustomPagination() {
+  const bullets = document.querySelectorAll('.swiper-pagination-bullet');
+  const activeIndex = swiper.realIndex; // Використовуємо realIndex для відслідковування активного слайду
+  const totalSlides = swiper.slides.length;
+
+  // ВИдаляємо всі буллети
+  bullets.forEach(bullet => bullet.style.display = 'none');
+
+  // Відображуємо тільки три буллета
+  for (let i = activeIndex - 1; i <= activeIndex + 1; i++) {
+    if (i >= 0 && i < totalSlides) {
+      bullets[i].style.display = 'inline-block';
+    }
+  }
 }
 
 const swiper = new Swiper(".swiper", {
@@ -34,7 +50,6 @@ const swiper = new Swiper(".swiper", {
 
   pagination: {
     el: ".swiper-pagination",
-    dynamicBullets: true,
   },
 
   breakpoints: {
@@ -46,17 +61,21 @@ const swiper = new Swiper(".swiper", {
   on: {
     init: function () {
       setTimeout(() => {
-        setEqualHeight(); 
-      }, 0); 
+        setEqualHeight();
+        setCustomPagination(); // Налаштовуємо пагінацію вісля ініціалізації
+      }, 0);
     },
     resize: function () {
-      setEqualHeight(); 
+      setEqualHeight();
+      setCustomPagination(); // Оновлюємо при зміні розміру
     },
     slideChangeTransitionEnd: function () {
-      setEqualHeight(); 
+      setEqualHeight();
+      setCustomPagination(); // Оновлюємо при зміні слайду
     }
   }
 });
+
 
 
 
