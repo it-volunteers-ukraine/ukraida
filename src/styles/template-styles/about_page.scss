@@ -121,7 +121,7 @@
 }
 
 .about__slider-button {
-  margin-top: 40px;
+  margin-top: 20px;
 }
 
 .about__title-partners {
@@ -360,7 +360,6 @@
   }
 
   .about__slider {
-    max-width: 1152px;
     margin: 0 auto;
   }
 
@@ -374,7 +373,7 @@
   }
 
   .slider__item-container {
-    max-width: 537px;
+    
     padding-bottom: 24px;
     margin-bottom: 0;
   }
@@ -421,6 +420,8 @@
     background-color: transparent;
     border: none;
     cursor: pointer;
+    padding: 0;
+    line-height: 0;
   }
 
   .about__slider-button--right {
@@ -428,11 +429,13 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    right: clamp(3px, calc(3px + (7 - 3) * ((100vw - 1200px) / (1920 - 1200))), 7px);
+    right: -10px;
     z-index: 10;
     background-color: transparent;
     border: none;
     cursor: pointer;
+    padding: 0;
+    line-height: 0;
   }
 
   .about__arrow {
@@ -442,6 +445,10 @@
     &:hover {
       fill: #abb8c3;
     }
+  }
+
+  .about__slider-pagination {
+    margin-top: 40px;
   }
 
   .about__button-wrapper {
@@ -528,8 +535,6 @@
   }
 
   .slider__item-container {
-    min-width: 637px;
-    max-width: 1000px;
     padding-bottom: 24px;
   }
 

@@ -71,8 +71,7 @@ $detailed_text = esc_html(get_field('about_detailed_text', $currend_id));
         <div class="container">
             <h2 class="about__title about__title-slider"><?php echo esc_html(get_field('section_articles_title', $currend_id)); ?></h2>
             <div class="about__slider">
-                <div class="about__slider-wrapper">
-                    
+                <div class="about__slider-wrapper">  
                     <div class="swiper">
                         <div class="swiper-wrapper about__slider-container">
                             <?php 
@@ -108,7 +107,7 @@ $detailed_text = esc_html(get_field('about_detailed_text', $currend_id));
                     </div>
                     <button class="swiper-button-prev about__slider-button--left">
                         <svg class="about__arrow">
-                            <use xlink:href="#left-arrow" x="-4" y="-2"></use>
+                            <use xlink:href="<?php bloginfo('template_url'); ?>/assets/images/symbol-defs.svg#icon-arrow-left"></use>
                         </svg>
                     </button>
                     <button class="swiper-button-next about__slider-button--right">
