@@ -72,11 +72,7 @@ $detailed_text = esc_html(get_field('about_detailed_text', $currend_id));
             <h2 class="about__title about__title-slider"><?php echo esc_html(get_field('section_articles_title', $currend_id)); ?></h2>
             <div class="about__slider">
                 <div class="about__slider-wrapper">
-                    <button class="swiper-button-prev about__slider-button--left">
-                        <svg class="about__arrow">
-                            <use xlink:href="#left-arrow" x="-4" y="-2"></use>
-                        </svg>
-                    </button>
+                    
                     <div class="swiper">
                         <div class="swiper-wrapper about__slider-container">
                             <?php 
@@ -110,6 +106,11 @@ $detailed_text = esc_html(get_field('about_detailed_text', $currend_id));
                             <?php endwhile; ?>
                         </div>
                     </div>
+                    <button class="swiper-button-prev about__slider-button--left">
+                        <svg class="about__arrow">
+                            <use xlink:href="#left-arrow" x="-4" y="-2"></use>
+                        </svg>
+                    </button>
                     <button class="swiper-button-next about__slider-button--right">
                         <svg class="about__arrow">
                             <use xlink:href="#right-arrow" x="-4" y="-2"></use>

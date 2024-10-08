@@ -50,7 +50,7 @@ const swiper = new Swiper(".swiper", {
 
   pagination: {
     el: ".swiper-pagination",
-    dinamicBullets: true,
+    dynamicBullets: true,
   },
 
   breakpoints: {
