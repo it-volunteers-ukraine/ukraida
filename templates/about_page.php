@@ -79,7 +79,7 @@ $detailed_text = esc_html(get_field('about_detailed_text', $currend_id));
                     </button>
                     <div class="swiper">
                         <div class="swiper-wrapper about__slider-container">
-                        <?php 
+                            <?php 
                         while ($query->have_posts()): $query->the_post(); ?>
                             <div class="swiper-slide slider__item-container">
                                 <div class="slider__item--left">
@@ -116,7 +116,7 @@ $detailed_text = esc_html(get_field('about_detailed_text', $currend_id));
                         </svg>
                     </button>
                     <div class="swiper-pagination about__slider-pagination"></div>
-                </div>
+                </div>    
             </div>
             <div class="about__button-wrapper">
                 <a href="<?php echo esc_url(get_field('link_button_press', $currend_id)); ?>" class="about__button about__slider-button" rel="noopener noreferrer">

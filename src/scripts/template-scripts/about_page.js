@@ -20,21 +20,21 @@ function setEqualHeight() {
   });
 }
 
-function setCustomPagination() {
-  const bullets = document.querySelectorAll('.swiper-pagination-bullet');
-  const activeIndex = swiper.realIndex; // Використовуємо realIndex для відслідковування активного слайду
-  const totalSlides = swiper.slides.length;
+// function setCustomPagination() {
+//   const bullets = document.querySelectorAll('.swiper-pagination-bullet');
+//   const activeIndex = swiper.realIndex; // Використовуємо realIndex для відслідковування активного слайду
+//   const totalSlides = swiper.slides.length;
 
-  // ВИдаляємо всі буллети
-  bullets.forEach(bullet => bullet.style.display = 'none');
+//   // ВИдаляємо всі буллети
+//   bullets.forEach(bullet => bullet.style.display = 'none');
 
-  // Відображуємо тільки три буллета
-  for (let i = activeIndex - 1; i <= activeIndex + 1; i++) {
-    if (i >= 0 && i < totalSlides) {
-      bullets[i].style.display = 'inline-block';
-    }
-  }
-}
+//   // Відображуємо тільки три буллета
+//   for (let i = activeIndex - 1; i <= activeIndex + 1; i++) {
+//     if (i >= 0 && i < totalSlides) {
+//       bullets[i].style.display = 'inline-block';
+//     }
+//   }
+// }
 
 const swiper = new Swiper(".swiper", {
   direction: "horizontal",
@@ -50,6 +50,7 @@ const swiper = new Swiper(".swiper", {
 
   pagination: {
     el: ".swiper-pagination",
+    dinamicBullets: true,
   },
 
   breakpoints: {
@@ -62,16 +63,16 @@ const swiper = new Swiper(".swiper", {
     init: function () {
       setTimeout(() => {
         setEqualHeight();
-        setCustomPagination(); // Налаштовуємо пагінацію вісля ініціалізації
+        // setCustomPagination(); // Налаштовуємо пагінацію вісля ініціалізації
       }, 0);
     },
     resize: function () {
       setEqualHeight();
-      setCustomPagination(); // Оновлюємо при зміні розміру
+      // setCustomPagination(); // Оновлюємо при зміні розміру
     },
     slideChangeTransitionEnd: function () {
       setEqualHeight();
-      setCustomPagination(); // Оновлюємо при зміні слайду
+      // setCustomPagination(); // Оновлюємо при зміні слайду
     }
   }
 });

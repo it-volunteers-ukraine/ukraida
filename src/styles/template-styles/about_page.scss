@@ -109,10 +109,9 @@
 }
 
 .about__slider-pagination {
-  position: absolute;
-  bottom: -16px !important;
-  display: flex;
-  justify-content: center;   
+  margin-left: auto;
+  margin-right: auto;
+  transform: translateX(0) !important;
 }
 
 .about__button-wrapper {
@@ -417,7 +416,7 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    left: clamp(3px, calc(3px + (7 - 3) * ((1200px - 100vw) / (1200 - 1920))), 7px);
+    left: -10px;
     z-index: 10;
     background-color: transparent;
     border: none;
@@ -443,16 +442,6 @@
     &:hover {
       fill: #abb8c3;
     }
-  }
-
-  .about__slider-pagination {
-    position: absolute;
-    bottom: -40px !important;
-  }
-
-  .swiper-pagination-bullet {
-    width: 18px !important;
-    height: 18px !important;
   }
 
   .about__button-wrapper {
