@@ -113,11 +113,11 @@ $detailed_text = esc_html(get_field('about_detailed_text', $currend_id));
                     </button>
                     <button class="swiper-button-next about__slider-button--right">
                         <svg class="about__arrow">
-                            <use xlink:href="#right-arrow" x="-4" y="-2"></use>
+                            <use xlink:href="<?php bloginfo('template_url'); ?>/assets/images/symbol-defs.svg#icon-arrow-right"></use>
                         </svg>
                     </button>
-                    <div class="swiper-pagination about__slider-pagination"></div>
                 </div>    
+                <div class="swiper-pagination about__slider-pagination"></div>
             </div>
             <div class="about__button-wrapper">
                 <a href="<?php echo esc_url(get_field('link_button_press', $currend_id)); ?>" class="about__button about__slider-button" rel="noopener noreferrer">
