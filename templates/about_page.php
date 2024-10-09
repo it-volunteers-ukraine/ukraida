@@ -71,15 +71,10 @@ $detailed_text = esc_html(get_field('about_detailed_text', $currend_id));
         <div class="container">
             <h2 class="about__title about__title-slider"><?php echo esc_html(get_field('section_articles_title', $currend_id)); ?></h2>
             <div class="about__slider">
-                <div class="about__slider-wrapper">
-                    <button class="swiper-button-prev about__slider-button--left">
-                        <svg class="about__arrow">
-                            <use xlink:href="#left-arrow" x="-4" y="-2"></use>
-                        </svg>
-                    </button>
+                <div class="about__slider-wrapper">  
                     <div class="swiper">
                         <div class="swiper-wrapper about__slider-container">
-                        <?php 
+                            <?php 
                         while ($query->have_posts()): $query->the_post(); ?>
                             <div class="swiper-slide slider__item-container">
                                 <div class="slider__item--left">
@@ -110,13 +105,18 @@ $detailed_text = esc_html(get_field('about_detailed_text', $currend_id));
                             <?php endwhile; ?>
                         </div>
                     </div>
-                    <button class="swiper-button-next about__slider-button--right">
+                    <button class="swiper-button-prev about__slider-button--left">
                         <svg class="about__arrow">
-                            <use xlink:href="#right-arrow" x="-4" y="-2"></use>
+                            <use xlink:href="<?php bloginfo('template_url'); ?>/assets/images/symbol-defs.svg#icon-arrow-left"></use>
                         </svg>
                     </button>
-                    <div class="swiper-pagination about__slider-pagination"></div>
-                </div>
+                    <button class="swiper-button-next about__slider-button--right">
+                        <svg class="about__arrow">
+                            <use xlink:href="<?php bloginfo('template_url'); ?>/assets/images/symbol-defs.svg#icon-arrow-right"></use>
+                        </svg>
+                    </button>
+                </div>    
+                <div class="swiper-pagination about__slider-pagination"></div>
             </div>
             <div class="about__button-wrapper">
                 <a href="<?php echo esc_url(get_field('link_button_press', $currend_id)); ?>" class="about__button about__slider-button" rel="noopener noreferrer">
@@ -154,18 +154,16 @@ $detailed_text = esc_html(get_field('about_detailed_text', $currend_id));
                 ?>
                     <li class="partners-item">
                         <div class="partners-list-img">
-                            <figure>
-                                <?php if ($partner_logo): ?>
-                                    <img src="<?php echo esc_url($partner_logo['url']); ?>" alt="<?php echo esc_attr($partner_logo['alt']); ?>" />
-                                <?php endif; ?>
-                                <figcaption><?php echo esc_html($partner_name); ?></figcaption> 
-                            </figure>
+                            <?php if ($partner_logo): ?>
+                            <img src="<?php echo esc_url($partner_logo['url']); ?>" alt="<?php echo esc_attr($partner_logo['alt']); ?>" />
+                            <?php endif; ?>
+                            <p><?php echo esc_html($partner_name); ?></p> 
                         </div>
                     </li>
                 <?php endwhile; ?>
             </ul>
 
-            <div class="about__slider-button about__slider-button-bottom">
+            <div class="about__partners-button">
                 <a href="<?php echo esc_url(get_field('link_page_partners', $currend_id)); ?>" class="about__button" rel="noopener noreferrer">
                     <?php echo esc_html($detailed_information_button_text); ?>
                 </a>
