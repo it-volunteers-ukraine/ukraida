@@ -92,7 +92,7 @@ $detailed_text = esc_html(get_field('about_detailed_text', $currend_id));
                                     <p class="slider__date"><?php the_field('about_media_date'); ?></p>
                                     <p class="slider__item-text"><?php the_field('about_media_text'); ?></p>
                                     <?php
-                                    $link = get_field('article_link');
+                                    $link = get_field('link_article');
                                     if ($link): ?>
                                     <div class="slider__item-link">
                                         <a href="<?php echo esc_url($link); ?>" target="_blank" rel="noopener noreferrer">
