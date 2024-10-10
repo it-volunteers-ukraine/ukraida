@@ -96,7 +96,7 @@ $detailed_text = esc_html(get_field('about_detailed_text', $currend_id));
                                     if ($link): ?>
                                     <div class="slider__item-link">
                                         <a href="<?php echo esc_url($link); ?>" target="_blank" rel="noopener noreferrer">
-                                            <?php echo esc_html(get_field('link_text')); ?> 
+                                            <?php echo esc_html(get_field('link_title')); ?> 
                                         </a>
                                     </div>
                                     <?php endif; ?>
