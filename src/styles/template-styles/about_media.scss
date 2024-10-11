@@ -1,6 +1,8 @@
+@import "../parts-styles/_projects-page-pagination";
+@import "../parts-styles/_breadcrumbs";
+
 .about__media-list {
-  @media screen and (min-width: 1920px) {
-  }
+  @media screen and (min-width: 1920px) {}
 }
 
 .about__media-title {
@@ -81,8 +83,7 @@
     margin-bottom: 20px;
   }
 
-  @media screen and (min-width: 1920px) {
-  }
+  @media screen and (min-width: 1920px) {}
 }
 
 .about__media-avtor {
@@ -101,8 +102,7 @@
     width: 252px;
   }
 
-  @media screen and (min-width: 1920px) {
-  }
+  @media screen and (min-width: 1920px) {}
 }
 
 .about__media-name-article {
@@ -119,8 +119,7 @@
     margin-bottom: 16px;
   }
 
-  @media screen and (min-width: 1920px) {
-  }
+  @media screen and (min-width: 1920px) {}
 }
 
 .about__media-date {
@@ -137,8 +136,7 @@
     margin-bottom: 32px;
   }
 
-  @media screen and (min-width: 1920px) {
-  }
+  @media screen and (min-width: 1920px) {}
 }
 
 .about__media-text {
@@ -146,16 +144,25 @@
   line-height: 1.36;
   margin-bottom: 16px;
 
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 7;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
   @media screen and (min-width: 768px) {
     font-size: 20px;
+    -webkit-line-clamp: 5;
   }
 
   @media screen and (min-width: 1280px) {
     font-size: 24px;
     margin-bottom: 32px;
+    -webkit-line-clamp: 4;
   }
 
   @media screen and (min-width: 1920px) {
+    -webkit-line-clamp: 3;
   }
 }
 
@@ -177,6 +184,10 @@
     font-size: 24px;
   }
 
-  @media screen and (min-width: 1920px) {
-  }
+  @media screen and (min-width: 1920px) {}
 }
+
+.about__media-nopost {
+  text-align: center;
+}
+

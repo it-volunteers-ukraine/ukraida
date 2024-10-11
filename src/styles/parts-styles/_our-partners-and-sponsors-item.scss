@@ -22,6 +22,10 @@
     justify-content: center;
 }
 
+.our-partners-and-sponsors-item-logo {
+    object-fit: contain;
+}
+
 .our-partners-and-sponsors-item-info-name,
 .our-partners-and-sponsors-item-info-description {
     font-family: $font-main;
