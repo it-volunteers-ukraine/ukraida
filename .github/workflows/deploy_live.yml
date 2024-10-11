@@ -29,5 +29,5 @@ jobs:
           **/node_modules/**
           fileToExclude.txt
         dangerous-clean-slate: false
-        
+        protocol: ftps
         
