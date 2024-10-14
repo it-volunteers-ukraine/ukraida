@@ -16,7 +16,7 @@ $current_id = get_the_ID();
                         <div class="slider__track-big swiper-wrapper">
                             <?php while ( have_rows('donates2_repeat_img', $current_id)): the_row();
                                 $img = get_sub_field('donates2_img'); ?>
-                                <div class="slider__item swiper-slide slider__item--big">
+                                <div class="slider__item swiper-slide">
                                     <img class="slider__item-fon" src="<?php echo esc_url($img['sizes']['large']); ?>" alt="<?php echo esc_attr($img['alt']); ?>">
                                 </div>
                             <?php endwhile;?>
