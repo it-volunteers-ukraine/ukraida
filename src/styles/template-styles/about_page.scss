@@ -14,6 +14,10 @@
   padding-top: 64px;
 }
 
+.about__img img {
+  border-radius: 15px;
+}
+
 .about__title-who-are-we {
   display: none;
 }
@@ -64,6 +68,11 @@
 .slider__item-subtitle {
   font-size: 16px;
   width: 195px;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  word-break: break-word;
+  overflow-wrap: break-word;
 }
 
 .slider__item-title {
@@ -109,8 +118,9 @@
 }
 
 .about__slider-pagination {
-  position: absolute;
-  bottom: -16px !important;
+  margin-left: auto;
+  margin-right: auto;
+  transform: translateX(0) !important;
 }
 
 .about__button-wrapper {
@@ -120,7 +130,7 @@
 }
 
 .about__slider-button {
-  margin-top: 40px;
+  margin-top: 20px;
 }
 
 .about__title-partners {
@@ -145,21 +155,27 @@
 
 .partners-list-img {
   width: 136px;
-  height: 136px;
   margin: 0 auto;
 }
 
-.partners-list-img figcaption {
+.partners-list-img img {
+  width: 136px !important;
+  height: 136px !important;
+  object-fit: contain;
+}
+
+.partners-list-img p {
   text-align: center;
   padding: 16px 0;
   font-size: 16px;
   font-weight: 600;
 }
 
-.about__slider-button-bottom {
+.about__partners-button {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 40px;
 }
 
 @media (min-width: 768px) {
@@ -200,7 +216,7 @@
   .slider__item--left {
     max-width: 25%;
   }
-  
+
   .slider__item--right {
     max-width: 75%;
   }
@@ -269,12 +285,18 @@
   }
 
   .partners-list-img {
-    margin-bottom: 32px;
-    width: 124px;
-    height: 124px;
+  
+  width: 124px;
+  margin: 0 auto;
   }
 
-  .partners-list-img figcaption {
+  .partners-list-img img {
+    width: 124px !important;
+    height: 124px !important;
+    object-fit: contain;
+  }
+
+  .partners-list-img p {
     padding: 24px 0;
     font-size: 24px;
     font-weight: 400;
@@ -347,7 +369,6 @@
   }
 
   .about__slider {
-    max-width: 1152px;
     margin: 0 auto;
   }
 
@@ -356,8 +377,12 @@
     position: relative;
   }
 
+  .about__slider-container {
+    margin-bottom: 0;
+  }
+
   .slider__item-container {
-    max-width: 537px;
+    
     padding-bottom: 24px;
     margin-bottom: 0;
   }
@@ -399,44 +424,46 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    left: clamp(3px, calc(3px + (7 - 3) * ((1200px - 100vw) / (1200 - 1920))), 7px);
+    left: -10px;
     z-index: 10;
     background-color: transparent;
     border: none;
-    cursor: pointer; 
+    cursor: pointer;
+    padding: 0;
+    line-height: 0;
   }
-  
+
   .about__slider-button--right {
     display: block;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    right: clamp(3px, calc(3px + (7 - 3) * ((100vw - 1200px) / (1920 - 1200))), 7px);
+    right: -10px;
     z-index: 10;
     background-color: transparent;
     border: none;
-    cursor: pointer; 
-  } 
-  
+    cursor: pointer;
+    padding: 0;
+    line-height: 0;
+  }
+
   .about__arrow {
-    width: 24px;
-    height: 24px;
+    width: 32px;
+    height: 32px;
+
     &:hover {
       fill: #abb8c3;
     }
   }
 
   .about__slider-pagination {
-    position: absolute;
-    bottom: -24px !important;
-    display: flex;
-    justify-content: center;
+    margin-top: 40px;
   }
-  
+
   .about__button-wrapper {
     padding-top: 24px;
   }
-  
+
   .slider__button {
     background-color: transparent;
   }
@@ -466,16 +493,17 @@
     max-width: unset;
     object-fit: cover;
     width: 244px;
-    height: 244px;
   }
 
-  .partners-list-img figcaption {
+  .partners-list-img img {
+    width: 244px !important;
+    height: 244px !important;
+    object-fit: contain;
+  }
+
+  .partners-list-img p {
     display: none;
-  }
-
-  .about__slider-button-bottom {
-    padding: 0;
-  }
+  } 
 }
 
 @media (min-width: 1440px) {
@@ -510,21 +538,19 @@
     justify-content: unset;
     gap: 25px;
   }
-  
+
   .about__slider {
     max-width: 1620px;
   }
 
   .slider__item-container {
-    min-width: 637px;
-    max-width: 1000px;
     padding-bottom: 24px;
   }
-  
+
   .slider__item--left {
     max-width: 30%;
   }
-  
+
   .slider__item--right {
     max-width: 70%;
   }
@@ -558,5 +584,4 @@
     margin-right: 184px;
   }
 }
-
 

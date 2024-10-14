@@ -75,9 +75,11 @@
       @media (min-width: 768px) {
         height: 330px;
       }
+
       @media (min-width: 1200px) {
         height: 421px;
       }
+
       @media (min-width: 1440px) {
         height: 493px;
       }
@@ -86,14 +88,17 @@
     &:not(.slider__item--big) {
       width: 132px;
       height: 100px;
+
       @media (min-width: 768px) {
         width: 240px;
         height: 176px;
       }
+
       @media (min-width: 1200px) {
         width: 293px;
         height: 211px;
       }
+
       @media (min-width: 1440px) {
         width: 344px;
         height: 252px;
@@ -247,9 +252,11 @@
   @media screen and (min-width: 768px) {
     margin-top: 24px;
   }
+
   @media screen and (min-width: 1200px) {
     margin-top: 32px;
   }
+
   @media screen and (min-width: 1440px) {
     margin-top: 40px;
   }
@@ -258,6 +265,7 @@
 .swiper-pagination-bullet-active {
   background-color: $swiper-pagination-active;
 }
+
 .swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullets-dynamic {
   transform: translateX(0);
   margin-left: auto;
