@@ -24,14 +24,17 @@ $current_id = get_the_ID();
         </div>
     </section>
 
-    <section class="section section__instagram">
-        <div class="container container__instagram">
-            <?php
-            $shortcode = get_field('short_code_feed_them_social', $current_id); 
-            echo do_shortcode($shortcode);
-            ?>
-        </div>
-    </section>
+    <?php $inst_code = get_field('short_code_feed_them_social', $current_id);
+    if ($inst_code) : ?>
+        <section class="section section__instagram">
+            <div class="container container__instagram">
+                <?php
+                $shortcode = get_field('short_code_feed_them_social', $current_id);
+                echo do_shortcode($shortcode);
+                ?>
+            </div>
+        </section>
+    <?php endif; ?>
 
     <section id="event-map" class="section container__map">
         <div class="container container-map">

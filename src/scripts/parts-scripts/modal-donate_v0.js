@@ -8,7 +8,7 @@ const btnDonateCopyRef = document.getElementById("js-btn-donate-copy");
 
 function openModal() {
   bodyScrollTop = window.scrollY || document.documentElement.scrollTop;
-    // Запрещаем прокрутку страницы
+  // Запрещаем прокрутку страницы
   document.body.style.overflow = 'hidden';
   document.body.style.paddingRight = getScrollbarWidth() + 'px';
 
