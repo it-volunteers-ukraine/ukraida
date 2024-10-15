@@ -274,7 +274,7 @@
     text-decoration: none;
     color: $black;
 
-    transition: color 0.3s;
+    transition: all $animations;
   }
 
   .menu-item a:hover {
@@ -301,7 +301,7 @@
   }
 
   .menu__item-inst:hover svg {
-    fill: $dark-blue;
+    fill: $blue;
   }
 
   .menu__item svg {
@@ -309,11 +309,6 @@
     height: 32px;
 
     stroke: $black;
-    transition: stroke 0.3s;
-  }
-
-  .menu__item:hover svg {
-    stroke: $dark-blue;
   }
 
   .menu__item {

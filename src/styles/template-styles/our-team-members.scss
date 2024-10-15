@@ -58,10 +58,6 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 32px 20px;
   }
-
-  .our-team-members-items-item:nth-child(odd) {
-    flex-direction: row-reverse;
-  }
 }
 
 @media screen and (min-width: 990px) {

@@ -3,7 +3,7 @@ function setEqualHeight() {
   const slides = document.querySelectorAll('.swiper-slide');
 
   slides.forEach((slide) => {
-    slide.style.height = 'auto'; // Обнуляємо висоту перед розрахунком
+    slide.style.height = 'auto'; // Обнуляємо висоту
   });
 
   // Знаходимо максимальну висоту слайду
@@ -14,7 +14,7 @@ function setEqualHeight() {
     }
   });
 
-  // Встановлюємо однакоу висоту для всіх слайдів
+  // Встановлюємо однакову висоту для всіх слайдів
   slides.forEach((slide) => {
     slide.style.height = maxHeight + 'px';
   });
@@ -46,17 +46,18 @@ const swiper = new Swiper(".swiper", {
   on: {
     init: function () {
       setTimeout(() => {
-        setEqualHeight(); 
-      }, 0); 
+        setEqualHeight();
+      }, 0);
     },
     resize: function () {
-      setEqualHeight(); 
+      setEqualHeight();
     },
     slideChangeTransitionEnd: function () {
-      setEqualHeight(); 
+      setEqualHeight();
     }
   }
 });
+
 
 
 
