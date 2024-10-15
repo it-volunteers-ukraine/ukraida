@@ -137,11 +137,7 @@ function wp_it_volunteers_scripts()
     ));
 
     // progress bar
-    function enqueue_progress_bar_script()
-    {
-      wp_enqueue_script('progress-bar', get_template_directory_uri() . '/assets/scripts/parts-scripts/progress-bar.js', array(), null, true);
-    }
-    add_action('wp_enqueue_scripts', 'enqueue_progress_bar_script');
+    wp_enqueue_script('progress-bar', get_template_directory_uri() . '/assets/scripts/parts-scripts/progress-bar.js', array(), null, true);
   }
 
   if (is_page_template('templates/donates_things_page.php')) {
