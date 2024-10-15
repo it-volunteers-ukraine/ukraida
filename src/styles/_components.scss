@@ -1,1 +1,6 @@
 @import "./components/_buttons.scss";
+
+/* Overriding border-radius for the buttons from Cookie Yes plugin*/
+button.cky-btn {
+    border-radius: 15px;
+}
