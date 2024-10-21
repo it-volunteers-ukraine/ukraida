@@ -49,17 +49,22 @@
   }
 
   &__wrap {
+    min-width: 272px;
+
     @media screen and (min-width: 768px) {
-      height: 321px;
+      width: 640px;
+      height: 426px;
     }
 
     @media screen and (min-width: 1280px) {
-      height: 432px;
+      /* width: 1016px; */
+      width: 100%;
+      height: 677px;
     }
 
     @media screen and (min-width: 1920px) {
       width: 742px;
-      height: 492px;
+      height: 494px;
     }
 
     & img {
