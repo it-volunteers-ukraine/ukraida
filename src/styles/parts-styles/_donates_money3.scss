@@ -47,13 +47,13 @@
     height: calc(97% - 426px);
   }
 
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: 1200px) {
     height: calc(97% - 320px);
   }
 }
 
 .result-card_img {
-  padding-bottom: 24px;
+  margin-bottom: 24px;
   border-radius: 15px;
   overflow: hidden;
   display: flex;
@@ -71,7 +71,7 @@
     height: 426px;
   }
 
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: 1200px) {
     width: 480px;
     height: 320px;
   }
