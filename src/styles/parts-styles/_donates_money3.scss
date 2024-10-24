@@ -40,8 +40,7 @@
 
 .result-card {
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  position: relative;
 
   @media screen and (min-width: 768px) {
     height: calc(97% - 426px);
@@ -50,6 +49,11 @@
   @media screen and (min-width: 1200px) {
     height: calc(97% - 320px);
   }
+}
+
+.result-card_sum-wrap {
+  position: absolute;
+  bottom: 0;
 }
 
 .result-card_img {
@@ -86,7 +90,7 @@
 }
 
 .result-card_text {
-  margin-bottom: 12px;
+  margin-bottom: 70px;
   font-size: 14px;
   font-style: italic;
 }
@@ -124,7 +128,7 @@
     font-size: 24px;
   }
   .result-card_text {
-    margin-bottom: 24px;
+    margin-bottom: 80px;
     font-size: 16px;
   }
 
@@ -167,7 +171,7 @@
     margin-bottom: 16px;
   }
   .result-card_text {
-    margin-bottom: 16px;
+    margin-bottom: 80px;
     font-size: 24px;
   }
   .btn-load-more {
