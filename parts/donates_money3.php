@@ -49,7 +49,7 @@ $current_id = get_the_ID();
                                 <h2 class="result-card_title"><?php echo esc_html(get_field('donates_money_title')); ?></h2>
                                 <p class="result-card_text"><?php echo esc_html(get_field('donates_money_text')); ?></p>
                             </div>
-                            <div>
+                            <div class=result-card_sum-wrap>
                                 <p class="result-card_sum-title"><?php echo esc_html($title_archive_sum); ?></p>
                                 <p class="result-card_sum-value"><?php echo esc_html(get_field('donates_money_sum')); ?></p>
                             </div>
