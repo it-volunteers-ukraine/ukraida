@@ -43,11 +43,11 @@
   position: relative;
 
   @media screen and (min-width: 768px) {
-    height: calc(97% - 426px);
+    height: calc(100% - 426px);
   }
 
   @media screen and (min-width: 1200px) {
-    height: calc(97% - 320px);
+    height: calc(100% - 344px);
   }
 }
 
@@ -90,9 +90,12 @@
 }
 
 .result-card_text {
-  margin-bottom: 70px;
   font-size: 14px;
   font-style: italic;
+}
+
+.result-card_text-wrap {
+  margin-bottom: 80px;
 }
 
 .result-card_sum-title {
@@ -128,8 +131,11 @@
     font-size: 24px;
   }
   .result-card_text {
-    margin-bottom: 80px;
     font-size: 16px;
+  }
+
+  .result-card_text-wrap {
+    margin-bottom: 80px;
   }
 
   .result-card_sum-title {
@@ -171,8 +177,11 @@
     margin-bottom: 16px;
   }
   .result-card_text {
-    margin-bottom: 80px;
     font-size: 24px;
+  }
+
+  .result-card_text-wrap {
+    margin-bottom: 80px;
   }
   .btn-load-more {
     @include btn-main-l;

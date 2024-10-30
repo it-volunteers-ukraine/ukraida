@@ -16,7 +16,7 @@ $img = get_field('donates_money_img');
             <img src="<?php echo esc_url($img['url']); ?>" alt="foto">
         </div>
         <div class="result-card">
-            <div>
+            <div class="result-card_text-wrap">
                 <h2 class="result-card_title"><?php echo esc_html(get_field('donates_money_title')); ?></h2>
                 <p class="result-card_text"><?php echo esc_html(get_field('donates_money_text')); ?></p>
             </div>

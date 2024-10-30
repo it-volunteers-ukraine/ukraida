@@ -82,6 +82,9 @@
   &__block {
     @media screen and (min-width: 1920px) {
       width: 780px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
   }
 
