@@ -4,7 +4,6 @@
     // thumbnail - 150x150
     // medium - 300x300
     // large - 1024x1024
-
     $gallery = get_field('gallery_swiper', 'option');
     ?>
 

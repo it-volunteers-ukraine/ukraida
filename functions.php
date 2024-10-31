@@ -255,6 +255,7 @@ function wp_it_volunteers_menus()
   $locations = array(
     'header' => __('Header Menu', 'wp-it-volunteers'),
     'footer' => __('Footer Menu', 'wp-it-volunteers'),
+    'swiper' => __('Swiper Menu', 'wp-it-volunteers'),
   );
 
   register_nav_menus($locations);
@@ -284,6 +285,12 @@ if (function_exists('acf_add_options_page')) {
     'page_title'    => 'Theme Footer Settings',
     'menu_title'    => 'Footer',
     'parent_slug'   => 'theme-general-settings',
+  ));
+
+  acf_add_options_sub_page(array(
+    'page_title'    => 'Swiper HomePage',
+    'menu_title'    => 'HomePage Swiper',
+    'parent_slug'   => 'edit.php?post_type=page',
   ));
 
   //   acf_add_options_sub_page(array(
