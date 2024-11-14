@@ -1,50 +1,27 @@
-.instagram-list {
-}
-
-.instagram-list .instagram-item {
-  width: 239px;
-  margin-right: 16px;
-  padding: 12px; 
-  border: 2px solid $green;
-}
-
-.instagram-media{
-  min-width: unset !important;
-}
-
-.EmbedFrame{
-  padding: 10px;
-  padding-bottom: 100% !important;
-}
-
-.instagram-item{
-  height: auto !important;
-}
-.swiper-pagination{
-  margin-top: 24px;
-  margin-left: auto;
-  margin-right: auto;
+.instagram-title {
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Open Sans", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 22px;
 }
 
 @media screen and (min-width: 768px) {
-  .instagram-list .instagram-item {
-    width: 334px;
-    margin-right: 20px;
-    padding: 16px; 
+  .instagram-title{
+    font-size: 32px;
+    padding-bottom: 46px;
   }
 }
 
 @media screen and (min-width: 1200px) {
-  .instagram-list .instagram-item {
-    width: 376px;
-    padding: 8px; 
+  .instagram-title{
+    padding-bottom: 22px;
   }
 }
 
 @media screen and (min-width: 1440px) {
-  .instagram-list .instagram-item {
-    width: 528px;
-    margin-right: 24px;
-    padding: 16px; 
+  .instagram-title{
+    padding-bottom: 54px;
   }
 }

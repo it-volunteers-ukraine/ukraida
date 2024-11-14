@@ -28,6 +28,7 @@ $current_id = get_the_ID();
     if ($inst_code) : ?>
         <section class="section section__instagram">
             <div class="container container__instagram">
+                <h2 class="instagram-title"><?php echo get_field('instagram_title', $current_id); ?></h2>
                 <?php
                 $shortcode = get_field('short_code_feed_them_social', $current_id);
                 echo do_shortcode($shortcode);
