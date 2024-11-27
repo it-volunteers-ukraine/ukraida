@@ -1,0 +1,39 @@
+@import "../components/_buttons";
+@import "../variables";
+
+.news-search-container {
+  display: flex;
+  flex-direction: row;
+  background-color: $light-blue;
+  padding: 24px;
+  border-radius: 15px;
+}
+
+.news-search-input {
+  flex-grow: 1;
+  height: 77px;
+  padding-left: 24px;
+}
+
+.news-search-btn {
+  @include btn-main;
+  height: 77px;
+}
+
+@media screen and (min-width: 768px) {
+
+}
+
+@media screen and (min-width: 1200px) {
+  .select2-container {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .news-search-container {
+    gap: 32px;
+    align-items: center;
+    width: 1355px;
+  }
+}
