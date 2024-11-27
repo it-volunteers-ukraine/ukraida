@@ -1,23 +1,123 @@
 @import "../components/_buttons";
 @import "../variables";
 
+.news-search-form {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  width: 1355px;
+}
+
 .news-search-container {
   display: flex;
-  flex-direction: row;
   background-color: $light-blue;
   padding: 24px;
   border-radius: 15px;
 }
 
+.news-search-input-container {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  background-color: $white;
+  border-radius: 15px;
+  height: 77px;
+  padding: 22px 8px;
+  gap: 12px;
+  transition: all $animations;
+}
+
+// Outline on focus
+.news-search-input-container:hover,
+.news-search-input-container:has(.news-search-input:focus) {
+  outline: 2px solid $dark-blue;
+}
+
+.news-search-svg {
+  width: 22px;
+  height: 22px;
+  transition: all $animations;
+}
+
+// Change color of svg when input is focused
+.news-search-input-container:has(.news-search-input:focus) .news-search-svg {
+  fill: $dark-blue;
+}
+
 .news-search-input {
   flex-grow: 1;
-  height: 77px;
-  padding-left: 24px;
+  border: 0px solid transparent;
+  outline: none;
+  transition: all $animations;
+}
+
+.news-search-input::placeholder {
+  color: $grey;
+}
+
+// Hide placeholder when input is focused
+.news-search-input:focus::placeholder {
+  color: transparent;
 }
 
 .news-search-btn {
   @include btn-main;
   height: 77px;
+}
+
+.news-search-wide-categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.news-category-btn {
+  font-family: $font-advanced;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  padding: 18px;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: 500;
+  border: 1px solid $blue;
+  background-color: $light-blue;
+  cursor: pointer;
+  transition: all $animations;
+  height: 58px;
+
+  &:hover:not(:disabled),
+  &:focus-visible:not(:disabled) {
+    background-color: $dark-blue;
+    color: $white;
+  }
+
+  &:active:not(:disabled) {
+    background-color: $blue;
+  }
+
+  &:disabled {
+    background: none;
+    background-color: $btn-disabled;
+    cursor: initial;
+  }
+}
+
+.news-category-btn.active {
+  background-color: $dark-blue;
+  color: $white;
+}
+
+.news-search-category-remove-svg {
+  width: 22px;
+  height: 22px;
+  fill: $white;
+  display: none;
+}
+
+.news-search-category-remove-svg.active {
+  display: inline;
 }
 
 @media screen and (min-width: 768px) {
