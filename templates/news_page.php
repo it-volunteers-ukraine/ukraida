@@ -15,6 +15,7 @@ Template Name: newspage
         <div class="container news">
             <h1 class="news-title"><?php echo $news_title; ?></h1>
             <?php get_template_part('/parts/news-search'); ?>
+            <?php get_template_part('/parts/news-filter'); ?>
         </div>
     </section>
 </main>
