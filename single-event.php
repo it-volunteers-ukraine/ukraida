@@ -76,31 +76,30 @@ $image2 = get_field('image2', $current_id);
                     ?>
                     <div class="event__article article">
                         <div class="article-images">
-                            <div class="article-image-item">
-                                <?php if ($r_image1) : ?>
+                            <?php if ($r_image1) : ?>
+                                <div class="article-image-item">
                                     <div class="article-image-wrapper">
                                         <img class="article-image" src="<?php echo esc_url($r_image1['sizes']['large']); ?>" alt="<?php echo esc_attr($r_image1['alt']); ?>">
                                     </div>
-                                <?php endif; ?>
-                                <?php if ($r_image1_title) : ?>
-                                    <p class="article-image-title">
-                                        <?php echo esc_html($r_image1_title); ?>
-                                    </p>
-                                <?php endif; ?>
-                            </div>
-                            <div class="article-image-item">
-                                <?php if ($r_image2) : ?>
+                                    <?php if ($r_image1_title) : ?>
+                                        <p class="article-image-title">
+                                            <?php echo esc_html($r_image1_title); ?>
+                                        </p>
+                                    <?php endif; ?>
+                                </div>
+                            <?php endif; ?>
+                            <?php if ($r_image2) : ?>
+                                <div class="article-image-item">
                                     <div class="article-image-wrapper">
                                         <img class="article-image" src="<?php echo esc_url($r_image2['sizes']['large']); ?>" alt="<?php echo esc_attr($r_image2['alt']); ?>">
-
                                     </div>
-                                <?php endif; ?>
-                                <?php if ($r_image2_title) : ?>
-                                    <p class="article-image-title">
-                                        <?php echo esc_html($r_image2_title); ?>
-                                    </p>
-                                <?php endif; ?>
-                            </div>
+                                    <?php if ($r_image2_title) : ?>
+                                        <p class="article-image-title">
+                                            <?php echo esc_html($r_image2_title); ?>
+                                        </p>
+                                    <?php endif; ?>
+                                </div>
+                            <?php endif; ?>
                         </div>
                         <div class="article-text">
                             <?php if ($r_text) : ?>
