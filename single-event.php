@@ -21,7 +21,7 @@ $image2 = get_field('image2', $current_id);
 
 <main class="">
     <section class="section section__event ">
-        <div class="container">
+        <div class="container container__event">
             <h1 class="event-title"><?php echo esc_html($title); ?></h1>
             <div class="calendar-list event__calendar">
                 <div class="calendar-item">
