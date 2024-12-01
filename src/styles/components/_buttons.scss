@@ -10,6 +10,9 @@ You can use this class for button
  btn-icon-advanced    - button for black icons
  btn-socseti-yellow   - button yellow for socseti
  btn-socseti-white    - button white for socseti
+ btn-filter-s         - button for filter
+ btn-filter-m         - button for filter
+ btn-filter-l         - button for filter
  btn-clear - utils, delete all styles from button
  */
 
@@ -171,6 +174,25 @@ You can use this class for button
   }
 }
 
+@mixin btn-filter {
+  @include btn-main;
+  min-width: unset;
+  height: 32px;
+  padding: 8px;
+  border: 1px solid $blue;
+  font-size: 12px;
+  border-radius: 10px;
+  color: $black;
+  background-color: $light-blue;
+}
+
+@mixin btn-filter-noactive{
+  @include btn-filter;
+  &:disabled{
+    background-color: $light-blue;
+  }
+}
+
 @mixin btn-main-s {
   @include btn-main;
   height: 45px;
@@ -209,6 +231,29 @@ You can use this class for button
   font-size: 24px;
   height: 77px;
   padding: 24px 20px;
+}
+
+@mixin btn-filter-s {
+  @include btn-filter;
+  padding: 8px;
+}
+
+@mixin btn-filter-m {
+  @include btn-filter;
+  font-size: 18px;
+  padding: 18px;
+}
+
+@mixin btn-filter-noactive-s{
+  @include btn-filter-noactive;
+  padding: 8px;
+
+}
+
+@mixin btn-filter-noactive-m{
+  @include btn-filter-noactive;
+  font-size: 18px;
+  padding: 18px;
 }
 
 .btn-clear {
@@ -280,25 +325,24 @@ You can use this class for button
 }
 
 @keyframes jittery {
-  
   50% {
     transform: scale(1);
   }
-   99% {
+  99% {
     transform: scale(1);
   }
   10% {
     transform: scale(0.9);
   }
   15% {
-
     transform: scale(1.15);
   }
   20% {
     box-shadow: rgba(0, 0, 0, 0.08) 0 0 0 1px,
-    rgba(0, 0, 0, 0.2) 0 -2px 1px 0 inset,
-    rgba(255, 255, 255, 0.5) 0 2px 1px 0 inset,
-    0 2px 5px -1px rgba(0, 0, 0, 0.05), 3px 3px 9px 6px rgba(0, 0, 0, 0.2509803922);
+      rgba(0, 0, 0, 0.2) 0 -2px 1px 0 inset,
+      rgba(255, 255, 255, 0.5) 0 2px 1px 0 inset,
+      0 2px 5px -1px rgba(0, 0, 0, 0.05),
+      3px 3px 9px 6px rgba(0, 0, 0, 0.2509803922);
     transform: scale(1.15) rotate(-5deg);
   }
   25% {
@@ -320,4 +364,3 @@ You can use this class for button
     transform: scale(1);
   }
 }
-

@@ -11,6 +11,7 @@ $date = get_field('date', $current_id);
 $time = get_field('time', $current_id);
 $location_title = get_field('location_title', $current_id);
 $location_link = get_field('location_link', $current_id);
+$taxonomy_terms = get_field('categoty', $current_id);
 // echo $location_link;
 if (!$location_link) {
     $location_link = pll_home_url() . '#event-map';
@@ -60,9 +61,11 @@ $image2 = get_field('image2', $current_id);
             </div>
 
             <div class="event__category category">
-                <div class="btn">Політичні події</div>
-                <div class="btn">Музика</div>
-                <div class="btn">Їжа</div>
+                <?php if ($taxonomy_terms): ?> 
+                    <?php foreach ($taxonomy_terms as $term) : ?>
+                        <button class="btn-filter" disabled><?php echo $term->name;?></button>
+                    <?php endforeach; ?>
+                <?php endif; ?>
             </div>
 
             <?php if (have_rows('event_article')) : ?>
@@ -113,7 +116,7 @@ $image2 = get_field('image2', $current_id);
     </section>
     <section class="section section__socseti">
         <div class="container">
-            <h2 class="socseti-title"><?php echo esc_html(get_field('block_socseti_title', 'option'))?></h2>
+            <h2 class="socseti-title"><?php echo esc_html(get_field('block_socseti_title', 'option')) ?></h2>
             <div class="socseti-list">
                 <a class="socseti-item" href="https://www.instagram.com/<?php the_field('instagram', 'option') ?>" target="_blank">
                     <svg class="socseti-icon">
