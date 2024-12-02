@@ -61,9 +61,9 @@ $image2 = get_field('image2', $current_id);
             </div>
 
             <div class="event__category category">
-                <?php if ($taxonomy_terms): ?> 
+                <?php if ($taxonomy_terms): ?>
                     <?php foreach ($taxonomy_terms as $term) : ?>
-                        <button class="btn-filter" disabled><?php echo $term->name;?></button>
+                        <button class="btn-filter" disabled><?php echo $term->name; ?></button>
                     <?php endforeach; ?>
                 <?php endif; ?>
             </div>
@@ -78,32 +78,35 @@ $image2 = get_field('image2', $current_id);
                     $r_text = get_sub_field('text');
                     ?>
                     <div class="event__article article">
-                        <div class="article-images">
-                            <?php if ($r_image1) : ?>
-                                <div class="article-image-item">
-                                    <div class="article-image-wrapper">
-                                        <img class="article-image" src="<?php echo esc_url($r_image1['sizes']['large']); ?>" alt="<?php echo esc_attr($r_image1['alt']); ?>">
+                        <?php if ($r_image1 || $r_image2): ?>
+                            <div class="article-images">
+                                <?php if ($r_image1) : ?>
+                                    <div class="article-image-item">
+                                        <div class="article-image-wrapper">
+                                            <img class="article-image" src="<?php echo esc_url($r_image1['sizes']['large']); ?>" alt="<?php echo esc_attr($r_image1['alt']); ?>">
+                                        </div>
+                                        <?php if ($r_image1_title) : ?>
+                                            <p class="article-image-title">
+                                                <?php echo esc_html($r_image1_title); ?>
+                                            </p>
+                                        <?php endif; ?>
                                     </div>
-                                    <?php if ($r_image1_title) : ?>
-                                        <p class="article-image-title">
-                                            <?php echo esc_html($r_image1_title); ?>
-                                        </p>
-                                    <?php endif; ?>
-                                </div>
-                            <?php endif; ?>
-                            <?php if ($r_image2) : ?>
-                                <div class="article-image-item">
-                                    <div class="article-image-wrapper">
-                                        <img class="article-image" src="<?php echo esc_url($r_image2['sizes']['large']); ?>" alt="<?php echo esc_attr($r_image2['alt']); ?>">
+                                <?php endif; ?>
+                                <?php if ($r_image2) : ?>
+                                    <div class="article-image-item">
+                                        <div class="article-image-wrapper">
+                                            <img class="article-image" src="<?php echo esc_url($r_image2['sizes']['large']); ?>" alt="<?php echo esc_attr($r_image2['alt']); ?>">
+                                        </div>
+                                        <?php if ($r_image2_title) : ?>
+                                            <p class="article-image-title">
+                                                <?php echo esc_html($r_image2_title); ?>
+                                            </p>
+                                        <?php endif; ?>
                                     </div>
-                                    <?php if ($r_image2_title) : ?>
-                                        <p class="article-image-title">
-                                            <?php echo esc_html($r_image2_title); ?>
-                                        </p>
-                                    <?php endif; ?>
-                                </div>
-                            <?php endif; ?>
-                        </div>
+                                <?php endif; ?>
+                            </div>
+                        <?php endif; ?>
+
                         <div class="article-text">
                             <?php if ($r_text) : ?>
                                 <?php echo ($r_text); ?>
@@ -116,25 +119,8 @@ $image2 = get_field('image2', $current_id);
     </section>
     <section class="section section__socseti">
         <div class="container">
-            <h2 class="socseti-title"><?php echo esc_html(get_field('block_socseti_title', 'option')) ?></h2>
-            <div class="socseti-list">
-                <a class="socseti-item" href="https://www.instagram.com/<?php the_field('instagram', 'option') ?>" target="_blank">
-                    <svg class="socseti-icon">
-                        <use xlink:href="<?php bloginfo('template_url'); ?>/assets/images/symbol-defs.svg#icon-instagram"></use>
-                    </svg>
-                </a>
-                <a class="socseti-item" href="<?php the_field('facebook_link', 'option') ?>" target="_blank">
-                    <svg class="socseti-icon">
-                        <use xlink:href="<?php bloginfo('template_url'); ?>/assets/images/symbol-defs.svg#icon-facebook"></use>
-                    </svg>
-                </a>
-                <a class="socseti-item" href="<?php the_field('xtwitter_link', 'option') ?>" target="_blank">
-                    <svg class="socseti-icon">
-                        <use xlink:href="<?php bloginfo('template_url'); ?>/assets/images/symbol-defs.svg#icon-twitter"></use>
-                    </svg>
-                </a>
-            </div>
-
+            <?php get_template_part('parts/block_socseti', null, []); ?>
+        </div>
     </section>
 </main>
 

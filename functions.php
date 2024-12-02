@@ -203,12 +203,6 @@ function wp_it_volunteers_scripts()
     $front_scripts_args = ['ajaxUrl' => admin_url('admin-ajax.php')];
     wp_localize_script('our-team-members-scripts', 'vars', $front_scripts_args);
   }
-  // if (is_page_template('single-event.php')) {
-  // if (is_singular('event') && is_page_template('single-event.php')) {
-  // if (is_singular('event')) {
-  if (is_singular() && get_post_type() === 'event') {
-    wp_enqueue_style('pt-event-style', get_template_directory_uri() . '/assets/styles/single-event.css', array('main'));
-  }
 
   if (is_page_template('templates/privacy.php')) {
     wp_enqueue_style('privacy-style', get_template_directory_uri() . '/assets/styles/template-styles/privacy.css', array('main'));
@@ -232,10 +226,11 @@ function wp_it_volunteers_scripts()
   //   wp_enqueue_script( 'gallery-parts-scripts', get_template_directory_uri() . '/assets/scripts/parts-scripts/gallery.js', array(), false, true );
   // }
 
-  // if (is_singular() && is_page_template('parts/events.php')) {
-  //   wp_enqueue_style( 'events-parts-style', get_template_directory_uri() . '/assets/styles/parts-styles/events.css', array() );
-  //   wp_enqueue_script( 'events-parts-scripts', get_template_directory_uri() . '/assets/scripts/parts-scripts/events.js', array(), false, true );
-  // }
+  // if (is_singular() && get_post_type() === 'event') {
+    if (is_singular('event') ) {
+    wp_enqueue_style('pt-event-style', get_template_directory_uri() . '/assets/styles/single-event.css', array('main'));
+    wp_enqueue_style('block-socseti-style', get_template_directory_uri() . '/assets/styles/parts-styles/block-socseti.css', array('main'));
+  }
 
   if (is_singular('post-types-project')) {
     wp_enqueue_style('post-types-project-style', get_template_directory_uri() . '/assets/styles/post-types-project.css', array('main'));
@@ -243,7 +238,8 @@ function wp_it_volunteers_scripts()
 
   if (is_singular('post-types-one-news')) {
     wp_enqueue_style('post-types-one-news-style', get_template_directory_uri() . '/assets/styles/post-types-one-news.css', array('main'));
-  }}
+  }
+}
 
 // function create_pt_event_post_type() {
 //   register_post_type('pt_event',
