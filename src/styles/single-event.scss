@@ -1,0 +1,422 @@
+@import "../styles/_variables";
+@import "./components/_buttons";
+
+.section__event {
+  padding-top: 24px;
+}
+
+.btn-filter {
+  @include btn-filter-noactive-s;
+}
+
+.event-title {
+  margin-bottom: 32px;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: $font-main;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+@media screen and (min-width: 768px) {
+  .btn-filter {
+    @include btn-filter-noactive-m;
+  }
+  .section__event {
+    padding-top: 64px;
+  }
+  .event-title {
+    margin-bottom: 56px;
+    font-size: 24px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container__event {
+    width: 1112px;
+  }
+  .event-title {
+    margin-bottom: 118px;
+    font-size: 32px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .container__event {
+    width: 1404px;
+  }
+  .section__event {
+    padding-top: 118px;
+  }
+  .event-title {
+    margin-bottom: 90px;
+  }
+}
+
+.event__calendar {
+  margin-bottom: 32px;
+}
+
+.calendar-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.calendar-item {
+  display: flex;
+  align-items: center;
+}
+
+.calendar-text {
+  font-size: 16px;
+  font-weight: 700;
+}
+.location.calendar-text:hover {
+  text-decoration: underline;
+  transition: $animations;
+}
+
+.location.calendar-text:hover {
+  color: $dark-blue;
+}
+
+.calendar-icon {
+  width: 32px;
+  height: 32px;
+  margin-right: 12px;
+}
+
+.event-images {
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.event-image {
+  border-radius: 15px;
+}
+
+.category {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.event__category {
+  margin-bottom: 24px;
+}
+
+.event__article {
+}
+
+.event__article:not(:last-child) {
+  padding-bottom: 24px;
+}
+
+.article {
+}
+
+.article-images {
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.article-image-item {
+}
+.article-image-wrapper {
+}
+
+.article-image {
+  margin-bottom: 12px;
+  border-radius: 15px;
+}
+.article-image-title {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+  font-style: italic;
+}
+.article-text * {
+  font-size: 16px;
+}
+
+@media screen and (min-width: 768px) {
+  .event__calendar {
+    margin-bottom: 64px;
+  }
+  .calendar-list {
+    width: 636px;
+    margin-left: auto;
+    margin-right: auto;
+    flex-direction: row;
+    gap: 64px;
+  }
+
+  .calendar-text {
+    font-size: 20px;
+  }
+
+  .event-images {
+    display: flex;
+    margin-bottom: 24px;
+    flex-direction: row;
+    gap: 32px;
+    justify-content: center;
+  }
+  .event-image {
+    width: 307px;
+    align-self: center;
+  }
+  .event__category {
+    margin-bottom: 32px;
+  }
+
+  .category {
+    gap: 16px;
+  }
+
+  .event__article:not(:last-child) {
+    padding-bottom: 48px;
+  }
+
+  .article-images {
+    margin-bottom: 24px;
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+    justify-content: center;
+  }
+
+  .article-image-item {
+    width: 318px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .article-image-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    margin-bottom: 16px;
+  }
+
+  .article-image-wrapper img {
+    max-width: 100%;
+    max-height: 100%;
+    margin: auto;
+    object-fit: contain;
+  }
+
+  .article-image-title {
+    font-size: 20px;
+    margin-top: auto;
+    text-align: center;
+  }
+
+  .article-text * {
+    font-size: 20px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .event__calendar {
+    margin-bottom: 64px;
+  }
+  .calendar-list {
+    width: 1009px;
+    gap: 201px;
+  }
+
+  .calendar-text {
+    font-size: 24px;
+  }
+
+  .event-images {
+    margin-bottom: 40px;
+    gap: 64px;
+  }
+  .event-image {
+    width: 508px;
+  }
+  .event__category {
+    margin-bottom: 48px;
+  }
+
+  .event__article:not(:last-child) {
+  }
+
+  .article-images {
+    margin-bottom: 32px;
+    gap: 48px;
+  }
+
+  .article-image-item {
+    width: 516px;
+  }
+
+  .article-image-wrapper {
+  }
+
+  .article-image-wrapper img {
+  }
+
+  .article-image-title {
+  }
+
+  .article-text * {
+    font-size: 20px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .event__calendar {
+    margin-bottom: 96px;
+  }
+  .calendar-list {
+  }
+
+  .calendar-text {
+    font-size: 32px;
+  }
+
+  .event-images {
+    margin-bottom: 40px;
+  }
+  .event-image {
+    width: 622px;
+  }
+  .event__category {
+  }
+
+  .event__article:not(:last-child) {
+    padding-bottom: 64px;
+  }
+
+  .article-images {
+    margin-bottom: 48px;
+    gap: 24px;
+  }
+
+  .article-image-item {
+    width: 666px;
+  }
+
+  .article-image-wrapper {
+    margin-bottom: 24px;
+  }
+
+  .article-image-wrapper img {
+  }
+
+  .article-image-title {
+    font-size: 24px;
+  }
+
+  .article-text * {
+    font-size: 24px;
+  }
+}
+
+.section__socseti {
+}
+
+.socseti-title {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 56px;
+}
+
+.socseti-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+}
+
+.socseti-item {
+  width: 56px;
+  height: 56px;
+  padding: 10px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $light-blue;
+  overflow: hidden;
+  transition: $animations;
+}
+
+.socseti__icon {
+  width: 100%;
+  transition: $animations;
+}
+
+.socseti-item:hover {
+  box-shadow: (4px 4px 12px rgba(0, 0, 0, 0.11));
+}
+.socseti-item:active {
+  background-color: $dark-blue;
+}
+
+.socseti-item:active .socseti-icon {
+  fill: $white;
+}
+
+@media screen and (min-width: 768px) {
+  .section__socseti {
+  }
+
+  .socseti-title {
+    font-size: 24px;
+    margin-bottom: 64px;
+  }
+
+  .socseti-list {
+    width: 458px;
+    margin-left: auto;
+    margin-right: auto;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .socseti-item {
+    width: 74px;
+    height: 74px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .section__socseti {
+  }
+
+  .socseti-title {
+    font-size: 32px;
+  }
+
+  .socseti-list {
+    width: 458px;
+  }
+
+  .socseti-item {
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .section__socseti {
+  }
+
+  .socseti-title {
+    font-size: 32px;
+  }
+
+  .socseti-list {
+    width: 458px;
+  }
+
+  .socseti-item {
+  }
+}

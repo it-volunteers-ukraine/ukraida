@@ -203,6 +203,12 @@ function wp_it_volunteers_scripts()
     $front_scripts_args = ['ajaxUrl' => admin_url('admin-ajax.php')];
     wp_localize_script('our-team-members-scripts', 'vars', $front_scripts_args);
   }
+  // if (is_page_template('single-event.php')) {
+  // if (is_singular('event') && is_page_template('single-event.php')) {
+  // if (is_singular('event')) {
+  if (is_singular() && get_post_type() === 'event') {
+    wp_enqueue_style('pt-event-style', get_template_directory_uri() . '/assets/styles/single-event.css', array('main'));
+  }
 
   if (is_page_template('templates/privacy.php')) {
     wp_enqueue_style('privacy-style', get_template_directory_uri() . '/assets/styles/template-styles/privacy.css', array('main'));
@@ -238,6 +244,27 @@ function wp_it_volunteers_scripts()
   if (is_singular('post-types-one-news')) {
     wp_enqueue_style('post-types-one-news-style', get_template_directory_uri() . '/assets/styles/post-types-one-news.css', array('main'));
   }}
+
+// function create_pt_event_post_type() {
+//   register_post_type('pt_event',
+//       array(
+//           'labels' => array(
+//               'name' => __('PT Events'),
+//               'singular_name' => __('PT Event'),
+//           ),
+//           'public' => true,
+//           'has_archive' => true,
+//           'menu_position' => 5,
+//           'menu_icon' => 'dashicons-calendar',
+//           'supports' => array('title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments', 'revisions'),
+//           'taxonomies' => array('category', 'post_tag'),
+//           'hierarchical' => false,
+//           'show_in_rest' => true,
+//       )
+//   );
+// }
+// add_action('init', 'create_pt_event_post_type');
+
 
 /** add swiper */
 // function add_swiper() {

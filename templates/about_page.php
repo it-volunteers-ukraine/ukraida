@@ -186,4 +186,3 @@ $detailed_text = esc_html(get_field('about_detailed_text', $currend_id));
     </symbol>
 </svg>
 <?php get_footer(); ?>
-
