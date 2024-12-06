@@ -7,6 +7,7 @@ Template Name: our team members
 
 <main>
     <section class="section our-team-members">
+        <?php get_template_part('/parts/breadcrumbs'); ?>
         <div class="container container__our-team-members">
             <h1 class="our-team-members-title"><?= $title ?></h1>
             <div class="our-team-members-items" id="ourTeamMembersItems"></div>
