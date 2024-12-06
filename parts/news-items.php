@@ -6,11 +6,33 @@
         // Basic args for query
         $args = array(
             'paged'             => $paged,
-            'post_type'         => ['event', 'post-types-one-news'],
             'posts_per_page'    => 6,
             'order'             => 'DESC',
         );
 
+        // Categories meta query
+        $val = $_GET['categories'] ?? [];
+        $categories = is_array($val) ? $val : [$val];
+        //
+        if (count($categories)) {
+            $args['tax_query'] = array(
+                array(
+                    'taxonomy' => 'category', 
+                    'field' => 'name', 
+                    'terms' => $categories
+                )
+            );
+        }
+
+        // Post type filter
+        $post_type = $_GET['type'] ?? 'all';
+        if ($post_type === 'news') {
+            $args['post_type'] = 'post-types-one-news';
+        } else if ($post_type === 'events') {
+            $args['post_type'] = 'event';
+        } else if ($post_type === 'all') {
+            $args['post_type'] = ['event', 'post-types-one-news'];
+        }
         $query = new WP_Query($args);
 
         // Texts
