@@ -7,7 +7,9 @@
     $search_query = $_GET['query'] ?? '';
     $search_button_text = acf_esc_html(get_field('search_button_text', $currend_id));
     $category_remove_icon_href = get_bloginfo('template_url') . "/assets/images/symbol-defs.svg#icon-close";
-    $initially_selected_categories = $_GET['categories'] ?? [];
+
+    $val = $_GET['categories'] ?? [];
+    $initially_selected_categories = is_array($val) ? $val : [$val];
 
     // Retrieving possible categories
     $term_args = array(
@@ -30,12 +32,11 @@
     <div class="news-search-categories">
         <select class="news-search-narrow-select" id="newsSearchNarrowSelect" multiple="multiple" name="categories[]">
             <?php
-                foreach ($categories as $index => $category):
+                foreach ($categories as $category):
                     // Is category initially selected
                     $selected = array_search($category, $initially_selected_categories) !== false;
                     ?>
                         <option
-                            id="categoryOption<?= $index ?>"
                             <?= $selected ? "selected" : "" ?>
                         >
                             <?= $category?>
@@ -46,24 +47,32 @@
         </select>
         <div class="news-search-wide-categories">
             <?php
-                foreach ($categories as $index => $category):
+                foreach ($categories as $category):
                     // Is category initially selected
                     $selected = array_search($category, $initially_selected_categories) !== false;
+                    // If the category is selected then preparing the url without the category
+                    // Otherwise it is needed to be added
+                    $cts = $initially_selected_categories;
+                    if ($selected) {
+                        $index = array_search($category, $cts);
+                        array_splice($cts, $index, 1);
+                    } else {
+                        $cts[] = $category;
+                    }
+                    $url = add_query_arg('categories', $cts);
                     ?>
-                        <div
+                        <a
                             class="news-category-btn<?= $selected ? " active" : "" ?>"
-                            id="categoryButton<?= $index ?>"
-                            onClick="onCategoryClick(<?= $index ?>)"
+                            href="<?= $url ?>"
                         >
                             <?= $category?>
                             <svg 
                                 class="news-search-category-remove-svg<?= $selected ? " active" : "" ?>"
-                                id="categoryRemoveSvg<?= $index ?>"
                             >
                                 <use xlink:href="<?= $category_remove_icon_href ?>">
                                 </use>
                             </svg>
-                        </div>
+                        </a>
                     <?php
                 endforeach
             ?>
