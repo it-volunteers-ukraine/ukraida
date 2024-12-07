@@ -42,7 +42,7 @@
 
   .one-news__title {
     font-size: 24px;
-    padding-bottom: 110px;
+    padding-bottom: 64px;
   }
 
   .one-news__img img {
@@ -66,13 +66,18 @@
 
   .one-news__title {
     font-size: 32px;
-    padding-bottom: 104px;
+    padding-bottom: 97px;
     max-width: 1000px;
     margin: 0 auto;
   }
 
   .one-news__img {
     padding-bottom: 48px;
+  }
+
+  .one-news__img img {
+    width: 772px;
+    height: 597px;
   }
 
   .one-news__text {
@@ -82,7 +87,7 @@
 
 @media (min-width: 1440px) {
   .one-news__title {
-    padding-bottom: 112px;
+    padding-bottom: 104px;
     max-width: 100%;
   }
 
