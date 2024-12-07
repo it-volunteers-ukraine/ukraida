@@ -146,22 +146,32 @@ $detailed_text = esc_html(get_field('about_detailed_text', $currend_id));
         <div class="container">
             <h2 class="about__title about__title-partners"><?php echo esc_html(get_field('title_our_partners', $currend_id)); ?></h2>
             <ul class="about__partners-list">
-                <?php
-                while ($partners_query->have_posts()): $partners_query->the_post();
-                    // Get ACF fields for 'name' and 'logo'
-                    $partner_name = get_field('our_partners_and_sponsors_name'); 
-                    $partner_logo = get_field('our_partners_and_sponsors_logo'); 
-                ?>
-                    <li class="partners-item">
-                        <div class="partners-list-img">
-                            <?php if ($partner_logo): ?>
+    <?php
+    while ($partners_query->have_posts()): $partners_query->the_post();
+        // Get ACF fields for 'name', 'logo', and 'website'
+        $partner_name = get_field('our_partners_and_sponsors_name'); 
+        $partner_logo = get_field('our_partners_and_sponsors_logo'); 
+        $partner_website = get_field('our_partners_and_sponsors_site'); 
+    ?>
+        <li class="partners-item">
+            <div class="partners-list-img">
+                <?php if ($partner_logo): ?>
+                    <?php if ($partner_website): ?>
+                        <a href="<?php echo esc_url($partner_website); ?>" target="_blank" rel="noopener noreferrer">
                             <img src="<?php echo esc_url($partner_logo['url']); ?>" alt="<?php echo esc_attr($partner_logo['alt']); ?>" />
-                            <?php endif; ?>
-                            <p><?php echo esc_html($partner_name); ?></p> 
-                        </div>
-                    </li>
-                <?php endwhile; ?>
-            </ul>
+                        </a>
+                    <?php else: ?>
+                        <img src="<?php echo esc_url($partner_logo['url']); ?>" alt="<?php echo esc_attr($partner_logo['alt']); ?>" />
+                    <?php endif; ?>
+                <?php endif; ?>
+                <?php if ($partner_name): ?>
+                    <p><?php echo esc_html($partner_name); ?></p>
+                <?php endif; ?>
+            </div>
+        </li>
+    <?php endwhile; ?>
+</ul>
+
 
             <div class="about__partners-button">
                 <a href="<?php echo esc_url(get_field('link_page_partners', $currend_id)); ?>" class="about__button" rel="noopener noreferrer">
