@@ -26,7 +26,7 @@
 
 .wrap {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   /*position: fixed;*/
   padding: 8px 0;
@@ -335,9 +335,6 @@
     height: 200px;
   }
 
-  .nav__site {
-    gap: 24px;
-  }
 }
 
 @media screen and (min-width: 1440px) {
@@ -361,7 +358,7 @@
   }
 
   .nav {
-    width: auto;
+    width: 54.4%;
   }
 
   .nav__site {
@@ -372,20 +369,9 @@
 @media screen and (min-width: 1600px) {
   .wrap {
     flex-wrap: nowrap;
-    gap: 115px;
   }
 
   .nav__site {
     gap: 36px;
-  }
-}
-
-@media screen and (min-width: 1920px) {
-  .wrap {
-    gap: 135px;
-  }
-
-  .nav__site {
-    gap: 46px;
   }
 }
