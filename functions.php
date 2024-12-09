@@ -235,17 +235,40 @@ function wp_it_volunteers_scripts()
   //   wp_enqueue_script( 'gallery-parts-scripts', get_template_directory_uri() . '/assets/scripts/parts-scripts/gallery.js', array(), false, true );
   // }
 
-  // if (is_singular() && is_page_template('parts/events.php')) {
-  //   wp_enqueue_style( 'events-parts-style', get_template_directory_uri() . '/assets/styles/parts-styles/events.css', array() );
-  //   wp_enqueue_script( 'events-parts-scripts', get_template_directory_uri() . '/assets/scripts/parts-scripts/events.js', array(), false, true );
-  // }
+  // if (is_singular() && get_post_type() === 'event') {
+    if (is_singular('event') ) {
+    wp_enqueue_style('pt-event-style', get_template_directory_uri() . '/assets/styles/single-event.css', array('main'));
+    wp_enqueue_style('block-socseti-style', get_template_directory_uri() . '/assets/styles/parts-styles/block-socseti.css', array('main'));
+  }
 
   if (is_singular('post-types-project')) {
     wp_enqueue_style('post-types-project-style', get_template_directory_uri() . '/assets/styles/post-types-project.css', array('main'));
   }
+
+  if (is_singular('post-types-one-news')) {
+    wp_enqueue_style('post-types-one-news-style', get_template_directory_uri() . '/assets/styles/post-types-one-news.css', array('main'));
+  }
 }
 
-
+// function create_pt_event_post_type() {
+//   register_post_type('pt_event',
+//       array(
+//           'labels' => array(
+//               'name' => __('PT Events'),
+//               'singular_name' => __('PT Event'),
+//           ),
+//           'public' => true,
+//           'has_archive' => true,
+//           'menu_position' => 5,
+//           'menu_icon' => 'dashicons-calendar',
+//           'supports' => array('title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments', 'revisions'),
+//           'taxonomies' => array('category', 'post_tag'),
+//           'hierarchical' => false,
+//           'show_in_rest' => true,
+//       )
+//   );
+// }
+// add_action('init', 'create_pt_event_post_type');
 
 
 /** add swiper */

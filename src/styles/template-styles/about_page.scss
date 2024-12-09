@@ -222,16 +222,17 @@
   }
 
   .slider__item-photo img {
+    margin: 0 auto;
     width: 108px;
     height: 108px;
     max-width: unset;
     object-fit: cover;
-    margin-bottom: 33px;
   }
 
   .slider__item-subtitle {
     font-size: 18px;
     width: 100%;
+    margin-top: 15px;
   }
 
   .slider__date {
@@ -393,10 +394,6 @@
 
   .slider__item--right {
     max-width: 65%;
-  }
-
-  .slider__item-photo img {
-    margin-bottom: 35px;
   }
 
   .slider__item-title {
