@@ -10,11 +10,11 @@
     $eventsClass = "news-filter-btn " . ($type == "events" ? "active" : "inactive" );
 
     // Texts
-    $currend_id = get_the_ID();
-    $filter_text = acf_esc_html(get_field('filter_text', $currend_id));
-    $filter_all_text = acf_esc_html(get_field('filter_all_text', $currend_id));
-    $filter_news_text = acf_esc_html(get_field('filter_news_text', $currend_id));
-    $filter_events_text = acf_esc_html(get_field('filter_events_text', $currend_id));
+    $current_id = get_the_ID();
+    $filter_text = acf_esc_html(get_field('filter_text', $current_id));
+    $filter_all_text = acf_esc_html(get_field('filter_all_text', $current_id));
+    $filter_news_text = acf_esc_html(get_field('filter_news_text', $current_id));
+    $filter_events_text = acf_esc_html(get_field('filter_events_text', $current_id));
 ?>
 
 <div class="news-filter">

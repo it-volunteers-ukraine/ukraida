@@ -7,8 +7,8 @@ Template Name: newspage
 
 <main>
     <?php
-    $currend_id = get_the_ID();
-    $news_title = get_field('title', $currend_id);
+    $current_id = get_the_ID();
+    $news_title = get_field('title', $current_id);
 
     ?>
     <section class="section news">

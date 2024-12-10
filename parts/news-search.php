@@ -1,11 +1,11 @@
 <?php
-    $currend_id = get_the_ID();
+    $current_id = get_the_ID();
 
     // Initial values
     $search_icon_href = get_bloginfo('template_url') . "/assets/images/symbol-defs.svg#icon-magnifying-glass";
-    $search_placeholder = acf_esc_html(get_field('search_placeholder', $currend_id));
+    $search_placeholder = acf_esc_html(get_field('search_placeholder', $current_id));
     $search_query = $_GET['query'] ?? '';
-    $search_button_text = acf_esc_html(get_field('search_button_text', $currend_id));
+    $search_button_text = acf_esc_html(get_field('search_button_text', $current_id));
     $category_remove_icon_href = get_bloginfo('template_url') . "/assets/images/symbol-defs.svg#icon-close";
 
     $val = $_GET['categories'] ?? [];
