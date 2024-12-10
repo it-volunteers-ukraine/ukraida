@@ -1,14 +1,14 @@
 <?php
-    $currend_id = get_the_ID();
+    $current_id = get_the_ID();
 
     // Preparing variables
     // Image
-    $image = get_field('one_news_img', $currend_id);
+    $image = get_field('one_news_img', $current_id);
     $img_tag = ImageHelper::get_image_tag($image, 'news-item-news-image');
     // Badge text
     $badge_text = $args['texts']['type'];
     // Categories
-    $categories_terms = get_field('one_news_categories', $currend_id);
+    $categories_terms = get_field('one_news_categories', $current_id);
     $categories = [];
     if ($categories_terms) {
         $categories = array_map(function ($term) {
@@ -16,10 +16,10 @@
         }, $categories_terms);
     }
     //
-    $title = esc_html(get_field('one_news_title', $currend_id));
-    $date = esc_html(get_field('one_news_date', $currend_id));
-    $text = esc_html(get_field('one_news_text', $currend_id));
-    $link = get_the_permalink($currend_id);
+    $title = esc_html(get_field('one_news_title', $current_id));
+    $date = esc_html(get_field('one_news_date', $current_id));
+    $text = esc_html(get_field('one_news_text', $current_id));
+    $link = get_the_permalink($current_id);
     $link_text = $args['texts']['link_title'];
 ?>
     <div class="news-item-news">
