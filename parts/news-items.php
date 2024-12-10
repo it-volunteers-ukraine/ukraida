@@ -33,6 +33,55 @@
         } else if ($post_type === 'all') {
             $args['post_type'] = ['event', 'post-types-one-news'];
         }
+
+        // Search query filter
+        $query = $_GET['query'];
+        if ($query) {
+            // filter
+            function news_where( $where ) {
+                $where = str_replace("meta_key = 'event_article_$", "meta_key LIKE 'event_article_%", $where);
+                return $where;
+            }
+            add_filter('posts_where', 'news_where');
+
+            //
+            $args['meta_query'] = array(
+                // Event
+                'relation' => 'OR',
+                array(
+                    'key' => 'title',
+                    'value' => $query,
+                    'compare' => 'LIKE',
+                ),
+                array(
+                    'key' => 'location_title',
+                    'value' => $query,
+                    'compare' => 'LIKE',
+                ),
+                array(
+                    'key' => 'event_article_$_text',
+                    'value' => $query,
+                    'compare' => 'LIKE',
+                ),
+                // News
+                array(
+                    'key' => 'one_news_title',
+                    'value' => $query,
+                    'compare' => 'LIKE',
+                ),
+                array(
+                    'key' => 'one_news_author',
+                    'value' => $query,
+                    'compare' => 'LIKE',
+                ),
+                array(
+                    'key' => 'one_news_text',
+                    'value' => $query,
+                    'compare' => 'LIKE',
+                ),
+            );
+        }
+
         $query = new WP_Query($args);
 
         // Texts
