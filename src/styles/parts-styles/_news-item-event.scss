@@ -7,6 +7,18 @@
   padding: 16px;
 }
 
+.news-item-event-mask {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  border-radius: 15px;
+  opacity: 30%;
+  background-color: #F1EBEB;
+  pointer-events: none;
+}
+
 .news-item-event-image-wrap {
   position: relative;
 }

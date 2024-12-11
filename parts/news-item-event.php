@@ -18,7 +18,13 @@
     //
     $title = esc_html(get_field('title', $current_id));
     $date = get_the_date('d.m.Y', $current_id) . $args['texts']['date_ending'];
+    // Retrieving the event date
     $event_date = esc_html(get_field('date', $current_id));
+    // Checking whether the event is active (it's date is in the future)
+    $date1 = new DateTime(substr($event_date, 0, 10));
+    $date2 = new DateTime('today');
+    $is_event_active = $date2 <= $date1;
+    //
     $time = esc_html(get_field('time', $current_id));
     $location_title = esc_html(get_field('location_title', $current_id));
     $location_link = esc_html(get_field('location_link', $current_id));
@@ -30,6 +36,10 @@
     $link_text = $args['texts']['link_title'];
 ?>
     <div class="news-item-event">
+        <?php
+            // Mask if event is not active
+            if (!$is_event_active) echo '<div class="news-item-event-mask"></div>';
+        ?>
         <div class="news-item-event-image-wrap">
             <?= $img_tag ?>
             <div class="news-item-event-image-mask"></div>
