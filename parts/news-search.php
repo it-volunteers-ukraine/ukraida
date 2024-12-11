@@ -6,6 +6,7 @@
     $search_placeholder = acf_esc_html(get_field('search_placeholder', $current_id));
     $search_query = $_GET['query'] ?? '';
     $search_button_text = acf_esc_html(get_field('search_button_text', $current_id));
+    $categories_select_placeholder = acf_esc_html(get_field('categories_select_placeholder', $current_id));
     $category_remove_icon_href = get_bloginfo('template_url') . "/assets/images/symbol-defs.svg#icon-close";
 
     $val = $_GET['categories'] ?? [];
@@ -45,6 +46,14 @@
                 endforeach
             ?>
         </select>
+        <script>
+            // Initialize select
+            jQuery(document).ready(function() {
+                jQuery('#newsSearchNarrowSelect').select2({
+                    placeholder :"<?= $categories_select_placeholder ?>",
+                });
+            });
+        </script>
         <div class="news-search-wide-categories">
             <?php
                 foreach ($categories as $category):
