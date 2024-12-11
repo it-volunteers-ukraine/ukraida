@@ -35,7 +35,7 @@
         }
 
         // Search query filter
-        $query = $_GET['query'];
+        $query = $_GET['query'] ?? '';
         if ($query) {
             // filter
             function news_where( $where ) {
