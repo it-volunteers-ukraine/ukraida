@@ -1,12 +1,8 @@
 .one-news__categories {
   display: flex;
+  flex-wrap: wrap;
   gap: 8px;
   padding-bottom: 16px;
-}
-
-.one-news__content {
-  display: flex;
-  flex-direction: column;
 }
 
 .category-item {
