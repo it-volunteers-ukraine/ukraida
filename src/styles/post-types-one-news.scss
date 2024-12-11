@@ -8,7 +8,7 @@
 }
 
 .one-news__title {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 700;
   text-align: center;
   padding-bottom: 40px;
@@ -56,6 +56,10 @@
 }
 
 @media (min-width: 1200px) {
+  .section__one-news {
+    padding-top: 64px;
+  }
+
   .one-news__wrapper {
     flex-direction: row;
   }
