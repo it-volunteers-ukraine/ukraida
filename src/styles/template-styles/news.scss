@@ -16,9 +16,8 @@
 }
 
 .news-title {
-  margin-bottom: 32px;
+  margin-bottom: 24px;
   font-size: 18px;
-  line-height: 1.36;
   font-weight: 700;
   text-transform: uppercase;
   text-align: center;
@@ -28,6 +27,7 @@
   .section.news {
     padding-top: 48px;
   }
+
   .news-title {
     font-size: 32px;
     margin-bottom: 56px;
@@ -37,7 +37,8 @@
 @media screen and (min-width: 1200px) {
   .section.news {
     padding-top: 64px;
-  } 
+  }
+
   .news-title {
     font-size: 36px;
     margin-bottom: 107px;
