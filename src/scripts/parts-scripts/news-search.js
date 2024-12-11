@@ -1,4 +1,5 @@
-// Initialize select
-jQuery(document).ready(function() {
-  jQuery('#newsSearchNarrowSelect').select2();
-});
+function onSelectChange() {
+  // Find form and submit
+  const form = document.getElementById('newsSearchForm');
+  form.submit();
+}

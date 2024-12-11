@@ -22,7 +22,7 @@
     $categories = $term_query->terms;
 ?>
 
-<form class="news-search-form">
+<form class="news-search-form" id="newsSearchForm">
     <div class="news-search-container">
         <div class="news-search-input-container">
             <svg class="news-search-svg"><use xlink:href="<?= $search_icon_href ?>"></use></svg>
@@ -31,7 +31,13 @@
         <button class="news-search-btn" type="submit"><?= $search_button_text ?></button>
     </div>
     <div class="news-search-categories">
-        <select class="news-search-narrow-select" id="newsSearchNarrowSelect" multiple="multiple" name="categories[]">
+        <select 
+            class="news-search-narrow-select" 
+            id="newsSearchNarrowSelect" 
+            multiple="multiple" 
+            name="categories[]"
+            onchange="onSelectChange()"
+        >
             <?php
                 foreach ($categories as $category):
                     // Is category initially selected
