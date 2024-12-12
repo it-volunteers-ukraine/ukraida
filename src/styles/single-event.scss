@@ -14,7 +14,7 @@
   text-align: center;
   text-transform: uppercase;
   font-family: $font-main;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 700;
 }
 
@@ -32,11 +32,17 @@
 }
 
 @media screen and (min-width: 1200px) {
+  .btn-filter {
+    @include btn-filter-noactive-l;
+  }
+  .section__event{
+    padding-bottom: 112px;
+  }
   .container__event {
     width: 1112px;
   }
   .event-title {
-    margin-bottom: 118px;
+    margin-bottom: 64px;
     font-size: 32px;
   }
 }
@@ -46,10 +52,9 @@
     width: 1404px;
   }
   .section__event {
-    padding-top: 118px;
   }
   .event-title {
-    margin-bottom: 90px;
+    margin-bottom: 80px;
   }
 }
 
@@ -68,7 +73,7 @@
 }
 
 .calendar-text {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 700;
 }
 .location.calendar-text:hover {
@@ -139,7 +144,7 @@
   font-style: italic;
 }
 .article-text * {
-  font-size: 16px;
+  font-size: 14px;
 }
 
 @media screen and (min-width: 768px) {
@@ -211,7 +216,7 @@
   }
 
   .article-image-title {
-    font-size: 20px;
+    font-size: 16px;
     margin-top: auto;
     text-align: center;
   }
@@ -264,6 +269,7 @@
   }
 
   .article-image-title {
+    font-size: 24px;
   }
 
   .article-text * {
