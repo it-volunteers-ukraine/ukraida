@@ -178,10 +178,11 @@ You can use this class for button
 @mixin btn-filter {
   @include btn-main;
   min-width: unset;
-  height: 32px;
-  padding: 8px;
+  padding: 12px;
   border: 1px solid $blue;
   font-size: 12px;
+  font-weight: 600;
+  height: unset;
   border-radius: 10px;
   color: $black;
   background-color: $light-blue;
@@ -236,10 +237,15 @@ You can use this class for button
 
 @mixin btn-filter-s {
   @include btn-filter;
-  padding: 8px;
 }
 
 @mixin btn-filter-m {
+  @include btn-filter;
+  font-size: 16px;
+  padding: 16px;
+}
+
+@mixin btn-filter-l {
   @include btn-filter;
   font-size: 18px;
   padding: 18px;
@@ -247,11 +253,16 @@ You can use this class for button
 
 @mixin btn-filter-noactive-s{
   @include btn-filter-noactive;
-  padding: 8px;
 
 }
 
 @mixin btn-filter-noactive-m{
+  @include btn-filter-noactive;
+  font-size: 16px;
+  padding: 16px;
+}
+
+@mixin btn-filter-noactive-l{
   @include btn-filter-noactive;
   font-size: 18px;
   padding: 18px;

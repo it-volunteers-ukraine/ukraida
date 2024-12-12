@@ -3,7 +3,7 @@
 .socseti-title {
   text-align: center;
   font-size: 16px;
-  font-weight: 700;
+  font-weight: 600;
   margin-bottom: 56px;
 }
 
@@ -53,7 +53,7 @@
   }
 
   .socseti-list {
-    width: 458px;
+    width: 404px;
     margin-left: auto;
     margin-right: auto;
     flex-direction: row;
@@ -61,8 +61,7 @@
   }
 
   .socseti-item {
-    width: 74px;
-    height: 74px;
+
   }
 }
 
@@ -79,6 +78,8 @@
   }
 
   .socseti-item {
+    width: 74px;
+    height: 74px;
   }
 }
 
