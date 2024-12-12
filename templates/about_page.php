@@ -12,7 +12,10 @@ $dev_page_url = PllHelper::get_current_translation('/about/about-media');
 
 //
 $detailed_information_button_text = esc_html(get_field('detailed_information_button_text', $currend_id));
-$detailed_text = esc_html(get_field('about_detailed_text', $currend_id));
+$partners_button_text = esc_html(get_field('partners_button_text', $currend_id));
+$button_out_command_text = esc_html(get_field('button_our_command_text', $currend_id));
+$press_link_text = esc_html(get_field('press_link_text', $currend_id));
+
 ?>
 
 <main class="about about__wrapper">
@@ -47,7 +50,7 @@ $detailed_text = esc_html(get_field('about_detailed_text', $currend_id));
                                 <?php echo wp_kses_post(get_sub_field('about_us_text')); ?>
                             </div>
                             <a href="<?php echo esc_url(get_sub_field('button_link_page')); ?>" class="about__button" rel="noopener noreferrer">
-                                <?php echo $detailed_information_button_text; ?>
+                                <?php echo esc_html(get_sub_field('button_text')); ?>
                             </a>
                         </div>
                     </div>
@@ -175,7 +178,7 @@ $detailed_text = esc_html(get_field('about_detailed_text', $currend_id));
 
             <div class="about__partners-button">
                 <a href="<?php echo esc_url(get_field('link_page_partners', $currend_id)); ?>" class="about__button" rel="noopener noreferrer">
-                    <?php echo esc_html($detailed_information_button_text); ?>
+                    <?php echo esc_html($partners_button_text); ?>
                 </a>
             </div>
         </div>
