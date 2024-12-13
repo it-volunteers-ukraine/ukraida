@@ -90,7 +90,6 @@
         $type_news_link_text = acf_esc_html(get_field('type_news_link_text', $currend_id));
         $type_event_text = acf_esc_html(get_field('type_event_text', $currend_id));
         $type_event_link_text = acf_esc_html(get_field('type_event_link_text', $currend_id));
-        $type_event_date_ending = acf_esc_html(get_field('type_event_date_ending', $currend_id));
 
         // Outputting items
         echo '<div class="news-items">';
@@ -108,7 +107,6 @@
                         "texts" => [
                             "type" => $type_event_text,
                             "link_title" => $type_event_link_text,
-                            "date_ending" => $type_event_date_ending,
                         ],
                     ],
                 );

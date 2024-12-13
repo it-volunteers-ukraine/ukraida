@@ -17,7 +17,6 @@
     }
     //
     $title = esc_html(get_field('title', $current_id));
-    $date = get_the_date('d.m.Y', $current_id) . $args['texts']['date_ending'];
     // Retrieving the event date
     $event_date = esc_html(get_field('date', $current_id));
     // Checking whether the event is active (it's date is in the future)
@@ -97,9 +96,6 @@
                     <h2 class="news-item-event-title">
                         <?= $title ?>
                     </h2>
-                    <div class="news-item-event-post-date">
-                        <?= $date ?>
-                    </div>
                 </div>
                 <div class="news-item-event-excerpt">
                     <?= $text ?>
