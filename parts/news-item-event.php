@@ -25,6 +25,10 @@
     $date2 = new DateTime('today');
     $is_event_active = $date2 <= $date1;
     //
+    $date_svg_href = get_bloginfo('template_url') . "/assets/images/symbol-defs.svg#icon-calendar-blue";
+    $time_svg_href = get_bloginfo('template_url') . "/assets/images/symbol-defs.svg#icon-clock-blue";
+    $location_svg_href = get_bloginfo('template_url') . "/assets/images/symbol-defs.svg#icon-location-blue";
+    //
     $time = esc_html(get_field('time', $current_id));
     $location_title = esc_html(get_field('location_title', $current_id));
     $location_link = esc_html(get_field('location_link', $current_id));
@@ -61,20 +65,29 @@
                 <?php
             endif;
         ?>
-        <div class="news-item-event-ldp">
+        <div class="news-item-event-dtl">
             <div class="news-item-event-date-row">
+                <svg class="news-item-event-date-svg">
+                    <use xlink:href="<?= $date_svg_href ?>"></use>
+                </svg>
                 <div class="news-item-event-date">
                     <?= $event_date ?>
                 </div>
             </div>
             <div class="news-item-event-time-row">
+                <svg class="news-item-event-time-svg">
+                    <use xlink:href="<?= $time_svg_href ?>"></use>
+                </svg>
                 <div class="news-item-event-time">
                     <?= $time ?>
                 </div>
             </div>
             <div class="news-item-event-location-row">
+                <svg class="news-item-event-location-svg">
+                    <use xlink:href="<?= $location_svg_href ?>"></use>
+                </svg>
                 <div class="news-item-event-location">
-                    <a href="<?= $location_link ?>"><?= $location_title ?></a>
+                    <a href="<?= $location_link ?>" target="_blank" rel="noreferrer"><?= $location_title ?></a>
                 </div>
             </div>
         </div>
@@ -84,7 +97,7 @@
                     <h2 class="news-item-event-title">
                         <?= $title ?>
                     </h2>
-                    <div class="news-item-event-date">
+                    <div class="news-item-event-post-date">
                         <?= $date ?>
                     </div>
                 </div>
