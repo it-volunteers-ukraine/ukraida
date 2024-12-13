@@ -1,13 +1,26 @@
 .news-items-and-pagination {
   display: flex;
   flex-direction: column;
-  margin: 0px 144px;
   width: 100%;
   align-items: center;
 }
 
 .news-items {
+  display: flex;
+  flex-wrap: wrap;
   width: 100%;
+}
+
+@media screen and (max-width: 767.9px) {
+  .news-items-and-pagination {
+    max-width: 288px;
+    gap: 56px;
+  }
+
+  .news-items {
+    flex-direction: column;
+    gap: 24px;
+  }
 }
 
 @media screen and (min-width: 768px) {

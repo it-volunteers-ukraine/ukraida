@@ -111,9 +111,15 @@
   font-family: $font-advanced;
   font-weight: 400;
   font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 .select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
   color: $white;
+  order: 2;
+  text-transform: uppercase;
+  font-size: 20px;
 }
 .select2-container--default.select2-container--open.select2-container--below .select2-selection--multiple {
   border-radius: 15px;
