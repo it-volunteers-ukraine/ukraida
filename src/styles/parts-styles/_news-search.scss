@@ -282,6 +282,11 @@
 }
 
 @media screen and (min-width: 1440px) {
+  .news-search-form {
+    padding-left: 146px;
+    padding-right: 146px;
+  }
+  
   .news-search-container {
     gap: 32px;
     align-items: center;
