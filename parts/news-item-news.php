@@ -32,15 +32,15 @@
             // Display categories if there are some
             if (count($categories)):
                 ?>
-                    <div class="news-item-news-categories">
+                    <ul class="news-item-news-categories">
                         <?php
                             foreach ($categories as $category):
                                 ?>
-                                    <div class="news-item-news-category"><?= $category?></div>
+                                    <li class="news-item-news-category"><?= $category?></li>
                                 <?php
                             endforeach;
                         ?>
-                    </div>
+                    </ul>
                 <?php
             endif;
         ?>

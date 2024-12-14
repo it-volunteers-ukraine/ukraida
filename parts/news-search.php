@@ -12,14 +12,30 @@
     $val = $_GET['categories'] ?? [];
     $initially_selected_categories = is_array($val) ? $val : [$val];
 
-    // Retrieving possible categories
+    // Retrieving all the existing categories
     $term_args = array(
         'taxonomy' => 'category',
         'hide_empty' => false,
         'fields' => 'names'
     );
     $term_query = new WP_Term_Query($term_args);
-    $categories = $term_query->terms;
+    $all_categories = $term_query->terms;
+    // Leave the catogories, which are used
+    $categories = array_filter($all_categories, function ($category) {
+        // Check if there exists at least one post with this category
+        $query = new WP_Query(array(
+            'post_type' => array('event', 'post-types-one-news'),
+            'tax_query' => array(
+                array(
+                    'taxonomy' => 'category', 
+                    'field' => 'name', 
+                    'terms' => $category,
+                )
+            )
+        ));
+
+        return ($query->found_posts > 0);
+    });
 ?>
 
 <form class="news-search-form" id="newsSearchForm">

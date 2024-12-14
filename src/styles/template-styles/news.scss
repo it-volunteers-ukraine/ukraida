@@ -3,6 +3,7 @@
 @import "../parts-styles/news-items";
 @import "../parts-styles/news-item-news";
 @import "../parts-styles/news-item-event";
+@import "../parts-styles/news-pagination";
 @import "../variables";
 
 .section.news {
@@ -41,7 +42,7 @@
 
   .news-title {
     font-size: 36px;
-    margin-bottom: 107px;
+    margin-bottom: 104px;
   }
 }
 
