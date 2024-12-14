@@ -23,6 +23,10 @@
 }
 
 @media screen and (min-width: 768px) {
+  .news-items-and-pagination {
+    gap: 104px;
+  }
+
   .news-items {
     display: grid;
     grid-template-columns: 50% 50%;
