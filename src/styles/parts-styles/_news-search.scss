@@ -9,6 +9,7 @@
 
 .news-search-container {
   display: flex;
+  align-items: center;
   background-color: $light-blue;
   padding: 8px;
   border-radius: 15px;
@@ -22,7 +23,6 @@
   background-color: $white;
   border-radius: 15px;
   padding: 14px 8px;
-  gap: 8px;
   transition: all $animations;
 }
 
@@ -46,7 +46,6 @@
   border: 0px solid transparent;
   outline: none;
   transition: all $animations;
-  height: 19px;
   font-family: $font-main;
   font-weight: 400;
 }
@@ -204,6 +203,10 @@
     gap: 24px;
   }
 
+  .news-search-input-container {
+    gap: 8px;
+  }
+
   .news-search-input {
     font-size: 14px;
   }
@@ -227,6 +230,10 @@
     gap: 12px;
   }
 
+  .news-search-input-container {
+    gap: 8px;
+  }
+
   .news-search-input {
     font-size: 14px;
   }
@@ -242,6 +249,29 @@
 }
 
 @media screen and (min-width: 1200px) {
+  .news-search-container {
+    gap: 24px;
+    padding: 24px;
+  }
+  
+  .news-search-input-container {
+    padding: 22px 8px;
+    gap: 12px;
+  }
+
+  .news-search-input {
+    font-size: 24px;
+  }
+
+  .news-search-svg {
+    width: 28px;
+    height: 28px;
+  }
+
+  .news-search-btn {
+    font-size: 24px;
+  }
+
   .select2-container {
     display: none;
   }
