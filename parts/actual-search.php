@@ -38,18 +38,18 @@
     });
 ?>
 
-<form class="news-search-form" id="newsSearchForm">
-    <div class="news-search-container">
-        <div class="news-search-input-container">
-            <svg class="news-search-svg"><use xlink:href="<?= $search_icon_href ?>"></use></svg>
-            <input class="news-search-input" name="query" placeholder="<?= $search_placeholder ?>" value="<?= $search_query ?>">
+<form class="actual-search-form" id="actualSearchForm">
+    <div class="actual-search-container">
+        <div class="actual-search-input-container">
+            <svg class="actual-search-svg"><use xlink:href="<?= $search_icon_href ?>"></use></svg>
+            <input class="actual-search-input" name="query" placeholder="<?= $search_placeholder ?>" value="<?= $search_query ?>">
         </div>
-        <button class="news-search-btn" type="submit"><?= $search_button_text ?></button>
+        <button class="actual-search-btn" type="submit"><?= $search_button_text ?></button>
     </div>
-    <div class="news-search-categories">
+    <div class="actual-search-categories">
         <select 
-            class="news-search-narrow-select" 
-            id="newsSearchNarrowSelect" 
+            class="actual-search-narrow-select" 
+            id="actualSearchNarrowSelect" 
             multiple="multiple" 
             name="categories[]"
             onchange="onSelectChange()"
@@ -71,12 +71,12 @@
         <script>
             // Initialize select
             jQuery(document).ready(function() {
-                jQuery('#newsSearchNarrowSelect').select2({
+                jQuery('#actualSearchNarrowSelect').select2({
                     placeholder :"<?= $categories_select_placeholder ?>",
                 });
             });
         </script>
-        <div class="news-search-wide-categories">
+        <div class="actual-search-wide-categories">
             <?php
                 foreach ($categories as $category):
                     // Is category initially selected
@@ -93,12 +93,12 @@
                     $url = add_query_arg('categories', $cts);
                     ?>
                         <a
-                            class="news-category-btn<?= $selected ? " active" : "" ?>"
+                            class="actual-category-btn<?= $selected ? " active" : "" ?>"
                             href="<?= $url ?>"
                         >
                             <?= $category?>
                             <svg 
-                                class="news-search-category-remove-svg<?= $selected ? " active" : "" ?>"
+                                class="actual-search-category-remove-svg<?= $selected ? " active" : "" ?>"
                             >
                                 <use xlink:href="<?= $category_remove_icon_href ?>">
                                 </use>

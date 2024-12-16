@@ -102,17 +102,22 @@ function wp_it_volunteers_scripts()
 
 
   if (is_page_template('templates/news_page.php')) {
+    // Page styles
+    wp_enqueue_style('news-style', get_template_directory_uri() . '/assets/styles/template-styles/news.css', array('main'));
+  }
+
+  if (is_page_template('templates/actual_page.php')) {
     // Select2
     wp_enqueue_script('jquery');
-    wp_enqueue_style('news-select-style', get_template_directory_uri() . '/assets/styles/vendors/select2.css');
-    wp_enqueue_script('news-select-scripts', get_template_directory_uri() . '/assets/scripts/vendors/select2.min.js', array('jquery'));
+    wp_enqueue_style('actual-select-style', get_template_directory_uri() . '/assets/styles/vendors/select2.css');
+    wp_enqueue_script('actual-select-scripts', get_template_directory_uri() . '/assets/scripts/vendors/select2.min.js', array('jquery'));
 
     // Page scripts
     wp_enqueue_script(
-      'news-search-scripts', get_template_directory_uri() . '/assets/scripts/parts-scripts/news-search.js', array('news-select-scripts')
+      'actual-search-scripts', get_template_directory_uri() . '/assets/scripts/parts-scripts/actual-search.js', array('actual-select-scripts')
     );
     // Page styles
-    wp_enqueue_style('news-style', get_template_directory_uri() . '/assets/styles/template-styles/news.css', array('main', 'news-select-style'));
+    wp_enqueue_style('actual-style', get_template_directory_uri() . '/assets/styles/template-styles/actual.css', array('main', 'actual-select-style'));
   }
 
   if (is_page_template('templates/donates_page.php')) {

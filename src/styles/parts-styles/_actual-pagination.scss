@@ -1,12 +1,12 @@
 @import "../components/_buttons";
 @import "../variables";
 
-.news-pagination {
+.actual-pagination {
   display: flex;
   justify-content: center;
 }
 
-.news-pagination-btn {
+.actual-pagination-btn {
   font-family: $font-advanced;
   display: inline-flex;
   justify-content: center;
@@ -17,20 +17,20 @@
   border: none;
 }
 
-.news-pagination-btn.active {
+.actual-pagination-btn.active {
   color: $white;
   background-color: $btn-main;
 }
 
-.news-pagination-btn.inactive,
-.news-pagination-btn.disabled {
+.actual-pagination-btn.inactive,
+.actual-pagination-btn.disabled {
   color: $black;
   background-color: $light-blue;
   border: 1px solid $blue;
 }
 
-.news-pagination-btn.active,
-.news-pagination-btn.inactive {
+.actual-pagination-btn.active,
+.actual-pagination-btn.inactive {
   cursor: pointer;
   transition: all $animations;
 
@@ -44,37 +44,37 @@
   }
 }
 
-.news-pagination-btn-svg {
+.actual-pagination-btn-svg {
   width: 32px;
   height: 32px;
 }
 
-.news-pagination-btn-svg-disabled {
+.actual-pagination-btn-svg-disabled {
   fill: #CCCCCC;
 }
 
-.news-pagination-btn-svg-enabled {
+.actual-pagination-btn-svg-enabled {
   fill: #221F25;
 }
 
-.news-pagination-pages {
+.actual-pagination-pages {
   display: flex;
 }
 
 @media screen and (max-width: 767.9px) {
-  .news-pagination {
+  .actual-pagination {
     gap: 26px;
   }
 
-  .news-pagination-regular {
+  .actual-pagination-regular {
     display: none;
   }
 
-  .news-pagination-pages {
+  .actual-pagination-pages {
     gap: 8px;
   }
 
-  .news-pagination-btn {
+  .actual-pagination-btn {
     width: 44px;
     height: 44px;
     font-size: 20px;
@@ -82,26 +82,26 @@
 }
 
 @media screen and (min-width: 768px) {
-  .news-pagination {
+  .actual-pagination {
     gap: 40px;
   }
 
-  .news-pagination-narrow {
+  .actual-pagination-narrow {
     display: none;
   }
 
-  .news-pagination-pages {
+  .actual-pagination-pages {
     gap: 24px;
   }
 
-  .news-pagination-btn {
+  .actual-pagination-btn {
     width: 56px;
     height: 56px;
   }
 }
 
 @media screen and (min-width: 1280px) {
-  .news-pagination-btn {
+  .actual-pagination-btn {
     width: 64px;
     height: 64px;
     font-size: 24px;

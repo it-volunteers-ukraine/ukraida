@@ -4,7 +4,7 @@
     // Preparing variables
     // Image
     $image = get_field('one_news_img', $current_id);
-    $img_tag = ImageHelper::get_image_tag($image, 'news-item-news-image');
+    $img_tag = ImageHelper::get_image_tag($image, 'actual-item-news-image');
     // Badge text
     $badge_text = $args['texts']['type'];
     // Categories
@@ -22,21 +22,21 @@
     $link = get_the_permalink($current_id);
     $link_text = $args['texts']['link_title'];
 ?>
-    <div class="news-item-news">
-        <div class="news-item-news-image-wrap">
+    <div class="actual-item-news">
+        <div class="actual-item-news-image-wrap">
             <?= $img_tag ?>
-            <div class="news-item-news-image-mask"></div>
+            <div class="actual-item-news-image-mask"></div>
         </div>
-        <div class="news-item-news-badge"><?= $badge_text ?></div>
+        <div class="actual-item-news-badge"><?= $badge_text ?></div>
         <?php
             // Display categories if there are some
             if (count($categories)):
                 ?>
-                    <ul class="news-item-news-categories">
+                    <ul class="actual-item-news-categories">
                         <?php
                             foreach ($categories as $category):
                                 ?>
-                                    <li class="news-item-news-category"><?= $category?></li>
+                                    <li class="actual-item-news-category"><?= $category?></li>
                                 <?php
                             endforeach;
                         ?>
@@ -44,21 +44,21 @@
                 <?php
             endif;
         ?>
-        <div class="news-item-news-card">
-            <div class="news-item-news-info">
-                <div class="news-item-news-header">
-                    <h2 class="news-item-news-title">
+        <div class="actual-item-news-card">
+            <div class="actual-item-news-info">
+                <div class="actual-item-news-header">
+                    <h2 class="actual-item-news-title">
                         <?= $title ?>
                     </h2>
-                    <div class="news-item-news-date">
+                    <div class="actual-item-news-date">
                         <?= $date ?>
                     </div>
                 </div>
-                <div class="news-item-news-excerpt">
+                <div class="actual-item-news-excerpt">
                     <?= $text ?>
                 </div>
             </div>
-            <div class="news-item-news-link">
+            <div class="actual-item-news-link">
                 <a href="<?= $link ?>"><?= $link_text ?></a>
             </div>
         </div>

@@ -1,22 +1,22 @@
 @import "../components/_buttons";
 @import "../variables";
 
-.news-filter {
+.actual-filter {
   display: flex;
   width: 100%;
 }
   
-.news-filter-text {
+.actual-filter-text {
   font-family: $font-main;
   font-weight: 600;
 }
 
-.news-filter-buttons {
+.actual-filter-buttons {
   display: flex;
   flex-wrap: wrap;
 }
 
-.news-filter-btn {
+.actual-filter-btn {
   font-family: $font-advanced;
   display: inline-flex;
   justify-content: center;
@@ -44,77 +44,77 @@
   }
 }
 
-.news-filter-btn.active {
+.actual-filter-btn.active {
   color: $white;
   background-color: $btn-main;
 }
 
-.news-filter-btn.inactive {
+.actual-filter-btn.inactive {
   color: $black;
   background-color: $light-blue;
   border: 1px solid $blue;
 }
 
 @media screen and (max-width: 767.9px) {
-  .news-filter {
+  .actual-filter {
     flex-direction: column;
     gap: 16px;
     margin-top: 105px;
     margin-bottom: 22px;
   }
 
-  .news-filter-text {
+  .actual-filter-text {
     font-size: 16px;
   }
 
-  .news-filter-buttons {
+  .actual-filter-buttons {
     gap: 19px;
   }
 
-  .news-filter-btn {
+  .actual-filter-btn {
     font-size: 16px;
   }
 }
 
 @media screen and (min-width: 768px) {
-  .news-filter {
+  .actual-filter {
     margin-top: 46px;
     margin-bottom: 32px;
     align-items: center;
     gap: 16px;
   }
 
-  .news-filter-text {
+  .actual-filter-text {
     font-size: 20px;
   }
 
-  .news-filter-buttons {
+  .actual-filter-buttons {
     gap: 24px;
   }
 
-  .news-filter-btn {
+  .actual-filter-btn {
     font-size: 18px;
   }
 }
 
 @media screen and (min-width: 1200px) {
-  .news-filter {
+  .actual-filter {
     margin-top: 104px;
     margin-bottom: 64px;
     gap: 24px;
   }
 
-  .news-filter-text {
+  .actual-filter-text {
     font-size: 24px;
   }
 
-  .news-filter-buttons {
+  .actual-filter-buttons {
     gap: 16px;
   }
 }
 
 @media screen and (min-width: 1440px) {
-  .news-filter {
+  .actual-filter {
     margin-top: 144px;
     margin-bottom: 69px;
   }

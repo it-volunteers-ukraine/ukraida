@@ -1,4 +1,4 @@
-<div class="news-items-and-pagination">
+<div class="actual-items-and-pagination">
     <?php
         //
         $paged = max(get_query_var('paged'), 1);
@@ -92,7 +92,7 @@
         $type_event_link_text = acf_esc_html(get_field('type_event_link_text', $currend_id));
 
         // Outputting items
-        echo '<div class="news-items">';
+        echo '<div class="actual-items">';
         while ($query->have_posts()) {
             //
             $query->the_post();
@@ -101,7 +101,7 @@
             //
             if ($post_type === "event") {
                 get_template_part(
-                    'parts/news-item-event',
+                    'parts/actual-item-event',
                     null,
                     [
                         "texts" => [
@@ -113,7 +113,7 @@
             } else {
                 if ($post_type === "post-types-one-news") {
                     get_template_part(
-                        'parts/news-item-news',
+                        'parts/actual-item-news',
                         null,
                         [
                             "texts" => [
@@ -129,7 +129,7 @@
 
         // Pagination
         get_template_part(
-            'parts/news-pagination', null, ["current_page" => $paged, "max_num_pages" => $query->max_num_pages]
+            'parts/actual-pagination', null, ["current_page" => $paged, "max_num_pages" => $query->max_num_pages]
         );
 
         // Resetting postdata

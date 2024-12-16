@@ -1,13 +1,13 @@
 @import "../components/_buttons";
 @import "../variables";
 
-.news-search-form {
+.actual-search-form {
   display: flex;
   width: 100%;
   flex-direction: column;
 }
 
-.news-search-container {
+.actual-search-container {
   display: flex;
   align-items: center;
   background-color: $light-blue;
@@ -16,7 +16,7 @@
   width: 100%;
 }
 
-.news-search-input-container {
+.actual-search-input-container {
   display: flex;
   align-items: center;
   flex-grow: 1;
@@ -27,21 +27,21 @@
 }
 
 // Outline on focus
-.news-search-input-container:hover,
-.news-search-input-container:has(.news-search-input:focus) {
+.actual-search-input-container:hover,
+.actual-search-input-container:has(.actual-search-input:focus) {
   outline: 2px solid $dark-blue;
 }
 
-.news-search-svg {
+.actual-search-svg {
   transition: all $animations;
 }
 
 // Change color of svg when input is focused
-.news-search-input-container:has(.news-search-input:focus) .news-search-svg {
+.actual-search-input-container:has(.actual-search-input:focus) .actual-search-svg {
   fill: $dark-blue;
 }
 
-.news-search-input {
+.actual-search-input {
   flex-grow: 1;
   border: 0px solid transparent;
   outline: none;
@@ -50,21 +50,21 @@
   font-weight: 400;
 }
 
-.news-search-input::placeholder {
+.actual-search-input::placeholder {
   color: $grey;
 }
 
 // Hide placeholder when input is focused
-.news-search-input:focus::placeholder {
+.actual-search-input:focus::placeholder {
   color: transparent;
 }
 
-.news-search-btn {
+.actual-search-btn {
   @include btn-main;
 }
 
 // Styles for the select2 element
-.news-search-narrow-select {
+.actual-search-narrow-select {
   width: 100%;
 }
 .select2-container--default .select2-selection--multiple {
@@ -143,13 +143,13 @@
   border-bottom: 1px solid $white;
 }
 
-.news-search-wide-categories {
+.actual-search-wide-categories {
   display: none;
   flex-wrap: wrap;
   gap: 16px;
 }
 
-.news-category-btn {
+.actual-category-btn {
   font-family: $font-advanced;
   display: flex;
   gap: 10px;
@@ -182,93 +182,93 @@
   }
 }
 
-.news-category-btn.active {
+.actual-category-btn.active {
   background-color: $dark-blue;
   color: $white;
 }
 
-.news-search-category-remove-svg {
+.actual-search-category-remove-svg {
   width: 22px;
   height: 22px;
   fill: $white;
   display: none;
 }
 
-.news-search-category-remove-svg.active {
+.actual-search-category-remove-svg.active {
   display: inline;
 }
 
 @media screen and (max-width: 767.9px) {
-  .news-search-form {
+  .actual-search-form {
     gap: 24px;
   }
 
-  .news-search-input-container {
+  .actual-search-input-container {
     gap: 8px;
   }
 
-  .news-search-input {
+  .actual-search-input {
     font-size: 14px;
   }
 
-  .news-search-svg {
+  .actual-search-svg {
     width: 16px;
     height: 16px;
   }
 
-  .news-search-btn {
+  .actual-search-btn {
     display: none;
   }
 }
 
 @media screen and (min-width: 768px) {
-  .news-search-form {
+  .actual-search-form {
     gap: 32px;
   }
 
-  .news-search-container {
+  .actual-search-container {
     gap: 12px;
   }
 
-  .news-search-input-container {
+  .actual-search-input-container {
     gap: 8px;
   }
 
-  .news-search-input {
+  .actual-search-input {
     font-size: 14px;
   }
 
-  .news-search-svg {
+  .actual-search-svg {
     width: 16px;
     height: 16px;
   }
 
-  .news-search-btn {
+  .actual-search-btn {
     font-size: 20px;
   }
 }
 
 @media screen and (min-width: 1200px) {
-  .news-search-container {
+  .actual-search-container {
     gap: 24px;
     padding: 24px;
   }
   
-  .news-search-input-container {
+  .actual-search-input-container {
     padding: 22px 8px;
     gap: 12px;
   }
 
-  .news-search-input {
+  .actual-search-input {
     font-size: 24px;
   }
 
-  .news-search-svg {
+  .actual-search-svg {
     width: 28px;
     height: 28px;
   }
 
-  .news-search-btn {
+  .actual-search-btn {
     font-size: 24px;
   }
 
@@ -276,18 +276,18 @@
     display: none;
   }
 
-  .news-search-wide-categories {
+  .actual-search-wide-categories {
     display: flex;
   }
 }
 
 @media screen and (min-width: 1440px) {
-  .news-search-form {
+  .actual-search-form {
     padding-left: 146px;
     padding-right: 146px;
   }
   
-  .news-search-container {
+  .actual-search-container {
     gap: 32px;
     align-items: center;
   }
