@@ -4,7 +4,7 @@
     // Preparing variables
     // Image
     $image = get_field('image1', $current_id);
-    $img_tag = ImageHelper::get_image_tag($image, 'news-item-event-image');
+    $img_tag = ImageHelper::get_image_tag($image, 'actual-item-event-image');
     // Badge text
     $badge_text = $args['texts']['type'];
     // Categories
@@ -38,21 +38,21 @@
     $link = get_the_permalink($current_id);
     $link_text = $args['texts']['link_title'];
 ?>
-    <div class="news-item-event">
-        <div class="news-item-event-image-wrap">
+    <div class="actual-item-event">
+        <div class="actual-item-event-image-wrap">
             <?= $img_tag ?>
-            <div class="news-item-event-image-mask"></div>
+            <div class="actual-item-event-image-mask"></div>
         </div>
-        <div class="news-item-event-badge"><?= $badge_text ?></div>
+        <div class="actual-item-event-badge"><?= $badge_text ?></div>
         <?php
             // Display categories if there are some
             if (count($categories)):
                 ?>
-                    <div class="news-item-event-categories">
+                    <div class="actual-item-event-categories">
                         <?php
                             foreach ($categories as $category):
                                 ?>
-                                    <div class="news-item-event-category"><?= $category?></div>
+                                    <div class="actual-item-event-category"><?= $category?></div>
                                 <?php
                             endforeach;
                         ?>
@@ -60,46 +60,46 @@
                 <?php
             endif;
         ?>
-        <div class="news-item-event-tdtlel">
-            <div class="news-item-event-tdtle">
-                <h2 class="news-item-event-title"><?= $title ?></h2>
-                <div class="news-item-event-dtl">
-                    <div class="news-item-event-date-row">
-                        <svg class="news-item-event-date-svg">
+        <div class="actual-item-event-tdtlel">
+            <div class="actual-item-event-tdtle">
+                <h2 class="actual-item-event-title"><?= $title ?></h2>
+                <div class="actual-item-event-dtl">
+                    <div class="actual-item-event-date-row">
+                        <svg class="actual-item-event-date-svg">
                             <use xlink:href="<?= $date_svg_href ?>"></use>
                         </svg>
-                        <div class="news-item-event-date">
+                        <div class="actual-item-event-date">
                             <?= $event_date ?>
                         </div>
                     </div>
-                    <div class="news-item-event-time-row">
-                        <svg class="news-item-event-time-svg">
+                    <div class="actual-item-event-time-row">
+                        <svg class="actual-item-event-time-svg">
                             <use xlink:href="<?= $time_svg_href ?>"></use>
                         </svg>
-                        <div class="news-item-event-time">
+                        <div class="actual-item-event-time">
                             <?= $time ?>
                         </div>
                     </div>
-                    <div class="news-item-event-location-row">
-                        <svg class="news-item-event-location-svg">
+                    <div class="actual-item-event-location-row">
+                        <svg class="actual-item-event-location-svg">
                             <use xlink:href="<?= $location_svg_href ?>"></use>
                         </svg>
-                        <div class="news-item-event-location">
+                        <div class="actual-item-event-location">
                             <a href="<?= $location_link ?>" target="_blank" rel="noreferrer"><?= $location_title ?></a>
                         </div>
                     </div>
                 </div>
-                <div class="news-item-event-excerpt">
+                <div class="actual-item-event-excerpt">
                     <?= $text ?>
                 </div>
             </div>
             
-            <div class="news-item-event-link">
+            <div class="actual-item-event-link">
                 <a href="<?= $link ?>"><?= $link_text ?></a>
             </div>
         </div>
         <?php
             // Mask if event is not active
-            if (!$is_event_active) echo '<div class="news-item-event-mask"></div>';
+            if (!$is_event_active) echo '<div class="actual-item-event-mask"></div>';
         ?>
     </div>

@@ -5,17 +5,17 @@
         $text = $page_text ?? $page_number;
         
         return <<<BTN
-            <a class="news-pagination-btn inactive" href="$page_url">$text</a>
+            <a class="actual-pagination-btn inactive" href="$page_url">$text</a>
         BTN;
     }
 
     // Returns code for SVG for previous button
     function getPrevSvg($is_enabled) {
-        $class = "news-pagination-btn-svg-" . ($is_enabled ? "enabled" : "disabled");
+        $class = "actual-pagination-btn-svg-" . ($is_enabled ? "enabled" : "disabled");
         $href = get_bloginfo('template_url') . "/assets/images/symbol-defs.svg#icon-arrow-left";
 
         return <<<BTN
-            <svg class="news-pagination-btn-svg $class">
+            <svg class="actual-pagination-btn-svg $class">
                 <use xlink:href="$href"></use>
             </svg>
         BTN;
@@ -23,11 +23,11 @@
 
     // Returns code for SVG for previous button
     function getNextSvg($is_enabled) {
-        $class = "news-pagination-btn-svg-" . ($is_enabled ? "enabled" : "disabled");
+        $class = "actual-pagination-btn-svg-" . ($is_enabled ? "enabled" : "disabled");
         $href = get_bloginfo('template_url') . "/assets/images/symbol-defs.svg#icon-arrow-right";
 
         return <<<BTN
-            <svg class="news-pagination-btn-svg $class">
+            <svg class="actual-pagination-btn-svg $class">
                 <use xlink:href="$href"></use>
             </svg>
         BTN;
@@ -41,7 +41,7 @@
         // Only if there are some pages
         if ($max_num_pages > 1) {
             // Start of pagination
-            $s = '<div class="news-pagination news-pagination-narrow">';
+            $s = '<div class="actual-pagination actual-pagination-narrow">';
 
             // Previous button
             if ($current_page > 1) {
@@ -49,12 +49,12 @@
             } else {
                 $svg = getPrevSvg(false);
                 $s .= <<<BTN
-                    <span class="news-pagination-btn disabled">$svg</span>
+                    <span class="actual-pagination-btn disabled">$svg</span>
                 BTN; 
             }
 
             // Start of pages group
-            $s .= '<div class="news-pagination-pages">';
+            $s .= '<div class="actual-pagination-pages">';
 
             // Second previous page
             if (($current_page == $max_num_pages) && ($current_page - 2 >= 1)) {
@@ -74,7 +74,7 @@
 
             // Current page
             $s .= <<<BTN
-                <span class="news-pagination-btn active">$current_page</span>
+                <span class="actual-pagination-btn active">$current_page</span>
             BTN;
 
             // One next page
@@ -102,7 +102,7 @@
             } else {
                 $svg = getNextSvg(false);
                 $s .= <<<BTN
-                    <span class="news-pagination-btn disabled">$svg</span>
+                    <span class="actual-pagination-btn disabled">$svg</span>
                 BTN; 
             }
 
@@ -121,7 +121,7 @@
         // Only if there are some pages
         if ($max_num_pages > 1) {
             // Start of pagination
-            $s = '<div class="news-pagination news-pagination-regular">';
+            $s = '<div class="actual-pagination actual-pagination-regular">';
 
             // Previous button
             if ($current_page > 1) {
@@ -129,12 +129,12 @@
             } else {
                 $svg = getPrevSvg(false);
                 $s .= <<<BTN
-                    <span class="news-pagination-btn disabled">$svg</span>
+                    <span class="actual-pagination-btn disabled">$svg</span>
                 BTN; 
             }
 
             // Start of pages group
-            $s .= '<div class="news-pagination-pages">';
+            $s .= '<div class="actual-pagination-pages">';
 
             // Third previous page
             if ($current_page - 3 >= 1) {
@@ -153,7 +153,7 @@
 
             // Current page
             $s .= <<<BTN
-                <span class="news-pagination-btn active">$current_page</span>
+                <span class="actual-pagination-btn active">$current_page</span>
             BTN;
 
             // Two next pages
@@ -180,7 +180,7 @@
             } else {
                 $svg = getNextSvg(false);
                 $s .= <<<BTN
-                    <span class="news-pagination-btn disabled">$svg</span>
+                    <span class="actual-pagination-btn disabled">$svg</span>
                 BTN; 
             }
 

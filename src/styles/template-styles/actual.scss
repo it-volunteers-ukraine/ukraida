@@ -1,0 +1,54 @@
+@import "../parts-styles/actual-search";
+@import "../parts-styles/actual-filter";
+@import "../parts-styles/actual-items";
+@import "../parts-styles/actual-item-news";
+@import "../parts-styles/actual-item-event";
+@import "../parts-styles/actual-pagination";
+@import "../variables";
+
+.section.actual {
+  padding-top: 24px;
+}
+
+.container.actual {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.actual-title {
+  margin-bottom: 24px;
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .section.actual {
+    padding-top: 48px;
+  }
+
+  .actual-title {
+    font-size: 32px;
+    margin-bottom: 56px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .section.actual {
+    padding-top: 64px;
+  }
+
+  .actual-title {
+    font-size: 36px;
+    margin-bottom: 104px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .actual-title {
+    font-size: 36px;
+    margin-bottom: 112px;
+  }
+}
