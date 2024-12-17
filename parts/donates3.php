@@ -24,7 +24,9 @@ $currend_id = get_the_ID();
                 </a>
             </li>
         </ul>
-        <a href="/devpage" class="donate3-btn"><?php echo get_field('donates3_report_btn_name', $currend_id); ?></a>
+        <?php if (get_field('donates3_zvit_btn_name', $currend_id)): ?>
+            <a href="/devpage" class="donate3-btn"><?php echo get_field('donates3_report_btn_name', $currend_id); ?></a>
+        <?php endif; ?>
     </div>
     <div class="separator"></div>
     <div class="donate3-wrap">
@@ -49,7 +51,9 @@ $currend_id = get_the_ID();
                 </a>
             </li>
         </ul>
-        <a href="/devpage" class="donate3-btn"><?php echo get_field('donates3_zvit_btn_name', $currend_id); ?></a>
+        <?php if (get_field('donates3_zvit_btn_name', $currend_id)): ?>
+            <a href="/devpage" class="donate3-btn"><?php echo get_field('donates3_zvit_btn_name', $currend_id); ?></a>
+        <?php endif; ?>
     </div>
 </div>
 <!-- <div class="item button-jittery" style="--bg-color: #f1c40f;">
