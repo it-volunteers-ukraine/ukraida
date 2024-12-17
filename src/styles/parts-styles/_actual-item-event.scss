@@ -1,0 +1,362 @@
+@import "../variables";
+
+.actual-item-event {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border: 2px solid $yellow;
+  border-radius: 15px;
+}
+
+.actual-item-event-mask {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  border-radius: 15px;
+  opacity: 30%;
+  background-color: #F1EBEB;
+  pointer-events: none;
+}
+
+.actual-item-event-image-wrap {
+  position: relative;
+}
+
+.actual-item-event-image {
+  border-radius: 10px;
+}
+
+.actual-item-event-image-mask {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  border-radius: 10px;
+  opacity: 30%;
+  background-color: #F1EBEB;
+  transition: all $animations;
+}
+
+.actual-item-event:hover .actual-item-event-image-mask {
+  opacity: 0%;
+}
+
+.actual-item-event-badge {
+  position: absolute;
+  border-radius: 10px;
+  background-color: $yellow;
+  color: $black;
+  font-family: $font-main;
+  font-weight: 700;
+}
+
+.actual-item-event-categories {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.actual-item-event-category::before {
+  content: '#';
+  color: $dark-blue;
+}
+
+.actual-item-event-category {
+  font-family: $font-main;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+}
+
+.actual-item-event-category:not(:last-child)::after {
+  content: ',';
+}
+
+.actual-item-event-tdtlel {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 2;
+  flex-grow: 1;
+  min-height: 0;
+}
+
+.actual-item-event-tdtle {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 2;
+  flex-grow: 1;
+  min-height: 0;
+}
+
+.actual-item-event-title {
+  font-family: $font-main;
+  font-weight: 700;
+}
+
+.actual-item-event-dtl {
+  display: flex;
+  flex-direction: column;
+}
+
+.actual-item-event-date-row,
+.actual-item-event-time-row,
+.actual-item-event-location-row {
+  display: flex;
+  align-items: center;
+}
+
+.actual-item-event-date,
+.actual-item-event-time {
+  font-family: $font-main;
+  font-weight: 600;
+}
+
+.actual-item-event-location {
+  font-family: $font-advanced;
+  font-weight: 500;
+  text-decoration: underline;
+}
+
+.actual-item-event-excerpt {
+  position: relative;
+  font-family: $font-main;
+  font-weight: 400;
+  font-style: italic;
+  overflow: hidden;
+  flex-shrink: 2;
+  flex-grow: 1;
+  min-height: 0;
+}
+
+.actual-item-event-excerpt::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+  pointer-events: none;
+}
+
+.actual-item-event-link {
+  font-family: $font-advanced;
+  font-weight: 500;
+  color: $dark-blue;
+  text-decoration: underline;
+  transition: all $animations;
+}
+
+@media screen and (max-width: 767.9px) {
+  .actual-item-event {
+    max-height: 896px;
+    padding: 8px;
+  }
+
+  .actual-item-event-badge {
+    top: 20px;
+    left: 20px;
+    padding: 8px;
+    font-size: 16px;
+  }
+
+  .actual-item-event-categories {
+    margin-top: 8px;
+    gap: 8px;
+  }
+
+  .actual-item-event-category::before {
+    margin-right: 4px;
+  }
+
+  .actual-item-event-category {
+    font-size: 12px;
+  }
+
+  .actual-item-event-tdtlel {
+    margin-top: 16px;
+    gap: 16px;
+  }
+
+  .actual-item-event-tdtle {
+    gap: 16px;
+  }
+
+  .actual-item-event-title {
+    font-size: 16px;
+  }
+
+  .actual-item-event-dtl {
+    gap: 8px;
+  }
+
+  .actual-item-event-date-row,
+  .actual-item-event-time-row,
+  .actual-item-event-location-row {
+    gap: 12px;
+  }
+
+  .actual-item-event-date-svg,
+  .actual-item-event-time-svg,
+  .actual-item-event-location-svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .actual-item-event-date,
+  .actual-item-event-time,
+  .actual-item-event-location {
+    font-size: 14px;
+  }
+
+  .actual-item-event-location {
+    padding: 13px 0px 12px 0px;
+  }
+
+  .actual-item-event-excerpt {
+    font-size: 14px;
+  }
+
+  .actual-item-event-link {
+    padding: 14px 12px 14px 0px;
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .actual-item-event {
+    max-height: 938px;
+    padding: 12px;
+  }
+
+  .actual-item-event-badge {
+    top: 20px;
+    left: 20px;
+    padding: 8px;
+    font-size: 16px;
+  }
+
+  .actual-item-event-categories {
+    margin-top: 12px;
+    gap: 8px;
+  }
+
+  .actual-item-event-category::before {
+    margin-right: 4px;
+  }
+
+  .actual-item-event-category {
+    font-size: 12px;
+  }
+
+  .actual-item-event-tdtlel {
+    margin-top: 16px;
+    gap: 16px;
+  }
+
+  .actual-item-event-tdtle {
+    gap: 16px;
+  }
+
+  .actual-item-event-title {
+    font-size: 22px;
+  }
+
+  .actual-item-event-dtl {
+    gap: 8px;
+  }
+
+  .actual-item-event-date-row,
+  .actual-item-event-time-row,
+  .actual-item-event-location-row {
+    gap: 12px;
+  }
+
+  .actual-item-event-date-svg,
+  .actual-item-event-time-svg,
+  .actual-item-event-location-svg {
+    width: 32px;
+    height: 32px;
+  }
+
+  .actual-item-event-date,
+  .actual-item-event-time,
+  .actual-item-event-location {
+    font-size: 16px;
+  }
+
+  .actual-item-event-location {
+    padding: 13px 0px 12px 0px;
+  }
+
+  .actual-item-event-excerpt {
+    font-size: 20px;
+  }
+
+  .actual-item-event-link {
+    padding: 16px 16px 16px 0px;
+    font-size: 20px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .actual-item-event {
+    max-height: 1192px;
+    padding: 16px;
+  }
+
+  .actual-item-event-badge {
+    top: 32px;
+    left: 32px;
+    padding: 12px;
+    font-size: 24px;
+  }
+
+  .actual-item-event-categories {
+    margin-top: 24px;
+  }
+
+  .actual-item-event-category {
+    font-size: 18px;
+  }
+
+  .actual-item-event-tdtle {
+    gap: 24px;
+  }
+
+  .actual-item-event-title {
+    font-size: 30px;
+  }
+
+  .actual-item-event-dtl {
+    gap: 16px;
+  }
+
+  .actual-item-event-date,
+  .actual-item-event-time,
+  .actual-item-event-location {
+    font-size: 24px;
+  }
+
+  .actual-item-event-location {
+    padding: 0px;
+  }
+
+  .actual-item-event-excerpt {
+    font-size: 24px;
+  }
+
+  .actual-item-event-link {
+    padding: 24px 20px 24px 0px;
+    font-size: 24px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .actual-item-event {
+    max-height: 1179px;
+  }
+}

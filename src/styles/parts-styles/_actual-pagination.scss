@@ -1,0 +1,109 @@
+@import "../components/_buttons";
+@import "../variables";
+
+.actual-pagination {
+  display: flex;
+  justify-content: center;
+}
+
+.actual-pagination-btn {
+  font-family: $font-advanced;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: 500;
+  border: none;
+}
+
+.actual-pagination-btn.active {
+  color: $white;
+  background-color: $btn-main;
+}
+
+.actual-pagination-btn.inactive,
+.actual-pagination-btn.disabled {
+  color: $black;
+  background-color: $light-blue;
+  border: 1px solid $blue;
+}
+
+.actual-pagination-btn.active,
+.actual-pagination-btn.inactive {
+  cursor: pointer;
+  transition: all $animations;
+
+  &:hover:not(:disabled),
+  &:focus-visible:not(:disabled) {
+    box-shadow: $btn-hover-shadow;
+  }
+
+  &:active:not(:disabled) {
+    background-color: $blue;
+  }
+}
+
+.actual-pagination-btn-svg {
+  width: 32px;
+  height: 32px;
+}
+
+.actual-pagination-btn-svg-disabled {
+  fill: #CCCCCC;
+}
+
+.actual-pagination-btn-svg-enabled {
+  fill: #221F25;
+}
+
+.actual-pagination-pages {
+  display: flex;
+}
+
+@media screen and (max-width: 767.9px) {
+  .actual-pagination {
+    gap: 26px;
+  }
+
+  .actual-pagination-regular {
+    display: none;
+  }
+
+  .actual-pagination-pages {
+    gap: 8px;
+  }
+
+  .actual-pagination-btn {
+    width: 44px;
+    height: 44px;
+    font-size: 20px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .actual-pagination {
+    gap: 40px;
+  }
+
+  .actual-pagination-narrow {
+    display: none;
+  }
+
+  .actual-pagination-pages {
+    gap: 24px;
+  }
+
+  .actual-pagination-btn {
+    width: 56px;
+    height: 56px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .actual-pagination-btn {
+    width: 64px;
+    height: 64px;
+    font-size: 24px;
+  }
+}

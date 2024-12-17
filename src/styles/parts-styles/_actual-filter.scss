@@ -1,0 +1,121 @@
+@import "../components/_buttons";
+@import "../variables";
+
+.actual-filter {
+  display: flex;
+  width: 100%;
+}
+  
+.actual-filter-text {
+  font-family: $font-main;
+  font-weight: 600;
+}
+
+.actual-filter-buttons {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.actual-filter-btn {
+  font-family: $font-advanced;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: all $animations;
+
+  &:hover:not(:disabled),
+  &:focus-visible:not(:disabled) {
+    box-shadow: $btn-hover-shadow;
+  }
+
+  &:active:not(:disabled) {
+    background-color: $blue;
+  }
+
+  &:disabled {
+    background: none;
+    background-color: $btn-disabled;
+    cursor: initial;
+  }
+}
+
+.actual-filter-btn.active {
+  color: $white;
+  background-color: $btn-main;
+}
+
+.actual-filter-btn.inactive {
+  color: $black;
+  background-color: $light-blue;
+  border: 1px solid $blue;
+}
+
+@media screen and (max-width: 767.9px) {
+  .actual-filter {
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 105px;
+    margin-bottom: 22px;
+  }
+
+  .actual-filter-text {
+    font-size: 16px;
+  }
+
+  .actual-filter-buttons {
+    gap: 19px;
+  }
+
+  .actual-filter-btn {
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .actual-filter {
+    margin-top: 46px;
+    margin-bottom: 32px;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .actual-filter-text {
+    font-size: 20px;
+  }
+
+  .actual-filter-buttons {
+    gap: 24px;
+  }
+
+  .actual-filter-btn {
+    font-size: 18px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .actual-filter {
+    margin-top: 104px;
+    margin-bottom: 64px;
+    gap: 24px;
+  }
+
+  .actual-filter-text {
+    font-size: 24px;
+  }
+
+  .actual-filter-buttons {
+    gap: 16px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .actual-filter {
+    margin-top: 144px;
+    margin-bottom: 69px;
+  }
+}
