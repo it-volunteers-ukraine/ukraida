@@ -100,6 +100,9 @@
   background: $white;
   transform: translateY(-200%);
   transition-duration: 1s;
+
+  max-height: 100vh; 
+  overflow-y: auto;
 }
 
 .is__open {
@@ -166,6 +169,12 @@
   width: 44px;
   height: 44px;
   fill: $black;
+
+  transition: fill 0.3s;
+
+  &:hover {
+    fill: $blue;
+  }
 }
 
 .link-modal {
