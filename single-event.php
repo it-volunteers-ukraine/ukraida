@@ -55,16 +55,22 @@ $image2 = get_field('image2', $current_id);
                 <?php if ($image1) : ?>
                     <img class="event-image" src="<?php echo esc_url($image1['sizes']['large']); ?>" alt="<?php echo esc_attr($image1['alt']); ?>">
                 <?php endif; ?>
-                <?php if ($image1) : ?>
+                <?php if ($image2) : ?>
                     <img class="event-image" src="<?php echo esc_url($image2['sizes']['large']); ?>" alt="<?php echo esc_attr($image2['alt']); ?>">
                 <?php endif; ?>
             </div>
 
             <div class="event__category category">
+                <?php $is_first = ""; ?>
+
                 <?php if ($taxonomy_terms): ?>
-                    <?php foreach ($taxonomy_terms as $term) : ?>
-                        <button class="btn-filter" disabled><?php echo $term->name; ?></button>
-                    <?php endforeach; ?>
+                    <?php
+                    $tags = [];
+                    foreach ($taxonomy_terms as $term) {
+                        $tags[] = '<span class="category-hashtag">#</span>' . esc_html($term->name);
+                    }
+                    echo implode(', ', $tags);
+                    ?>
                 <?php endif; ?>
             </div>
 
