@@ -125,8 +125,10 @@
     margin-right: 0;
   }
   .donate3-wrap:first-child {
+    padding-bottom: 46px;
   }
   .donate3-wrap:last-child {
+    padding-top: 46px;
   }
   .donate3-item {
     height: 218px;
@@ -150,6 +152,12 @@
   }
   .donate3-wrap{
     padding: 67px 0;
+  }
+  .donate3-wrap:first-child {
+    padding-bottom: 67px;
+  }
+  .donate3-wrap:last-child {
+    padding-top: 67px;
   }
   .donate3-item {
     height: 224px;
