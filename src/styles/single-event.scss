@@ -102,9 +102,11 @@
 }
 
 .category {
-  display: flex;
-  gap: 8px;
-  flex-wrap: wrap;
+  font-size: 14px;
+  font-weight: 600;
+}
+.category-hashtag{
+  color: $dark-blue;
 }
 
 .event__category {
@@ -179,7 +181,7 @@
   }
 
   .category {
-    gap: 16px;
+    font-size: 20px;
   }
 
   .event__article:not(:last-child) {
@@ -248,6 +250,9 @@
   }
   .event__category {
     margin-bottom: 48px;
+  }
+  .category{
+    font-size: 24px;
   }
 
   .event__article:not(:last-child) {
