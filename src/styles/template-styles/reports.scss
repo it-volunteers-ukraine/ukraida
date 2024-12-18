@@ -1,0 +1,85 @@
+@import "../variables";
+
+.section.reports {
+  padding-top: 24px;
+}
+
+.container.reports {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.reports-title {
+  margin-bottom: 24px;
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.reports-links {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.reports-link {
+  font-family: $font-main;
+  font-weight: 400;
+}
+
+@media screen and (max-width: 767.9px) {
+  .reports-links {
+    gap: 4px;
+  }
+
+  .reports-link {
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .section.reports {
+    padding-top: 48px;
+  }
+
+  .reports-title {
+    font-size: 32px;
+    margin-bottom: 56px;
+  }
+
+  .reports-links {
+    gap: 8px;
+  }
+
+  .reports-link {
+    font-size: 20px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .section.reports {
+    padding-top: 64px;
+  }
+
+  .reports-title {
+    font-size: 36px;
+    margin-bottom: 104px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .reports-title {
+    font-size: 36px;
+    margin-bottom: 112px;
+  }
+
+  .reports-links {
+    gap: 12px;
+  }
+
+  .reports-link {
+    font-size: 24px;
+  }
+}
