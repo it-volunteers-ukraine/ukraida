@@ -68,7 +68,6 @@
 .about__media-img {
   width: 88px;
   height: 88px;
-  margin-bottom: 16px;
 
   img {
     width: 100%;
@@ -80,12 +79,12 @@
   @media screen and (min-width: 768px) {
     width: 108px;
     height: 108px;
+    margin: 0 auto;
   }
 
   @media screen and (min-width: 1280px) {
     width: 196px;
     height: 196px;
-    margin-bottom: 20px;
   }
 
   @media screen and (min-width: 1920px) {}
@@ -94,17 +93,19 @@
 .about__media-avtor {
   font-size: 16px;
   font-weight: 700;
-  margin-bottom: 16px;
+  padding-top: 16px;
 
   @media screen and (min-width: 768px) {
     margin-bottom: 0;
     width: 141px;
+    padding-top: 16px;
   }
 
   @media screen and (min-width: 1280px) {
     font-size: 18px;
     text-transform: uppercase;
     width: 252px;
+    padding-top: 20px;
   }
 
   @media screen and (min-width: 1920px) {}
