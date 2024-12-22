@@ -16,17 +16,11 @@ class ImageHelper {
         return $s;
     }
 
-    // Returns image sizes
-    protected static function get_image_sizes() {
-        return "(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 1024px";
-    }
-
     // Returns image tag for provided Wordpress image array and image class
-    public static function get_image_tag($image, $class) {
+    public static function get_image_tag($image, $class, $sizes = "(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 1024px") {
         //
         $image_src = ImageHelper::get_image_src($image);
         $image_srcset = ImageHelper::get_image_srcset($image);
-        $image_sizes = ImageHelper::get_image_sizes();
         $image_alt = esc_attr($image['alt']);
 
         //
@@ -35,7 +29,7 @@ class ImageHelper {
                 class="$class"
                 src="$image_src" 
                 srcset="$image_srcset" 
-                sizes="$image_sizes" 
+                sizes="$sizes" 
                 alt="$image_alt"
             >
         BLOCK;

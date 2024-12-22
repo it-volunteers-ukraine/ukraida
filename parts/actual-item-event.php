@@ -4,7 +4,11 @@
     // Preparing variables
     // Image
     $image = get_field('image1', $current_id);
-    $img_tag = ImageHelper::get_image_tag($image, 'actual-item-event-image');
+    $img_tag = ImageHelper::get_image_tag(
+        $image, 
+        'actual-item-event-image',
+        '(max-width: 767.9px) 100vw, (max-width: 1919.9px) 50vw, 33.33vw'
+    );
     // Badge text
     $badge_text = $args['texts']['type'];
     // Categories
@@ -41,7 +45,6 @@
     <div class="actual-item-event">
         <div class="actual-item-event-image-wrap">
             <?= $img_tag ?>
-            <div class="actual-item-event-image-mask"></div>
         </div>
         <div class="actual-item-event-badge"><?= $badge_text ?></div>
         <?php
