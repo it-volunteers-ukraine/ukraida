@@ -13,14 +13,12 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  flex: 1 1 auto;
   min-height: 0;
   align-self: flex-start;
 }
 
 .actual-item-news-image {
   border-radius: 10px;
-  flex: 1 1 auto;
   min-height: 100px;
   overflow: hidden;
   max-height: 100%;
