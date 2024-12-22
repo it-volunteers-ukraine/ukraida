@@ -23,25 +23,27 @@
 
 .actual-item-event-image-wrap {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  min-height: 0;
+  align-self: flex-start;
 }
 
 .actual-item-event-image {
   border-radius: 10px;
-}
-
-.actual-item-event-image-mask {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0px;
-  border-radius: 10px;
-  opacity: 30%;
-  background-color: #F1EBEB;
+  flex: 1 1 auto;
+  min-height: 100px;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: contain;
+  align-self: flex-start;
+  mask: linear-gradient(to bottom, #F1EBEB4C, #F1EBEB4C);
   transition: all $animations;
 }
 
-.actual-item-event:hover .actual-item-event-image-mask {
-  opacity: 0%;
+.actual-item-event:hover .actual-item-event-image {
+  mask: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 1));
 }
 
 .actual-item-event-badge {
@@ -78,17 +80,15 @@
 .actual-item-event-tdtlel {
   display: flex;
   flex-direction: column;
-  flex-shrink: 2;
-  flex-grow: 1;
-  min-height: 0;
+  flex: 1 1 auto;
+  overflow: hidden;
 }
 
 .actual-item-event-tdtle {
   display: flex;
   flex-direction: column;
-  flex-shrink: 2;
-  flex-grow: 1;
-  min-height: 0;
+  flex: 1 1 auto;
+  overflow: hidden;
 }
 
 .actual-item-event-title {
@@ -125,10 +125,9 @@
   font-family: $font-main;
   font-weight: 400;
   font-style: italic;
+  min-height: 30px;
+  flex: 1 1 auto;
   overflow: hidden;
-  flex-shrink: 2;
-  flex-grow: 1;
-  min-height: 0;
 }
 
 .actual-item-event-excerpt::after {
