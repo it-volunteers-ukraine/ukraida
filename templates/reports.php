@@ -13,18 +13,37 @@ Template Name: reports
         <div class="container reports">
             <h1 class="reports-title"><?php echo $reports_title; ?></h1>
 
-            <?php if (have_rows('links')) : ?>
-                <ul class="reports-links">
-                    <?php while (have_rows('links')) : 
-                        the_row();
-                        $link = get_sub_field('link');
+            <?php
+                // Basic args for query
+                $args = array(
+                    'post_type'         => 'post-types-reports',
+                    'posts_per_page'    => -1,
+                    'meta_key'          => 'sort_by',
+                    'meta_type'         => 'DATETIME',
+                    'orderby'           => ['meta_value' => 'DESC'],
+                );
+                $query = new WP_Query($args);
+
+                if ($query->have_posts()) : 
                     ?>
-                        <li class="reports-link">
-                            <a href="<?= $link["url"] ?>" target="_blank"><?= $link["title"] ?></a>
-                        </li>
-                    <?php endwhile; ?>
-                </ul>
-            <?php endif; ?>
+                        <ul class="reports-links">
+                            <?php 
+                                while ($query->have_posts()) : 
+                                    $query->the_post();
+
+                                    $title = acf_esc_html(get_field('name'));
+                                    $link = esc_url(get_field('file')['url']);
+                                ?>
+                                    <li class="reports-link">
+                                        <a href="<?= $link ?>" target="_blank"><?= $title ?></a>
+                                    </li>
+                                <?php 
+                                endwhile; 
+                            ?>
+                        </ul>
+                    <?php 
+                endif; 
+            ?>
         </div>
     </section>
 </main>
