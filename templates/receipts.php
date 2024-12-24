@@ -14,25 +14,15 @@ Template Name: receipts
             <h1 class="receipts-title"><?php echo $receipts_title; ?></h1>
 
             <?php
-                // Basic args for query
-                $args = array(
-                    'post_type'         => 'post-types-receipts',
-                    'posts_per_page'    => -1,
-                    'meta_key'          => 'sort_by',
-                    'meta_type'         => 'DATETIME',
-                    'orderby'           => ['meta_value' => 'DESC'],
-                );
-                $query = new WP_Query($args);
-
-                if ($query->have_posts()) : 
+                if (have_rows('files', $current_id)) : 
                     ?>
                         <ul class="receipts-links">
                             <?php 
-                                while ($query->have_posts()) : 
-                                    $query->the_post();
+                                while (have_rows('files', $current_id)) : 
+                                    the_row();
 
-                                    $title = acf_esc_html(get_field('name'));
-                                    $link = esc_url(get_field('file')['url']);
+                                    $title = acf_esc_html(get_sub_field('title'));
+                                    $link = esc_url(get_sub_field('file')['url']);
                                 ?>
                                     <li class="receipts-link">
                                         <a href="<?= $link ?>" target="_blank"><?= $title ?></a>
