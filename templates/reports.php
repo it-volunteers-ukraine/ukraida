@@ -14,25 +14,15 @@ Template Name: reports
             <h1 class="reports-title"><?php echo $reports_title; ?></h1>
 
             <?php
-                // Basic args for query
-                $args = array(
-                    'post_type'         => 'post-types-reports',
-                    'posts_per_page'    => -1,
-                    'meta_key'          => 'sort_by',
-                    'meta_type'         => 'DATETIME',
-                    'orderby'           => ['meta_value' => 'DESC'],
-                );
-                $query = new WP_Query($args);
-
-                if ($query->have_posts()) : 
+                if (have_rows('files', $current_id)) : 
                     ?>
                         <ul class="reports-links">
                             <?php 
-                                while ($query->have_posts()) : 
-                                    $query->the_post();
+                                while (have_rows('files', $current_id)) : 
+                                    the_row();
 
-                                    $title = acf_esc_html(get_field('name'));
-                                    $link = esc_url(get_field('file')['url']);
+                                    $title = acf_esc_html(get_sub_field('title'));
+                                    $link = esc_url(get_sub_field('file')['url']);
                                 ?>
                                     <li class="reports-link">
                                         <a href="<?= $link ?>" target="_blank"><?= $title ?></a>
