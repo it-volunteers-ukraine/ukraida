@@ -13,7 +13,7 @@
   border-radius: 10px;
   min-height: 100px;
   object-fit: contain;
-  flex: 1 1 auto;
+  flex: 4 1 auto;
   align-self: flex-start;
   mask: linear-gradient(to bottom, #F1EBEB4C, #F1EBEB4C);
   transition: all $animations;
@@ -58,7 +58,7 @@
 .actual-item-news-card {
   display: flex;
   flex-direction: column;
-  flex: 4 4 auto;
+  flex: 1 4 auto;
   overflow: hidden;
 }
 
