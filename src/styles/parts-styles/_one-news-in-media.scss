@@ -15,6 +15,7 @@
 .one-news__photo img {
   width: 105px;
   height: 105px;
+  object-fit: cover;
   border-radius: 50%;
 }
 
@@ -58,14 +59,14 @@
 @media (min-width: 1200px) {
   .one-news__in-media {
     padding-bottom: 0;
-    margin-top: 5%;
   }
 }
 
 @media (min-width: 1440px) {
   .one-news__in-media {
     max-width: 350px;
-    margin-top: -18%;
+    padding-top: 24px;
+    margin-top: 5%;
   }
     
   .one-news__author {
