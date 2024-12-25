@@ -26,9 +26,9 @@
 
 .one-news__img img {
   width: 288px;
-  height: 224px;
   margin: 0 auto;
   border-radius: 15px;
+  object-fit: cover;
 }
 
 .one-news__text {
@@ -47,7 +47,6 @@
 
   .one-news__img img {
     width: 688px;
-    height: 532px;
   }
 
   .one-news__text {
@@ -81,7 +80,6 @@
 
   .one-news__img img {
     width: 772px;
-    height: 597px;
   }
 
   .one-news__text {
@@ -95,13 +93,16 @@
     max-width: 100%;
   }
 
+  .one-news__wrapper {
+    align-items: start;
+  }
+
   .one-news__img {
     padding-bottom: 64px;
   }
 
   .one-news__img img {
     width: 942px;
-    height: 728px;
   }
 
   .one-news__text {
