@@ -9,19 +9,9 @@
   border-radius: 15px;
 }
 
-.actual-item-news-image-wrap {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  min-height: 0;
-  align-self: flex-start;
-}
-
 .actual-item-news-image {
   border-radius: 10px;
   min-height: 100px;
-  overflow: hidden;
-  max-height: 100%;
   object-fit: contain;
   align-self: flex-start;
   mask: linear-gradient(to bottom, #F1EBEB4C, #F1EBEB4C);

@@ -43,9 +43,7 @@
     $link_text = $args['texts']['link_title'];
 ?>
     <div class="actual-item-event">
-        <div class="actual-item-event-image-wrap">
-            <?= $img_tag ?>
-        </div>
+        <?= $img_tag ?>
         <div class="actual-item-event-badge"><?= $badge_text ?></div>
         <?php
             // Display categories if there are some
