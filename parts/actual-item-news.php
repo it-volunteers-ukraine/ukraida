@@ -27,9 +27,7 @@
     $link_text = $args['texts']['link_title'];
 ?>
     <div class="actual-item-news">
-        <div class="actual-item-news-image-wrap">
-            <?= $img_tag ?>
-        </div>
+        <?= $img_tag ?>
         <div class="actual-item-news-badge"><?= $badge_text ?></div>
         <?php
             // Display categories if there are some
