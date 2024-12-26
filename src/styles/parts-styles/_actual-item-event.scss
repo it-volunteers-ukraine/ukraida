@@ -286,9 +286,15 @@
   }
 }
 
+@media screen and (min-width: 990px) {
+  .actual-item-event {
+    max-height: 1038px;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .actual-item-event {
-    max-height: 1192px;
+    max-height: 1292px;
     padding: 16px;
   }
 
