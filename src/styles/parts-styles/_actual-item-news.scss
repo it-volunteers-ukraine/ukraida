@@ -11,9 +11,6 @@
 
 .actual-item-news-image {
   border-radius: 10px;
-  min-height: 100px;
-  object-fit: contain;
-  align-self: flex-start;
   mask: linear-gradient(to bottom, #F1EBEB4C, #F1EBEB4C);
   transition: all $animations;
 }
@@ -224,9 +221,15 @@
   }
 }
 
+@media screen and (min-width: 992px) {
+  .actual-item-news {
+    max-height: 1038px;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .actual-item-news {
-    max-height: 1192px;
+    max-height: 1292px;
     padding: 16px;
   }
 
