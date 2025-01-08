@@ -16,26 +16,28 @@
     $term_args = array(
         'taxonomy' => 'category',
         'hide_empty' => false,
-        'fields' => 'names'
+        'fields' => 'id=>name',
     );
     $term_query = new WP_Term_Query($term_args);
     $all_categories = $term_query->terms;
     // Leave the catogories, which are used
-    $categories = array_filter($all_categories, function ($category) {
+    $current_language = pll_current_language();
+    $categories = array_filter($all_categories, function ($category, $category_id) use ($current_language) {
         // Check if there exists at least one post with this category
         $query = new WP_Query(array(
             'post_type' => array('event', 'post-types-one-news'),
+            'lang' => $current_language,
             'tax_query' => array(
                 array(
                     'taxonomy' => 'category', 
-                    'field' => 'name', 
-                    'terms' => $category,
+                    'field' => 'term_id', 
+                    'terms' => $category_id,
                 )
             )
         ));
 
         return ($query->found_posts > 0);
-    });
+    }, ARRAY_FILTER_USE_BOTH);
 ?>
 
 <form class="actual-search-form" id="actualSearchForm">
