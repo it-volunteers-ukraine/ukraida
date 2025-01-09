@@ -15,9 +15,14 @@
     $categories_terms = get_field('one_news_categories', $current_id);
     $categories = [];
     if ($categories_terms) {
+        // Filter the categories for current language
+        $filtered_categories = array_filter($categories_terms, function ($term) {
+            return pll_get_term_language($term->term_id) == pll_current_language();
+        });
+        // Get the array of the categories names
         $categories = array_map(function ($term) {
             return $term->name;
-        }, $categories_terms);
+        }, $filtered_categories);
     }
     //
     $title = esc_html(get_field('one_news_title', $current_id));
