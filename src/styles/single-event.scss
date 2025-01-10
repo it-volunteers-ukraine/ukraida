@@ -76,6 +76,9 @@
   font-size: 14px;
   font-weight: 700;
 }
+.calendar-text.date, .calendar-text.time {
+  white-space: nowrap;
+}
 .location.calendar-text:hover {
   text-decoration: underline;
   transition: $animations;

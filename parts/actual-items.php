@@ -8,6 +8,7 @@
             'paged'             => $paged,
             'posts_per_page'    => 6,
             'order'             => 'DESC',
+            'lang'              => pll_current_language(),
         );
 
         // Categories meta query
