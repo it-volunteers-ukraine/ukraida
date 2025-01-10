@@ -29,7 +29,7 @@ $image2 = get_field('image2', $current_id);
                     <svg class="calendar-icon">
                         <use xlink:href="<?php bloginfo('template_url'); ?>/assets/images/symbol-defs.svg#icon-calendar-blue"></use>
                     </svg>
-                    <p class="calendar-text">
+                    <p class="calendar-text date">
                         <?php echo esc_html($date); ?>
                     </p>
                 </div>
@@ -37,7 +37,7 @@ $image2 = get_field('image2', $current_id);
                     <svg class="calendar-icon">
                         <use xlink:href="<?php bloginfo('template_url'); ?>/assets/images/symbol-defs.svg#icon-clock-blue"></use>
                     </svg>
-                    <p class="calendar-text">
+                    <p class="calendar-text time">
                         <?php echo esc_html($time); ?>
                     </p>
                 </div>
@@ -46,7 +46,7 @@ $image2 = get_field('image2', $current_id);
                         <use xlink:href="<?php bloginfo('template_url'); ?>/assets/images/symbol-defs.svg#icon-location-blue"></use>
                     </svg>
                     <p class="calendar-text location">
-                        <a href="<?php echo esc_url($location_link); ?>"><?php echo esc_html($location_title); ?></a>
+                        <a href="<?php echo esc_url($location_link); ?>" target="_blank"><?php echo esc_html($location_title); ?></a>
                     </p>
                 </div>
             </div>
