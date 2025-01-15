@@ -262,6 +262,7 @@ function wp_it_volunteers_scripts()
 
   if (is_singular('post-types-one-news')) {
     wp_enqueue_style('post-types-one-news-style', get_template_directory_uri() . '/assets/styles/post-types-one-news.css', array('main'));
+    wp_enqueue_style('block-socseti-style-news', get_template_directory_uri() . '/assets/styles/parts-styles/block-socseti.css', array('main'));
   }
 }
 

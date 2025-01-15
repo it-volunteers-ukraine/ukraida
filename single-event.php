@@ -125,7 +125,7 @@ $image2 = get_field('image2', $current_id);
     </section>
     <section class="section section__socseti">
         <div class="container">
-            <?php get_template_part('parts/block_socseti', null, []); ?>
+            <?php get_template_part('parts/block_share_socseti', null, []); ?>
         </div>
     </section>
 </main>
