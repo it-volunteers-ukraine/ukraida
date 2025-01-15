@@ -43,9 +43,11 @@
         </div>
     </section>
 
-    <?php 
-        get_template_part('parts/one-news-share'); 
-    ?>
+    <section class="section section__socseti">
+        <div class="container">
+            <?php get_template_part('parts/block_share_socseti', null, []); ?>
+        </div>
+    </section>
 </main>
 
 <?php
