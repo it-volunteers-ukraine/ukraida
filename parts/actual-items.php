@@ -39,11 +39,12 @@
         $query = $_GET['query'] ?? '';
         if ($query) {
             // filter
-            function news_where( $where ) {
+            function actual_where( $where ) {
                 $where = str_replace("meta_key = 'event_article_$", "meta_key LIKE 'event_article_%", $where);
+                $where = str_replace("meta_key = 'one_news_article_$", "meta_key LIKE 'one_news_article_%", $where);
                 return $where;
             }
-            add_filter('posts_where', 'news_where');
+            add_filter('posts_where', 'actual_where');
 
             //
             $args['meta_query'] = array(
@@ -77,6 +78,11 @@
                 ),
                 array(
                     'key' => 'one_news_text',
+                    'value' => $query,
+                    'compare' => 'LIKE',
+                ),
+                array(
+                    'key' => 'one_news_article_$_text',
                     'value' => $query,
                     'compare' => 'LIKE',
                 ),
