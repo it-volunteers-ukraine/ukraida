@@ -35,6 +35,31 @@
   font-size: 14px;
 }
 
+.one-news__article:not(:last-child) {
+  padding-bottom: 24px;
+}
+
+.article-images {
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.article-image {
+  margin-bottom: 12px;
+  border-radius: 15px;
+}
+.article-image-title {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+  font-style: italic;
+}
+.article-text * {
+  font-size: 14px;
+}
+
 @media (min-width: 768px) {
   .section__one-news {
     padding-top: 48px;
@@ -50,6 +75,49 @@
   }
 
   .one-news__text {
+    font-size: 20px;
+  }
+
+  .one-news__article:not(:last-child) {
+    padding-bottom: 48px;
+  }
+
+  .article-images {
+    margin-bottom: 24px;
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+    justify-content: center;
+  }
+
+  .article-image-item {
+    width: 318px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .article-image-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    margin-bottom: 16px;
+  }
+
+  .article-image-wrapper img {
+    max-width: 100%;
+    max-height: 100%;
+    margin: auto;
+    object-fit: contain;
+  }
+
+  .article-image-title {
+    font-size: 16px;
+    margin-top: auto;
+    text-align: center;
+  }
+
+  .article-text * {
     font-size: 20px;
   }
 }
@@ -85,6 +153,23 @@
   .one-news__text {
     font-size: 20px;
   }
+
+  .article-images {
+    margin-bottom: 32px;
+    gap: 48px;
+  }
+
+  .article-image-item {
+    width: 516px;
+  }
+
+  .article-image-title {
+    font-size: 24px;
+  }
+
+  .article-text * {
+    font-size: 20px;
+  }
 }
 
 @media (min-width: 1440px) {
@@ -106,6 +191,31 @@
   }
 
   .one-news__text {
+    font-size: 24px;
+  }
+
+  .one-news__article:not(:last-child) {
+    padding-bottom: 64px;
+  }
+
+  .article-images {
+    margin-bottom: 48px;
+    gap: 24px;
+  }
+
+  .article-image-item {
+    width: 666px;
+  }
+
+  .article-image-wrapper {
+    margin-bottom: 24px;
+  }
+
+  .article-image-title {
+    font-size: 24px;
+  }
+
+  .article-text * {
     font-size: 24px;
   }
 }

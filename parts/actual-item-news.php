@@ -27,7 +27,7 @@
     //
     $title = esc_html(get_field('one_news_title', $current_id));
     $date = esc_html(get_field('one_news_date', $current_id));
-    $text = esc_html(get_field('one_news_text', $current_id));
+    $text = get_field('one_news_text', $current_id);
     $link = get_the_permalink($current_id);
     $link_text = $args['texts']['link_title'];
 ?>
